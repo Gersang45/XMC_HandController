@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Hand_Controller/Scenes/XMC_Scene.unity
+  isLoaded: 1
+  isActive: 1
