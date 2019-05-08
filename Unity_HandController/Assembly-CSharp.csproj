@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{2258B967-67AC-CC79-2B3F-D334493DB1C7}</ProjectGuid>
+    <ProjectGuid>{DB52A201-58AC-D524-17AA-7C71640DC7CD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,61 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ARDUnity\Examples\Custom Controller\MyController.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\ColorInput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\ColorOutput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\CurveOutput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\DragInput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\ImpulseInput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\InputFilter.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\MappingInput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\OutputCombine.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\RTTTLSong.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\ToggleInput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\ToneOutput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\TriggerInput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Bridge\ValueOutput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\CommSocket\CommSerial.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Controller\AnalogInput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Controller\AnalogOutput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Controller\DigitalInput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Controller\DigitalOutput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Controller\GenericServo.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Controller\GenericTone.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Controller\PulseOutput.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Internal\ControllerDataType.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\AudioSourceReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\ButtonReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\ColliderReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\DialSliderReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\DropdownReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\ExplosionReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\ForceReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\LightColorReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\LightIntensityReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\MoveAxisReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\Rotation2DReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\RotationAxisReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\SliderReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\TextReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\ToggleReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Reactor\TorqueReactor.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Utility\ArdunityAppUI.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Utility\CommSerialUI.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Utility\CommSocketUI.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Utility\DialSlider.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Utility\ListItem.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Utility\ListView.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Utility\SliderSnap.cs" />
-    <Compile Include="Assets\ARDUnity\Scripts\Utility\ToggleEvent.cs" />
     <Compile Include="Assets\Hand_Controller\Scripts\Move.cs" />
-    <None Include="Assets\ARDUnity\Examples\Buzzer\SampleSongs.txt" />
-    <None Include="Assets\ARDUnity\Plugins\Android\AndroidManifest.xml" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/XMC/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/XMC_HandController/Unity_HandController/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/XMC/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/XMC_HandController/Unity_HandController/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -311,9 +262,6 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="ArdunityCore">
-      <HintPath>D:/XMC/Assets/ARDUnity/Scripts/Internal/ArdunityCore.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Lenovo/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

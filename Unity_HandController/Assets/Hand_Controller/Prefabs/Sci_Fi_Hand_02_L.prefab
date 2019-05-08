@@ -245,8 +245,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4702988435935068}
-  - component: {fileID: 95952023191734528}
-  - component: {fileID: 114224435790297144}
   - component: {fileID: 54448972995833082}
   m_Layer: 0
   m_Name: Sci_Fi_Hand_02_L
@@ -783,35 +781,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &95952023191734528
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1553509004563596}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5ae641b7457b20048828caf246d4aadd, type: 3}
-  m_Controller: {fileID: 9100000, guid: 55e01705fda755f49ae6fed39fd690b6, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114224435790297144
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1553509004563596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf8e8d255ec21f49a7f5dae831e12ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!137 &137380910184209566
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
