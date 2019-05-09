@@ -6,9 +6,13 @@ using System.IO.Ports;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject Hand_R;
-    public GameObject Hand_L;
-    public GameObject cube;
+    [SerializeField]
+    private GameObject Hand_R;
+    [SerializeField]
+    private GameObject Hand_L;
+    [SerializeField]
+    private GameObject cube;
+
 
     private SerialPort MySerial = new SerialPort();  // 시리얼 포트 생성
     private const int SIGNAL_CHECK = 0;     // CheckGoodSignal 함수에서 신호의 첫번째 들어오는 값이 정상적으로 들어오고 있는지 비교할 기준값
@@ -16,9 +20,12 @@ public class GameManager : MonoBehaviour {
     private byte[] recvBuf = new byte[1];   // DAVE에서 보내주는 값들을 1차적으로 저장하는 배열
     private byte[] recvData = new byte[20]; // DAVE에서 보내주는 값들을 최종적으로 저장할 배열, 앞으로 써먹을 값들
 
+    [Header("COM PORT Config")]
+    [SerializeField]
+    private string Com_Port_Name;    //컴포트 이름을 저장하는 변수
+    [SerializeField]
+    private int Com_Port_BaudRate;   //보드레이트 값을 저장하는 변수
 
-    public string Com_Port_Name;    //컴포트 이름을 저장하는 변수
-    public int Com_Port_BaudRate;   //보드레이트 값을 저장하는 변수
 
     private void Awake()    // 게임 오브젝트를 생성할 때 최초로 실행됨
     {
