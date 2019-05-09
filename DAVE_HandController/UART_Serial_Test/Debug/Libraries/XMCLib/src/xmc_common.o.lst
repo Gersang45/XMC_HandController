@@ -22,232 +22,232 @@
   22              	 .thumb_func
   24              	XMC_PRIOARRAY_GetHead:
   25              	.LFB123:
-  26              	 .file 1 "C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_common.h"
-   1:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**
-   2:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @file xmc_common.h
-   3:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @date 2016-05-30
-   4:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
-   5:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @cond
-   6:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   *************************************************************************************************
-   7:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * XMClib v2.1.8 - XMC Peripheral Driver Library 
-   8:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
-   9:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Copyright (c) 2015-2016, Infineon Technologies AG
-  10:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * All rights reserved.                        
-  11:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *                                             
-  12:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
-  13:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * following conditions are met:   
-  14:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  15:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
-  16:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer.                        
-  17:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 
-  18:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
-  19:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
-  20:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 
-  21:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
-  22:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * products derived from this software without specific prior written permission.                  
-  23:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  24:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
-  25:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
-  26:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
-  27:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
-  28:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
-  29:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
-  30:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
-  31:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  32:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
-  33:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
-  34:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
-  35:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
-  36:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Change History
-  37:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * --------------
-  38:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
-  39:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 2015-06-20:
-  40:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Initial
-  41:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Brief section updated
-  42:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added XMC_LIB_VERSION macro
-  43:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
-  44:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-02-26:
-  45:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.6
-  46:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *      
-  47:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-05-30:
-  48:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.8
-  49:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
-  50:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @endcond 
-  51:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
-  52:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
-  53:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
-  54:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #ifndef XMC_COMMON_H
-  55:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_COMMON_H
-  56:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
-  57:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include <stddef.h>
-  58:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include <stdint.h>
-  59:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include <stdbool.h>
-  60:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include <string.h>
-  61:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
-  62:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include "xmc_device.h"
-  63:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
-  64:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**
-  65:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup XMClib XMC Peripheral Library
-  66:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @{
-  67:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
-  68:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
-  69:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**
-  70:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup COMMON
-  71:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @brief Common APIs to all peripherals for XMC microcontroller family 
-  72:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @{
-  73:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
-  74:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
-  75:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
-  76:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * MACROS
-  77:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
-  78:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MAJOR_VERSION	(2U)
-  79:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MINOR_VERSION	(1U)
-  80:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_PATCH_VERSION	(8U)
-  81:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  
-  82:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_VERSION         ((XMC_LIB_MAJOR_VERSION << 16U) + (XMC_LIB_MINOR_VERSION << 8U) + X
-  83:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
-  84:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /* Define WEAK attribute */
-  85:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__WEAK)
-  86:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
-  87:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
-  88:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
-  89:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __weak
-  90:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
-  91:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
-  92:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
-  93:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
-  94:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
-  95:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
-  96:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
-  97:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_ASSERT_ENABLE
-  98:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { if(!(exp)) {XMC_AssertHandler(msg, __FILE__, __LINE__);} }
-  99:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #else
- 100:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { ; }
- 101:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 102:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 103:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_DEBUG_ENABLE
- 104:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #include <stdio.h>
- 105:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { printf(__VA_ARGS__); }
- 106:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #else
- 107:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { ; }
- 108:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 109:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 110:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_UNUSED_ARG(x) (void)x
- 111:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 112:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_STRUCT_INIT(m) memset(&m, 0, sizeof(m))
- 113:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 114:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY_DEF(name, size) \
- 115:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_ITEM_t prioarray_m_##name[size + 2]; \
- 116:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_t prioarray_def_##name = {(size), (prioarray_m_##name)};
- 117:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 118:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY(name) \
- 119:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** &prioarray_def_##name
- 120:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 121:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
- 122:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * DATA STRUCTURES
- 123:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
- 124:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 125:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 126:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 127:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_DRIVER_VERSION 
- 128:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
- 129:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t major;
- 130:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t minor;
- 131:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t patch;
- 132:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** } XMC_DRIVER_VERSION_t;
- 133:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 134:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 135:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 136:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 137:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** typedef void *XMC_LIST_t;
- 138:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 139:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 140:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 141:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 142:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY_ITEM
- 143:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
- 144:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   int32_t priority;
- 145:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   int32_t previous;
- 146:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   int32_t next;
- 147:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_ITEM_t;
- 148:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 149:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 150:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 151:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 152:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY
- 153:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
- 154:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   uint32_t size;
- 155:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_PRIOARRAY_ITEM_t *items;
- 156:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_t;
- 157:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 158:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
- 159:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * API PROTOTYPES
- 160:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
- 161:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 162:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #ifdef __cplusplus
- 163:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** extern "C" {
- 164:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 165:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 166:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 167:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 168:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 169:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_AssertHandler(const char *const msg, const char *const file, uint32_t line);
- 170:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 171:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 172:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 173:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 174:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Init(XMC_LIST_t *list);
- 175:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 176:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 177:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 178:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 179:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Add(XMC_LIST_t *list, void *const item);
- 180:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 181:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 182:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 183:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 184:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Remove(XMC_LIST_t *list, void *const item);
- 185:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 186:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 187:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 188:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 189:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** uint32_t XMC_LIST_GetLength(XMC_LIST_t *list);
- 190:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 191:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 192:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 193:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 194:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetHead(XMC_LIST_t *list);
- 195:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 196:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 197:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 198:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 199:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetTail(XMC_LIST_t *list);
- 200:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 201:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 202:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 203:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 204:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Insert(XMC_LIST_t *list, void *prev_item, void *new_item);
- 205:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 206:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 207:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 208:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 209:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Init(XMC_PRIOARRAY_t *prioarray);
- 210:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 211:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 212:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 213:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 214:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Add(XMC_PRIOARRAY_t *prioarray, int32_t item, int32_t priority);
- 215:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 216:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 217:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 218:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 219:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Remove(XMC_PRIOARRAY_t *prioarray, int32_t item);
- 220:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 221:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 222:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 223:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 224:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetHead(XMC_PRIOARRAY_t *prioarray)
- 225:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
+  26              	 .file 1 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_common.h"
+   1:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**
+   2:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @file xmc_common.h
+   3:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @date 2016-05-30
+   4:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+   5:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @cond
+   6:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   *************************************************************************************************
+   7:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * XMClib v2.1.8 - XMC Peripheral Driver Library 
+   8:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+   9:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Copyright (c) 2015-2016, Infineon Technologies AG
+  10:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * All rights reserved.                        
+  11:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *                                             
+  12:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * following conditions are met:   
+  14:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  15:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer.                        
+  17:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 
+  18:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 
+  21:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * products derived from this software without specific prior written permission.                  
+  23:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  24:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  32:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+  35:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+  36:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * Change History
+  37:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * --------------
+  38:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+  39:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 2015-06-20:
+  40:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Initial
+  41:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Brief section updated
+  42:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added XMC_LIB_VERSION macro
+  43:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+  44:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-02-26:
+  45:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.6
+  46:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *      
+  47:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-05-30:
+  48:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.8
+  49:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+  50:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @endcond 
+  51:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+  52:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+  53:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+  54:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #ifndef XMC_COMMON_H
+  55:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_COMMON_H
+  56:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+  57:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include <stddef.h>
+  58:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include <stdint.h>
+  59:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include <stdbool.h>
+  60:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include <string.h>
+  61:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+  62:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #include "xmc_device.h"
+  63:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+  64:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**
+  65:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup XMClib XMC Peripheral Library
+  66:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @{
+  67:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+  68:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+  69:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**
+  70:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup COMMON
+  71:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @brief Common APIs to all peripherals for XMC microcontroller family 
+  72:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * @{
+  73:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+  74:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+  75:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+  76:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * MACROS
+  77:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+  78:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MAJOR_VERSION	(2U)
+  79:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MINOR_VERSION	(1U)
+  80:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_PATCH_VERSION	(8U)
+  81:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  
+  82:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_VERSION         ((XMC_LIB_MAJOR_VERSION << 16U) + (XMC_LIB_MINOR_VERSION << 8U) + X
+  83:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+  84:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /* Define WEAK attribute */
+  85:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__WEAK)
+  86:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
+  87:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+  88:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
+  89:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __weak
+  90:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
+  91:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+  92:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
+  93:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+  94:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
+  95:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
+  96:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+  97:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_ASSERT_ENABLE
+  98:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { if(!(exp)) {XMC_AssertHandler(msg, __FILE__, __LINE__);} }
+  99:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #else
+ 100:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { ; }
+ 101:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 102:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 103:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_DEBUG_ENABLE
+ 104:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #include <stdio.h>
+ 105:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { printf(__VA_ARGS__); }
+ 106:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #else
+ 107:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { ; }
+ 108:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 109:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 110:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_UNUSED_ARG(x) (void)x
+ 111:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 112:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_STRUCT_INIT(m) memset(&m, 0, sizeof(m))
+ 113:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 114:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY_DEF(name, size) \
+ 115:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_ITEM_t prioarray_m_##name[size + 2]; \
+ 116:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_t prioarray_def_##name = {(size), (prioarray_m_##name)};
+ 117:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 118:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY(name) \
+ 119:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** &prioarray_def_##name
+ 120:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 121:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+ 122:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * DATA STRUCTURES
+ 123:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+ 124:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 125:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 126:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 127:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_DRIVER_VERSION 
+ 128:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
+ 129:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t major;
+ 130:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t minor;
+ 131:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t patch;
+ 132:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** } XMC_DRIVER_VERSION_t;
+ 133:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 134:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 135:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 136:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 137:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** typedef void *XMC_LIST_t;
+ 138:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 139:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 140:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 141:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 142:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY_ITEM
+ 143:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
+ 144:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   int32_t priority;
+ 145:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   int32_t previous;
+ 146:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   int32_t next;
+ 147:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_ITEM_t;
+ 148:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 149:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 150:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 151:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 152:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY
+ 153:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
+ 154:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   uint32_t size;
+ 155:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_PRIOARRAY_ITEM_t *items;
+ 156:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_t;
+ 157:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 158:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+ 159:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  * API PROTOTYPES
+ 160:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+ 161:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 162:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #ifdef __cplusplus
+ 163:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** extern "C" {
+ 164:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 165:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 166:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 167:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 168:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 169:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_AssertHandler(const char *const msg, const char *const file, uint32_t line);
+ 170:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 171:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 172:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 173:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 174:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Init(XMC_LIST_t *list);
+ 175:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 176:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 177:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 178:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 179:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Add(XMC_LIST_t *list, void *const item);
+ 180:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 181:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 182:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 183:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 184:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Remove(XMC_LIST_t *list, void *const item);
+ 185:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 186:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 187:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 188:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 189:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** uint32_t XMC_LIST_GetLength(XMC_LIST_t *list);
+ 190:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 191:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 192:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 193:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 194:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetHead(XMC_LIST_t *list);
+ 195:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 196:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 197:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 198:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 199:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetTail(XMC_LIST_t *list);
+ 200:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 201:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 202:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 203:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 204:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Insert(XMC_LIST_t *list, void *prev_item, void *new_item);
+ 205:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 206:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 207:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 208:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 209:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Init(XMC_PRIOARRAY_t *prioarray);
+ 210:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 211:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 212:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 213:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 214:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Add(XMC_PRIOARRAY_t *prioarray, int32_t item, int32_t priority);
+ 215:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 216:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 217:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 218:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 219:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Remove(XMC_PRIOARRAY_t *prioarray, int32_t item);
+ 220:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 221:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 222:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 223:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 224:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetHead(XMC_PRIOARRAY_t *prioarray)
+ 225:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
   27              	 .loc 1 225 0
   28              	 .cfi_startproc
   29              	 
@@ -264,8 +264,8 @@
   40              	.LCFI2:
   41              	 .cfi_def_cfa_register 7
   42 0006 7860     	 str r0,[r7,#4]
- 226:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
- 227:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size].next;
+ 226:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 227:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size].next;
   43              	 .loc 1 227 0
   44 0008 7B68     	 ldr r3,[r7,#4]
   45 000a 5968     	 ldr r1,[r3,#4]
@@ -277,7 +277,7 @@
   51 0016 9B00     	 lsls r3,r3,#2
   52 0018 0B44     	 add r3,r3,r1
   53 001a 9B68     	 ldr r3,[r3,#8]
- 228:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** }
+ 228:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** }
   54              	 .loc 1 228 0
   55 001c 1846     	 mov r0,r3
   56 001e 0C37     	 adds r7,r7,#12
@@ -300,21 +300,21 @@
   74              	 .thumb_func
   76              	XMC_PRIOARRAY_GetItemPriority:
   77              	.LFB125:
- 229:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 230:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 231:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 232:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 233:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetTail(XMC_PRIOARRAY_t *prioarray)
- 234:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
- 235:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
- 236:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size + 1].previous;
- 237:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** }
- 238:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 239:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 240:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 241:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 242:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemPriority(XMC_PRIOARRAY_t *prioarray, int32_t item)
- 243:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
+ 229:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 230:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 231:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 232:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 233:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetTail(XMC_PRIOARRAY_t *prioarray)
+ 234:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
+ 235:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 236:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size + 1].previous;
+ 237:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** }
+ 238:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 239:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 240:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 241:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 242:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemPriority(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 243:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
   78              	 .loc 1 243 0
   79              	 .cfi_startproc
   80              	 
@@ -332,8 +332,8 @@
   92              	 .cfi_def_cfa_register 7
   93 0006 7860     	 str r0,[r7,#4]
   94 0008 3960     	 str r1,[r7]
- 244:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemPriority: item out of range", (item >= 0) && (item < prioarray->
- 245:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].priority;
+ 244:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemPriority: item out of range", (item >= 0) && (item < prioarray->
+ 245:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].priority;
   95              	 .loc 1 245 0
   96 000a 7B68     	 ldr r3,[r7,#4]
   97 000c 5968     	 ldr r1,[r3,#4]
@@ -344,7 +344,7 @@
  102 0016 9B00     	 lsls r3,r3,#2
  103 0018 0B44     	 add r3,r3,r1
  104 001a 1B68     	 ldr r3,[r3]
- 246:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** }
+ 246:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** }
  105              	 .loc 1 246 0
  106 001c 1846     	 mov r0,r3
  107 001e 0C37     	 adds r7,r7,#12
@@ -367,12 +367,12 @@
  125              	 .thumb_func
  127              	XMC_PRIOARRAY_GetItemNext:
  128              	.LFB126:
- 247:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
- 248:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
- 249:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
- 250:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
- 251:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemNext(XMC_PRIOARRAY_t *prioarray, int32_t item)
- 252:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
+ 247:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** 
+ 248:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 249:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 250:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 251:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemNext(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 252:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** {
  129              	 .loc 1 252 0
  130              	 .cfi_startproc
  131              	 
@@ -390,8 +390,8 @@
  143              	 .cfi_def_cfa_register 7
  144 0006 7860     	 str r0,[r7,#4]
  145 0008 3960     	 str r1,[r7]
- 253:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemNext: item out of range", (item >= 0) && (item < prioarray->size
- 254:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].next;
+ 253:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemNext: item out of range", (item >= 0) && (item < prioarray->size
+ 254:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].next;
  146              	 .loc 1 254 0
  147 000a 7B68     	 ldr r3,[r7,#4]
  148 000c 5968     	 ldr r1,[r3,#4]
@@ -402,7 +402,7 @@
  153 0016 9B00     	 lsls r3,r3,#2
  154 0018 0B44     	 add r3,r3,r1
  155 001a 9B68     	 ldr r3,[r3,#8]
- 255:C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** }
+ 255:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_common.h **** }
  156              	 .loc 1 255 0
  157 001c 1846     	 mov r0,r3
  158 001e 0C37     	 adds r7,r7,#12
@@ -1330,7 +1330,7 @@
  885              	.Letext0:
  886              	 .file 3 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
  887              	 .file 4 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 888              	 .file 5 "C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test/Libraries/CMSIS/Include/core_cm4.h"
+ 888              	 .file 5 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/CMSIS/Include/core_cm4.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_common.c
     {standard input}:20     .text.XMC_PRIOARRAY_GetHead:00000000 $t

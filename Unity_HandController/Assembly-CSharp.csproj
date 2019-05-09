@@ -61,7 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Hand_Controller\Scripts\Move.cs" />
+    <Compile Include="Assets\Hand_Controller\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Hand_Controller\Scripts\R_GetSensor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/XMC_HandController/Unity_HandController/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

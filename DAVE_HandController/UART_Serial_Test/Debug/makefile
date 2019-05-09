@@ -49,7 +49,7 @@ LIST_FILES = $(addsuffix .o.lst, $(basename $(OBJS)))
 MAP_FILE = "UART_Serial_Test.map"
 
 TOOLCHAIN_ROOT=C:/DAVEv4/DAVE-4.3.2/eclipse/ARM-GCC-49
-PROJECT_LOC=C:/Users/Lenovo/Desktop/HandController/UART_Serial_Test
+PROJECT_LOC=D:/XMC_HandController/DAVE_HandController/UART_Serial_Test
 
 # All Target
 all: UART_Serial_Test.elf secondary-outputs

@@ -15,21 +15,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   5 .debug_aranges 000008c8  00000000  00000000  00010020  2**3
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000a87e  00000000  00000000  000108e8  2**0
+  6 .debug_info   0000a881  00000000  00000000  000108e8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00001c2d  00000000  00000000  0001b166  2**0
+  7 .debug_abbrev 00001c2d  00000000  00000000  0001b169  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00003d13  00000000  00000000  0001cd93  2**0
+  8 .debug_line   00003da3  00000000  00000000  0001cd96  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00002310  00000000  00000000  00020aa8  2**2
+  9 .debug_frame  00002310  00000000  00000000  00020b3c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00005810  00000000  00000000  00022db8  2**0
+ 10 .debug_str    00005813  00000000  00000000  00022e4c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    000047aa  00000000  00000000  000285c8  2**0
+ 11 .debug_loc    000047aa  00000000  00000000  0002865f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000778  00000000  00000000  0002cd72  2**0
+ 12 .debug_ranges 00000778  00000000  00000000  0002ce09  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .build_attributes 00000435  00000000  00000000  0002d4ea  2**0
+ 13 .build_attributes 00000435  00000000  00000000  0002d581  2**0
                   CONTENTS, READONLY
 
 Disassembly of section .text:
@@ -6235,7 +6235,7 @@ __STATIC_INLINE bool UART_IsTxBusy(const UART_t *const handle)
  800226a:	4770      	bx	lr
 
 0800226c <CB_Timer_20ms>:
-uint8_t Tx_Data[] = { 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 };
+uint8_t Tx_Data[] = { SIGNAL_CHECK,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 };
 //uint8_t Rx_Data[] = { 0};
 //uint8_t state = OFF;
 
@@ -6328,7 +6328,6 @@ int main(void)
  80022e8:	2213      	movs	r2, #19
  80022ea:	f7ff f84d 	bl	8001388 <UART_Transmit>
 			}
-
 			flag = !flag;
  80022ee:	4b08      	ldr	r3, [pc, #32]	; (8002310 <main+0x7c>)
  80022f0:	781b      	ldrb	r3, [r3, #0]

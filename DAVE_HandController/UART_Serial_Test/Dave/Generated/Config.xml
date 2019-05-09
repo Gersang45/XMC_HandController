@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="UART_Serial_Test" Path="C:\Users\Lenovo\Desktop\HandController\UART_Serial_Test">
+<Project MotherSystem_Version="" Name="UART_Serial_Test" Path="D:\XMC_HandController\DAVE_HandController\UART_Serial_Test">
     <COMPILER>
         <Name>ARM_GCC_HOME</Name>
         <Version/>
