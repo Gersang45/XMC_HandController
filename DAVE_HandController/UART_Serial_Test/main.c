@@ -10,6 +10,7 @@
 int8_t flag = OFF;
 uint32_t Timer_20ms_Id;
 uint8_t Tx_Data[] = { SIGNAL_CHECK,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 };
+uint8_t result = 1;
 //uint8_t Rx_Data[] = { 0};
 //uint8_t state = OFF;
 
@@ -43,11 +44,22 @@ int main(void)
 		{
 			if(UART_IsTxBusy(&dhUART_0) != true)	//Tx
 			{
-				//DIGITAL_IO_SetOutputHigh(&dhDIGITAL_OUT_0);	//Check run LED
+				DIGITAL_IO_SetOutputHigh(&dhDIGITAL_OUT_0);	//Check run LED
 				UART_Transmit(&dhUART_0, Tx_Data, sizeof(Tx_Data));	//Tx_Data's data send
 			}
 			flag = !flag;
 		}
 	}
 return 1U;
+}
+
+void ISR_Adc_Measurement_0()
+{
+	result = ADC_MEASUREMENT_GetResult(&ADC_MEASUREMENT_Channel_A);
+	if(result == SIGNAL_CHECK)
+	{
+		result++;
+	}
+	Tx_Data[1] = result;
+	ADC_MEASUREMENT_StartConversion(&dhADC_MEASUREMENT_0);
 }

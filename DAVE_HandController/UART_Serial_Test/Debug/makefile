@@ -13,9 +13,11 @@ RM := rm -rf
 -include Libraries/Newlib/subdir.mk
 -include Dave/Generated/UART/subdir.mk
 -include Dave/Generated/SYSTIMER/subdir.mk
+-include Dave/Generated/GLOBAL_ADC/subdir.mk
 -include Dave/Generated/DIGITAL_IO/subdir.mk
 -include Dave/Generated/CPU_CTRL_XMC4/subdir.mk
 -include Dave/Generated/CLOCK_XMC4/subdir.mk
+-include Dave/Generated/ADC_MEASUREMENT/subdir.mk
 -include Dave/Generated/subdir.mk
 -include subdir.mk
 -include objects.mk

@@ -16,13 +16,320 @@
   16              	 .text
   17              	.Ltext0:
   18              	 .cfi_sections .debug_frame
-  19              	 .section .text.UART_IsTxBusy,"ax",%progbits
+  19              	 .section .text.XMC_GPIO_SetOutputHigh,"ax",%progbits
   20              	 .align 2
   21              	 .thumb
   22              	 .thumb_func
-  24              	UART_IsTxBusy:
-  25              	.LFB264:
-  26              	 .file 1 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART/uart.h"
+  24              	XMC_GPIO_SetOutputHigh:
+  25              	.LFB164:
+  26              	 .file 1 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_gpio.h"
+   1:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+   2:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @file xmc_gpio.h
+   3:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @date 2015-06-20
+   4:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+   5:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @cond
+   6:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   *************************************************************************************************
+   7:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * XMClib v2.1.8 - XMC Peripheral Driver Library 
+   8:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+   9:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Copyright (c) 2015-2016, Infineon Technologies AG
+  10:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * All rights reserved.                        
+  11:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *                                             
+  12:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * following conditions are met:   
+  14:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *                                                                              
+  15:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * disclaimer.                        
+  17:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * 
+  18:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * 
+  21:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * products derived from this software without specific prior written permission.                  
+  23:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *                                                                              
+  24:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *                                                                              
+  32:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+  35:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  36:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Change History
+  37:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * --------------
+  38:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  39:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * 2015-02-20:
+  40:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *     - Initial draft<br>
+  41:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *     - Documentation improved <br>
+  42:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *      
+  43:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * 2015-06-20:
+  44:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *     - Removed version macros and declaration of GetDriverVersion API
+  45:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  46:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @endcond
+  47:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  48:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+  49:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  50:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #ifndef XMC_GPIO_H
+  51:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #define XMC_GPIO_H
+  52:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  53:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+  54:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * HEADER FILES
+  55:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+  56:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  57:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #include "xmc_common.h"
+  58:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  59:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+  60:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @addtogroup XMClib XMC Peripheral Library
+  61:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @{
+  62:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+  63:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  64:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+  65:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @addtogroup GPIO
+  66:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @brief General Purpose Input Output (GPIO) driver for the XMC microcontroller family.
+  67:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  68:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * GPIO driver provide a generic and very flexible software interface for all standard digital I/O 
+  69:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Each port slice has individual interfaces for the operation as General Purpose I/O and it furthe
+  70:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * connectivity to the on-chip periphery and the control for the pad characteristics. 
+  71:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  72:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * The driver is divided into Input and Output mode.
+  73:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  74:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Input mode features:
+  75:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Configuration structure XMC_GPIO_CONFIG_t and initialization function XMC_GPIO_Init()
+  76:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of weak pull-up or pull-down device. Configuration structure XMC_GPIO_MO
+  77:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \if XMC1
+  78:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of input hysteresis. XMC_GPIO_SetInputHysteresis()
+  79:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \endif
+  80:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  81:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * 
+  82:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Output mode features:
+  83:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of push pull/open drain and Alternate output. Configuration structure XM
+  84:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \if XMC4
+  85:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of pad driver strength. Configuration structure XMC_GPIO_OUTPUT_STRENGTH
+  86:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \endif
+  87:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  88:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of initial output level. Configuration structure XMC_GPIO_OUTPUT_LEVEL_t
+  89:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  90:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *@{
+  91:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+  92:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  
+  93:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+  94:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * MACROS
+  95:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+  96:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  97:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #define PORT_IOCR_PC_Pos PORT0_IOCR0_PC0_Pos
+  98:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #define PORT_IOCR_PC_Msk PORT0_IOCR0_PC0_Msk
+  99:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 100:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #define PORT_IOCR_PC_Size 				(8U)
+ 101:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 											
+ 102:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 103:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #define XMC_GPIO_CHECK_OUTPUT_LEVEL(level) ((level == XMC_GPIO_OUTPUT_LEVEL_LOW) || \
+ 104:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****                                             (level == XMC_GPIO_OUTPUT_LEVEL_HIGH))
+ 105:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****                                             
+ 106:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #define XMC_GPIO_CHECK_HWCTRL(hwctrl) ((hwctrl == XMC_GPIO_HWCTRL_DISABLED) || \
+ 107:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****                                        (hwctrl == XMC_GPIO_HWCTRL_PERIPHERAL1) || \
+ 108:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****                                        (hwctrl == XMC_GPIO_HWCTRL_PERIPHERAL2))                    
+ 109:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****                                             
+ 110:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+ 111:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * ENUMS
+ 112:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+ 113:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 114:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 115:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 116:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Defines output level of a pin. Use type \a XMC_GPIO_OUTPUT_LEVEL_t for this enum.
+ 117:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 118:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** typedef enum XMC_GPIO_OUTPUT_LEVEL
+ 119:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 120:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_OUTPUT_LEVEL_LOW  = 0x10000U, /**<  Reset bit */
+ 121:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_OUTPUT_LEVEL_HIGH = 0x1U, 	/**< Set bit  */
+ 122:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** } XMC_GPIO_OUTPUT_LEVEL_t;
+ 123:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 124:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 125:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Defines direct hardware control characteristics of the pin . Use type \a XMC_GPIO_HWCTRL_t for t
+ 126:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 127:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** typedef enum XMC_GPIO_HWCTRL
+ 128:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 129:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_HWCTRL_DISABLED     = 0x0U, /**<  Software control only */
+ 130:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_HWCTRL_PERIPHERAL1  = 0x1U, /**<  HWI0/HWO0 control path can override the software confi
+ 131:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_HWCTRL_PERIPHERAL2  = 0x2U  /**<  HWI1/HWO1 control path can override the software confi
+ 132:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** } XMC_GPIO_HWCTRL_t;
+ 133:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 134:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+ 135:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * DEVICE FAMILY EXTENSIONS
+ 136:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+ 137:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 138:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  #if UC_FAMILY == XMC1
+ 139:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #include "xmc1_gpio.h"
+ 140:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #elif UC_FAMILY == XMC4
+ 141:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #include "xmc4_gpio.h"
+ 142:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #else
+ 143:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #error "xmc_gpio.h: family device not supported"
+ 144:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #endif
+ 145:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 146:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+ 147:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * API PROTOTYPES
+ 148:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+ 149:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 150:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #ifdef __cplusplus
+ 151:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** extern "C" {
+ 152:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** #endif
+ 153:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 154:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 155:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 156:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port	  Constant pointer pointing to GPIO port, to access port registers like Pn_OUT,Pn_O
+ 157:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	  Port pin number.
+ 158:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  config GPIO configuration data structure. Refer data structure @ref XMC_GPIO_CONFIG_t fo
+ 159:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 160:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 161:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 162:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 163:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \if XMC1
+ 164:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Initializes input / output mode settings like, pull up / pull down devices,hysteresis, push pull
+ 165:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Also configures alternate function outputs and clears hardware port control for a selected \a po
+ 166:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \a config provides selected I/O settings. It configures hardware registers Pn_IOCR,Pn_OUT, Pn_OM
+ 167:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \endif
+ 168:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \if XMC4
+ 169:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Initializes input / output mode settings like, pull up / pull down devices,push pull /open drain
+ 170:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Also configures alternate function outputs and clears hardware port control for selected \a port
+ 171:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * It configures hardware registers Pn_IOCR,Pn_OUT,Pn_OMR,Pn_PDISC and Pn_PDR.\n
+ 172:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \endif
+ 173:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 174:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 175:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *  None
+ 176:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 177:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Note:</b><br>
+ 178:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * This API is called in definition of DAVE_init by code generation and therefore should not be exp
+ 179:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * for the normal operation. Use other APIs only after DAVE_init is called successfully (returns DA
+ 180:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 181:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 182:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 183:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 184:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  
+ 185:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** void XMC_GPIO_Init(XMC_GPIO_PORT_t *const port, const uint8_t pin, const XMC_GPIO_CONFIG_t *const c
+ 186:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  
+ 187:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 188:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 189:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port	Constant pointer pointing to GPIO port, to access hardware register Pn_IOCR.
+ 190:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	Port pin number.
+ 191:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  mode input / output functionality selection. Refer @ref XMC_GPIO_MODE_t for valid values
+ 192:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 193:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 194:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 195:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 196:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Sets digital input and output driver functionality and characteristics of a GPIO port pin. It co
+ 197:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * registers Pn_IOCR. \a mode is initially configured during initialization in XMC_GPIO_Init(). Cal
+ 198:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * the port direction functionality as needed later in the program.
+ 199:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 200:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 201:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *  None
+ 202:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 203:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 204:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 205:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** void XMC_GPIO_SetMode(XMC_GPIO_PORT_t *const port, const uint8_t pin, const XMC_GPIO_MODE_t mode);
+ 206:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 207:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 208:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 209:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 210:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port	 Constant pointer pointing to GPIO port, to access hardware register Pn_OMR.
+ 211:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	 Port pin number.
+ 212:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  level output level selection. Refer @ref XMC_GPIO_OUTPUT_LEVEL_t for valid values.
+ 213:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 214:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 215:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 216:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 217:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Set port pin output level to high or low.It configures hardware registers Pn_OMR.\a level is ini
+ 218:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * configured during initialization in XMC_GPIO_Init(). Call this API to alter output level as need
+ 219:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 220:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 221:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *  XMC_GPIO_SetOutputHigh(), XMC_GPIO_SetOutputLow().
+ 222:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 223:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Note:</b><br>
+ 224:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Prior to this api, user has to configure port pin to output mode using XMC_GPIO_SetMode().
+ 225:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 226:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 227:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 228:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 229:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_SetOutputLevel(XMC_GPIO_PORT_t *const port, const uint8_t pin, const 
+ 230:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 231:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_SetOutputLevel: Invalid port", XMC_GPIO_CHECK_OUTPUT_PORT(port));
+ 232:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_SetOutputLevel: Invalid output level", XMC_GPIO_CHECK_OUTPUT_LEVEL(level));
+ 233:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   
+ 234:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   port->OMR = (uint32_t)level << pin;
+ 235:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** }
+ 236:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 237:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 238:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 239:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port constant pointer pointing to GPIO port, to access hardware register Pn_OMR.
+ 240:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	Port pin number.
+ 241:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 242:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 243:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 244:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 245:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *  Sets port pin output to high. It configures hardware registers Pn_OMR.
+ 246:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 247:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *  \par<b>Related APIs:</b><BR>
+ 248:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *  XMC_GPIO_SetOutputLow()
+ 249:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 250:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Note:</b><br>
+ 251:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Prior to this api, user has to configure port pin to output mode using XMC_GPIO_SetMode().\n
+ 252:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  * Register Pn_OMR is virtual and does not contain any flip-flop. A read action delivers the value 
+ 253:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 254:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 255:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 256:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_SetOutputHigh(XMC_GPIO_PORT_t *const port, const uint8_t pin)
+ 257:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** {
+  27              	 .loc 1 257 0
+  28              	 .cfi_startproc
+  29              	 
+  30              	 
+  31              	 
+  32 0000 80B4     	 push {r7}
+  33              	.LCFI0:
+  34              	 .cfi_def_cfa_offset 4
+  35              	 .cfi_offset 7,-4
+  36 0002 83B0     	 sub sp,sp,#12
+  37              	.LCFI1:
+  38              	 .cfi_def_cfa_offset 16
+  39 0004 00AF     	 add r7,sp,#0
+  40              	.LCFI2:
+  41              	 .cfi_def_cfa_register 7
+  42 0006 7860     	 str r0,[r7,#4]
+  43 0008 0B46     	 mov r3,r1
+  44 000a FB70     	 strb r3,[r7,#3]
+ 258:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_SetOutputHigh: Invalid port", XMC_GPIO_CHECK_OUTPUT_PORT(port));
+ 259:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 260:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h ****   port->OMR = (uint32_t)0x1U << pin;
+  45              	 .loc 1 260 0
+  46 000c FB78     	 ldrb r3,[r7,#3]
+  47 000e 0122     	 movs r2,#1
+  48 0010 9A40     	 lsls r2,r2,r3
+  49 0012 7B68     	 ldr r3,[r7,#4]
+  50 0014 5A60     	 str r2,[r3,#4]
+ 261:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc\xmc_gpio.h **** }
+  51              	 .loc 1 261 0
+  52 0016 0C37     	 adds r7,r7,#12
+  53              	.LCFI3:
+  54              	 .cfi_def_cfa_offset 4
+  55 0018 BD46     	 mov sp,r7
+  56              	.LCFI4:
+  57              	 .cfi_def_cfa_register 13
+  58              	 
+  59 001a 5DF8047B 	 ldr r7,[sp],#4
+  60              	.LCFI5:
+  61              	 .cfi_restore 7
+  62              	 .cfi_def_cfa_offset 0
+  63 001e 7047     	 bx lr
+  64              	 .cfi_endproc
+  65              	.LFE164:
+  67              	 .section .text.UART_IsTxBusy,"ax",%progbits
+  68              	 .align 2
+  69              	 .thumb
+  70              	 .thumb_func
+  72              	UART_IsTxBusy:
+  73              	.LFB264:
+  74              	 .file 2 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART/uart.h"
    1:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h **** /**
    2:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h ****  * @file uart.h
    3:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h ****  * @date 2015-12-17
@@ -2140,82 +2447,400 @@
 2115:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h ****  * */
 2116:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h **** __STATIC_INLINE bool UART_IsTxBusy(const UART_t *const handle)
 2117:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h **** {
-  27              	 .loc 1 2117 0
-  28              	 .cfi_startproc
-  29              	 
-  30              	 
-  31              	 
-  32 0000 80B4     	 push {r7}
-  33              	.LCFI0:
-  34              	 .cfi_def_cfa_offset 4
-  35              	 .cfi_offset 7,-4
-  36 0002 83B0     	 sub sp,sp,#12
-  37              	.LCFI1:
-  38              	 .cfi_def_cfa_offset 16
-  39 0004 00AF     	 add r7,sp,#0
-  40              	.LCFI2:
-  41              	 .cfi_def_cfa_register 7
-  42 0006 7860     	 str r0,[r7,#4]
+  75              	 .loc 2 2117 0
+  76              	 .cfi_startproc
+  77              	 
+  78              	 
+  79              	 
+  80 0000 80B4     	 push {r7}
+  81              	.LCFI6:
+  82              	 .cfi_def_cfa_offset 4
+  83              	 .cfi_offset 7,-4
+  84 0002 83B0     	 sub sp,sp,#12
+  85              	.LCFI7:
+  86              	 .cfi_def_cfa_offset 16
+  87 0004 00AF     	 add r7,sp,#0
+  88              	.LCFI8:
+  89              	 .cfi_def_cfa_register 7
+  90 0006 7860     	 str r0,[r7,#4]
 2118:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h ****   XMC_ASSERT("UART APP handle invalid", (handle != NULL))
 2119:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h ****   return (handle->runtime->tx_busy);
-  43              	 .loc 1 2119 0
-  44 0008 7B68     	 ldr r3,[r7,#4]
-  45 000a 9B68     	 ldr r3,[r3,#8]
-  46 000c 1B7E     	 ldrb r3,[r3,#24]
-  47 000e DBB2     	 uxtb r3,r3
+  91              	 .loc 2 2119 0
+  92 0008 7B68     	 ldr r3,[r7,#4]
+  93 000a 9B68     	 ldr r3,[r3,#8]
+  94 000c 1B7E     	 ldrb r3,[r3,#24]
+  95 000e DBB2     	 uxtb r3,r3
 2120:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART\uart.h **** }
-  48              	 .loc 1 2120 0
-  49 0010 1846     	 mov r0,r3
-  50 0012 0C37     	 adds r7,r7,#12
-  51              	.LCFI3:
-  52              	 .cfi_def_cfa_offset 4
-  53 0014 BD46     	 mov sp,r7
-  54              	.LCFI4:
-  55              	 .cfi_def_cfa_register 13
-  56              	 
-  57 0016 5DF8047B 	 ldr r7,[sp],#4
-  58              	.LCFI5:
-  59              	 .cfi_restore 7
-  60              	 .cfi_def_cfa_offset 0
-  61 001a 7047     	 bx lr
-  62              	 .cfi_endproc
-  63              	.LFE264:
-  65              	 .global flag
-  66              	 .section .bss.flag,"aw",%nobits
-  69              	flag:
-  70 0000 00       	 .space 1
-  71              	 .comm Timer_20ms_Id,4,4
-  72              	 .global Tx_Data
-  73              	 .section .data.Tx_Data,"aw",%progbits
-  74              	 .align 2
-  77              	Tx_Data:
-  78 0000 00       	 .byte 0
-  79 0001 01       	 .byte 1
-  80 0002 02       	 .byte 2
-  81 0003 03       	 .byte 3
-  82 0004 04       	 .byte 4
-  83 0005 05       	 .byte 5
-  84 0006 06       	 .byte 6
-  85 0007 07       	 .byte 7
-  86 0008 08       	 .byte 8
-  87 0009 09       	 .byte 9
-  88 000a 0A       	 .byte 10
-  89 000b 0B       	 .byte 11
-  90 000c 0C       	 .byte 12
-  91 000d 0D       	 .byte 13
-  92 000e 0E       	 .byte 14
-  93 000f 0F       	 .byte 15
-  94 0010 10       	 .byte 16
-  95 0011 11       	 .byte 17
-  96 0012 12       	 .byte 18
-  97 0013 00       	 .section .text.CB_Timer_20ms,"ax",%progbits
-  98              	 .align 2
-  99              	 .global CB_Timer_20ms
- 100              	 .thumb
- 101              	 .thumb_func
- 103              	CB_Timer_20ms:
- 104              	.LFB270:
- 105              	 .file 2 "../main.c"
+  96              	 .loc 2 2120 0
+  97 0010 1846     	 mov r0,r3
+  98 0012 0C37     	 adds r7,r7,#12
+  99              	.LCFI9:
+ 100              	 .cfi_def_cfa_offset 4
+ 101 0014 BD46     	 mov sp,r7
+ 102              	.LCFI10:
+ 103              	 .cfi_def_cfa_register 13
+ 104              	 
+ 105 0016 5DF8047B 	 ldr r7,[sp],#4
+ 106              	.LCFI11:
+ 107              	 .cfi_restore 7
+ 108              	 .cfi_def_cfa_offset 0
+ 109 001a 7047     	 bx lr
+ 110              	 .cfi_endproc
+ 111              	.LFE264:
+ 113              	 .section .text.DIGITAL_IO_SetOutputHigh,"ax",%progbits
+ 114              	 .align 2
+ 115              	 .thumb
+ 116              	 .thumb_func
+ 118              	DIGITAL_IO_SetOutputHigh:
+ 119              	.LFB266:
+ 120              	 .file 3 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO/digital_io.h"
+   1:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /*
+   2:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+   3:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * @file digital_io.h
+   4:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * @date 2016-07-08
+   5:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+   6:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * NOTE:
+   7:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * This file is generated by DAVE. Any manual modification done to this file will be lost when the 
+   8:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+   9:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * @cond
+  10:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  **************************************************************************************************
+  11:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * DIGITAL_IO v4.0.16 - The DIGITAL_IO APP is used to configure a port pin as digital Input/Output.
+  12:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  13:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * Copyright (c) 2015-2016, Infineon Technologies AG
+  14:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * All rights reserved.
+  15:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  16:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  17:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * following conditions are met:
+  18:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  19:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *   Redistributions of source code must retain the above copyright notice, this list of conditions
+  20:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *   disclaimer.
+  21:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  22:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *   Redistributions in binary form must reproduce the above copyright notice, this list of conditi
+  23:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *   following disclaimer in the documentation and/or other materials provided with the distributio
+  24:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  25:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *   Neither the name of the copyright holders nor the names of its contributors may be used to end
+  26:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *   products derived from this software without specific prior written permission.
+  27:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  28:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  29:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  30:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  31:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  32:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  33:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  34:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  35:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  36:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  37:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * with Infineon Technologies AG (dave@infineon.com).
+  38:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  **************************************************************************************************
+  39:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  40:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * Change History
+  41:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * --------------
+  42:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  43:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * 2015-02-16
+  44:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *     - Initial version
+  45:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  46:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * 2015-04-22
+  47:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *     - XMC_ASSERT is added in static inline functions.<br>
+  48:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  49:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * 2015-06-20
+  50:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *     - Version check added for XMCLib dependency.<br>
+  51:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  52:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * 2015-12-22
+  53:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *     - Added hardware controlled IO feature.
+  54:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * 2016-07-08:
+  55:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *     - Fixed incorrect case for an included header.<br>
+  56:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  57:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * @endcond
+  58:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  *
+  59:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  */
+  60:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+  61:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**************************************************************************************************
+  62:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * HEADER FILES
+  63:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  **************************************************************************************************
+  64:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+  65:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #ifndef DIGITAL_IO_H
+  66:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #define DIGITAL_IO_H
+  67:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+  68:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #include <xmc_gpio.h>
+  69:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #include <DAVE_Common.h>
+  70:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #include "digital_io_conf.h"
+  71:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+  72:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**************************************************************************************************
+  73:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * MACROS
+  74:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  **************************************************************************************************
+  75:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #if (!((XMC_LIB_MAJOR_VERSION == 2U) && \
+  76:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****        (XMC_LIB_MINOR_VERSION >= 0U) && \
+  77:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****        (XMC_LIB_PATCH_VERSION >= 0U)))
+  78:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #error "DIGITAL_IO requires XMC Peripheral Library v2.0.0 or higher"
+  79:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #endif
+  80:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+  81:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  /*************************************************************************************************
+  82:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * ENUMS
+  83:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  **************************************************************************************************
+  84:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+  85:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+  86:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @ingroup DIGITAL_IO_enumerations
+  87:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @{
+  88:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+  89:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+  90:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+  91:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @brief Initialization status of DIGITAL_IO APP.
+  92:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+  93:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** typedef enum DIGITAL_IO_STATUS
+  94:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** {
+  95:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****   DIGITAL_IO_STATUS_OK = 0U,/**< 0=Status OK */
+  96:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****   DIGITAL_IO_STATUS_FAILURE = 1U/**< 1=Status Failed */
+  97:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** } DIGITAL_IO_STATUS_t;
+  98:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+  99:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+ 100:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @}
+ 101:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+ 102:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 103:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**************************************************************************************************
+ 104:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * DATA STRUCTURES
+ 105:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  **************************************************************************************************
+ 106:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+ 107:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @ingroup DIGITAL_IO_datastructures
+ 108:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @{
+ 109:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+ 110:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 111:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+ 112:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @brief Initialization data structure of DIGITAL_IO APP
+ 113:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+ 114:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** typedef struct DIGITAL_IO
+ 115:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** {
+ 116:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****   XMC_GPIO_PORT_t *const gpio_port;             /**< port number */
+ 117:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****   const XMC_GPIO_CONFIG_t gpio_config;          /**< mode, initial output level and pad driver stre
+ 118:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****   const uint8_t gpio_pin;                       /**< pin number */
+ 119:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****   const XMC_GPIO_HWCTRL_t hwctrl;               /**< Hardware port control */
+ 120:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** } DIGITAL_IO_t;
+ 121:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 122:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 123:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+ 124:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @}
+ 125:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+ 126:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 127:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 128:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**************************************************************************************************
+ 129:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  * API Prototypes
+ 130:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****  **************************************************************************************************
+ 131:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 132:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 133:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #ifdef __cplusplus
+ 134:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** extern "C" {
+ 135:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** #endif
+ 136:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 137:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+ 138:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @ingroup DIGITAL_IO_apidoc
+ 139:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @{
+ 140:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+ 141:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 142:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 143:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 144:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+ 145:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @brief Get DIGITAL_IO APP version
+ 146:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @return DAVE_APP_VERSION_t APP version information (major, minor and patch number)
+ 147:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 148:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * \par<b>Description: </b><br>
+ 149:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * The function can be used to check application software compatibility with a
+ 150:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * specific version of the APP.
+ 151:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 152:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * Example Usage:
+ 153:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 154:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @code
+ 155:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * #include <DAVE.h>
+ 156:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 157:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * int main(void)
+ 158:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * {
+ 159:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   DAVE_STATUS_t init_status;
+ 160:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   DAVE_APP_VERSION_t version;
+ 161:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 162:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   // Initialize DIGITAL_IO APP:
+ 163:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   // DIGITAL_IO_Init() is called from within DAVE_Init().
+ 164:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   init_status = DAVE_Init();
+ 165:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   if(init_status == DAVE_STATUS_SUCCESS)
+ 166:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   {
+ 167:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     version = DIGITAL_IO_GetAppVersion();
+ 168:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     if (version.major != 4U) {
+ 169:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     // Probably, not the right version.
+ 170:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     }
+ 171:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   }
+ 172:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 173:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     // More code here
+ 174:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     while(1) {
+ 175:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 176:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     }
+ 177:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     return (1);
+ 178:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *  }
+ 179:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @endcode<BR>
+ 180:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+ 181:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 182:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** DAVE_APP_VERSION_t DIGITAL_IO_GetAppVersion(void);
+ 183:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 184:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+ 185:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 186:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @brief Function to initialize the port pin as per UI settings.
+ 187:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @param handler Pointer pointing to APP data structure. Refer @ref DIGITAL_IO_t for details.
+ 188:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @return DIGITAL_IO_STATUS_t DIGITAL_IO APP status. Refer @ref DIGITAL_IO_STATUS_t structure for d
+ 189:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 190:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * \par<b>Description:</b><br>
+ 191:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * This function initializes GPIO port registers IOCR,PDISC,OMR,PDR/PHCR to configure pin direction,
+ 192:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * and pad driver strength/hysteresis.
+ 193:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 194:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * \par<b>Related APIs:</b><BR>
+ 195:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * None
+ 196:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 197:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * Example Usage:
+ 198:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @code
+ 199:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * #include <DAVE.h>//Declarations from DAVE Code Generation (includes SFR declaration)
+ 200:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * int main(void)
+ 201:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * {
+ 202:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   DAVE_STATUS_t status;
+ 203:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   status = DAVE_Init();  //(DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_0) is called within DAVE_In
+ 204:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   if(status == DAVE_STATUS_SUCCESS)
+ 205:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   {
+ 206:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     XMC_DEBUG("DAVE Apps initialization success\n");
+ 207:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   }
+ 208:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   else
+ 209:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   {
+ 210:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     XMC_DEBUG(("DAVE Apps initialization failed with status %d\n", status));
+ 211:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     while(1U)
+ 212:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     {
+ 213:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     }
+ 214:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   }
+ 215:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   //Placeholder for user application code. The while loop below can be replaced with user applica
+ 216:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   while(1U)
+ 217:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   {
+ 218:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   }
+ 219:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   return 1U;
+ 220:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *  }
+ 221:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *  @endcode
+ 222:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+ 223:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 224:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** DIGITAL_IO_STATUS_t DIGITAL_IO_Init(const DIGITAL_IO_t *const handler);
+ 225:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 226:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** /**
+ 227:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 228:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @brief Function to set port pin high.
+ 229:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @param handler Pointer pointing to APP data structure. Refer @ref DIGITAL_IO_t for details.
+ 230:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @return None
+ 231:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 232:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * \par<b>Description:</b><br>
+ 233:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * This function configures port output modification register Pn_OMR, to make port pin to high level
+ 234:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 235:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * \par<b>Related APIs:</b><BR>
+ 236:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *  DIGITAL_IO_SetOutputLow()
+ 237:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 238:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * Example Usage:
+ 239:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * @code
+ 240:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * #include <DAVE.h>//Declarations from DAVE Code Generation (includes SFR declaration)
+ 241:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * int main(void)
+ 242:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * {
+ 243:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   DAVE_STATUS_t status;
+ 244:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   status = DAVE_Init();  //(DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_0) is called within DAVE_In
+ 245:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   if(status == DAVE_STATUS_SUCCESS)
+ 246:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   {
+ 247:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     XMC_DEBUG("DAVE Apps initialization success\n");
+ 248:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   }
+ 249:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   else
+ 250:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   {
+ 251:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     XMC_DEBUG(("DAVE Apps initialization failed with status %d\n", status));
+ 252:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     while(1U)
+ 253:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     {
+ 254:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     }
+ 255:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   }
+ 256:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   //Placeholder for user application code. The while loop below can be replaced with user applica
+ 257:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   DIGITAL_IO_SetOutputHigh(&DIGITAL_IO_0);
+ 258:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   while(1U)
+ 259:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   {
+ 260:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *     // Add application code here
+ 261:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   }
+ 262:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *
+ 263:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *   return (1);
+ 264:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** * }
+ 265:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** *  @endcode
+ 266:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** */
+ 267:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** 
+ 268:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** __STATIC_INLINE void DIGITAL_IO_SetOutputHigh(const DIGITAL_IO_t *const handler)
+ 269:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** {
+ 121              	 .loc 3 269 0
+ 122              	 .cfi_startproc
+ 123              	 
+ 124              	 
+ 125 0000 80B5     	 push {r7,lr}
+ 126              	.LCFI12:
+ 127              	 .cfi_def_cfa_offset 8
+ 128              	 .cfi_offset 7,-8
+ 129              	 .cfi_offset 14,-4
+ 130 0002 82B0     	 sub sp,sp,#8
+ 131              	.LCFI13:
+ 132              	 .cfi_def_cfa_offset 16
+ 133 0004 00AF     	 add r7,sp,#0
+ 134              	.LCFI14:
+ 135              	 .cfi_def_cfa_register 7
+ 136 0006 7860     	 str r0,[r7,#4]
+ 270:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****   XMC_ASSERT("DIGITAL_IO_SetOutputHigh: handler null pointer", handler != NULL);
+ 271:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h ****   XMC_GPIO_SetOutputHigh(handler->gpio_port, handler->gpio_pin);
+ 137              	 .loc 3 271 0
+ 138 0008 7B68     	 ldr r3,[r7,#4]
+ 139 000a 1A68     	 ldr r2,[r3]
+ 140 000c 7B68     	 ldr r3,[r7,#4]
+ 141 000e 1B7C     	 ldrb r3,[r3,#16]
+ 142 0010 1046     	 mov r0,r2
+ 143 0012 1946     	 mov r1,r3
+ 144 0014 FFF7FEFF 	 bl XMC_GPIO_SetOutputHigh
+ 272:D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO\digital_io.h **** }
+ 145              	 .loc 3 272 0
+ 146 0018 0837     	 adds r7,r7,#8
+ 147              	.LCFI15:
+ 148              	 .cfi_def_cfa_offset 8
+ 149 001a BD46     	 mov sp,r7
+ 150              	.LCFI16:
+ 151              	 .cfi_def_cfa_register 13
+ 152              	 
+ 153 001c 80BD     	 pop {r7,pc}
+ 154              	 .cfi_endproc
+ 155              	.LFE266:
+ 157              	 .global flag
+ 158 001e 00BF     	 .section .bss.flag,"aw",%nobits
+ 161              	flag:
+ 162 0000 00       	 .space 1
+ 163              	 .comm Timer_20ms_Id,4,4
+ 164              	 .global Tx_Data
+ 165              	 .section .data.Tx_Data,"aw",%progbits
+ 166              	 .align 2
+ 169              	Tx_Data:
+ 170 0000 00       	 .byte 0
+ 171 0001 01       	 .byte 1
+ 172 0002 02       	 .byte 2
+ 173 0003 03       	 .byte 3
+ 174 0004 04       	 .byte 4
+ 175 0005 05       	 .byte 5
+ 176 0006 06       	 .byte 6
+ 177 0007 07       	 .byte 7
+ 178 0008 08       	 .byte 8
+ 179 0009 09       	 .byte 9
+ 180 000a 0A       	 .byte 10
+ 181 000b 0B       	 .byte 11
+ 182 000c 0C       	 .byte 12
+ 183 000d 0D       	 .byte 13
+ 184 000e 0E       	 .byte 14
+ 185 000f 0F       	 .byte 15
+ 186 0010 10       	 .byte 16
+ 187 0011 11       	 .byte 17
+ 188 0012 12       	 .byte 18
+ 189              	 .global result
+ 190 0013 00       	 .section .data.result,"aw",%progbits
+ 193              	result:
+ 194 0000 01       	 .byte 1
+ 195              	 .section .text.CB_Timer_20ms,"ax",%progbits
+ 196              	 .align 2
+ 197              	 .global CB_Timer_20ms
+ 198              	 .thumb
+ 199              	 .thumb_func
+ 201              	CB_Timer_20ms:
+ 202              	.LFB347:
+ 203              	 .file 4 "../main.c"
    1:../main.c     **** #include <DAVE.h>
    2:../main.c     **** 
    3:../main.c     **** //1.4 Rx  -> Orange
@@ -2228,207 +2853,296 @@
   10:../main.c     **** int8_t flag = OFF;
   11:../main.c     **** uint32_t Timer_20ms_Id;
   12:../main.c     **** uint8_t Tx_Data[] = { SIGNAL_CHECK,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 };
-  13:../main.c     **** //uint8_t Rx_Data[] = { 0};
-  14:../main.c     **** //uint8_t state = OFF;
-  15:../main.c     **** 
-  16:../main.c     **** void CB_Timer_20ms()
-  17:../main.c     **** {
- 106              	 .loc 2 17 0
- 107              	 .cfi_startproc
- 108              	 
- 109              	 
- 110              	 
- 111 0000 80B4     	 push {r7}
- 112              	.LCFI6:
- 113              	 .cfi_def_cfa_offset 4
- 114              	 .cfi_offset 7,-4
- 115 0002 00AF     	 add r7,sp,#0
- 116              	.LCFI7:
- 117              	 .cfi_def_cfa_register 7
-  18:../main.c     **** 	flag = !flag;
- 118              	 .loc 2 18 0
- 119 0004 074B     	 ldr r3,.L4
- 120 0006 1B78     	 ldrb r3,[r3]
- 121 0008 5BB2     	 sxtb r3,r3
- 122 000a 002B     	 cmp r3,#0
- 123 000c 0CBF     	 ite eq
- 124 000e 0123     	 moveq r3,#1
- 125 0010 0023     	 movne r3,#0
- 126 0012 DBB2     	 uxtb r3,r3
- 127 0014 DAB2     	 uxtb r2,r3
- 128 0016 034B     	 ldr r3,.L4
- 129 0018 1A70     	 strb r2,[r3]
-  19:../main.c     **** }
- 130              	 .loc 2 19 0
- 131 001a BD46     	 mov sp,r7
- 132              	.LCFI8:
- 133              	 .cfi_def_cfa_register 13
- 134              	 
- 135 001c 5DF8047B 	 ldr r7,[sp],#4
- 136              	.LCFI9:
- 137              	 .cfi_restore 7
- 138              	 .cfi_def_cfa_offset 0
- 139 0020 7047     	 bx lr
- 140              	.L5:
- 141 0022 00BF     	 .align 2
- 142              	.L4:
- 143 0024 00000000 	 .word flag
- 144              	 .cfi_endproc
- 145              	.LFE270:
- 147              	 .section .text.main,"ax",%progbits
- 148              	 .align 2
- 149              	 .global main
- 150              	 .thumb
- 151              	 .thumb_func
- 153              	main:
- 154              	.LFB271:
-  20:../main.c     **** 
-  21:../main.c     **** int main(void)
-  22:../main.c     **** {
- 155              	 .loc 2 22 0
- 156              	 .cfi_startproc
- 157              	 
- 158              	 
- 159 0000 80B5     	 push {r7,lr}
- 160              	.LCFI10:
- 161              	 .cfi_def_cfa_offset 8
- 162              	 .cfi_offset 7,-8
- 163              	 .cfi_offset 14,-4
- 164 0002 82B0     	 sub sp,sp,#8
- 165              	.LCFI11:
- 166              	 .cfi_def_cfa_offset 16
- 167 0004 00AF     	 add r7,sp,#0
- 168              	.LCFI12:
- 169              	 .cfi_def_cfa_register 7
-  23:../main.c     **** 	DAVE_STATUS_t status;
-  24:../main.c     **** 	status = DAVE_Init();           /* Initialization of DAVE APPs  */
- 170              	 .loc 2 24 0
- 171 0006 FFF7FEFF 	 bl DAVE_Init
- 172 000a 0346     	 mov r3,r0
- 173 000c FB71     	 strb r3,[r7,#7]
-  25:../main.c     **** 
-  26:../main.c     **** 	if(status != DAVE_STATUS_SUCCESS)
- 174              	 .loc 2 26 0
- 175 000e FB79     	 ldrb r3,[r7,#7]
- 176 0010 002B     	 cmp r3,#0
- 177 0012 00D0     	 beq .L7
- 178              	.L8:
-  27:../main.c     **** 	{
-  28:../main.c     **** 		/* Placeholder for error handler code. The while loop below can be replaced with an user error ha
-  29:../main.c     **** 		XMC_DEBUG("DAVE APPs initialization failed\n");
-  30:../main.c     **** 
-  31:../main.c     **** 		while(1U)
-  32:../main.c     **** 		{
-  33:../main.c     **** 			//Is Error
-  34:../main.c     **** 		}
- 179              	 .loc 2 34 0 discriminator 1
- 180 0014 FEE7     	 b .L8
- 181              	.L7:
-  35:../main.c     **** 	}
-  36:../main.c     **** 
-  37:../main.c     **** 	Timer_20ms_Id = SYSTIMER_CreateTimer(20000, SYSTIMER_MODE_PERIODIC, (void*) CB_Timer_20ms, NULL);	
- 182              	 .loc 2 37 0
- 183 0016 44F62060 	 movw r0,#20000
- 184 001a 0121     	 movs r1,#1
- 185 001c 154A     	 ldr r2,.L12
- 186 001e 0023     	 movs r3,#0
- 187 0020 FFF7FEFF 	 bl SYSTIMER_CreateTimer
- 188 0024 0246     	 mov r2,r0
- 189 0026 144B     	 ldr r3,.L12+4
- 190 0028 1A60     	 str r2,[r3]
-  38:../main.c     **** 	SYSTIMER_StartTimer(Timer_20ms_Id);	//20ms start Timer!
- 191              	 .loc 2 38 0
- 192 002a 134B     	 ldr r3,.L12+4
- 193 002c 1B68     	 ldr r3,[r3]
- 194 002e 1846     	 mov r0,r3
- 195 0030 FFF7FEFF 	 bl SYSTIMER_StartTimer
- 196              	.L11:
-  39:../main.c     **** 		/* Placeholder for user application code. The while loop below can be replaced with user applicat
-  40:../main.c     **** 	while(1U)
-  41:../main.c     **** 	{
-  42:../main.c     **** 		if(flag == ON)
- 197              	 .loc 2 42 0
- 198 0034 114B     	 ldr r3,.L12+8
- 199 0036 1B78     	 ldrb r3,[r3]
- 200 0038 5BB2     	 sxtb r3,r3
- 201 003a 012B     	 cmp r3,#1
- 202 003c 18D1     	 bne .L9
-  43:../main.c     **** 		{
-  44:../main.c     **** 			if(UART_IsTxBusy(&dhUART_0) != true)	//Tx
- 203              	 .loc 2 44 0
- 204 003e 1048     	 ldr r0,.L12+12
- 205 0040 FFF7FEFF 	 bl UART_IsTxBusy
- 206 0044 0346     	 mov r3,r0
- 207 0046 83F00103 	 eor r3,r3,#1
- 208 004a DBB2     	 uxtb r3,r3
- 209 004c 002B     	 cmp r3,#0
- 210 004e 04D0     	 beq .L10
-  45:../main.c     **** 			{
-  46:../main.c     **** 				//DIGITAL_IO_SetOutputHigh(&dhDIGITAL_OUT_0);	//Check run LED
-  47:../main.c     **** 				UART_Transmit(&dhUART_0, Tx_Data, sizeof(Tx_Data));	//Tx_Data's data send
- 211              	 .loc 2 47 0
- 212 0050 0B48     	 ldr r0,.L12+12
- 213 0052 0C49     	 ldr r1,.L12+16
- 214 0054 1322     	 movs r2,#19
- 215 0056 FFF7FEFF 	 bl UART_Transmit
- 216              	.L10:
-  48:../main.c     **** 			}
-  49:../main.c     **** 			flag = !flag;
- 217              	 .loc 2 49 0
- 218 005a 084B     	 ldr r3,.L12+8
- 219 005c 1B78     	 ldrb r3,[r3]
- 220 005e 5BB2     	 sxtb r3,r3
- 221 0060 002B     	 cmp r3,#0
- 222 0062 0CBF     	 ite eq
- 223 0064 0123     	 moveq r3,#1
- 224 0066 0023     	 movne r3,#0
- 225 0068 DBB2     	 uxtb r3,r3
- 226 006a DAB2     	 uxtb r2,r3
- 227 006c 034B     	 ldr r3,.L12+8
- 228 006e 1A70     	 strb r2,[r3]
- 229              	.L9:
-  50:../main.c     **** 		}
-  51:../main.c     **** 	}
- 230              	 .loc 2 51 0
- 231 0070 E0E7     	 b .L11
- 232              	.L13:
- 233 0072 00BF     	 .align 2
- 234              	.L12:
- 235 0074 00000000 	 .word CB_Timer_20ms
- 236 0078 00000000 	 .word Timer_20ms_Id
- 237 007c 00000000 	 .word flag
- 238 0080 00000000 	 .word dhUART_0
- 239 0084 00000000 	 .word Tx_Data
- 240              	 .cfi_endproc
- 241              	.LFE271:
- 243              	 .text
- 244              	.Letext0:
- 245              	 .file 3 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
- 246              	 .file 4 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 247              	 .file 5 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_gpio.h"
- 248              	 .file 6 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc4_gpio.h"
- 249              	 .file 7 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_usic.h"
- 250              	 .file 8 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_uart.h"
- 251              	 .file 9 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIMER/systimer.h"
- 252              	 .file 10 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DAVE.h"
- 253              	 .file 11 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/CMSIS/Include/core_cm4.h"
- 254              	 .file 12 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
- 255              	 .file 13 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART/uart_extern.h"
+  13:../main.c     **** uint8_t result = 1;
+  14:../main.c     **** //uint8_t Rx_Data[] = { 0};
+  15:../main.c     **** //uint8_t state = OFF;
+  16:../main.c     **** 
+  17:../main.c     **** void CB_Timer_20ms()
+  18:../main.c     **** {
+ 204              	 .loc 4 18 0
+ 205              	 .cfi_startproc
+ 206              	 
+ 207              	 
+ 208              	 
+ 209 0000 80B4     	 push {r7}
+ 210              	.LCFI17:
+ 211              	 .cfi_def_cfa_offset 4
+ 212              	 .cfi_offset 7,-4
+ 213 0002 00AF     	 add r7,sp,#0
+ 214              	.LCFI18:
+ 215              	 .cfi_def_cfa_register 7
+  19:../main.c     **** 	flag = !flag;
+ 216              	 .loc 4 19 0
+ 217 0004 074B     	 ldr r3,.L6
+ 218 0006 1B78     	 ldrb r3,[r3]
+ 219 0008 5BB2     	 sxtb r3,r3
+ 220 000a 002B     	 cmp r3,#0
+ 221 000c 0CBF     	 ite eq
+ 222 000e 0123     	 moveq r3,#1
+ 223 0010 0023     	 movne r3,#0
+ 224 0012 DBB2     	 uxtb r3,r3
+ 225 0014 DAB2     	 uxtb r2,r3
+ 226 0016 034B     	 ldr r3,.L6
+ 227 0018 1A70     	 strb r2,[r3]
+  20:../main.c     **** }
+ 228              	 .loc 4 20 0
+ 229 001a BD46     	 mov sp,r7
+ 230              	.LCFI19:
+ 231              	 .cfi_def_cfa_register 13
+ 232              	 
+ 233 001c 5DF8047B 	 ldr r7,[sp],#4
+ 234              	.LCFI20:
+ 235              	 .cfi_restore 7
+ 236              	 .cfi_def_cfa_offset 0
+ 237 0020 7047     	 bx lr
+ 238              	.L7:
+ 239 0022 00BF     	 .align 2
+ 240              	.L6:
+ 241 0024 00000000 	 .word flag
+ 242              	 .cfi_endproc
+ 243              	.LFE347:
+ 245              	 .section .text.main,"ax",%progbits
+ 246              	 .align 2
+ 247              	 .global main
+ 248              	 .thumb
+ 249              	 .thumb_func
+ 251              	main:
+ 252              	.LFB348:
+  21:../main.c     **** 
+  22:../main.c     **** int main(void)
+  23:../main.c     **** {
+ 253              	 .loc 4 23 0
+ 254              	 .cfi_startproc
+ 255              	 
+ 256              	 
+ 257 0000 80B5     	 push {r7,lr}
+ 258              	.LCFI21:
+ 259              	 .cfi_def_cfa_offset 8
+ 260              	 .cfi_offset 7,-8
+ 261              	 .cfi_offset 14,-4
+ 262 0002 82B0     	 sub sp,sp,#8
+ 263              	.LCFI22:
+ 264              	 .cfi_def_cfa_offset 16
+ 265 0004 00AF     	 add r7,sp,#0
+ 266              	.LCFI23:
+ 267              	 .cfi_def_cfa_register 7
+  24:../main.c     **** 	DAVE_STATUS_t status;
+  25:../main.c     **** 	status = DAVE_Init();           /* Initialization of DAVE APPs  */
+ 268              	 .loc 4 25 0
+ 269 0006 FFF7FEFF 	 bl DAVE_Init
+ 270 000a 0346     	 mov r3,r0
+ 271 000c FB71     	 strb r3,[r7,#7]
+  26:../main.c     **** 
+  27:../main.c     **** 	if(status != DAVE_STATUS_SUCCESS)
+ 272              	 .loc 4 27 0
+ 273 000e FB79     	 ldrb r3,[r7,#7]
+ 274 0010 002B     	 cmp r3,#0
+ 275 0012 00D0     	 beq .L9
+ 276              	.L10:
+  28:../main.c     **** 	{
+  29:../main.c     **** 		/* Placeholder for error handler code. The while loop below can be replaced with an user error ha
+  30:../main.c     **** 		XMC_DEBUG("DAVE APPs initialization failed\n");
+  31:../main.c     **** 
+  32:../main.c     **** 		while(1U)
+  33:../main.c     **** 		{
+  34:../main.c     **** 			//Is Error
+  35:../main.c     **** 		}
+ 277              	 .loc 4 35 0 discriminator 1
+ 278 0014 FEE7     	 b .L10
+ 279              	.L9:
+  36:../main.c     **** 	}
+  37:../main.c     **** 
+  38:../main.c     **** 	Timer_20ms_Id = SYSTIMER_CreateTimer(20000, SYSTIMER_MODE_PERIODIC, (void*) CB_Timer_20ms, NULL);	
+ 280              	 .loc 4 38 0
+ 281 0016 44F62060 	 movw r0,#20000
+ 282 001a 0121     	 movs r1,#1
+ 283 001c 164A     	 ldr r2,.L14
+ 284 001e 0023     	 movs r3,#0
+ 285 0020 FFF7FEFF 	 bl SYSTIMER_CreateTimer
+ 286 0024 0246     	 mov r2,r0
+ 287 0026 154B     	 ldr r3,.L14+4
+ 288 0028 1A60     	 str r2,[r3]
+  39:../main.c     **** 	SYSTIMER_StartTimer(Timer_20ms_Id);	//20ms start Timer!
+ 289              	 .loc 4 39 0
+ 290 002a 144B     	 ldr r3,.L14+4
+ 291 002c 1B68     	 ldr r3,[r3]
+ 292 002e 1846     	 mov r0,r3
+ 293 0030 FFF7FEFF 	 bl SYSTIMER_StartTimer
+ 294              	.L13:
+  40:../main.c     **** 		/* Placeholder for user application code. The while loop below can be replaced with user applicat
+  41:../main.c     **** 	while(1U)
+  42:../main.c     **** 	{
+  43:../main.c     **** 		if(flag == ON)
+ 295              	 .loc 4 43 0
+ 296 0034 124B     	 ldr r3,.L14+8
+ 297 0036 1B78     	 ldrb r3,[r3]
+ 298 0038 5BB2     	 sxtb r3,r3
+ 299 003a 012B     	 cmp r3,#1
+ 300 003c 1BD1     	 bne .L11
+  44:../main.c     **** 		{
+  45:../main.c     **** 			if(UART_IsTxBusy(&dhUART_0) != true)	//Tx
+ 301              	 .loc 4 45 0
+ 302 003e 1148     	 ldr r0,.L14+12
+ 303 0040 FFF7FEFF 	 bl UART_IsTxBusy
+ 304 0044 0346     	 mov r3,r0
+ 305 0046 83F00103 	 eor r3,r3,#1
+ 306 004a DBB2     	 uxtb r3,r3
+ 307 004c 002B     	 cmp r3,#0
+ 308 004e 07D0     	 beq .L12
+  46:../main.c     **** 			{
+  47:../main.c     **** 				DIGITAL_IO_SetOutputHigh(&dhDIGITAL_OUT_0);	//Check run LED
+ 309              	 .loc 4 47 0
+ 310 0050 0D48     	 ldr r0,.L14+16
+ 311 0052 FFF7FEFF 	 bl DIGITAL_IO_SetOutputHigh
+  48:../main.c     **** 				UART_Transmit(&dhUART_0, Tx_Data, sizeof(Tx_Data));	//Tx_Data's data send
+ 312              	 .loc 4 48 0
+ 313 0056 0B48     	 ldr r0,.L14+12
+ 314 0058 0C49     	 ldr r1,.L14+20
+ 315 005a 1322     	 movs r2,#19
+ 316 005c FFF7FEFF 	 bl UART_Transmit
+ 317              	.L12:
+  49:../main.c     **** 			}
+  50:../main.c     **** 			flag = !flag;
+ 318              	 .loc 4 50 0
+ 319 0060 074B     	 ldr r3,.L14+8
+ 320 0062 1B78     	 ldrb r3,[r3]
+ 321 0064 5BB2     	 sxtb r3,r3
+ 322 0066 002B     	 cmp r3,#0
+ 323 0068 0CBF     	 ite eq
+ 324 006a 0123     	 moveq r3,#1
+ 325 006c 0023     	 movne r3,#0
+ 326 006e DBB2     	 uxtb r3,r3
+ 327 0070 DAB2     	 uxtb r2,r3
+ 328 0072 034B     	 ldr r3,.L14+8
+ 329 0074 1A70     	 strb r2,[r3]
+ 330              	.L11:
+  51:../main.c     **** 		}
+  52:../main.c     **** 	}
+ 331              	 .loc 4 52 0
+ 332 0076 DDE7     	 b .L13
+ 333              	.L15:
+ 334              	 .align 2
+ 335              	.L14:
+ 336 0078 00000000 	 .word CB_Timer_20ms
+ 337 007c 00000000 	 .word Timer_20ms_Id
+ 338 0080 00000000 	 .word flag
+ 339 0084 00000000 	 .word dhUART_0
+ 340 0088 00000000 	 .word dhDIGITAL_OUT_0
+ 341 008c 00000000 	 .word Tx_Data
+ 342              	 .cfi_endproc
+ 343              	.LFE348:
+ 345              	 .section .text.VADC0_C0_2_IRQHandler,"ax",%progbits
+ 346              	 .align 2
+ 347              	 .global VADC0_C0_2_IRQHandler
+ 348              	 .thumb
+ 349              	 .thumb_func
+ 351              	VADC0_C0_2_IRQHandler:
+ 352              	.LFB349:
+  53:../main.c     **** return 1U;
+  54:../main.c     **** }
+  55:../main.c     **** 
+  56:../main.c     **** void ISR_Adc_Measurement_0()
+  57:../main.c     **** {
+ 353              	 .loc 4 57 0
+ 354              	 .cfi_startproc
+ 355              	 
+ 356              	 
+ 357 0000 80B5     	 push {r7,lr}
+ 358              	.LCFI24:
+ 359              	 .cfi_def_cfa_offset 8
+ 360              	 .cfi_offset 7,-8
+ 361              	 .cfi_offset 14,-4
+ 362 0002 00AF     	 add r7,sp,#0
+ 363              	.LCFI25:
+ 364              	 .cfi_def_cfa_register 7
+  58:../main.c     **** 	result = ADC_MEASUREMENT_GetResult(&ADC_MEASUREMENT_Channel_A);
+ 365              	 .loc 4 58 0
+ 366 0004 0C48     	 ldr r0,.L18
+ 367 0006 FFF7FEFF 	 bl ADC_MEASUREMENT_GetResult
+ 368 000a 0346     	 mov r3,r0
+ 369 000c DAB2     	 uxtb r2,r3
+ 370 000e 0B4B     	 ldr r3,.L18+4
+ 371 0010 1A70     	 strb r2,[r3]
+  59:../main.c     **** 	if(result == SIGNAL_CHECK)
+ 372              	 .loc 4 59 0
+ 373 0012 0A4B     	 ldr r3,.L18+4
+ 374 0014 1B78     	 ldrb r3,[r3]
+ 375 0016 002B     	 cmp r3,#0
+ 376 0018 05D1     	 bne .L17
+  60:../main.c     **** 	{
+  61:../main.c     **** 		result++;
+ 377              	 .loc 4 61 0
+ 378 001a 084B     	 ldr r3,.L18+4
+ 379 001c 1B78     	 ldrb r3,[r3]
+ 380 001e 0133     	 adds r3,r3,#1
+ 381 0020 DAB2     	 uxtb r2,r3
+ 382 0022 064B     	 ldr r3,.L18+4
+ 383 0024 1A70     	 strb r2,[r3]
+ 384              	.L17:
+  62:../main.c     **** 	}
+  63:../main.c     **** 	Tx_Data[1] = result;
+ 385              	 .loc 4 63 0
+ 386 0026 054B     	 ldr r3,.L18+4
+ 387 0028 1A78     	 ldrb r2,[r3]
+ 388 002a 054B     	 ldr r3,.L18+8
+ 389 002c 5A70     	 strb r2,[r3,#1]
+  64:../main.c     **** 	ADC_MEASUREMENT_StartConversion(&dhADC_MEASUREMENT_0);
+ 390              	 .loc 4 64 0
+ 391 002e 0548     	 ldr r0,.L18+12
+ 392 0030 FFF7FEFF 	 bl ADC_MEASUREMENT_StartConversion
+  65:../main.c     **** }
+ 393              	 .loc 4 65 0
+ 394 0034 80BD     	 pop {r7,pc}
+ 395              	.L19:
+ 396 0036 00BF     	 .align 2
+ 397              	.L18:
+ 398 0038 00000000 	 .word ADC_MEASUREMENT_Channel_A_handle
+ 399 003c 00000000 	 .word result
+ 400 0040 00000000 	 .word Tx_Data
+ 401 0044 00000000 	 .word dhADC_MEASUREMENT_0
+ 402              	 .cfi_endproc
+ 403              	.LFE349:
+ 405              	 .text
+ 406              	.Letext0:
+ 407              	 .file 5 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 408              	 .file 6 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 409              	 .file 7 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
+ 410              	 .file 8 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc4_gpio.h"
+ 411              	 .file 9 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_usic.h"
+ 412              	 .file 10 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_uart.h"
+ 413              	 .file 11 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIMER/systimer.h"
+ 414              	 .file 12 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc.h"
+ 415              	 .file 13 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc.h"
+ 416              	 .file 14 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/ADC_MEASUREMENT/adc_measurement.h"
+ 417              	 .file 15 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DAVE.h"
+ 418              	 .file 16 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/CMSIS/Include/core_cm4.h"
+ 419              	 .file 17 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
+ 420              	 .file 18 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/UART/uart_extern.h"
+ 421              	 .file 19 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO/digital_io_extern.h"
+ 422              	 .file 20 "D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/ADC_MEASUREMENT/ADC_MEASUREMENT_Extern.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-    {standard input}:20     .text.UART_IsTxBusy:00000000 $t
-    {standard input}:24     .text.UART_IsTxBusy:00000000 UART_IsTxBusy
-    {standard input}:69     .bss.flag:00000000 flag
-    {standard input}:70     .bss.flag:00000000 $d
+    {standard input}:20     .text.XMC_GPIO_SetOutputHigh:00000000 $t
+    {standard input}:24     .text.XMC_GPIO_SetOutputHigh:00000000 XMC_GPIO_SetOutputHigh
+    {standard input}:68     .text.UART_IsTxBusy:00000000 $t
+    {standard input}:72     .text.UART_IsTxBusy:00000000 UART_IsTxBusy
+    {standard input}:114    .text.DIGITAL_IO_SetOutputHigh:00000000 $t
+    {standard input}:118    .text.DIGITAL_IO_SetOutputHigh:00000000 DIGITAL_IO_SetOutputHigh
+    {standard input}:161    .bss.flag:00000000 flag
+    {standard input}:162    .bss.flag:00000000 $d
                             *COM*:00000004 Timer_20ms_Id
-    {standard input}:77     .data.Tx_Data:00000000 Tx_Data
-    {standard input}:74     .data.Tx_Data:00000000 $d
-    {standard input}:98     .text.CB_Timer_20ms:00000000 $t
-    {standard input}:103    .text.CB_Timer_20ms:00000000 CB_Timer_20ms
-    {standard input}:143    .text.CB_Timer_20ms:00000024 $d
-    {standard input}:148    .text.main:00000000 $t
-    {standard input}:153    .text.main:00000000 main
-    {standard input}:235    .text.main:00000074 $d
+    {standard input}:169    .data.Tx_Data:00000000 Tx_Data
+    {standard input}:166    .data.Tx_Data:00000000 $d
+    {standard input}:193    .data.result:00000000 result
+    {standard input}:196    .text.CB_Timer_20ms:00000000 $t
+    {standard input}:201    .text.CB_Timer_20ms:00000000 CB_Timer_20ms
+    {standard input}:241    .text.CB_Timer_20ms:00000024 $d
+    {standard input}:246    .text.main:00000000 $t
+    {standard input}:251    .text.main:00000000 main
+    {standard input}:336    .text.main:00000078 $d
+    {standard input}:346    .text.VADC0_C0_2_IRQHandler:00000000 $t
+    {standard input}:351    .text.VADC0_C0_2_IRQHandler:00000000 VADC0_C0_2_IRQHandler
+    {standard input}:398    .text.VADC0_C0_2_IRQHandler:00000038 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
@@ -2437,3 +3151,8 @@ SYSTIMER_CreateTimer
 SYSTIMER_StartTimer
 UART_Transmit
 dhUART_0
+dhDIGITAL_OUT_0
+ADC_MEASUREMENT_GetResult
+ADC_MEASUREMENT_StartConversion
+ADC_MEASUREMENT_Channel_A_handle
+dhADC_MEASUREMENT_0

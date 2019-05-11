@@ -1571,15 +1571,9 @@ Discarded input sections
  .text          0x00000000        0x0 ./Libraries/XMCLib/src/xmc_vadc.o
  .data          0x00000000        0x0 ./Libraries/XMCLib/src/xmc_vadc.o
  .bss           0x00000000        0x0 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GROUP_ExternalMuxControlInit
-                0x00000000       0x6c ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_ScanEnableArbitrationSlot
                 0x00000000       0x24 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_ScanDisableArbitrationSlot
-                0x00000000       0x24 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GROUP_BackgroundEnableArbitrationSlot
-                0x00000000       0x24 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GROUP_BackgroundDisableArbitrationSlot
                 0x00000000       0x24 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_QueueEnableArbitrationSlot
                 0x00000000       0x24 ./Libraries/XMCLib/src/xmc_vadc.o
@@ -1587,18 +1581,8 @@ Discarded input sections
                 0x00000000       0x24 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_QueueFlushEntries
                 0x00000000       0x34 ./Libraries/XMCLib/src/xmc_vadc.o
- .rodata.g_xmc_vadc_group_array
-                0x00000000       0x10 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GLOBAL_EnableModule
-                0x00000000        0xc ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GLOBAL_DisableModule
                 0x00000000        0xc ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GLOBAL_Init
-                0x00000000       0x54 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GLOBAL_InputClassInit
-                0x00000000       0x48 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GLOBAL_StartupCalibration
-                0x00000000       0x60 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GLOBAL_SetBoundaries
                 0x00000000       0x34 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GLOBAL_SetIndividualBoundary
@@ -1611,14 +1595,6 @@ Discarded input sections
                 0x00000000       0x58 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GLOBAL_SetResultEventInterruptNode
                 0x00000000       0x4c ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GLOBAL_BackgroundSetReqSrcEventInterruptNode
-                0x00000000       0x48 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GROUP_Init
-                0x00000000       0x68 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GROUP_InputClassInit
-                0x00000000       0xb8 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GROUP_SetPowerMode
-                0x00000000       0x38 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_SetSyncSlave
                 0x00000000       0x44 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_SetSyncMaster
@@ -1657,8 +1633,6 @@ Discarded input sections
                 0x00000000       0x38 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_ScanRemoveChannel
                 0x00000000       0x38 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GLOBAL_BackgroundInit
-                0x00000000       0xfc ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GLOBAL_BackgroundSelectTrigger
                 0x00000000       0x40 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GLOBAL_BackgroundSelectTriggerEdge
@@ -1689,8 +1663,6 @@ Discarded input sections
                 0x00000000       0x38 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_QueueSetReqSrcEventInterruptNode
                 0x00000000       0x38 ./Libraries/XMCLib/src/xmc_vadc.o
- .text.XMC_VADC_GROUP_ChannelInit
-                0x00000000       0xc8 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_SetChannelAlias
                 0x00000000       0x58 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_ChannelIsResultOutOfBounds
@@ -1727,18 +1699,7 @@ Discarded input sections
                 0x00000000       0x60 ./Libraries/XMCLib/src/xmc_vadc.o
  .text.XMC_VADC_GROUP_IsResultRegisterFifoHead
                 0x00000000       0x60 ./Libraries/XMCLib/src/xmc_vadc.o
- .debug_info    0x00000000     0x2e68 ./Libraries/XMCLib/src/xmc_vadc.o
- .debug_abbrev  0x00000000      0x266 ./Libraries/XMCLib/src/xmc_vadc.o
- .debug_loc     0x00000000     0x1ac8 ./Libraries/XMCLib/src/xmc_vadc.o
- .debug_aranges
-                0x00000000      0x280 ./Libraries/XMCLib/src/xmc_vadc.o
- .debug_ranges  0x00000000      0x270 ./Libraries/XMCLib/src/xmc_vadc.o
- .debug_line    0x00000000      0xacf ./Libraries/XMCLib/src/xmc_vadc.o
- .debug_str     0x00000000     0x26f3 ./Libraries/XMCLib/src/xmc_vadc.o
  .comment       0x00000000       0x71 ./Libraries/XMCLib/src/xmc_vadc.o
- .debug_frame   0x00000000      0xc00 ./Libraries/XMCLib/src/xmc_vadc.o
- .ARM.attributes
-                0x00000000       0x37 ./Libraries/XMCLib/src/xmc_vadc.o
  .text          0x00000000        0x0 ./Libraries/XMCLib/src/xmc_wdt.o
  .data          0x00000000        0x0 ./Libraries/XMCLib/src/xmc_wdt.o
  .bss           0x00000000        0x0 ./Libraries/XMCLib/src/xmc_wdt.o
@@ -1825,6 +1786,16 @@ Discarded input sections
  .data          0x00000000        0x0 ./Dave/Generated/SYSTIMER/systimer_conf.o
  .bss           0x00000000        0x0 ./Dave/Generated/SYSTIMER/systimer_conf.o
  .comment       0x00000000       0x71 ./Dave/Generated/SYSTIMER/systimer_conf.o
+ .text          0x00000000        0x0 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .data          0x00000000        0x0 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .bss           0x00000000        0x0 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .text.GLOBAL_ADC_GetAppVersion
+                0x00000000       0x44 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .comment       0x00000000       0x71 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .text          0x00000000        0x0 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+ .data          0x00000000        0x0 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+ .bss           0x00000000        0x0 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+ .comment       0x00000000       0x71 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
  .text          0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io.o
  .data          0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io.o
  .bss           0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io.o
@@ -1876,6 +1847,20 @@ Discarded input sections
  .data          0x00000000        0x0 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
  .bss           0x00000000        0x0 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
  .comment       0x00000000       0x71 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .text          0x00000000        0x0 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .data          0x00000000        0x0 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .bss           0x00000000        0x0 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.XMC_VADC_GROUP_GetDetailedResult
+                0x00000000       0x20 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.ADC_MEASUREMENT_GetAppVersion
+                0x00000000       0x44 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.ADC_MEASUREMENT_GetDetailedResult
+                0x00000000       0x2c ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .comment       0x00000000       0x71 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text          0x00000000        0x0 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+ .data          0x00000000        0x0 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+ .bss           0x00000000        0x0 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+ .comment       0x00000000       0x71 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
  .text          0x00000000        0x0 ./Dave/Generated/DAVE.o
  .data          0x00000000        0x0 ./Dave/Generated/DAVE.o
  .bss           0x00000000        0x0 ./Dave/Generated/DAVE.o
@@ -1973,12 +1958,16 @@ LOAD ./Dave/Generated/UART/uart.o
 LOAD ./Dave/Generated/UART/uart_conf.o
 LOAD ./Dave/Generated/SYSTIMER/systimer.o
 LOAD ./Dave/Generated/SYSTIMER/systimer_conf.o
+LOAD ./Dave/Generated/GLOBAL_ADC/global_adc.o
+LOAD ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
 LOAD ./Dave/Generated/DIGITAL_IO/digital_io.o
 LOAD ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
 LOAD ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.o
 LOAD ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
 LOAD ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
 LOAD ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+LOAD ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+LOAD ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
 LOAD ./Dave/Generated/DAVE.o
 LOAD ./main.o
 LOAD c:/davev4/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a
@@ -2000,7 +1989,7 @@ END GROUP
                 0x00000800                stack_size = DEFINED (stack_size)?stack_size:0x800
                 0x00000040                no_init_size = 0x40
 
-.text           0x08000000     0x2404 load address 0x0c000000
+.text           0x08000000     0x2e7c load address 0x0c000000
                 0x08000000                sText = .
  *(.reset)
  .reset         0x08000000      0x2b4 ./Startup/startup_XMC4500.o
@@ -2089,7 +2078,6 @@ END GROUP
                 0x080002b0                CAN0_3_IRQHandler
                 0x080002b0                ETH0_0_IRQHandler
                 0x080002b0                DSD0_0_IRQHandler
-                0x080002b0                VADC0_C0_2_IRQHandler
                 0x080002b0                CCU42_0_IRQHandler
                 0x080002b0                FCE0_0_IRQHandler
                 0x080002b0                VADC0_G1_0_IRQHandler
@@ -2252,124 +2240,197 @@ END GROUP
  .text.XMC_USIC_Enable
                 0x08001178       0x54 ./Libraries/XMCLib/src/xmc_usic.o
                 0x08001178                XMC_USIC_Enable
- .text._init    0x080011cc        0xc ./Libraries/Newlib/syscalls.o
-                0x080011cc                _init
+ .text.XMC_VADC_GROUP_ExternalMuxControlInit
+                0x080011cc       0x6c ./Libraries/XMCLib/src/xmc_vadc.o
+ .text.XMC_VADC_GROUP_BackgroundEnableArbitrationSlot
+                0x08001238       0x24 ./Libraries/XMCLib/src/xmc_vadc.o
+ .text.XMC_VADC_GROUP_BackgroundDisableArbitrationSlot
+                0x0800125c       0x24 ./Libraries/XMCLib/src/xmc_vadc.o
+ .text.XMC_VADC_GLOBAL_EnableModule
+                0x08001280        0xc ./Libraries/XMCLib/src/xmc_vadc.o
+                0x08001280                XMC_VADC_GLOBAL_EnableModule
+ .text.XMC_VADC_GLOBAL_Init
+                0x0800128c       0x54 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x0800128c                XMC_VADC_GLOBAL_Init
+ .text.XMC_VADC_GLOBAL_InputClassInit
+                0x080012e0       0x48 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x080012e0                XMC_VADC_GLOBAL_InputClassInit
+ .text.XMC_VADC_GLOBAL_StartupCalibration
+                0x08001328       0x60 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x08001328                XMC_VADC_GLOBAL_StartupCalibration
+ .text.XMC_VADC_GLOBAL_BackgroundSetReqSrcEventInterruptNode
+                0x08001388       0x48 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x08001388                XMC_VADC_GLOBAL_BackgroundSetReqSrcEventInterruptNode
+ .text.XMC_VADC_GROUP_Init
+                0x080013d0       0x68 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x080013d0                XMC_VADC_GROUP_Init
+ .text.XMC_VADC_GROUP_InputClassInit
+                0x08001438       0xb8 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x08001438                XMC_VADC_GROUP_InputClassInit
+ .text.XMC_VADC_GROUP_SetPowerMode
+                0x080014f0       0x38 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x080014f0                XMC_VADC_GROUP_SetPowerMode
+ .text.XMC_VADC_GLOBAL_BackgroundInit
+                0x08001528       0xfc ./Libraries/XMCLib/src/xmc_vadc.o
+                0x08001528                XMC_VADC_GLOBAL_BackgroundInit
+ .text.XMC_VADC_GROUP_ChannelInit
+                0x08001624       0xc8 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x08001624                XMC_VADC_GROUP_ChannelInit
+ .text._init    0x080016ec        0xc ./Libraries/Newlib/syscalls.o
+                0x080016ec                _init
  .text.XMC_USIC_CH_EnableEvent
-                0x080011d8       0x20 ./Dave/Generated/UART/uart.o
+                0x080016f8       0x20 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_DisableEvent
-                0x080011f8       0x24 ./Dave/Generated/UART/uart.o
+                0x08001718       0x24 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x0800121c       0x20 ./Dave/Generated/UART/uart.o
+                0x0800173c       0x20 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TriggerServiceRequest
-                0x0800123c       0x20 ./Dave/Generated/UART/uart.o
+                0x0800175c       0x20 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TXFIFO_EnableEvent
-                0x0800125c       0x24 ./Dave/Generated/UART/uart.o
+                0x0800177c       0x24 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TXFIFO_DisableEvent
-                0x08001280       0x28 ./Dave/Generated/UART/uart.o
+                0x080017a0       0x28 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TXFIFO_Flush
-                0x080012a8       0x1c ./Dave/Generated/UART/uart.o
+                0x080017c8       0x1c ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TXFIFO_IsFull
-                0x080012c4       0x28 ./Dave/Generated/UART/uart.o
+                0x080017e4       0x28 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TXFIFO_IsEmpty
-                0x080012ec       0x28 ./Dave/Generated/UART/uart.o
+                0x0800180c       0x28 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_RXFIFO_DisableEvent
-                0x08001314       0x28 ./Dave/Generated/UART/uart.o
+                0x08001834       0x28 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_RXFIFO_IsEmpty
-                0x0800133c       0x28 ./Dave/Generated/UART/uart.o
+                0x0800185c       0x28 ./Dave/Generated/UART/uart.o
  .text.UART_Init
-                0x08001364       0x24 ./Dave/Generated/UART/uart.o
-                0x08001364                UART_Init
+                0x08001884       0x24 ./Dave/Generated/UART/uart.o
+                0x08001884                UART_Init
  .text.UART_Transmit
-                0x08001388       0x38 ./Dave/Generated/UART/uart.o
-                0x08001388                UART_Transmit
+                0x080018a8       0x38 ./Dave/Generated/UART/uart.o
+                0x080018a8                UART_Transmit
  .text.UART_StartTransmitIRQ
-                0x080013c0       0xb8 ./Dave/Generated/UART/uart.o
-                0x080013c0                UART_StartTransmitIRQ
+                0x080018e0       0xb8 ./Dave/Generated/UART/uart.o
+                0x080018e0                UART_StartTransmitIRQ
  .text.UART_lTransmitHandler
-                0x08001478      0x10c ./Dave/Generated/UART/uart.o
-                0x08001478                UART_lTransmitHandler
+                0x08001998      0x10c ./Dave/Generated/UART/uart.o
+                0x08001998                UART_lTransmitHandler
  .text.UART_lReceiveHandler
-                0x08001584      0x120 ./Dave/Generated/UART/uart.o
-                0x08001584                UART_lReceiveHandler
+                0x08001aa4      0x120 ./Dave/Generated/UART/uart.o
+                0x08001aa4                UART_lReceiveHandler
  .text.UART_lReconfigureRxFIFO
-                0x080016a4       0x50 ./Dave/Generated/UART/uart.o
+                0x08001bc4       0x50 ./Dave/Generated/UART/uart.o
  .text.NVIC_GetPriorityGrouping
-                0x080016f4       0x1c ./Dave/Generated/UART/uart_conf.o
+                0x08001c14       0x1c ./Dave/Generated/UART/uart_conf.o
  .text.NVIC_EnableIRQ
-                0x08001710       0x30 ./Dave/Generated/UART/uart_conf.o
+                0x08001c30       0x30 ./Dave/Generated/UART/uart_conf.o
  .text.NVIC_SetPriority
-                0x08001740       0x54 ./Dave/Generated/UART/uart_conf.o
+                0x08001c60       0x54 ./Dave/Generated/UART/uart_conf.o
  .text.NVIC_EncodePriority
-                0x08001794       0x64 ./Dave/Generated/UART/uart_conf.o
+                0x08001cb4       0x64 ./Dave/Generated/UART/uart_conf.o
  .text.XMC_USIC_CH_SetInputSource
-                0x080017f8       0x3c ./Dave/Generated/UART/uart_conf.o
+                0x08001d18       0x3c ./Dave/Generated/UART/uart_conf.o
  .text.XMC_UART_CH_Start
-                0x08001834       0x24 ./Dave/Generated/UART/uart_conf.o
+                0x08001d54       0x24 ./Dave/Generated/UART/uart_conf.o
  .text.dhUART_0_init
-                0x08001858       0xd4 ./Dave/Generated/UART/uart_conf.o
-                0x08001858                dhUART_0_init
+                0x08001d78       0xd4 ./Dave/Generated/UART/uart_conf.o
+                0x08001d78                dhUART_0_init
  .text.USIC0_3_IRQHandler
-                0x0800192c       0x10 ./Dave/Generated/UART/uart_conf.o
-                0x0800192c                USIC0_3_IRQHandler
+                0x08001e4c       0x10 ./Dave/Generated/UART/uart_conf.o
+                0x08001e4c                USIC0_3_IRQHandler
  .text.USIC0_5_IRQHandler
-                0x0800193c       0x10 ./Dave/Generated/UART/uart_conf.o
-                0x0800193c                USIC0_5_IRQHandler
+                0x08001e5c       0x10 ./Dave/Generated/UART/uart_conf.o
+                0x08001e5c                USIC0_5_IRQHandler
  .text.NVIC_GetPriorityGrouping
-                0x0800194c       0x1c ./Dave/Generated/SYSTIMER/systimer.o
+                0x08001e6c       0x1c ./Dave/Generated/SYSTIMER/systimer.o
  .text.NVIC_SetPriority
-                0x08001968       0x54 ./Dave/Generated/SYSTIMER/systimer.o
+                0x08001e88       0x54 ./Dave/Generated/SYSTIMER/systimer.o
  .text.NVIC_EncodePriority
-                0x080019bc       0x64 ./Dave/Generated/SYSTIMER/systimer.o
+                0x08001edc       0x64 ./Dave/Generated/SYSTIMER/systimer.o
  .text.SysTick_Config
-                0x08001a20       0x44 ./Dave/Generated/SYSTIMER/systimer.o
+                0x08001f40       0x44 ./Dave/Generated/SYSTIMER/systimer.o
  .text.SYSTIMER_lInsertTimerList
-                0x08001a64      0x1c4 ./Dave/Generated/SYSTIMER/systimer.o
+                0x08001f84      0x1c4 ./Dave/Generated/SYSTIMER/systimer.o
  .text.SYSTIMER_lRemoveTimerList
-                0x08001c28       0xc0 ./Dave/Generated/SYSTIMER/systimer.o
+                0x08002148       0xc0 ./Dave/Generated/SYSTIMER/systimer.o
  .text.SYSTIMER_lTimerHandler
-                0x08001ce8       0xcc ./Dave/Generated/SYSTIMER/systimer.o
+                0x08002208       0xcc ./Dave/Generated/SYSTIMER/systimer.o
  .text.SysTick_Handler
-                0x08001db4       0x48 ./Dave/Generated/SYSTIMER/systimer.o
-                0x08001db4                SysTick_Handler
+                0x080022d4       0x48 ./Dave/Generated/SYSTIMER/systimer.o
+                0x080022d4                SysTick_Handler
  .text.SYSTIMER_Init
-                0x08001dfc       0x74 ./Dave/Generated/SYSTIMER/systimer.o
-                0x08001dfc                SYSTIMER_Init
+                0x0800231c       0x74 ./Dave/Generated/SYSTIMER/systimer.o
+                0x0800231c                SYSTIMER_Init
  .text.SYSTIMER_CreateTimer
-                0x08001e70      0x13c ./Dave/Generated/SYSTIMER/systimer.o
-                0x08001e70                SYSTIMER_CreateTimer
+                0x08002390      0x13c ./Dave/Generated/SYSTIMER/systimer.o
+                0x08002390                SYSTIMER_CreateTimer
  .text.SYSTIMER_StartTimer
-                0x08001fac       0x80 ./Dave/Generated/SYSTIMER/systimer.o
-                0x08001fac                SYSTIMER_StartTimer
+                0x080024cc       0x80 ./Dave/Generated/SYSTIMER/systimer.o
+                0x080024cc                SYSTIMER_StartTimer
+ .text.XMC_VADC_GLOBAL_DisablePostCalibration
+                0x0800254c       0x2c ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .text.GLOBAL_ADC_Init
+                0x08002578       0xb0 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+                0x08002578                GLOBAL_ADC_Init
  .text.DIGITAL_IO_Init
-                0x0800202c       0x40 ./Dave/Generated/DIGITAL_IO/digital_io.o
-                0x0800202c                DIGITAL_IO_Init
+                0x08002628       0x40 ./Dave/Generated/DIGITAL_IO/digital_io.o
+                0x08002628                DIGITAL_IO_Init
  .text.NVIC_SetPriorityGrouping
-                0x0800206c       0x48 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+                0x08002668       0x48 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
  .text.SystemCoreSetup
-                0x080020b4       0xa0 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
-                0x080020b4                SystemCoreSetup
+                0x080026b0       0xa0 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+                0x080026b0                SystemCoreSetup
  .text.CLOCK_XMC4_Init
-                0x08002154       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
-                0x08002154                CLOCK_XMC4_Init
+                0x08002750       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+                0x08002750                CLOCK_XMC4_Init
  .text.OSCHP_GetFrequency
-                0x08002174       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
-                0x08002174                OSCHP_GetFrequency
+                0x08002770       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+                0x08002770                OSCHP_GetFrequency
  .text.SystemCoreClockSetup
-                0x08002188       0x54 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
-                0x08002188                SystemCoreClockSetup
+                0x08002784       0x54 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x08002784                SystemCoreClockSetup
+ .text.NVIC_GetPriorityGrouping
+                0x080027d8       0x1c ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.NVIC_EnableIRQ
+                0x080027f4       0x30 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.NVIC_SetPriority
+                0x08002824       0x54 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.NVIC_EncodePriority
+                0x08002878       0x64 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.XMC_VADC_GLOBAL_BackgroundTriggerConversion
+                0x080028dc       0x24 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.XMC_VADC_GLOBAL_BackgroundAddChannelToSequence
+                0x08002900       0x38 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.XMC_VADC_GROUP_ResultInit
+                0x08002938       0x24 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.XMC_VADC_GROUP_GetResult
+                0x0800295c       0x24 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .text.ADC_MEASUREMENT_Init
+                0x08002980      0x150 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+                0x08002980                ADC_MEASUREMENT_Init
+ .text.ADC_MEASUREMENT_StartConversion
+                0x08002ad0       0x1c ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+                0x08002ad0                ADC_MEASUREMENT_StartConversion
+ .text.ADC_MEASUREMENT_GetResult
+                0x08002aec       0x30 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+                0x08002aec                ADC_MEASUREMENT_GetResult
  .text.DAVE_Init
-                0x080021dc       0x74 ./Dave/Generated/DAVE.o
-                0x080021dc                DAVE_Init
+                0x08002b1c       0x88 ./Dave/Generated/DAVE.o
+                0x08002b1c                DAVE_Init
+ .text.XMC_GPIO_SetOutputHigh
+                0x08002ba4       0x20 ./main.o
  .text.UART_IsTxBusy
-                0x08002250       0x1c ./main.o
+                0x08002bc4       0x1c ./main.o
+ .text.DIGITAL_IO_SetOutputHigh
+                0x08002be0       0x20 ./main.o
  .text.CB_Timer_20ms
-                0x0800226c       0x28 ./main.o
-                0x0800226c                CB_Timer_20ms
- .text.main     0x08002294       0x88 ./main.o
-                0x08002294                main
+                0x08002c00       0x28 ./main.o
+                0x08002c00                CB_Timer_20ms
+ .text.main     0x08002c28       0x90 ./main.o
+                0x08002c28                main
+ .text.VADC0_C0_2_IRQHandler
+                0x08002cb8       0x48 ./main.o
+                0x08002cb8                VADC0_C0_2_IRQHandler
  .text.__libc_init_array
-                0x0800231c       0x4c c:/davev4/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
-                0x0800231c                __libc_init_array
+                0x08002d00       0x4c c:/davev4/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x08002d00                __libc_init_array
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -2383,56 +2444,82 @@ END GROUP
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata .rodata.*)
+ .rodata.g_xmc_vadc_group_array
+                0x08002d4c       0x10 ./Libraries/XMCLib/src/xmc_vadc.o
  .rodata.dhUART_0_channel_config
-                0x08002368        0xc ./Dave/Generated/UART/uart_conf.o
-                0x08002368                dhUART_0_channel_config
+                0x08002d5c        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08002d5c                dhUART_0_channel_config
  .rodata.dhUART_0_tx_pin_config
-                0x08002374        0xc ./Dave/Generated/UART/uart_conf.o
-                0x08002374                dhUART_0_tx_pin_config
+                0x08002d68        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08002d68                dhUART_0_tx_pin_config
  .rodata.dhUART_0_tx_pin
-                0x08002380        0xc ./Dave/Generated/UART/uart_conf.o
-                0x08002380                dhUART_0_tx_pin
+                0x08002d74        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08002d74                dhUART_0_tx_pin
  .rodata.dhUART_0_config
-                0x0800238c       0x30 ./Dave/Generated/UART/uart_conf.o
-                0x0800238c                dhUART_0_config
+                0x08002d80       0x30 ./Dave/Generated/UART/uart_conf.o
+                0x08002d80                dhUART_0_config
  .rodata.dhUART_0_rx_pin_config
-                0x080023bc        0xc ./Dave/Generated/UART/uart_conf.o
-                0x080023bc                dhUART_0_rx_pin_config
+                0x08002db0        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08002db0                dhUART_0_rx_pin_config
+ .rodata.group_init_handle0
+                0x08002dbc       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08002dbc                group_init_handle0
+ .rodata.group_init_handle1
+                0x08002dd0       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08002dd0                group_init_handle1
+ .rodata.group_init_handle2
+                0x08002de4       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08002de4                group_init_handle2
+ .rodata.group_init_handle3
+                0x08002df8       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08002df8                group_init_handle3
+ .rodata.global_config
+                0x08002e0c       0x18 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08002e0c                global_config
  .rodata.dhDIGITAL_OUT_0
-                0x080023c8       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
-                0x080023c8                dhDIGITAL_OUT_0
+                0x08002e24       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08002e24                dhDIGITAL_OUT_0
  .rodata.dhDIGITAL_IN_0
-                0x080023dc       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
-                0x080023dc                dhDIGITAL_IN_0
- .rodata        0x080023f0       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x08002e38       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08002e38                dhDIGITAL_IN_0
+ .rodata        0x08002e4c       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .rodata.global_iclass_config
+                0x08002e60        0x4 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x08002e60                global_iclass_config
+ .rodata.backgnd_rs_intr_handle
+                0x08002e64        0xc ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x08002e64                backgnd_rs_intr_handle
+ .rodata.backgnd_config
+                0x08002e70        0xc ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x08002e70                backgnd_config
  *(.gnu.linkonce.r*)
-                0x08002404                . = ALIGN (0x4)
+                0x08002e7c                . = ALIGN (0x4)
 
-.glue_7         0x08002404        0x0 load address 0x0c002404
+.glue_7         0x08002e7c        0x0 load address 0x0c002e7c
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x08002404        0x0 load address 0x0c002404
+.glue_7t        0x08002e7c        0x0 load address 0x0c002e7c
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x08002404        0x0 load address 0x0c002404
+.vfp11_veneer   0x08002e7c        0x0 load address 0x0c002e7c
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08002404        0x0 load address 0x0c002404
+.v4_bx          0x08002e7c        0x0 load address 0x0c002e7c
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x08002404        0x0 load address 0x0c002404
+.iplt           0x08002e7c        0x0 load address 0x0c002e7c
  .iplt          0x00000000        0x0 ./Startup/startup_XMC4500.o
 
-.rel.dyn        0x08002404        0x0 load address 0x0c002404
+.rel.dyn        0x08002e7c        0x0 load address 0x0c002e7c
  .rel.iplt      0x00000000        0x0 ./Startup/startup_XMC4500.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08002404                __exidx_start = .
+                0x08002e7c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08002404                __exidx_end = .
+                0x08002e7c                __exidx_end = .
 
 Stack           0x10000000      0x800
                 0x10000000                __stack_start = .
@@ -2441,25 +2528,25 @@ Stack           0x10000000      0x800
                 0x10000800                __stack_end = .
                 0x10000800                __initial_sp = .
 
-.ram_code       0x10000800        0x0 load address 0x0c002404
+.ram_code       0x10000800        0x0 load address 0x0c002e7c
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __ram_code_start = .
  *(.ram_code)
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __ram_code_end = .
-                0x0c002404                __ram_code_load = LOADADDR (.ram_code)
+                0x0c002e7c                __ram_code_load = LOADADDR (.ram_code)
                 0x00000000                __ram_code_size = (__ram_code_end - __ram_code_start)
 
-PSRAM_DATA      0x10000800        0x0 load address 0x0c002404
+PSRAM_DATA      0x10000800        0x0 load address 0x0c002e7c
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __data3_start = .
  *(PSRAM_DATA)
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __data3_end = .
-                0x0c002404                __data3_load = LOADADDR (PSRAM_DATA)
+                0x0c002e7c                __data3_load = LOADADDR (PSRAM_DATA)
                 0x00000000                __data3_size = (__data3_end - __data3_start)
 
-PSRAM_BSS       0x10000800        0x0 load address 0x0c002404
+PSRAM_BSS       0x10000800        0x0 load address 0x0c002e7c
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __bss3_start = .
  *(PSRAM_BSS)
@@ -2469,7 +2556,7 @@ PSRAM_BSS       0x10000800        0x0 load address 0x0c002404
                 0x10000800                Heap_Bank3_Start = .
                 0x00000000                __bss3_size = (__bss3_end - __bss3_start)
 
-.data           0x20000000       0x20 load address 0x0c002404
+.data           0x20000000       0xac load address 0x0c002e7c
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __data_start = .
  *(.data)
@@ -2477,69 +2564,102 @@ PSRAM_BSS       0x10000800        0x0 load address 0x0c002404
  .data.dhUART_0
                 0x20000000        0xc ./Dave/Generated/UART/uart_conf.o
                 0x20000000                dhUART_0
- .data.Tx_Data  0x2000000c       0x14 ./main.o
-                0x2000000c                Tx_Data
+ .data.group_0_config
+                0x2000000c        0xc ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x2000000c                group_0_config
+ .data.group_1_config
+                0x20000018        0xc ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x20000018                group_1_config
+ .data.group_2_config
+                0x20000024        0xc ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x20000024                group_2_config
+ .data.group_3_config
+                0x20000030        0xc ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x20000030                group_3_config
+ .data.GLOBAL_ADC_0
+                0x2000003c       0x1c ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x2000003c                GLOBAL_ADC_0
+ .data.Channel_A_ch_config
+                0x20000058        0xc ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x20000058                Channel_A_ch_config
+ .data.ADC_MEASUREMENT_Channel_A_handle
+                0x20000064       0x10 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x20000064                ADC_MEASUREMENT_Channel_A_handle
+ .data.ADC_MEASUREMENT_channel_array
+                0x20000074        0x4 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x20000074                ADC_MEASUREMENT_channel_array
+ .data.dhADC_MEASUREMENT_0
+                0x20000078       0x1c ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x20000078                dhADC_MEASUREMENT_0
+ .data.Tx_Data  0x20000094       0x14 ./main.o
+                0x20000094                Tx_Data
+ .data.result   0x200000a8        0x1 ./main.o
+                0x200000a8                result
  *(*.data)
  *(.gnu.linkonce.d*)
-                0x20000020                . = ALIGN (0x4)
-                0x20000020                PROVIDE (__preinit_array_start, .)
+                0x200000ac                . = ALIGN (0x4)
+ *fill*         0x200000a9        0x3 
+                0x200000ac                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
-                0x20000020                PROVIDE (__preinit_array_end, .)
-                0x20000020                . = ALIGN (0x4)
-                0x20000020                PROVIDE (__init_array_start, .)
+                0x200000ac                PROVIDE (__preinit_array_end, .)
+                0x200000ac                . = ALIGN (0x4)
+                0x200000ac                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array)
-                0x20000020                PROVIDE (__init_array_end, .)
-                0x20000020                . = ALIGN (0x4)
-                0x20000020                PROVIDE (__fini_array_start, .)
+                0x200000ac                PROVIDE (__init_array_end, .)
+                0x200000ac                . = ALIGN (0x4)
+                0x200000ac                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array)
-                0x20000020                PROVIDE (__fini_array_end, .)
-                0x20000020                . = ALIGN (0x4)
-                0x20000020                __data_end = .
-                0x0c002404                __data_load = LOADADDR (.data)
-                0x00000020                __data_size = (__data_end - __data_start)
+                0x200000ac                PROVIDE (__fini_array_end, .)
+                0x200000ac                . = ALIGN (0x4)
+                0x200000ac                __data_end = .
+                0x0c002e7c                __data_load = LOADADDR (.data)
+                0x000000ac                __data_size = (__data_end - __data_start)
 
-.igot.plt       0x20000020        0x0 load address 0x0c002424
+.igot.plt       0x200000ac        0x0 load address 0x0c002f28
  .igot.plt      0x00000000        0x0 ./Startup/startup_XMC4500.o
 
-.bss            0x20000020      0x158 load address 0x0c002424
-                0x20000020                . = ALIGN (0x4)
-                0x20000020                __bss_start = .
+.bss            0x200000ac      0x15c load address 0x0c002f28
+                0x200000ac                . = ALIGN (0x4)
+                0x200000ac                __bss_start = .
  *(.bss)
  *(.bss*)
  .bss.dhUART_0_runtime
-                0x20000020       0x1c ./Dave/Generated/UART/uart_conf.o
-                0x20000020                dhUART_0_runtime
+                0x200000ac       0x1c ./Dave/Generated/UART/uart_conf.o
+                0x200000ac                dhUART_0_runtime
  .bss.g_timer_list
-                0x2000003c        0x4 ./Dave/Generated/SYSTIMER/systimer.o
-                0x2000003c                g_timer_list
+                0x200000c8        0x4 ./Dave/Generated/SYSTIMER/systimer.o
+                0x200000c8                g_timer_list
  .bss.g_timer_tracker
-                0x20000040        0x4 ./Dave/Generated/SYSTIMER/systimer.o
-                0x20000040                g_timer_tracker
+                0x200000cc        0x4 ./Dave/Generated/SYSTIMER/systimer.o
+                0x200000cc                g_timer_tracker
  .bss.g_systick_count
-                0x20000044        0x4 ./Dave/Generated/SYSTIMER/systimer.o
-                0x20000044                g_systick_count
+                0x200000d0        0x4 ./Dave/Generated/SYSTIMER/systimer.o
+                0x200000d0                g_systick_count
  .bss.dhSYSTIMER_0
-                0x20000048        0x4 ./Dave/Generated/SYSTIMER/systimer_conf.o
-                0x20000048                dhSYSTIMER_0
+                0x200000d4        0x4 ./Dave/Generated/SYSTIMER/systimer_conf.o
+                0x200000d4                dhSYSTIMER_0
  .bss.CLOCK_XMC4_0
-                0x2000004c        0x4 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
-                0x2000004c                CLOCK_XMC4_0
- .bss.flag      0x20000050        0x1 ./main.o
-                0x20000050                flag
+                0x200000d8        0x4 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x200000d8                CLOCK_XMC4_0
+ .bss.Channel_A_res_config
+                0x200000dc        0x4 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x200000dc                Channel_A_res_config
+ .bss.flag      0x200000e0        0x1 ./main.o
+                0x200000e0                flag
  *(COMMON)
- *fill*         0x20000051        0x3 
- COMMON         0x20000054      0x120 ./Dave/Generated/SYSTIMER/systimer.o
-                0x20000054                g_timer_tbl
- COMMON         0x20000174        0x4 ./main.o
-                0x20000174                Timer_20ms_Id
+ *fill*         0x200000e1        0x3 
+ COMMON         0x200000e4      0x120 ./Dave/Generated/SYSTIMER/systimer.o
+                0x200000e4                g_timer_tbl
+ COMMON         0x20000204        0x4 ./main.o
+                0x20000204                Timer_20ms_Id
  *(.gnu.linkonce.b*)
-                0x20000178                . = ALIGN (0x4)
-                0x20000178                __bss_end = .
-                0x20000178                . = ALIGN (0x8)
-                0x20000178                Heap_Bank1_Start = .
-                0x00000158                __bss_size = (__bss_end - __bss_start)
+                0x20000208                . = ALIGN (0x4)
+                0x20000208                __bss_end = .
+                0x20000208                . = ALIGN (0x8)
+                0x20000208                Heap_Bank1_Start = .
+                0x0000015c                __bss_size = (__bss_end - __bss_start)
 
 .no_init        0x2000ffc0       0x14
                 0x2000ffc0                Heap_Bank1_End = .
@@ -2548,16 +2668,16 @@ PSRAM_BSS       0x10000800        0x0 load address 0x0c002404
                 0x2000ffc0                SystemCoreClock
                 0x2000ffc4                g_chipid
 
-DSRAM2_DATA     0x30000000        0x0 load address 0x0c002424
+DSRAM2_DATA     0x30000000        0x0 load address 0x0c002f28
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __data2_start = .
  *(DSRAM2_DATA)
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __data2_end = .
-                0x0c002424                __data2_load = LOADADDR (DSRAM2_DATA)
+                0x0c002f28                __data2_load = LOADADDR (DSRAM2_DATA)
                 0x00000000                __data2_size = (__data2_end - __data2_start)
 
-DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
+DSRAM2_BSS      0x30000000        0x0 load address 0x0c002f28
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __bss2_start = .
  *(ETH_RAM)
@@ -2568,7 +2688,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
                 0x30000000                . = ALIGN (0x8)
                 0x30000000                Heap_Bank2_Start = .
                 0x00000000                __bss2_size = (__bss2_end - __bss2_start)
-                0x0000fe48                Heap_Bank1_Size = (Heap_Bank1_End - Heap_Bank1_Start)
+                0x0000fdb8                Heap_Bank1_Size = (Heap_Bank1_End - Heap_Bank1_Start)
                 0x00008000                Heap_Bank2_Size = (0x8000 - (Heap_Bank2_Start - ORIGIN (DSRAM_2_comm)))
                 0x0000f800                Heap_Bank3_Size = (0x10000 - (Heap_Bank3_Start - ORIGIN (PSRAM_1)))
                 0x00000001                ASSERT ((Heap_Bank1_Start <= Heap_Bank1_End), region SRAM_combined overflowed no_init section)
@@ -2594,7 +2714,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x8c8
+.debug_aranges  0x00000000      0xc48
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 ./Startup/startup_XMC4500.o
@@ -2611,29 +2731,39 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  .debug_aranges
                 0x000004e8       0x90 ./Libraries/XMCLib/src/xmc_usic.o
  .debug_aranges
-                0x00000578       0x28 ./Libraries/Newlib/syscalls.o
+                0x00000578      0x280 ./Libraries/XMCLib/src/xmc_vadc.o
  .debug_aranges
-                0x000005a0       0xf8 ./Dave/Generated/UART/uart.o
+                0x000007f8       0x28 ./Libraries/Newlib/syscalls.o
  .debug_aranges
-                0x00000698       0x60 ./Dave/Generated/UART/uart_conf.o
+                0x00000820       0xf8 ./Dave/Generated/UART/uart.o
  .debug_aranges
-                0x000006f8       0xa8 ./Dave/Generated/SYSTIMER/systimer.o
+                0x00000918       0x60 ./Dave/Generated/UART/uart_conf.o
  .debug_aranges
-                0x000007a0       0x18 ./Dave/Generated/SYSTIMER/systimer_conf.o
+                0x00000978       0xa8 ./Dave/Generated/SYSTIMER/systimer.o
  .debug_aranges
-                0x000007b8       0x28 ./Dave/Generated/DIGITAL_IO/digital_io.o
+                0x00000a20       0x18 ./Dave/Generated/SYSTIMER/systimer_conf.o
  .debug_aranges
-                0x000007e0       0x18 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x00000a38       0x30 ./Dave/Generated/GLOBAL_ADC/global_adc.o
  .debug_aranges
-                0x000007f8       0x28 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+                0x00000a68       0x18 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
  .debug_aranges
-                0x00000820       0x38 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+                0x00000a80       0x28 ./Dave/Generated/DIGITAL_IO/digital_io.o
  .debug_aranges
-                0x00000858       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x00000aa8       0x18 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
  .debug_aranges
-                0x00000878       0x20 ./Dave/Generated/DAVE.o
+                0x00000ac0       0x28 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
  .debug_aranges
-                0x00000898       0x30 ./main.o
+                0x00000ae8       0x38 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_aranges
+                0x00000b20       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_aranges
+                0x00000b40       0x88 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .debug_aranges
+                0x00000bc8       0x18 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+ .debug_aranges
+                0x00000be0       0x20 ./Dave/Generated/DAVE.o
+ .debug_aranges
+                0x00000c00       0x48 ./main.o
 
 .debug_pubnames
  *(.debug_pubnames)
@@ -2641,7 +2771,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_info     0x00000000     0xa881
+.debug_info     0x00000000    0x1535f
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0x86 ./Startup/startup_XMC4500.o
  .debug_info    0x00000086      0x8d1 ./Startup/system_XMC4500.o
@@ -2650,20 +2780,25 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  .debug_info    0x00002e3c      0x39d ./Libraries/XMCLib/src/xmc_gpio.o
  .debug_info    0x000031d9      0x88c ./Libraries/XMCLib/src/xmc_uart.o
  .debug_info    0x00003a65      0xb5d ./Libraries/XMCLib/src/xmc_usic.o
- .debug_info    0x000045c2      0x11f ./Libraries/Newlib/syscalls.o
- .debug_info    0x000046e1     0x14c6 ./Dave/Generated/UART/uart.o
- .debug_info    0x00005ba7     0x136d ./Dave/Generated/UART/uart_conf.o
- .debug_info    0x00006f14      0xd6b ./Dave/Generated/SYSTIMER/systimer.o
- .debug_info    0x00007c7f       0xda ./Dave/Generated/SYSTIMER/systimer_conf.o
- .debug_info    0x00007d59      0x4dc ./Dave/Generated/DIGITAL_IO/digital_io.o
- .debug_info    0x00008235      0x429 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
- .debug_info    0x0000865e      0x475 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_info    0x00008ad3      0x224 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_info    0x00008cf7      0x385 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_info    0x0000907c      0xbfe ./Dave/Generated/DAVE.o
- .debug_info    0x00009c7a      0xc07 ./main.o
+ .debug_info    0x000045c2     0x2e68 ./Libraries/XMCLib/src/xmc_vadc.o
+ .debug_info    0x0000742a      0x11f ./Libraries/Newlib/syscalls.o
+ .debug_info    0x00007549     0x14c6 ./Dave/Generated/UART/uart.o
+ .debug_info    0x00008a0f     0x136d ./Dave/Generated/UART/uart_conf.o
+ .debug_info    0x00009d7c      0xd6b ./Dave/Generated/SYSTIMER/systimer.o
+ .debug_info    0x0000aae7       0xda ./Dave/Generated/SYSTIMER/systimer_conf.o
+ .debug_info    0x0000abc1      0xfae ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .debug_info    0x0000bb6f      0xfb0 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+ .debug_info    0x0000cb1f      0x4dc ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_info    0x0000cffb      0x429 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .debug_info    0x0000d424      0x475 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_info    0x0000d899      0x224 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_info    0x0000dabd      0x385 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_info    0x0000de42     0x1e02 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .debug_info    0x0000fc44     0x1789 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+ .debug_info    0x000113cd     0x1f36 ./Dave/Generated/DAVE.o
+ .debug_info    0x00013303     0x205c ./main.o
 
-.debug_abbrev   0x00000000     0x1c2d
+.debug_abbrev   0x00000000     0x26a7
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0x14 ./Startup/startup_XMC4500.o
  .debug_abbrev  0x00000014      0x1a1 ./Startup/system_XMC4500.o
@@ -2672,20 +2807,25 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  .debug_abbrev  0x00000577      0x10c ./Libraries/XMCLib/src/xmc_gpio.o
  .debug_abbrev  0x00000683      0x1fe ./Libraries/XMCLib/src/xmc_uart.o
  .debug_abbrev  0x00000881      0x1eb ./Libraries/XMCLib/src/xmc_usic.o
- .debug_abbrev  0x00000a6c       0xbd ./Libraries/Newlib/syscalls.o
- .debug_abbrev  0x00000b29      0x266 ./Dave/Generated/UART/uart.o
- .debug_abbrev  0x00000d8f      0x24b ./Dave/Generated/UART/uart_conf.o
- .debug_abbrev  0x00000fda      0x295 ./Dave/Generated/SYSTIMER/systimer.o
- .debug_abbrev  0x0000126f       0x7a ./Dave/Generated/SYSTIMER/systimer_conf.o
- .debug_abbrev  0x000012e9      0x148 ./Dave/Generated/DIGITAL_IO/digital_io.o
- .debug_abbrev  0x00001431       0xfd ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
- .debug_abbrev  0x0000152e      0x184 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_abbrev  0x000016b2      0x10f ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_abbrev  0x000017c1      0x104 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_abbrev  0x000018c5      0x18c ./Dave/Generated/DAVE.o
- .debug_abbrev  0x00001a51      0x1dc ./main.o
+ .debug_abbrev  0x00000a6c      0x266 ./Libraries/XMCLib/src/xmc_vadc.o
+ .debug_abbrev  0x00000cd2       0xbd ./Libraries/Newlib/syscalls.o
+ .debug_abbrev  0x00000d8f      0x266 ./Dave/Generated/UART/uart.o
+ .debug_abbrev  0x00000ff5      0x24b ./Dave/Generated/UART/uart_conf.o
+ .debug_abbrev  0x00001240      0x295 ./Dave/Generated/SYSTIMER/systimer.o
+ .debug_abbrev  0x000014d5       0x7a ./Dave/Generated/SYSTIMER/systimer_conf.o
+ .debug_abbrev  0x0000154f      0x1e6 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .debug_abbrev  0x00001735      0x185 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+ .debug_abbrev  0x000018ba      0x148 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_abbrev  0x00001a02       0xfd ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .debug_abbrev  0x00001aff      0x184 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_abbrev  0x00001c83      0x10f ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_abbrev  0x00001d92      0x104 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_abbrev  0x00001e96      0x26d ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .debug_abbrev  0x00002103      0x17b ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+ .debug_abbrev  0x0000227e      0x1c2 ./Dave/Generated/DAVE.o
+ .debug_abbrev  0x00002440      0x267 ./main.o
 
-.debug_line     0x00000000     0x3da3
+.debug_line     0x00000000     0x57b4
  *(.debug_line)
  .debug_line    0x00000000       0x88 ./Startup/startup_XMC4500.o
  .debug_line    0x00000088      0x2e3 ./Startup/system_XMC4500.o
@@ -2694,20 +2834,25 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  .debug_line    0x000012d6      0x1dd ./Libraries/XMCLib/src/xmc_gpio.o
  .debug_line    0x000014b3      0x346 ./Libraries/XMCLib/src/xmc_uart.o
  .debug_line    0x000017f9      0x3f5 ./Libraries/XMCLib/src/xmc_usic.o
- .debug_line    0x00001bee       0xb7 ./Libraries/Newlib/syscalls.o
- .debug_line    0x00001ca5      0x587 ./Dave/Generated/UART/uart.o
- .debug_line    0x0000222c      0x34d ./Dave/Generated/UART/uart_conf.o
- .debug_line    0x00002579      0x473 ./Dave/Generated/SYSTIMER/systimer.o
- .debug_line    0x000029ec      0x15e ./Dave/Generated/SYSTIMER/systimer_conf.o
- .debug_line    0x00002b4a      0x251 ./Dave/Generated/DIGITAL_IO/digital_io.o
- .debug_line    0x00002d9b      0x1d1 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
- .debug_line    0x00002f6c      0x256 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_line    0x000031c2      0x287 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_line    0x00003449      0x25d ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_line    0x000036a6      0x363 ./Dave/Generated/DAVE.o
- .debug_line    0x00003a09      0x39a ./main.o
+ .debug_line    0x00001bee      0xacf ./Libraries/XMCLib/src/xmc_vadc.o
+ .debug_line    0x000026bd       0xb7 ./Libraries/Newlib/syscalls.o
+ .debug_line    0x00002774      0x587 ./Dave/Generated/UART/uart.o
+ .debug_line    0x00002cfb      0x34d ./Dave/Generated/UART/uart_conf.o
+ .debug_line    0x00003048      0x473 ./Dave/Generated/SYSTIMER/systimer.o
+ .debug_line    0x000034bb      0x15e ./Dave/Generated/SYSTIMER/systimer_conf.o
+ .debug_line    0x00003619      0x303 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .debug_line    0x0000391c      0x24e ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+ .debug_line    0x00003b6a      0x251 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_line    0x00003dbb      0x1d1 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .debug_line    0x00003f8c      0x256 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_line    0x000041e2      0x287 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_line    0x00004469      0x25d ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_line    0x000046c6      0x4b5 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .debug_line    0x00004b7b      0x2d9 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+ .debug_line    0x00004e54      0x3ff ./Dave/Generated/DAVE.o
+ .debug_line    0x00005253      0x561 ./main.o
 
-.debug_frame    0x00000000     0x2310
+.debug_frame    0x00000000     0x3244
  *(.debug_frame)
  .debug_frame   0x00000000       0xec ./Startup/system_XMC4500.o
  .debug_frame   0x000000ec       0x60 ./Libraries/XMCLib/src/xmc4_gpio.o
@@ -2715,58 +2860,71 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  .debug_frame   0x000012f0       0x60 ./Libraries/XMCLib/src/xmc_gpio.o
  .debug_frame   0x00001350      0x1c8 ./Libraries/XMCLib/src/xmc_uart.o
  .debug_frame   0x00001518      0x268 ./Libraries/XMCLib/src/xmc_usic.o
- .debug_frame   0x00001780       0x5c ./Libraries/Newlib/syscalls.o
- .debug_frame   0x000017dc      0x474 ./Dave/Generated/UART/uart.o
- .debug_frame   0x00001c50      0x15c ./Dave/Generated/UART/uart_conf.o
- .debug_frame   0x00001dac      0x2dc ./Dave/Generated/SYSTIMER/systimer.o
- .debug_frame   0x00002088       0x60 ./Dave/Generated/DIGITAL_IO/digital_io.o
- .debug_frame   0x000020e8       0x60 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_frame   0x00002148       0xac ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_frame   0x000021f4       0x3c ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_frame   0x00002230       0x38 ./Dave/Generated/DAVE.o
- .debug_frame   0x00002268       0x7c ./main.o
- .debug_frame   0x000022e4       0x2c c:/davev4/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00001780      0xc00 ./Libraries/XMCLib/src/xmc_vadc.o
+ .debug_frame   0x00002380       0x5c ./Libraries/Newlib/syscalls.o
+ .debug_frame   0x000023dc      0x474 ./Dave/Generated/UART/uart.o
+ .debug_frame   0x00002850      0x15c ./Dave/Generated/UART/uart_conf.o
+ .debug_frame   0x000029ac      0x2dc ./Dave/Generated/SYSTIMER/systimer.o
+ .debug_frame   0x00002c88       0x88 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .debug_frame   0x00002d10       0x60 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_frame   0x00002d70       0x60 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_frame   0x00002dd0       0xac ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_frame   0x00002e7c       0x3c ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_frame   0x00002eb8      0x240 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .debug_frame   0x000030f8       0x38 ./Dave/Generated/DAVE.o
+ .debug_frame   0x00003130       0xe8 ./main.o
+ .debug_frame   0x00003218       0x2c c:/davev4/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
 
-.debug_str      0x00000000     0x5813
+.debug_str      0x00000000     0x834f
  *(.debug_str)
- .debug_str     0x00000000      0x512 ./Startup/system_XMC4500.o
+ .debug_str     0x00000000      0x4fe ./Startup/system_XMC4500.o
                                 0x57e (size before relaxing)
- .debug_str     0x00000512      0x544 ./Libraries/XMCLib/src/xmc4_gpio.o
+ .debug_str     0x000004fe      0x544 ./Libraries/XMCLib/src/xmc4_gpio.o
                                 0x76d (size before relaxing)
- .debug_str     0x00000a56     0x1f7c ./Libraries/XMCLib/src/xmc4_scu.o
+ .debug_str     0x00000a42     0x1f63 ./Libraries/XMCLib/src/xmc4_scu.o
                                0x241d (size before relaxing)
- .debug_str     0x000029d2       0xca ./Libraries/XMCLib/src/xmc_gpio.o
+ .debug_str     0x000029a5       0xca ./Libraries/XMCLib/src/xmc_gpio.o
                                 0x61b (size before relaxing)
- .debug_str     0x00002a9c      0x889 ./Libraries/XMCLib/src/xmc_uart.o
+ .debug_str     0x00002a6f      0x889 ./Libraries/XMCLib/src/xmc_uart.o
                                 0xaf1 (size before relaxing)
- .debug_str     0x00003325      0x96f ./Libraries/XMCLib/src/xmc_usic.o
+ .debug_str     0x000032f8      0x961 ./Libraries/XMCLib/src/xmc_usic.o
                                0x1060 (size before relaxing)
- .debug_str     0x00003c94       0x6f ./Libraries/Newlib/syscalls.o
+ .debug_str     0x00003c59     0x20cd ./Libraries/XMCLib/src/xmc_vadc.o
+                               0x26f3 (size before relaxing)
+ .debug_str     0x00005d26       0x6f ./Libraries/Newlib/syscalls.o
                                 0x221 (size before relaxing)
- .debug_str     0x00003d03      0xbd5 ./Dave/Generated/UART/uart.o
+ .debug_str     0x00005d95      0xbcd ./Dave/Generated/UART/uart.o
                                0x1c66 (size before relaxing)
- .debug_str     0x000048d8      0x7d0 ./Dave/Generated/UART/uart_conf.o
+ .debug_str     0x00006962      0x7c7 ./Dave/Generated/UART/uart_conf.o
                                0x19c4 (size before relaxing)
- .debug_str     0x000050a8      0x393 ./Dave/Generated/SYSTIMER/systimer.o
+ .debug_str     0x00007129      0x383 ./Dave/Generated/SYSTIMER/systimer.o
                                 0xd46 (size before relaxing)
- .debug_str     0x0000543b       0x38 ./Dave/Generated/SYSTIMER/systimer_conf.o
+ .debug_str     0x000074ac       0x38 ./Dave/Generated/SYSTIMER/systimer_conf.o
                                 0x229 (size before relaxing)
- .debug_str     0x00005473       0xdf ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_str     0x000074e4      0x1c8 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+                                0xa1c (size before relaxing)
+ .debug_str     0x000076ac      0x21d ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                                0xb1b (size before relaxing)
+ .debug_str     0x000078c9       0xdf ./Dave/Generated/DIGITAL_IO/digital_io.o
                                 0x8aa (size before relaxing)
- .debug_str     0x00005552       0x4e ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .debug_str     0x000079a8       0x4e ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
                                 0x80a (size before relaxing)
- .debug_str     0x000055a0       0x92 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_str     0x000079f6       0x92 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
                                 0x3ab (size before relaxing)
- .debug_str     0x00005632       0xe7 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_str     0x00007a88       0xe7 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
                                 0x35e (size before relaxing)
- .debug_str     0x00005719       0x50 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_str     0x00007b6f       0x50 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
                                 0x73e (size before relaxing)
- .debug_str     0x00005769       0x65 ./Dave/Generated/DAVE.o
-                                0xee8 (size before relaxing)
- .debug_str     0x000057ce       0x45 ./main.o
-                                0xfd2 (size before relaxing)
+ .debug_str     0x00007bbf      0x3df ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+                               0x1830 (size before relaxing)
+ .debug_str     0x00007f9e      0x2ca ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                               0x179e (size before relaxing)
+ .debug_str     0x00008268       0x65 ./Dave/Generated/DAVE.o
+                               0x1b4c (size before relaxing)
+ .debug_str     0x000082cd       0x82 ./main.o
+                               0x1d5d (size before relaxing)
 
-.debug_loc      0x00000000     0x47aa
+.debug_loc      0x00000000     0x6912
  *(.debug_loc)
  .debug_loc     0x00000000      0x1a4 ./Startup/system_XMC4500.o
  .debug_loc     0x000001a4       0xb8 ./Libraries/XMCLib/src/xmc4_gpio.o
@@ -2774,21 +2932,24 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  .debug_loc     0x00002734       0xb8 ./Libraries/XMCLib/src/xmc_gpio.o
  .debug_loc     0x000027ec      0x3c4 ./Libraries/XMCLib/src/xmc_uart.o
  .debug_loc     0x00002bb0      0x52a ./Libraries/XMCLib/src/xmc_usic.o
- .debug_loc     0x000030da       0x94 ./Libraries/Newlib/syscalls.o
- .debug_loc     0x0000316e      0x98c ./Dave/Generated/UART/uart.o
- .debug_loc     0x00003afa      0x2b8 ./Dave/Generated/UART/uart_conf.o
- .debug_loc     0x00003db2      0x5dc ./Dave/Generated/SYSTIMER/systimer.o
- .debug_loc     0x0000438e       0xac ./Dave/Generated/DIGITAL_IO/digital_io.o
- .debug_loc     0x0000443a       0xac ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_loc     0x000044e6      0x14c ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_loc     0x00004632       0x50 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_loc     0x00004682       0x50 ./Dave/Generated/DAVE.o
- .debug_loc     0x000046d2       0xd8 ./main.o
+ .debug_loc     0x000030da     0x1ac8 ./Libraries/XMCLib/src/xmc_vadc.o
+ .debug_loc     0x00004ba2       0x94 ./Libraries/Newlib/syscalls.o
+ .debug_loc     0x00004c36      0x98c ./Dave/Generated/UART/uart.o
+ .debug_loc     0x000055c2      0x2b8 ./Dave/Generated/UART/uart_conf.o
+ .debug_loc     0x0000587a      0x5dc ./Dave/Generated/SYSTIMER/systimer.o
+ .debug_loc     0x00005e56      0x108 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .debug_loc     0x00005f5e       0xac ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_loc     0x0000600a       0xac ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_loc     0x000060b6      0x14c ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_loc     0x00006202       0x50 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_loc     0x00006252      0x4c0 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .debug_loc     0x00006712       0x50 ./Dave/Generated/DAVE.o
+ .debug_loc     0x00006762      0x1b0 ./main.o
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0x778
+.debug_ranges   0x00000000      0xa98
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x38 ./Startup/system_XMC4500.o
  .debug_ranges  0x00000038       0x18 ./Libraries/XMCLib/src/xmc4_gpio.o
@@ -2796,16 +2957,19 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  .debug_ranges  0x00000400       0x18 ./Libraries/XMCLib/src/xmc_gpio.o
  .debug_ranges  0x00000418       0x60 ./Libraries/XMCLib/src/xmc_uart.o
  .debug_ranges  0x00000478       0x80 ./Libraries/XMCLib/src/xmc_usic.o
- .debug_ranges  0x000004f8       0x18 ./Libraries/Newlib/syscalls.o
- .debug_ranges  0x00000510       0xe8 ./Dave/Generated/UART/uart.o
- .debug_ranges  0x000005f8       0x50 ./Dave/Generated/UART/uart_conf.o
- .debug_ranges  0x00000648       0x98 ./Dave/Generated/SYSTIMER/systimer.o
- .debug_ranges  0x000006e0       0x18 ./Dave/Generated/DIGITAL_IO/digital_io.o
- .debug_ranges  0x000006f8       0x18 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_ranges  0x00000710       0x28 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_ranges  0x00000738       0x10 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_ranges  0x00000748       0x10 ./Dave/Generated/DAVE.o
- .debug_ranges  0x00000758       0x20 ./main.o
+ .debug_ranges  0x000004f8      0x270 ./Libraries/XMCLib/src/xmc_vadc.o
+ .debug_ranges  0x00000768       0x18 ./Libraries/Newlib/syscalls.o
+ .debug_ranges  0x00000780       0xe8 ./Dave/Generated/UART/uart.o
+ .debug_ranges  0x00000868       0x50 ./Dave/Generated/UART/uart_conf.o
+ .debug_ranges  0x000008b8       0x98 ./Dave/Generated/SYSTIMER/systimer.o
+ .debug_ranges  0x00000950       0x20 ./Dave/Generated/GLOBAL_ADC/global_adc.o
+ .debug_ranges  0x00000970       0x18 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_ranges  0x00000988       0x18 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_ranges  0x000009a0       0x28 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_ranges  0x000009c8       0x10 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_ranges  0x000009d8       0x78 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .debug_ranges  0x00000a50       0x10 ./Dave/Generated/DAVE.o
+ .debug_ranges  0x00000a60       0x38 ./main.o
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -2820,7 +2984,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  *(.debug_varnames)
 
 .build_attributes
-                0x00000000      0x435
+                0x00000000      0x548
  *(.ARM.attributes)
  .ARM.attributes
                 0x00000000       0x25 ./Startup/startup_XMC4500.o
@@ -2837,29 +3001,39 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c002424
  .ARM.attributes
                 0x00000138       0x37 ./Libraries/XMCLib/src/xmc_usic.o
  .ARM.attributes
-                0x0000016f       0x37 ./Libraries/Newlib/syscalls.o
+                0x0000016f       0x37 ./Libraries/XMCLib/src/xmc_vadc.o
  .ARM.attributes
-                0x000001a6       0x37 ./Dave/Generated/UART/uart.o
+                0x000001a6       0x37 ./Libraries/Newlib/syscalls.o
  .ARM.attributes
-                0x000001dd       0x37 ./Dave/Generated/UART/uart_conf.o
+                0x000001dd       0x37 ./Dave/Generated/UART/uart.o
  .ARM.attributes
-                0x00000214       0x37 ./Dave/Generated/SYSTIMER/systimer.o
+                0x00000214       0x37 ./Dave/Generated/UART/uart_conf.o
  .ARM.attributes
-                0x0000024b       0x37 ./Dave/Generated/SYSTIMER/systimer_conf.o
+                0x0000024b       0x37 ./Dave/Generated/SYSTIMER/systimer.o
  .ARM.attributes
-                0x00000282       0x37 ./Dave/Generated/DIGITAL_IO/digital_io.o
+                0x00000282       0x37 ./Dave/Generated/SYSTIMER/systimer_conf.o
  .ARM.attributes
-                0x000002b9       0x37 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x000002b9       0x37 ./Dave/Generated/GLOBAL_ADC/global_adc.o
  .ARM.attributes
-                0x000002f0       0x37 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+                0x000002f0       0x37 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
  .ARM.attributes
-                0x00000327       0x37 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+                0x00000327       0x37 ./Dave/Generated/DIGITAL_IO/digital_io.o
  .ARM.attributes
-                0x0000035e       0x37 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x0000035e       0x37 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
  .ARM.attributes
-                0x00000395       0x37 ./Dave/Generated/DAVE.o
+                0x00000395       0x37 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
  .ARM.attributes
-                0x000003cc       0x37 ./main.o
+                0x000003cc       0x37 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
  .ARM.attributes
-                0x00000403       0x32 c:/davev4/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x00000403       0x37 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .ARM.attributes
+                0x0000043a       0x37 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
+ .ARM.attributes
+                0x00000471       0x37 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+ .ARM.attributes
+                0x000004a8       0x37 ./Dave/Generated/DAVE.o
+ .ARM.attributes
+                0x000004df       0x37 ./main.o
+ .ARM.attributes
+                0x00000516       0x32 c:/davev4/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
 OUTPUT(UART_Serial_Test.elf elf32-littlearm)

@@ -85,6 +85,11 @@ DAVE_STATUS_t DAVE_Init(void)
   {
 	 /**  Initialization of DIGITAL_IO APP instance dhDIGITAL_IN_0 */
 	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&dhDIGITAL_IN_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of ADC_MEASUREMENT APP instance dhADC_MEASUREMENT_0 */
+	 init_status = (DAVE_STATUS_t)ADC_MEASUREMENT_Init(&dhADC_MEASUREMENT_0); 
    }  
   return init_status;
 } /**  End of function DAVE_Init */

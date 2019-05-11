@@ -24,9 +24,11 @@ public class R_GetSensor : MonoBehaviour {
         for(int i = 0; i < 5; i++)
         {
             sensorValue[i] = sesnsor[i+1];
-            Debug.Log("잘 받고있다"+ i + " : " + sensorValue[i]);
+            if(i == 0)
+            {
+                Debug.Log("잘 받고있다" + i + " : " + sensorValue[i]);
+            }
         }
-        DebugChilde();
     }
 
     private void ChildInit()    //각각의 게임오브젝트에 알맞게 설정해줌

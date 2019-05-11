@@ -35,7 +35,16 @@ main.o main.d main.o: ../main.c \
  D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DIGITAL_IO/digital_io_extern.h \
  D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIMER/systimer.h \
  D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIMER/systimer_conf.h \
- D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIMER/systimer_extern.h
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIMER/systimer_extern.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc_map.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc_conf.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc_extern.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/ADC_MEASUREMENT/adc_measurement.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/ADC_MEASUREMENT/ADC_MEASUREMENT_Extern.h
 
 D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DAVE.h:
 
@@ -110,3 +119,21 @@ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIM
 D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIMER/systimer_conf.h:
 
 D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/SYSTIMER/systimer_extern.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc_map.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc_conf.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc_extern.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/ADC_MEASUREMENT/adc_measurement.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/ADC_MEASUREMENT/ADC_MEASUREMENT_Extern.h:

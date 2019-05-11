@@ -34,7 +34,16 @@ Dave/Generated/DAVE.o Dave/Generated/DAVE.d Dave/Generated/DAVE.o: \
  ../Dave/Generated/DIGITAL_IO/digital_io_extern.h \
  ../Dave/Generated/SYSTIMER/systimer.h \
  ../Dave/Generated/SYSTIMER/systimer_conf.h \
- ../Dave/Generated/SYSTIMER/systimer_extern.h
+ ../Dave/Generated/SYSTIMER/systimer_extern.h \
+ ../Dave/Generated/GLOBAL_ADC/global_adc.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc_map.h \
+ ../Dave/Generated/GLOBAL_ADC/global_adc_conf.h \
+ ../Dave/Generated/GLOBAL_ADC/global_adc_extern.h \
+ ../Dave/Generated/ADC_MEASUREMENT/adc_measurement.h \
+ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc.h \
+ ../Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.h \
+ ../Dave/Generated/ADC_MEASUREMENT/ADC_MEASUREMENT_Extern.h
 
 ../Dave/Generated/DAVE.h:
 
@@ -109,3 +118,21 @@ D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/DAVE_c
 ../Dave/Generated/SYSTIMER/systimer_conf.h:
 
 ../Dave/Generated/SYSTIMER/systimer_extern.h:
+
+../Dave/Generated/GLOBAL_ADC/global_adc.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Libraries/XMCLib/inc/xmc_vadc_map.h:
+
+../Dave/Generated/GLOBAL_ADC/global_adc_conf.h:
+
+../Dave/Generated/GLOBAL_ADC/global_adc_extern.h:
+
+../Dave/Generated/ADC_MEASUREMENT/adc_measurement.h:
+
+D:/XMC_HandController/DAVE_HandController/UART_Serial_Test/Dave/Generated/GLOBAL_ADC/global_adc.h:
+
+../Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.h:
+
+../Dave/Generated/ADC_MEASUREMENT/ADC_MEASUREMENT_Extern.h:

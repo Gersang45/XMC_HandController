@@ -25,8 +25,10 @@ Libraries/XMCLib/src \
 Libraries/Newlib \
 Dave/Generated/UART \
 Dave/Generated/SYSTIMER \
+Dave/Generated/GLOBAL_ADC \
 Dave/Generated/DIGITAL_IO \
 Dave/Generated \
 Dave/Generated/CPU_CTRL_XMC4 \
 Dave/Generated/CLOCK_XMC4 \
+Dave/Generated/ADC_MEASUREMENT \
 
