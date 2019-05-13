@@ -121,8 +121,8 @@
   53 0016 002B     	 cmp r3,#0
   54 0018 04D1     	 bne .L2
   70:../Dave/Generated/DAVE.c ****   {
-  71:../Dave/Generated/DAVE.c **** 	 /**  Initialization of UART APP instance dhUART_0 */
-  72:../Dave/Generated/DAVE.c **** 	 init_status = (DAVE_STATUS_t)UART_Init(&dhUART_0); 
+  71:../Dave/Generated/DAVE.c **** 	 /**  Initialization of UART APP instance UART_0 */
+  72:../Dave/Generated/DAVE.c **** 	 init_status = (DAVE_STATUS_t)UART_Init(&UART_0); 
   55              	 .loc 1 72 0
   56 001a 1648     	 ldr r0,.L8+4
   57 001c FFF7FEFF 	 bl UART_Init
@@ -208,7 +208,7 @@
  114 006e 00BF     	 .align 2
  115              	.L8:
  116 0070 00000000 	 .word CLOCK_XMC4_0
- 117 0074 00000000 	 .word dhUART_0
+ 117 0074 00000000 	 .word UART_0
  118 0078 00000000 	 .word dhDIGITAL_OUT_0
  119 007c 00000000 	 .word dhSYSTIMER_0
  120 0080 00000000 	 .word dhDIGITAL_IN_0
@@ -253,7 +253,7 @@ DIGITAL_IO_Init
 SYSTIMER_Init
 ADC_MEASUREMENT_Init
 CLOCK_XMC4_0
-dhUART_0
+UART_0
 dhDIGITAL_OUT_0
 dhSYSTIMER_0
 dhDIGITAL_IN_0

@@ -12,13 +12,15 @@ public class GameManager : MonoBehaviour {
     private GameObject Hand_L;
     [SerializeField]
     private GameObject cube;
-
-
-    private SerialPort MySerial = new SerialPort();  // 시리얼 포트 생성
-    private const int SIGNAL_CHECK = 0;     // CheckGoodSignal 함수에서 신호의 첫번째 들어오는 값이 정상적으로 들어오고 있는지 비교할 기준값
     private const int RECV_SIZE = 19;      // recv 받을 데이터배열의 크기
+    private const int SIGNAL_CHECK = 0;     // CheckGoodSignal 함수에서 신호의 첫번째 들어오는 값이 정상적으로 들어오고 있는지 비교할 기준값
+
+
+
+    private SerialPort MySerial = new SerialPort();  // 시리얼 포트 생성    
     private byte[] recvBuf = new byte[1];   // DAVE에서 보내주는 값들을 1차적으로 저장하는 배열
     private byte[] recvData = new byte[RECV_SIZE]; // DAVE에서 보내주는 값들을 최종적으로 저장할 배열, 앞으로 써먹을 값들
+    private byte[] txBuf = new byte[1];
 
     [Header("COM PORT Config")]
     [SerializeField]
@@ -40,7 +42,7 @@ public class GameManager : MonoBehaviour {
     void Start()   // Update 시작 직전 한번만 실행
     {
         bool chcek = false;
-        chcek = CheckGoodSignal();  // 신호가 제대로 오는지 체크하는 함수
+        //chcek = CheckGoodSignal();  // 신호가 제대로 오는지 체크하는 함수
         Debug.Log("Filtering : " + chcek);  // 처리완료 신호
     }
 
@@ -51,21 +53,22 @@ public class GameManager : MonoBehaviour {
         {
             try
             {
+                MySerial.Write(txBuf, 0, 1);
                 for (int i = 0; i < RECV_SIZE; i++)     // DAVE에서 보내는 데이터배열의 크기만큼 실행된다.
                 {
                     MySerial.Read(recvBuf, 0, 1);    // 데이터 전송받은 갯수, 데이터는 recvBuf에 배열형식으로 저장됨, Byte라서 최대 0~255까지 
                     recvData[i] = recvBuf[0];   // recvData 배열에 저장함, 앞으로 써먹을 값들
-                    if (i == 0) //i == 0일때 
-                    {
-                        if (recvBuf[0] != SIGNAL_CHECK)    // 첫번쨰로 들어오는 값이 Dave에서 SIGNAL_CHECK 값으로, 0을 보내기로 되어있음
-                        {
-                            Debug.Log("뭐가 이상하게 들어온다?");
-                            CheckGoodSignal();
-                        }
-                    }
-                    //Debug.Log("Signal" + i + " : " + recvData[i]);  // 제대로 값이 오고 있는지 주기적으로 확인함
+                    //if (i == 0) //i == 0일때 
+                    //{
+                    //    if (recvBuf[0] != SIGNAL_CHECK)    // 첫번쨰로 들어오는 값이 Dave에서 SIGNAL_CHECK 값으로, 0을 보내기로 되어있음
+                    //    {
+                    //        Debug.Log("뭐가 이상하게 들어온다?");
+                    //        CheckGoodSignal();
+                    //    }
+                    //}
+                    Debug.Log("Signal" + i + " : " + recvData[i]);  // 제대로 값이 오고 있는지 주기적으로 확인함
                 }
-                Hand_R.GetComponent<R_GetSensor>().Get_Value(recvData);     //받아온 데이터를 Hand_R로 전송함
+                //Hand_R.GetComponent<R_GetSensor>().Get_Value(recvData);     //받아온 데이터를 Hand_R로 전송함
             }
             catch (TimeoutException e)   // Timeout 에러를 죽일때 사용
             {

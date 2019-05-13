@@ -68,8 +68,8 @@ DAVE_STATUS_t DAVE_Init(void)
 
   if (init_status == DAVE_STATUS_SUCCESS)
   {
-	 /**  Initialization of UART APP instance dhUART_0 */
-	 init_status = (DAVE_STATUS_t)UART_Init(&dhUART_0); 
+	 /**  Initialization of UART APP instance UART_0 */
+	 init_status = (DAVE_STATUS_t)UART_Init(&UART_0); 
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
   {

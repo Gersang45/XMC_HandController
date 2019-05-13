@@ -1,0 +1,11 @@
+18:01:26 **** Incremental Build of configuration Debug for project Test_UART ****
+"\"C:\\DAVEv4\\DAVE-4.3.2\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Invoking: ARM-GCC Print Size'
+"C:/DAVEv4/DAVE-4.3.2/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "Test_UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7184	     12	   2104	   9300	   2454	Test_UART.elf
+'Finished building: Test_UART.siz'
+
+
+18:01:27 Build Finished (took 1s.657ms)
+

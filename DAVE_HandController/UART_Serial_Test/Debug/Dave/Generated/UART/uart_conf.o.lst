@@ -3100,10 +3100,10 @@
  379 0020 7047     	 bx lr
  380              	 .cfi_endproc
  381              	.LFE230:
- 383              	 .global dhUART_0_channel_config
- 384 0022 00BF     	 .section .rodata.dhUART_0_channel_config,"a",%progbits
+ 383              	 .global UART_0_channel_config
+ 384 0022 00BF     	 .section .rodata.UART_0_channel_config,"a",%progbits
  385              	 .align 2
- 388              	dhUART_0_channel_config:
+ 388              	UART_0_channel_config:
  389 0000 80250000 	 .word 9600
  390 0004 08       	 .byte 8
  391 0005 08       	 .byte 8
@@ -3111,29 +3111,29 @@
  393 0007 10       	 .byte 16
  394 0008 0000     	 .short 0
  395 000a 0000     	 .space 2
- 396              	 .global dhUART_0_tx_pin_config
- 397              	 .section .rodata.dhUART_0_tx_pin_config,"a",%progbits
+ 396              	 .global UART_0_tx_pin_config
+ 397              	 .section .rodata.UART_0_tx_pin_config,"a",%progbits
  398              	 .align 2
- 401              	dhUART_0_tx_pin_config:
+ 401              	UART_0_tx_pin_config:
  402 0000 90       	 .byte -112
  403 0001 000000   	 .space 3
  404 0004 01000000 	 .word 1
  405 0008 02       	 .byte 2
  406 0009 000000   	 .space 3
- 407              	 .global dhUART_0_tx_pin
- 408              	 .section .rodata.dhUART_0_tx_pin,"a",%progbits
+ 407              	 .global UART_0_tx_pin
+ 408              	 .section .rodata.UART_0_tx_pin,"a",%progbits
  409              	 .align 2
- 412              	dhUART_0_tx_pin:
+ 412              	UART_0_tx_pin:
  413 0000 00810248 	 .word 1208123648
  414 0004 05       	 .byte 5
  415 0005 000000   	 .space 3
- 416 0008 00000000 	 .word dhUART_0_tx_pin_config
- 417              	 .global dhUART_0_config
- 418              	 .section .rodata.dhUART_0_config,"a",%progbits
+ 416 0008 00000000 	 .word UART_0_tx_pin_config
+ 417              	 .global UART_0_config
+ 418              	 .section .rodata.UART_0_config,"a",%progbits
  419              	 .align 2
- 422              	dhUART_0_config:
- 423 0000 00000000 	 .word dhUART_0_channel_config
- 424 0004 00000000 	 .word dhUART_0_init
+ 422              	UART_0_config:
+ 423 0000 00000000 	 .word UART_0_channel_config
+ 424 0004 00000000 	 .word UART_0_init
  425 0008 00000000 	 .word 0
  426 000c 00000000 	 .word 0
  427 0010 00000000 	 .word 0
@@ -3141,7 +3141,7 @@
  429 0018 00000000 	 .word 0
  430 001c 00000000 	 .word 0
  431 0020 00000000 	 .word 0
- 432 0024 00000000 	 .word dhUART_0_tx_pin
+ 432 0024 00000000 	 .word UART_0_tx_pin
  433 0028 00       	 .byte 0
  434 0029 00       	 .byte 0
  435 002a 00       	 .byte 0
@@ -3149,37 +3149,37 @@
  437 002c 05       	 .byte 5
  438 002d 03       	 .byte 3
  439 002e 0000     	 .space 2
- 440              	 .global dhUART_0_runtime
- 441              	 .section .bss.dhUART_0_runtime,"aw",%nobits
+ 440              	 .global UART_0_runtime
+ 441              	 .section .bss.UART_0_runtime,"aw",%nobits
  442              	 .align 2
- 445              	dhUART_0_runtime:
+ 445              	UART_0_runtime:
  446 0000 00000000 	 .space 28
  446      00000000 
  446      00000000 
  446      00000000 
  446      00000000 
- 447              	 .global dhUART_0
- 448              	 .section .data.dhUART_0,"aw",%progbits
+ 447              	 .global UART_0
+ 448              	 .section .data.UART_0,"aw",%progbits
  449              	 .align 2
- 452              	dhUART_0:
+ 452              	UART_0:
  453 0000 00000340 	 .word 1073938432
- 454 0004 00000000 	 .word dhUART_0_config
- 455 0008 00000000 	 .word dhUART_0_runtime
- 456              	 .global dhUART_0_rx_pin_config
- 457              	 .section .rodata.dhUART_0_rx_pin_config,"a",%progbits
+ 454 0004 00000000 	 .word UART_0_config
+ 455 0008 00000000 	 .word UART_0_runtime
+ 456              	 .global UART_0_rx_pin_config
+ 457              	 .section .rodata.UART_0_rx_pin_config,"a",%progbits
  458              	 .align 2
- 461              	dhUART_0_rx_pin_config:
+ 461              	UART_0_rx_pin_config:
  462 0000 00       	 .byte 0
  463 0001 000000   	 .space 3
  464 0004 01000000 	 .word 1
  465 0008 02       	 .byte 2
  466 0009 000000   	 .space 3
- 467              	 .section .text.dhUART_0_init,"ax",%progbits
+ 467              	 .section .text.UART_0_init,"ax",%progbits
  468              	 .align 2
- 469              	 .global dhUART_0_init
+ 469              	 .global UART_0_init
  470              	 .thumb
  471              	 .thumb_func
- 473              	dhUART_0_init:
+ 473              	UART_0_init:
  474              	.LFB266:
  475              	 .file 4 "../Dave/Generated/UART/uart_conf.c"
    1:../Dave/Generated/UART/uart_conf.c **** /**************************************************************************************************
@@ -3272,10 +3272,10 @@
   88:../Dave/Generated/UART/uart_conf.c **** /**************************************************************************************************
   89:../Dave/Generated/UART/uart_conf.c ****  * DATA STRUCTURES
   90:../Dave/Generated/UART/uart_conf.c ****  **************************************************************************************************
-  91:../Dave/Generated/UART/uart_conf.c **** UART_STATUS_t dhUART_0_init(void);
+  91:../Dave/Generated/UART/uart_conf.c **** UART_STATUS_t UART_0_init(void);
   92:../Dave/Generated/UART/uart_conf.c **** 
   93:../Dave/Generated/UART/uart_conf.c **** /*USIC channel configuration*/
-  94:../Dave/Generated/UART/uart_conf.c **** const XMC_UART_CH_CONFIG_t dhUART_0_channel_config =
+  94:../Dave/Generated/UART/uart_conf.c **** const XMC_UART_CH_CONFIG_t UART_0_channel_config =
   95:../Dave/Generated/UART/uart_conf.c **** {
   96:../Dave/Generated/UART/uart_conf.c ****   .baudrate      = 9600U,
   97:../Dave/Generated/UART/uart_conf.c ****   .data_bits     = 8U,
@@ -3285,7 +3285,7 @@
  101:../Dave/Generated/UART/uart_conf.c ****   .parity_mode   = XMC_USIC_CH_PARITY_MODE_NONE
  102:../Dave/Generated/UART/uart_conf.c **** };
  103:../Dave/Generated/UART/uart_conf.c **** /*Transmit pin configuration*/
- 104:../Dave/Generated/UART/uart_conf.c **** const XMC_GPIO_CONFIG_t dhUART_0_tx_pin_config   = 
+ 104:../Dave/Generated/UART/uart_conf.c **** const XMC_GPIO_CONFIG_t UART_0_tx_pin_config   = 
  105:../Dave/Generated/UART/uart_conf.c **** { 
  106:../Dave/Generated/UART/uart_conf.c ****   .mode             = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT2, 
  107:../Dave/Generated/UART/uart_conf.c ****   .output_level     = XMC_GPIO_OUTPUT_LEVEL_HIGH,
@@ -3293,20 +3293,20 @@
  109:../Dave/Generated/UART/uart_conf.c **** };
  110:../Dave/Generated/UART/uart_conf.c **** 
  111:../Dave/Generated/UART/uart_conf.c **** /*Transmit pin configuration used for initializing*/
- 112:../Dave/Generated/UART/uart_conf.c **** const UART_TX_CONFIG_t dhUART_0_tx_pin = 
+ 112:../Dave/Generated/UART/uart_conf.c **** const UART_TX_CONFIG_t UART_0_tx_pin = 
  113:../Dave/Generated/UART/uart_conf.c **** {
  114:../Dave/Generated/UART/uart_conf.c ****   .port = (XMC_GPIO_PORT_t *)PORT1_BASE,
- 115:../Dave/Generated/UART/uart_conf.c ****   .config = &dhUART_0_tx_pin_config,
+ 115:../Dave/Generated/UART/uart_conf.c ****   .config = &UART_0_tx_pin_config,
  116:../Dave/Generated/UART/uart_conf.c ****   .pin = 5U
  117:../Dave/Generated/UART/uart_conf.c **** };
  118:../Dave/Generated/UART/uart_conf.c **** 
  119:../Dave/Generated/UART/uart_conf.c **** /*UART APP configuration structure*/
- 120:../Dave/Generated/UART/uart_conf.c **** const UART_CONFIG_t dhUART_0_config = 
+ 120:../Dave/Generated/UART/uart_conf.c **** const UART_CONFIG_t UART_0_config = 
  121:../Dave/Generated/UART/uart_conf.c **** {
- 122:../Dave/Generated/UART/uart_conf.c ****   .channel_config   = &dhUART_0_channel_config,
+ 122:../Dave/Generated/UART/uart_conf.c ****   .channel_config   = &UART_0_channel_config,
  123:../Dave/Generated/UART/uart_conf.c **** 
  124:../Dave/Generated/UART/uart_conf.c **** 
- 125:../Dave/Generated/UART/uart_conf.c ****   .fptr_uart_config = dhUART_0_init,
+ 125:../Dave/Generated/UART/uart_conf.c ****   .fptr_uart_config = UART_0_init,
  126:../Dave/Generated/UART/uart_conf.c ****   .tx_cbhandler = NULL,
  127:../Dave/Generated/UART/uart_conf.c ****   .rx_cbhandler = NULL,  
  128:../Dave/Generated/UART/uart_conf.c ****   .sync_error_cbhandler = NULL,  
@@ -3314,7 +3314,7 @@
  130:../Dave/Generated/UART/uart_conf.c ****   .format_error_bit0_cbhandler = NULL,  
  131:../Dave/Generated/UART/uart_conf.c ****   .format_error_bit1_cbhandler = NULL,  
  132:../Dave/Generated/UART/uart_conf.c ****   .collision_error_cbhandler = NULL,
- 133:../Dave/Generated/UART/uart_conf.c ****   .tx_pin_config    = &dhUART_0_tx_pin,
+ 133:../Dave/Generated/UART/uart_conf.c ****   .tx_pin_config    = &UART_0_tx_pin,
  134:../Dave/Generated/UART/uart_conf.c ****   .mode             = UART_MODE_FULLDUPLEX,
  135:../Dave/Generated/UART/uart_conf.c ****   .transmit_mode = UART_TRANSFER_MODE_INTERRUPT,
  136:../Dave/Generated/UART/uart_conf.c ****   .receive_mode = UART_TRANSFER_MODE_INTERRUPT,
@@ -3324,22 +3324,22 @@
  140:../Dave/Generated/UART/uart_conf.c **** };
  141:../Dave/Generated/UART/uart_conf.c **** 
  142:../Dave/Generated/UART/uart_conf.c **** /*Runtime handler*/
- 143:../Dave/Generated/UART/uart_conf.c **** UART_RUNTIME_t dhUART_0_runtime = 
+ 143:../Dave/Generated/UART/uart_conf.c **** UART_RUNTIME_t UART_0_runtime = 
  144:../Dave/Generated/UART/uart_conf.c **** {
  145:../Dave/Generated/UART/uart_conf.c ****   .tx_busy = false,  
  146:../Dave/Generated/UART/uart_conf.c ****   .rx_busy = false,
  147:../Dave/Generated/UART/uart_conf.c **** };
  148:../Dave/Generated/UART/uart_conf.c **** 
  149:../Dave/Generated/UART/uart_conf.c **** /*APP handle structure*/
- 150:../Dave/Generated/UART/uart_conf.c **** UART_t dhUART_0 = 
+ 150:../Dave/Generated/UART/uart_conf.c **** UART_t UART_0 = 
  151:../Dave/Generated/UART/uart_conf.c **** {
  152:../Dave/Generated/UART/uart_conf.c ****   .channel = XMC_UART0_CH0,
- 153:../Dave/Generated/UART/uart_conf.c ****   .config  = &dhUART_0_config,
- 154:../Dave/Generated/UART/uart_conf.c ****   .runtime = &dhUART_0_runtime
+ 153:../Dave/Generated/UART/uart_conf.c ****   .config  = &UART_0_config,
+ 154:../Dave/Generated/UART/uart_conf.c ****   .runtime = &UART_0_runtime
  155:../Dave/Generated/UART/uart_conf.c **** };
  156:../Dave/Generated/UART/uart_conf.c **** 
  157:../Dave/Generated/UART/uart_conf.c **** /*Receive pin configuration*/
- 158:../Dave/Generated/UART/uart_conf.c **** const XMC_GPIO_CONFIG_t dhUART_0_rx_pin_config   = {
+ 158:../Dave/Generated/UART/uart_conf.c **** const XMC_GPIO_CONFIG_t UART_0_rx_pin_config   = {
  159:../Dave/Generated/UART/uart_conf.c ****   .mode             = XMC_GPIO_MODE_INPUT_TRISTATE,
  160:../Dave/Generated/UART/uart_conf.c ****   .output_level     = XMC_GPIO_OUTPUT_LEVEL_HIGH,
  161:../Dave/Generated/UART/uart_conf.c ****   .output_strength  = XMC_GPIO_OUTPUT_STRENGTH_STRONG_SOFT_EDGE
@@ -3348,7 +3348,7 @@
  164:../Dave/Generated/UART/uart_conf.c ****  * API IMPLEMENTATION
  165:../Dave/Generated/UART/uart_conf.c ****  **************************************************************************************************
  166:../Dave/Generated/UART/uart_conf.c **** /*Channel initialization function*/
- 167:../Dave/Generated/UART/uart_conf.c **** UART_STATUS_t dhUART_0_init()
+ 167:../Dave/Generated/UART/uart_conf.c **** UART_STATUS_t UART_0_init()
  168:../Dave/Generated/UART/uart_conf.c **** {
  476              	 .loc 4 168 0
  477              	 .cfi_startproc
@@ -3370,14 +3370,14 @@
  492 0006 0023     	 movs r3,#0
  493 0008 FB71     	 strb r3,[r7,#7]
  170:../Dave/Generated/UART/uart_conf.c ****   /*Configure Receive pin*/
- 171:../Dave/Generated/UART/uart_conf.c ****   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 4U, &dhUART_0_rx_pin_config);
+ 171:../Dave/Generated/UART/uart_conf.c ****   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 4U, &UART_0_rx_pin_config);
  494              	 .loc 4 171 0
  495 000a 2D48     	 ldr r0,.L21
  496 000c 0421     	 movs r1,#4
  497 000e 2D4A     	 ldr r2,.L21+4
  498 0010 FFF7FEFF 	 bl XMC_GPIO_Init
  172:../Dave/Generated/UART/uart_conf.c ****   /* Initialize USIC channel in UART mode*/
- 173:../Dave/Generated/UART/uart_conf.c ****   XMC_UART_CH_Init(XMC_UART0_CH0, &dhUART_0_channel_config);
+ 173:../Dave/Generated/UART/uart_conf.c ****   XMC_UART_CH_Init(XMC_UART0_CH0, &UART_0_channel_config);
  499              	 .loc 4 173 0
  500 0014 2C48     	 ldr r0,.L21+8
  501 0016 2D49     	 ldr r1,.L21+12
@@ -3418,7 +3418,7 @@
  522 0040 FFF7FEFF 	 bl XMC_UART_CH_Start
  188:../Dave/Generated/UART/uart_conf.c **** 
  189:../Dave/Generated/UART/uart_conf.c ****   /* Initialize UART TX pin */
- 190:../Dave/Generated/UART/uart_conf.c ****   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 5U, &dhUART_0_tx_pin_config);
+ 190:../Dave/Generated/UART/uart_conf.c ****   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 5U, &UART_0_tx_pin_config);
  523              	 .loc 4 190 0
  524 0044 1E48     	 ldr r0,.L21
  525 0046 0521     	 movs r1,#5
@@ -3510,10 +3510,10 @@
  589              	 .align 2
  590              	.L21:
  591 00c0 00810248 	 .word 1208123648
- 592 00c4 00000000 	 .word dhUART_0_rx_pin_config
+ 592 00c4 00000000 	 .word UART_0_rx_pin_config
  593 00c8 00000340 	 .word 1073938432
- 594 00cc 00000000 	 .word dhUART_0_channel_config
- 595 00d0 00000000 	 .word dhUART_0_tx_pin_config
+ 594 00cc 00000000 	 .word UART_0_channel_config
+ 595 00d0 00000000 	 .word UART_0_tx_pin_config
  596              	 .cfi_endproc
  597              	.LFE266:
  599              	 .section .text.USIC0_3_IRQHandler,"ax",%progbits
@@ -3525,7 +3525,7 @@
  606              	.LFB267:
  213:../Dave/Generated/UART/uart_conf.c **** /*Interrupt handlers*/
  214:../Dave/Generated/UART/uart_conf.c **** /*Transmit ISR*/
- 215:../Dave/Generated/UART/uart_conf.c **** void dhUART_0_TX_HANDLER()
+ 215:../Dave/Generated/UART/uart_conf.c **** void UART_0_TX_HANDLER()
  216:../Dave/Generated/UART/uart_conf.c **** {
  607              	 .loc 4 216 0
  608              	 .cfi_startproc
@@ -3539,7 +3539,7 @@
  616 0002 00AF     	 add r7,sp,#0
  617              	.LCFI40:
  618              	 .cfi_def_cfa_register 7
- 217:../Dave/Generated/UART/uart_conf.c ****   UART_lTransmitHandler(&dhUART_0);
+ 217:../Dave/Generated/UART/uart_conf.c ****   UART_lTransmitHandler(&UART_0);
  619              	 .loc 4 217 0
  620 0004 0148     	 ldr r0,.L24
  621 0006 FFF7FEFF 	 bl UART_lTransmitHandler
@@ -3549,7 +3549,7 @@
  624              	.L25:
  625              	 .align 2
  626              	.L24:
- 627 000c 00000000 	 .word dhUART_0
+ 627 000c 00000000 	 .word UART_0
  628              	 .cfi_endproc
  629              	.LFE267:
  631              	 .section .text.USIC0_5_IRQHandler,"ax",%progbits
@@ -3561,7 +3561,7 @@
  638              	.LFB268:
  219:../Dave/Generated/UART/uart_conf.c **** 
  220:../Dave/Generated/UART/uart_conf.c **** /*Receive ISR*/
- 221:../Dave/Generated/UART/uart_conf.c **** void dhUART_0_RX_HANDLER()
+ 221:../Dave/Generated/UART/uart_conf.c **** void UART_0_RX_HANDLER()
  222:../Dave/Generated/UART/uart_conf.c **** {
  639              	 .loc 4 222 0
  640              	 .cfi_startproc
@@ -3575,7 +3575,7 @@
  648 0002 00AF     	 add r7,sp,#0
  649              	.LCFI42:
  650              	 .cfi_def_cfa_register 7
- 223:../Dave/Generated/UART/uart_conf.c ****   UART_lReceiveHandler(&dhUART_0);
+ 223:../Dave/Generated/UART/uart_conf.c ****   UART_lReceiveHandler(&UART_0);
  651              	 .loc 4 223 0
  652 0004 0148     	 ldr r0,.L27
  653 0006 FFF7FEFF 	 bl UART_lReceiveHandler
@@ -3585,7 +3585,7 @@
  656              	.L28:
  657              	 .align 2
  658              	.L27:
- 659 000c 00000000 	 .word dhUART_0
+ 659 000c 00000000 	 .word UART_0
  660              	 .cfi_endproc
  661              	.LFE268:
  663              	 .text
@@ -3614,23 +3614,23 @@ DEFINED SYMBOLS
     {standard input}:279    .text.XMC_USIC_CH_SetInputSource:00000000 XMC_USIC_CH_SetInputSource
     {standard input}:337    .text.XMC_UART_CH_Start:00000000 $t
     {standard input}:341    .text.XMC_UART_CH_Start:00000000 XMC_UART_CH_Start
-    {standard input}:388    .rodata.dhUART_0_channel_config:00000000 dhUART_0_channel_config
-    {standard input}:385    .rodata.dhUART_0_channel_config:00000000 $d
-    {standard input}:401    .rodata.dhUART_0_tx_pin_config:00000000 dhUART_0_tx_pin_config
-    {standard input}:398    .rodata.dhUART_0_tx_pin_config:00000000 $d
-    {standard input}:412    .rodata.dhUART_0_tx_pin:00000000 dhUART_0_tx_pin
-    {standard input}:409    .rodata.dhUART_0_tx_pin:00000000 $d
-    {standard input}:422    .rodata.dhUART_0_config:00000000 dhUART_0_config
-    {standard input}:419    .rodata.dhUART_0_config:00000000 $d
-    {standard input}:473    .text.dhUART_0_init:00000000 dhUART_0_init
-    {standard input}:445    .bss.dhUART_0_runtime:00000000 dhUART_0_runtime
-    {standard input}:442    .bss.dhUART_0_runtime:00000000 $d
-    {standard input}:452    .data.dhUART_0:00000000 dhUART_0
-    {standard input}:449    .data.dhUART_0:00000000 $d
-    {standard input}:461    .rodata.dhUART_0_rx_pin_config:00000000 dhUART_0_rx_pin_config
-    {standard input}:458    .rodata.dhUART_0_rx_pin_config:00000000 $d
-    {standard input}:468    .text.dhUART_0_init:00000000 $t
-    {standard input}:591    .text.dhUART_0_init:000000c0 $d
+    {standard input}:388    .rodata.UART_0_channel_config:00000000 UART_0_channel_config
+    {standard input}:385    .rodata.UART_0_channel_config:00000000 $d
+    {standard input}:401    .rodata.UART_0_tx_pin_config:00000000 UART_0_tx_pin_config
+    {standard input}:398    .rodata.UART_0_tx_pin_config:00000000 $d
+    {standard input}:412    .rodata.UART_0_tx_pin:00000000 UART_0_tx_pin
+    {standard input}:409    .rodata.UART_0_tx_pin:00000000 $d
+    {standard input}:422    .rodata.UART_0_config:00000000 UART_0_config
+    {standard input}:419    .rodata.UART_0_config:00000000 $d
+    {standard input}:473    .text.UART_0_init:00000000 UART_0_init
+    {standard input}:445    .bss.UART_0_runtime:00000000 UART_0_runtime
+    {standard input}:442    .bss.UART_0_runtime:00000000 $d
+    {standard input}:452    .data.UART_0:00000000 UART_0
+    {standard input}:449    .data.UART_0:00000000 $d
+    {standard input}:461    .rodata.UART_0_rx_pin_config:00000000 UART_0_rx_pin_config
+    {standard input}:458    .rodata.UART_0_rx_pin_config:00000000 $d
+    {standard input}:468    .text.UART_0_init:00000000 $t
+    {standard input}:591    .text.UART_0_init:000000c0 $d
     {standard input}:600    .text.USIC0_3_IRQHandler:00000000 $t
     {standard input}:605    .text.USIC0_3_IRQHandler:00000000 USIC0_3_IRQHandler
     {standard input}:627    .text.USIC0_3_IRQHandler:0000000c $d

@@ -3,33 +3,33 @@ UART_Serial_Test.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00002e7c  08000000  0c000000  00008000  2**2
+  0 .text         00002d34  08000000  0c000000  00008000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 Stack         00000800  10000000  10000000  00018000  2**0
                   ALLOC
-  2 .data         000000ac  20000000  0c002e7c  00010000  2**2
+  2 .data         000000a8  20000000  0c002d34  00010000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  3 .bss          0000015c  200000ac  0c002f28  000100ac  2**2
+  3 .bss          00000160  200000a8  0c002ddc  000100a8  2**2
                   ALLOC
   4 .no_init      00000014  2000ffc0  2000ffc0  00017fc0  2**2
                   ALLOC
-  5 .debug_aranges 00000c48  00000000  00000000  000100b0  2**3
+  5 .debug_aranges 00000c28  00000000  00000000  000100a8  2**3
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0001535f  00000000  00000000  00010cf8  2**0
+  6 .debug_info   00013f34  00000000  00000000  00010cd0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000026a7  00000000  00000000  00026057  2**0
+  7 .debug_abbrev 000025f3  00000000  00000000  00024c04  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000057b4  00000000  00000000  000286fe  2**0
+  8 .debug_line   000055e3  00000000  00000000  000271f7  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00003244  00000000  00000000  0002deb4  2**2
+  9 .debug_frame  000031b0  00000000  00000000  0002c7dc  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    0000834f  00000000  00000000  000310f8  2**0
+ 10 .debug_str    00008308  00000000  00000000  0002f98c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00006912  00000000  00000000  00039447  2**0
+ 11 .debug_loc    000067de  00000000  00000000  00037c94  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000a98  00000000  00000000  0003fd59  2**0
+ 12 .debug_ranges 00000a78  00000000  00000000  0003e472  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .build_attributes 00000548  00000000  00000000  000407f1  2**0
+ 13 .build_attributes 00000548  00000000  00000000  0003eeea  2**0
                   CONTENTS, READONLY
 
 Disassembly of section .text:
@@ -43,7 +43,7 @@ Disassembly of section .text:
  800004c:	b1 02 00 08 b1 02 00 08 b1 02 00 08 b1 02 00 08     ................
  800005c:	b1 02 00 08 b1 02 00 08 00 00 00 00 00 00 00 00     ................
  800006c:	00 00 00 00 b1 02 00 08 00 00 00 00 b1 02 00 08     ................
- 800007c:	b1 02 00 08 b9 2c 00 08 b1 02 00 08 b1 02 00 08     .....,..........
+ 800007c:	b1 02 00 08 b1 02 00 08 b1 02 00 08 b1 02 00 08     ................
  800008c:	b1 02 00 08 b1 02 00 08 b1 02 00 08 b1 02 00 08     ................
  800009c:	b1 02 00 08 b1 02 00 08 b1 02 00 08 b1 02 00 08     ................
  80000ac:	b1 02 00 08 b1 02 00 08 b1 02 00 08 b1 02 00 08     ................
@@ -174,21 +174,21 @@ Disassembly of section .text:
 	...
 
 08000248 <__copy_table_start__>:
- 8000248:	0c002e7c 	.word	0x0c002e7c
+ 8000248:	0c002d34 	.word	0x0c002d34
  800024c:	20000000 	.word	0x20000000
- 8000250:	000000ac 	.word	0x000000ac
- 8000254:	0c002f28 	.word	0x0c002f28
+ 8000250:	000000a8 	.word	0x000000a8
+ 8000254:	0c002ddc 	.word	0x0c002ddc
  8000258:	30000000 	.word	0x30000000
  800025c:	00000000 	.word	0x00000000
- 8000260:	0c002e7c 	.word	0x0c002e7c
+ 8000260:	0c002d34 	.word	0x0c002d34
  8000264:	10000800 	.word	0x10000800
  8000268:	00000000 	.word	0x00000000
- 800026c:	0c002e7c 	.word	0x0c002e7c
+ 800026c:	0c002d34 	.word	0x0c002d34
  8000270:	10000800 	.word	0x10000800
  8000274:	00000000 	.word	0x00000000
 
 08000278 <__copy_table_end__>:
- 8000278:	200000ac 	.word	0x200000ac
+ 8000278:	200000a8 	.word	0x200000a8
  800027c:	0000015c 	.word	0x0000015c
  8000280:	30000000 	.word	0x30000000
  8000284:	00000000 	.word	0x00000000
@@ -231,12 +231,12 @@ Disassembly of section .text:
    
 #ifndef __SKIP_LIBC_INIT_ARRAY
     ldr  r0, =__libc_init_array
- 80002a8:	08002d01 	.word	0x08002d01
+ 80002a8:	08002bb9 	.word	0x08002bb9
     blx  r0
 #endif
 
     ldr  r0, =main
- 80002ac:	08002c29 	.word	0x08002c29
+ 80002ac:	08002b5d 	.word	0x08002b5d
 
 080002b0 <BusFault_Handler>:
 	.align	1
@@ -3476,7 +3476,7 @@ void XMC_VADC_GLOBAL_StartupCalibration(XMC_VADC_GLOBAL_t *const global_ptr)
  800137c:	46bd      	mov	sp, r7
  800137e:	f85d 7b04 	ldr.w	r7, [sp], #4
  8001382:	4770      	bx	lr
- 8001384:	08002d4c 	.word	0x08002d4c
+ 8001384:	08002c04 	.word	0x08002c04
 
 08001388 <XMC_VADC_GLOBAL_BackgroundSetReqSrcEventInterruptNode>:
   global_ptr->GLOBEVNP |= (uint32_t)(node << VADC_GLOBEVNP_REV0NP_Pos);
@@ -3949,7 +3949,7 @@ void XMC_VADC_GLOBAL_BackgroundInit(XMC_VADC_GLOBAL_t *const global_ptr, const X
  800161a:	46bd      	mov	sp, r7
  800161c:	bd80      	pop	{r7, pc}
  800161e:	bf00      	nop
- 8001620:	08002d4c 	.word	0x08002d4c
+ 8001620:	08002c04 	.word	0x08002c04
 
 08001624 <XMC_VADC_GROUP_ChannelInit>:
 
@@ -5333,12 +5333,12 @@ __STATIC_INLINE void XMC_UART_CH_Start(XMC_USIC_CH_t *const channel)
  8001d74:	4770      	bx	lr
  8001d76:	bf00      	nop
 
-08001d78 <dhUART_0_init>:
+08001d78 <UART_0_init>:
 /**********************************************************************************************************************
  * API IMPLEMENTATION
  **********************************************************************************************************************/
 /*Channel initialization function*/
-UART_STATUS_t dhUART_0_init()
+UART_STATUS_t UART_0_init()
 {
  8001d78:	b580      	push	{r7, lr}
  8001d7a:	b082      	sub	sp, #8
@@ -5347,25 +5347,25 @@ UART_STATUS_t dhUART_0_init()
  8001d7e:	2300      	movs	r3, #0
  8001d80:	71fb      	strb	r3, [r7, #7]
   /*Configure Receive pin*/
-  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 4U, &dhUART_0_rx_pin_config);
- 8001d82:	482d      	ldr	r0, [pc, #180]	; (8001e38 <dhUART_0_init+0xc0>)
+  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 4U, &UART_0_rx_pin_config);
+ 8001d82:	482d      	ldr	r0, [pc, #180]	; (8001e38 <UART_0_init+0xc0>)
  8001d84:	2104      	movs	r1, #4
- 8001d86:	4a2d      	ldr	r2, [pc, #180]	; (8001e3c <dhUART_0_init+0xc4>)
+ 8001d86:	4a2d      	ldr	r2, [pc, #180]	; (8001e3c <UART_0_init+0xc4>)
  8001d88:	f7fe fb0e 	bl	80003a8 <XMC_GPIO_Init>
   /* Initialize USIC channel in UART mode*/
-  XMC_UART_CH_Init(XMC_UART0_CH0, &dhUART_0_channel_config);
- 8001d8c:	482c      	ldr	r0, [pc, #176]	; (8001e40 <dhUART_0_init+0xc8>)
- 8001d8e:	492d      	ldr	r1, [pc, #180]	; (8001e44 <dhUART_0_init+0xcc>)
+  XMC_UART_CH_Init(XMC_UART0_CH0, &UART_0_channel_config);
+ 8001d8c:	482c      	ldr	r0, [pc, #176]	; (8001e40 <UART_0_init+0xc8>)
+ 8001d8e:	492d      	ldr	r1, [pc, #180]	; (8001e44 <UART_0_init+0xcc>)
  8001d90:	f7fe ffd4 	bl	8000d3c <XMC_UART_CH_Init>
   /*Set input source path*/
   XMC_USIC_CH_SetInputSource(XMC_UART0_CH0, XMC_USIC_CH_INPUT_DX0, 1U);
- 8001d94:	482a      	ldr	r0, [pc, #168]	; (8001e40 <dhUART_0_init+0xc8>)
+ 8001d94:	482a      	ldr	r0, [pc, #168]	; (8001e40 <UART_0_init+0xc8>)
  8001d96:	2100      	movs	r1, #0
  8001d98:	2201      	movs	r2, #1
  8001d9a:	f7ff ffbd 	bl	8001d18 <XMC_USIC_CH_SetInputSource>
   /*Configure transmit FIFO*/
   XMC_USIC_CH_TXFIFO_Configure(XMC_UART0_CH0,
- 8001d9e:	4828      	ldr	r0, [pc, #160]	; (8001e40 <dhUART_0_init+0xc8>)
+ 8001d9e:	4828      	ldr	r0, [pc, #160]	; (8001e40 <UART_0_init+0xc8>)
  8001da0:	2120      	movs	r1, #32
  8001da2:	2205      	movs	r2, #5
  8001da4:	2301      	movs	r3, #1
@@ -5375,7 +5375,7 @@ UART_STATUS_t dhUART_0_init()
         1U);
   /*Configure receive FIFO*/
   XMC_USIC_CH_RXFIFO_Configure(XMC_UART0_CH0,
- 8001daa:	4825      	ldr	r0, [pc, #148]	; (8001e40 <dhUART_0_init+0xc8>)
+ 8001daa:	4825      	ldr	r0, [pc, #148]	; (8001e40 <UART_0_init+0xc8>)
  8001dac:	2100      	movs	r1, #0
  8001dae:	2205      	movs	r2, #5
  8001db0:	2300      	movs	r3, #0
@@ -5385,39 +5385,39 @@ UART_STATUS_t dhUART_0_init()
         0U);
   /* Start UART */
   XMC_UART_CH_Start(XMC_UART0_CH0);
- 8001db6:	4822      	ldr	r0, [pc, #136]	; (8001e40 <dhUART_0_init+0xc8>)
+ 8001db6:	4822      	ldr	r0, [pc, #136]	; (8001e40 <UART_0_init+0xc8>)
  8001db8:	f7ff ffcc 	bl	8001d54 <XMC_UART_CH_Start>
 
   /* Initialize UART TX pin */
-  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 5U, &dhUART_0_tx_pin_config);
- 8001dbc:	481e      	ldr	r0, [pc, #120]	; (8001e38 <dhUART_0_init+0xc0>)
+  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 5U, &UART_0_tx_pin_config);
+ 8001dbc:	481e      	ldr	r0, [pc, #120]	; (8001e38 <UART_0_init+0xc0>)
  8001dbe:	2105      	movs	r1, #5
- 8001dc0:	4a21      	ldr	r2, [pc, #132]	; (8001e48 <dhUART_0_init+0xd0>)
+ 8001dc0:	4a21      	ldr	r2, [pc, #132]	; (8001e48 <UART_0_init+0xd0>)
  8001dc2:	f7fe faf1 	bl	80003a8 <XMC_GPIO_Init>
 
   /*Set service request for UART protocol events*/
   XMC_USIC_CH_SetInterruptNodePointer(XMC_UART0_CH0, XMC_USIC_CH_INTERRUPT_NODE_POINTER_PROTOCOL,
- 8001dc6:	481e      	ldr	r0, [pc, #120]	; (8001e40 <dhUART_0_init+0xc8>)
+ 8001dc6:	481e      	ldr	r0, [pc, #120]	; (8001e40 <UART_0_init+0xc8>)
  8001dc8:	2110      	movs	r1, #16
  8001dca:	2200      	movs	r2, #0
  8001dcc:	f7ff f97c 	bl	80010c8 <XMC_USIC_CH_SetInterruptNodePointer>
      0U);
   /*Set service request for tx FIFO transmit interrupt*/
   XMC_USIC_CH_TXFIFO_SetInterruptNodePointer(XMC_UART0_CH0, XMC_USIC_CH_TXFIFO_INTERRUPT_NODE_POINTER_STANDARD,
- 8001dd0:	481b      	ldr	r0, [pc, #108]	; (8001e40 <dhUART_0_init+0xc8>)
+ 8001dd0:	481b      	ldr	r0, [pc, #108]	; (8001e40 <UART_0_init+0xc8>)
  8001dd2:	2110      	movs	r1, #16
  8001dd4:	2203      	movs	r2, #3
  8001dd6:	f7ff f993 	bl	8001100 <XMC_USIC_CH_TXFIFO_SetInterruptNodePointer>
       3U);
   /*Set service request for rx FIFO receive interrupt*/
   XMC_USIC_CH_RXFIFO_SetInterruptNodePointer(XMC_UART0_CH0, XMC_USIC_CH_RXFIFO_INTERRUPT_NODE_POINTER_STANDARD,
- 8001dda:	4819      	ldr	r0, [pc, #100]	; (8001e40 <dhUART_0_init+0xc8>)
+ 8001dda:	4819      	ldr	r0, [pc, #100]	; (8001e40 <UART_0_init+0xc8>)
  8001ddc:	2110      	movs	r1, #16
  8001dde:	2205      	movs	r2, #5
  8001de0:	f7ff f9ac 	bl	800113c <XMC_USIC_CH_RXFIFO_SetInterruptNodePointer>
        0x5U);
   XMC_USIC_CH_RXFIFO_SetInterruptNodePointer(XMC_UART0_CH0, XMC_USIC_CH_RXFIFO_INTERRUPT_NODE_POINTER_ALTERNATE,
- 8001de4:	4816      	ldr	r0, [pc, #88]	; (8001e40 <dhUART_0_init+0xc8>)
+ 8001de4:	4816      	ldr	r0, [pc, #88]	; (8001e40 <UART_0_init+0xc8>)
  8001de6:	2113      	movs	r1, #19
  8001de8:	2205      	movs	r2, #5
  8001dea:	f7ff f9a7 	bl	800113c <XMC_USIC_CH_RXFIFO_SetInterruptNodePointer>
@@ -5462,19 +5462,19 @@ UART_STATUS_t dhUART_0_init()
  8001e34:	46bd      	mov	sp, r7
  8001e36:	bd80      	pop	{r7, pc}
  8001e38:	48028100 	.word	0x48028100
- 8001e3c:	08002db0 	.word	0x08002db0
+ 8001e3c:	08002c68 	.word	0x08002c68
  8001e40:	40030000 	.word	0x40030000
- 8001e44:	08002d5c 	.word	0x08002d5c
- 8001e48:	08002d68 	.word	0x08002d68
+ 8001e44:	08002c14 	.word	0x08002c14
+ 8001e48:	08002c20 	.word	0x08002c20
 
 08001e4c <USIC0_3_IRQHandler>:
 /*Interrupt handlers*/
 /*Transmit ISR*/
-void dhUART_0_TX_HANDLER()
+void UART_0_TX_HANDLER()
 {
  8001e4c:	b580      	push	{r7, lr}
  8001e4e:	af00      	add	r7, sp, #0
-  UART_lTransmitHandler(&dhUART_0);
+  UART_lTransmitHandler(&UART_0);
  8001e50:	4801      	ldr	r0, [pc, #4]	; (8001e58 <USIC0_3_IRQHandler+0xc>)
  8001e52:	f7ff fda1 	bl	8001998 <UART_lTransmitHandler>
 }
@@ -5484,11 +5484,11 @@ void dhUART_0_TX_HANDLER()
 08001e5c <USIC0_5_IRQHandler>:
 
 /*Receive ISR*/
-void dhUART_0_RX_HANDLER()
+void UART_0_RX_HANDLER()
 {
  8001e5c:	b580      	push	{r7, lr}
  8001e5e:	af00      	add	r7, sp, #0
-  UART_lReceiveHandler(&dhUART_0);
+  UART_lReceiveHandler(&UART_0);
  8001e60:	4801      	ldr	r0, [pc, #4]	; (8001e68 <USIC0_5_IRQHandler+0xc>)
  8001e62:	f7ff fe1f 	bl	8001aa4 <UART_lReceiveHandler>
 }
@@ -5991,8 +5991,8 @@ static void SYSTIMER_lInsertTimerList(uint32_t tbl_index)
  800213a:	46bd      	mov	sp, r7
  800213c:	bc90      	pop	{r4, r7}
  800213e:	4770      	bx	lr
- 8002140:	200000e4 	.word	0x200000e4
- 8002144:	200000c8 	.word	0x200000c8
+ 8002140:	200000e0 	.word	0x200000e0
+ 8002144:	200000c4 	.word	0x200000c4
 
 08002148 <SYSTIMER_lRemoveTimerList>:
 
@@ -6126,8 +6126,8 @@ static void SYSTIMER_lRemoveTimerList(uint32_t tbl_index)
  80021f8:	f85d 7b04 	ldr.w	r7, [sp], #4
  80021fc:	4770      	bx	lr
  80021fe:	bf00      	nop
- 8002200:	200000e4 	.word	0x200000e4
- 8002204:	200000c8 	.word	0x200000c8
+ 8002200:	200000e0 	.word	0x200000e0
+ 8002204:	200000c4 	.word	0x200000c4
 
 08002208 <SYSTIMER_lTimerHandler>:
 
@@ -6289,8 +6289,8 @@ static void SYSTIMER_lTimerHandler(void)
  80022c6:	3708      	adds	r7, #8
  80022c8:	46bd      	mov	sp, r7
  80022ca:	bd80      	pop	{r7, pc}
- 80022cc:	200000c8 	.word	0x200000c8
- 80022d0:	200000cc 	.word	0x200000cc
+ 80022cc:	200000c4 	.word	0x200000c4
+ 80022d0:	200000c8 	.word	0x200000c8
 
 080022d4 <SysTick_Handler>:
 
@@ -6347,8 +6347,8 @@ void SysTick_Handler(void)
  800230e:	3708      	adds	r7, #8
  8002310:	46bd      	mov	sp, r7
  8002312:	bd80      	pop	{r7, pc}
- 8002314:	200000c8 	.word	0x200000c8
- 8002318:	200000d0 	.word	0x200000d0
+ 8002314:	200000c4 	.word	0x200000c4
+ 8002318:	200000cc 	.word	0x200000cc
 
 0800231c <SYSTIMER_Init>:
 
@@ -6437,9 +6437,9 @@ SYSTIMER_STATUS_t SYSTIMER_Init(SYSTIMER_t *handle)
  800237e:	46bd      	mov	sp, r7
  8002380:	bd80      	pop	{r7, pc}
  8002382:	bf00      	nop
- 8002384:	200000c8 	.word	0x200000c8
+ 8002384:	200000c4 	.word	0x200000c4
  8002388:	0001d4c0 	.word	0x0001d4c0
- 800238c:	200000cc 	.word	0x200000cc
+ 800238c:	200000c8 	.word	0x200000c8
 
 08002390 <SYSTIMER_CreateTimer>:
   uint32_t period,
@@ -6644,8 +6644,8 @@ SYSTIMER_STATUS_t SYSTIMER_Init(SYSTIMER_t *handle)
  80024b8:	46bd      	mov	sp, r7
  80024ba:	f85d 7b04 	ldr.w	r7, [sp], #4
  80024be:	4770      	bx	lr
- 80024c0:	200000cc 	.word	0x200000cc
- 80024c4:	200000e4 	.word	0x200000e4
+ 80024c0:	200000c8 	.word	0x200000c8
+ 80024c4:	200000e0 	.word	0x200000e0
  80024c8:	10624dd3 	.word	0x10624dd3
 
 080024cc <SYSTIMER_StartTimer>:
@@ -6735,7 +6735,7 @@ SYSTIMER_STATUS_t SYSTIMER_StartTimer(uint32_t id)
  8002542:	3710      	adds	r7, #16
  8002544:	46bd      	mov	sp, r7
  8002546:	bd80      	pop	{r7, pc}
- 8002548:	200000e4 	.word	0x200000e4
+ 8002548:	200000e0 	.word	0x200000e0
 
 0800254c <XMC_VADC_GLOBAL_DisablePostCalibration>:
  * XMC_VADC_GLOBAL_DisablePostCalibration()<BR>
@@ -7269,7 +7269,7 @@ void SystemCoreClockSetup(void)
  80027ce:	46bd      	mov	sp, r7
  80027d0:	bdb0      	pop	{r4, r5, r7, pc}
  80027d2:	bf00      	nop
- 80027d4:	08002e4c 	.word	0x08002e4c
+ 80027d4:	08002d04 	.word	0x08002d04
 
 080027d8 <NVIC_GetPriorityGrouping>:
   \brief   Get Priority Grouping
@@ -7536,796 +7536,562 @@ __STATIC_INLINE void XMC_VADC_GROUP_ResultInit(XMC_VADC_GROUP_t *const group_ptr
  8002956:	f85d 7b04 	ldr.w	r7, [sp], #4
  800295a:	4770      	bx	lr
 
-0800295c <XMC_VADC_GROUP_GetResult>:
- * \par<b>Related APIs:</b><br>
- * XMC_VADC_GROUP_GetDetailedResult().
- */
-__STATIC_INLINE XMC_VADC_RESULT_SIZE_t XMC_VADC_GROUP_GetResult(XMC_VADC_GROUP_t *const group_ptr, 
-                                                                const uint32_t res_reg)
-{
- 800295c:	b480      	push	{r7}
- 800295e:	b083      	sub	sp, #12
- 8002960:	af00      	add	r7, sp, #0
- 8002962:	6078      	str	r0, [r7, #4]
- 8002964:	6039      	str	r1, [r7, #0]
-  XMC_ASSERT("XMC_VADC_GROUP_GetResult:Wrong Group Pointer", XMC_VADC_CHECK_GROUP_PTR(group_ptr))
-  XMC_ASSERT("XMC_VADC_GROUP_GetResult:Wrong Result Register", ((res_reg) < XMC_VADC_NUM_RESULT_REGISTERS))
-
-  return ((XMC_VADC_RESULT_SIZE_t)group_ptr->RES[res_reg]);
- 8002966:	687b      	ldr	r3, [r7, #4]
- 8002968:	683a      	ldr	r2, [r7, #0]
- 800296a:	32c0      	adds	r2, #192	; 0xc0
- 800296c:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
- 8002970:	b29b      	uxth	r3, r3
-}
- 8002972:	4618      	mov	r0, r3
- 8002974:	370c      	adds	r7, #12
- 8002976:	46bd      	mov	sp, r7
- 8002978:	f85d 7b04 	ldr.w	r7, [sp], #4
- 800297c:	4770      	bx	lr
- 800297e:	bf00      	nop
-
-08002980 <ADC_MEASUREMENT_Init>:
+0800295c <ADC_MEASUREMENT_Init>:
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Initialization routine to call ADC LLD API's */
 ADC_MEASUREMENT_STATUS_t ADC_MEASUREMENT_Init(ADC_MEASUREMENT_t *const handle_ptr)
 {
- 8002980:	b590      	push	{r4, r7, lr}
- 8002982:	b085      	sub	sp, #20
- 8002984:	af00      	add	r7, sp, #0
- 8002986:	6078      	str	r0, [r7, #4]
+ 800295c:	b590      	push	{r4, r7, lr}
+ 800295e:	b085      	sub	sp, #20
+ 8002960:	af00      	add	r7, sp, #0
+ 8002962:	6078      	str	r0, [r7, #4]
   uint8_t j;
   ADC_MEASUREMENT_STATUS_t status;
 
   XMC_ASSERT("ADC_MEASUREMENT_Init:Invalid handle_ptr", (handle_ptr != NULL))
 
   if (ADC_MEASUREMENT_STATUS_UNINITIALIZED == handle_ptr->init_state)
- 8002988:	687b      	ldr	r3, [r7, #4]
- 800298a:	7e1b      	ldrb	r3, [r3, #24]
- 800298c:	2b02      	cmp	r3, #2
- 800298e:	f040 8099 	bne.w	8002ac4 <ADC_MEASUREMENT_Init+0x144>
+ 8002964:	687b      	ldr	r3, [r7, #4]
+ 8002966:	7e1b      	ldrb	r3, [r3, #24]
+ 8002968:	2b02      	cmp	r3, #2
+ 800296a:	f040 8099 	bne.w	8002aa0 <ADC_MEASUREMENT_Init+0x144>
   {
     /* Call the function to initialise Clock and ADC global functional units*/
     status = (ADC_MEASUREMENT_STATUS_t) GLOBAL_ADC_Init(handle_ptr->global_handle);
- 8002992:	687b      	ldr	r3, [r7, #4]
- 8002994:	68db      	ldr	r3, [r3, #12]
- 8002996:	4618      	mov	r0, r3
- 8002998:	f7ff fdee 	bl	8002578 <GLOBAL_ADC_Init>
- 800299c:	4603      	mov	r3, r0
- 800299e:	73bb      	strb	r3, [r7, #14]
+ 800296e:	687b      	ldr	r3, [r7, #4]
+ 8002970:	68db      	ldr	r3, [r3, #12]
+ 8002972:	4618      	mov	r0, r3
+ 8002974:	f7ff fe00 	bl	8002578 <GLOBAL_ADC_Init>
+ 8002978:	4603      	mov	r3, r0
+ 800297a:	73bb      	strb	r3, [r7, #14]
   
     /*Initialize the Global Conversion class 0*/
     XMC_VADC_GLOBAL_InputClassInit(handle_ptr->global_handle->module_ptr,*handle_ptr->iclass_config_handle,
- 80029a0:	687b      	ldr	r3, [r7, #4]
- 80029a2:	68db      	ldr	r3, [r3, #12]
- 80029a4:	695a      	ldr	r2, [r3, #20]
- 80029a6:	687b      	ldr	r3, [r7, #4]
- 80029a8:	689b      	ldr	r3, [r3, #8]
- 80029aa:	4610      	mov	r0, r2
- 80029ac:	6819      	ldr	r1, [r3, #0]
- 80029ae:	2200      	movs	r2, #0
- 80029b0:	2300      	movs	r3, #0
- 80029b2:	f7fe fc95 	bl	80012e0 <XMC_VADC_GLOBAL_InputClassInit>
+ 800297c:	687b      	ldr	r3, [r7, #4]
+ 800297e:	68db      	ldr	r3, [r3, #12]
+ 8002980:	695a      	ldr	r2, [r3, #20]
+ 8002982:	687b      	ldr	r3, [r7, #4]
+ 8002984:	689b      	ldr	r3, [r3, #8]
+ 8002986:	4610      	mov	r0, r2
+ 8002988:	6819      	ldr	r1, [r3, #0]
+ 800298a:	2200      	movs	r2, #0
+ 800298c:	2300      	movs	r3, #0
+ 800298e:	f7fe fca7 	bl	80012e0 <XMC_VADC_GLOBAL_InputClassInit>
     XMC_VADC_GLOBAL_InputClassInit(handle_ptr->global_handle->module_ptr,*handle_ptr->iclass_config_handle,
     		                              XMC_VADC_GROUP_CONV_STD,ADC_MEASUREMENT_ICLASS_NUM_XMC11);
 #endif
   
     /* Initialize the Background Scan hardware */
     XMC_VADC_GLOBAL_BackgroundInit(handle_ptr->global_handle->module_ptr, handle_ptr->backgnd_config_handle);
- 80029b6:	687b      	ldr	r3, [r7, #4]
- 80029b8:	68db      	ldr	r3, [r3, #12]
- 80029ba:	695a      	ldr	r2, [r3, #20]
- 80029bc:	687b      	ldr	r3, [r7, #4]
- 80029be:	685b      	ldr	r3, [r3, #4]
- 80029c0:	4610      	mov	r0, r2
- 80029c2:	4619      	mov	r1, r3
- 80029c4:	f7fe fdb0 	bl	8001528 <XMC_VADC_GLOBAL_BackgroundInit>
+ 8002992:	687b      	ldr	r3, [r7, #4]
+ 8002994:	68db      	ldr	r3, [r3, #12]
+ 8002996:	695a      	ldr	r2, [r3, #20]
+ 8002998:	687b      	ldr	r3, [r7, #4]
+ 800299a:	685b      	ldr	r3, [r3, #4]
+ 800299c:	4610      	mov	r0, r2
+ 800299e:	4619      	mov	r1, r3
+ 80029a0:	f7fe fdc2 	bl	8001528 <XMC_VADC_GLOBAL_BackgroundInit>
 #if (XMC_VADC_GROUP_AVAILABLE == 0U)
     /* Initialize the global result register */
     XMC_VADC_GLOBAL_ResultInit(handle_ptr->global_handle->module_ptr,handle_ptr->array->res_handle);
 #endif
 
     for (j = (uint8_t)0; j < (uint8_t)ADC_MEASUREMENT_MAXCHANNELS; j++)
- 80029c8:	2300      	movs	r3, #0
- 80029ca:	73fb      	strb	r3, [r7, #15]
- 80029cc:	e02e      	b.n	8002a2c <ADC_MEASUREMENT_Init+0xac>
+ 80029a4:	2300      	movs	r3, #0
+ 80029a6:	73fb      	strb	r3, [r7, #15]
+ 80029a8:	e02e      	b.n	8002a08 <ADC_MEASUREMENT_Init+0xac>
     {
       indexed = handle_ptr->array->channel_array[j];
- 80029ce:	687b      	ldr	r3, [r7, #4]
- 80029d0:	681b      	ldr	r3, [r3, #0]
- 80029d2:	7bfa      	ldrb	r2, [r7, #15]
- 80029d4:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
- 80029d8:	60bb      	str	r3, [r7, #8]
+ 80029aa:	687b      	ldr	r3, [r7, #4]
+ 80029ac:	681b      	ldr	r3, [r3, #0]
+ 80029ae:	7bfa      	ldrb	r2, [r7, #15]
+ 80029b0:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+ 80029b4:	60bb      	str	r3, [r7, #8]
 #if (XMC_VADC_GROUP_AVAILABLE == 1U)
       /* Initialize for configured channels*/
       XMC_VADC_GROUP_ChannelInit(indexed->group_handle,(uint32_t)indexed->ch_num, indexed->ch_handle);
- 80029da:	68bb      	ldr	r3, [r7, #8]
- 80029dc:	689a      	ldr	r2, [r3, #8]
+ 80029b6:	68bb      	ldr	r3, [r7, #8]
+ 80029b8:	689a      	ldr	r2, [r3, #8]
+ 80029ba:	68bb      	ldr	r3, [r7, #8]
+ 80029bc:	7b5b      	ldrb	r3, [r3, #13]
+ 80029be:	4619      	mov	r1, r3
+ 80029c0:	68bb      	ldr	r3, [r7, #8]
+ 80029c2:	681b      	ldr	r3, [r3, #0]
+ 80029c4:	4610      	mov	r0, r2
+ 80029c6:	461a      	mov	r2, r3
+ 80029c8:	f7fe fe2c 	bl	8001624 <XMC_VADC_GROUP_ChannelInit>
+  
+      /* Initialize for configured result registers */
+      XMC_VADC_GROUP_ResultInit(indexed->group_handle, (uint32_t)indexed->ch_handle->result_reg_number,
+ 80029cc:	68bb      	ldr	r3, [r7, #8]
+ 80029ce:	689a      	ldr	r2, [r3, #8]
+ 80029d0:	68bb      	ldr	r3, [r7, #8]
+ 80029d2:	681b      	ldr	r3, [r3, #0]
+ 80029d4:	789b      	ldrb	r3, [r3, #2]
+ 80029d6:	f3c3 0303 	ubfx	r3, r3, #0, #4
+ 80029da:	b2db      	uxtb	r3, r3
+ 80029dc:	4619      	mov	r1, r3
+                                indexed->res_handle);
  80029de:	68bb      	ldr	r3, [r7, #8]
- 80029e0:	7b5b      	ldrb	r3, [r3, #13]
- 80029e2:	4619      	mov	r1, r3
- 80029e4:	68bb      	ldr	r3, [r7, #8]
- 80029e6:	681b      	ldr	r3, [r3, #0]
- 80029e8:	4610      	mov	r0, r2
- 80029ea:	461a      	mov	r2, r3
- 80029ec:	f7fe fe1a 	bl	8001624 <XMC_VADC_GROUP_ChannelInit>
-  
-      /* Initialize for configured result registers */
-      XMC_VADC_GROUP_ResultInit(indexed->group_handle, (uint32_t)indexed->ch_handle->result_reg_number,
- 80029f0:	68bb      	ldr	r3, [r7, #8]
- 80029f2:	689a      	ldr	r2, [r3, #8]
- 80029f4:	68bb      	ldr	r3, [r7, #8]
- 80029f6:	681b      	ldr	r3, [r3, #0]
- 80029f8:	789b      	ldrb	r3, [r3, #2]
- 80029fa:	f3c3 0303 	ubfx	r3, r3, #0, #4
- 80029fe:	b2db      	uxtb	r3, r3
- 8002a00:	4619      	mov	r1, r3
-                                indexed->res_handle);
- 8002a02:	68bb      	ldr	r3, [r7, #8]
- 8002a04:	685b      	ldr	r3, [r3, #4]
+ 80029e0:	685b      	ldr	r3, [r3, #4]
 #if (XMC_VADC_GROUP_AVAILABLE == 1U)
       /* Initialize for configured channels*/
       XMC_VADC_GROUP_ChannelInit(indexed->group_handle,(uint32_t)indexed->ch_num, indexed->ch_handle);
   
       /* Initialize for configured result registers */
       XMC_VADC_GROUP_ResultInit(indexed->group_handle, (uint32_t)indexed->ch_handle->result_reg_number,
- 8002a06:	4610      	mov	r0, r2
- 8002a08:	461a      	mov	r2, r3
- 8002a0a:	f7ff ff95 	bl	8002938 <XMC_VADC_GROUP_ResultInit>
+ 80029e2:	4610      	mov	r0, r2
+ 80029e4:	461a      	mov	r2, r3
+ 80029e6:	f7ff ffa7 	bl	8002938 <XMC_VADC_GROUP_ResultInit>
                                 indexed->res_handle);
 #endif
       /* Add all channels into the Background Request Source Channel Select Register */
       XMC_VADC_GLOBAL_BackgroundAddChannelToSequence(handle_ptr->global_handle->module_ptr,
- 8002a0e:	687b      	ldr	r3, [r7, #4]
- 8002a10:	68db      	ldr	r3, [r3, #12]
- 8002a12:	695a      	ldr	r2, [r3, #20]
+ 80029ea:	687b      	ldr	r3, [r7, #4]
+ 80029ec:	68db      	ldr	r3, [r3, #12]
+ 80029ee:	695a      	ldr	r2, [r3, #20]
                                                      (uint32_t)indexed->group_index, (uint32_t)indexed->ch_num);
- 8002a14:	68bb      	ldr	r3, [r7, #8]
- 8002a16:	7b1b      	ldrb	r3, [r3, #12]
+ 80029f0:	68bb      	ldr	r3, [r7, #8]
+ 80029f2:	7b1b      	ldrb	r3, [r3, #12]
       /* Initialize for configured result registers */
       XMC_VADC_GROUP_ResultInit(indexed->group_handle, (uint32_t)indexed->ch_handle->result_reg_number,
                                 indexed->res_handle);
 #endif
       /* Add all channels into the Background Request Source Channel Select Register */
       XMC_VADC_GLOBAL_BackgroundAddChannelToSequence(handle_ptr->global_handle->module_ptr,
- 8002a18:	4619      	mov	r1, r3
+ 80029f4:	4619      	mov	r1, r3
                                                      (uint32_t)indexed->group_index, (uint32_t)indexed->ch_num);
- 8002a1a:	68bb      	ldr	r3, [r7, #8]
- 8002a1c:	7b5b      	ldrb	r3, [r3, #13]
+ 80029f6:	68bb      	ldr	r3, [r7, #8]
+ 80029f8:	7b5b      	ldrb	r3, [r3, #13]
       /* Initialize for configured result registers */
       XMC_VADC_GROUP_ResultInit(indexed->group_handle, (uint32_t)indexed->ch_handle->result_reg_number,
                                 indexed->res_handle);
 #endif
       /* Add all channels into the Background Request Source Channel Select Register */
       XMC_VADC_GLOBAL_BackgroundAddChannelToSequence(handle_ptr->global_handle->module_ptr,
- 8002a1e:	4610      	mov	r0, r2
- 8002a20:	461a      	mov	r2, r3
- 8002a22:	f7ff ff6d 	bl	8002900 <XMC_VADC_GLOBAL_BackgroundAddChannelToSequence>
+ 80029fa:	4610      	mov	r0, r2
+ 80029fc:	461a      	mov	r2, r3
+ 80029fe:	f7ff ff7f 	bl	8002900 <XMC_VADC_GLOBAL_BackgroundAddChannelToSequence>
 #if (XMC_VADC_GROUP_AVAILABLE == 0U)
     /* Initialize the global result register */
     XMC_VADC_GLOBAL_ResultInit(handle_ptr->global_handle->module_ptr,handle_ptr->array->res_handle);
 #endif
 
     for (j = (uint8_t)0; j < (uint8_t)ADC_MEASUREMENT_MAXCHANNELS; j++)
- 8002a26:	7bfb      	ldrb	r3, [r7, #15]
- 8002a28:	3301      	adds	r3, #1
- 8002a2a:	73fb      	strb	r3, [r7, #15]
- 8002a2c:	7bfb      	ldrb	r3, [r7, #15]
- 8002a2e:	2b00      	cmp	r3, #0
- 8002a30:	d0cd      	beq.n	80029ce <ADC_MEASUREMENT_Init+0x4e>
+ 8002a02:	7bfb      	ldrb	r3, [r7, #15]
+ 8002a04:	3301      	adds	r3, #1
+ 8002a06:	73fb      	strb	r3, [r7, #15]
+ 8002a08:	7bfb      	ldrb	r3, [r7, #15]
+ 8002a0a:	2b00      	cmp	r3, #0
+ 8002a0c:	d0cd      	beq.n	80029aa <ADC_MEASUREMENT_Init+0x4e>
         status |= (ADC_MEASUREMENT_STATUS_t) ANALOG_IO_Init(indexed->analog_io_config);
       }
 #endif
     }
 #if(UC_SERIES != XMC11)
     if ((handle_ptr->backgnd_config_handle->req_src_interrupt) && (handle_ptr->req_src_intr_handle != NULL ))
- 8002a32:	687b      	ldr	r3, [r7, #4]
- 8002a34:	685b      	ldr	r3, [r3, #4]
- 8002a36:	7a1b      	ldrb	r3, [r3, #8]
- 8002a38:	f003 0308 	and.w	r3, r3, #8
- 8002a3c:	b2db      	uxtb	r3, r3
- 8002a3e:	2b00      	cmp	r3, #0
- 8002a40:	d02c      	beq.n	8002a9c <ADC_MEASUREMENT_Init+0x11c>
- 8002a42:	687b      	ldr	r3, [r7, #4]
- 8002a44:	691b      	ldr	r3, [r3, #16]
- 8002a46:	2b00      	cmp	r3, #0
- 8002a48:	d028      	beq.n	8002a9c <ADC_MEASUREMENT_Init+0x11c>
+ 8002a0e:	687b      	ldr	r3, [r7, #4]
+ 8002a10:	685b      	ldr	r3, [r3, #4]
+ 8002a12:	7a1b      	ldrb	r3, [r3, #8]
+ 8002a14:	f003 0308 	and.w	r3, r3, #8
+ 8002a18:	b2db      	uxtb	r3, r3
+ 8002a1a:	2b00      	cmp	r3, #0
+ 8002a1c:	d02c      	beq.n	8002a78 <ADC_MEASUREMENT_Init+0x11c>
+ 8002a1e:	687b      	ldr	r3, [r7, #4]
+ 8002a20:	691b      	ldr	r3, [r3, #16]
+ 8002a22:	2b00      	cmp	r3, #0
+ 8002a24:	d028      	beq.n	8002a78 <ADC_MEASUREMENT_Init+0x11c>
     {
 #if (UC_FAMILY == XMC1)
       NVIC_SetPriority((IRQn_Type)handle_ptr->req_src_intr_handle->node_id,
                         handle_ptr->req_src_intr_handle->priority);
 #else
       NVIC_SetPriority((IRQn_Type)handle_ptr->req_src_intr_handle->node_id,
- 8002a4a:	687b      	ldr	r3, [r7, #4]
- 8002a4c:	691b      	ldr	r3, [r3, #16]
- 8002a4e:	681b      	ldr	r3, [r3, #0]
- 8002a50:	b2dc      	uxtb	r4, r3
- 8002a52:	f7ff fec1 	bl	80027d8 <NVIC_GetPriorityGrouping>
- 8002a56:	4601      	mov	r1, r0
+ 8002a26:	687b      	ldr	r3, [r7, #4]
+ 8002a28:	691b      	ldr	r3, [r3, #16]
+ 8002a2a:	681b      	ldr	r3, [r3, #0]
+ 8002a2c:	b2dc      	uxtb	r4, r3
+ 8002a2e:	f7ff fed3 	bl	80027d8 <NVIC_GetPriorityGrouping>
+ 8002a32:	4601      	mov	r1, r0
                         NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
                         handle_ptr->req_src_intr_handle->priority, handle_ptr->req_src_intr_handle->sub_priority));
- 8002a58:	687b      	ldr	r3, [r7, #4]
- 8002a5a:	691b      	ldr	r3, [r3, #16]
+ 8002a34:	687b      	ldr	r3, [r7, #4]
+ 8002a36:	691b      	ldr	r3, [r3, #16]
     {
 #if (UC_FAMILY == XMC1)
       NVIC_SetPriority((IRQn_Type)handle_ptr->req_src_intr_handle->node_id,
                         handle_ptr->req_src_intr_handle->priority);
 #else
       NVIC_SetPriority((IRQn_Type)handle_ptr->req_src_intr_handle->node_id,
- 8002a5c:	685a      	ldr	r2, [r3, #4]
+ 8002a38:	685a      	ldr	r2, [r3, #4]
                         NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
                         handle_ptr->req_src_intr_handle->priority, handle_ptr->req_src_intr_handle->sub_priority));
- 8002a5e:	687b      	ldr	r3, [r7, #4]
- 8002a60:	691b      	ldr	r3, [r3, #16]
+ 8002a3a:	687b      	ldr	r3, [r7, #4]
+ 8002a3c:	691b      	ldr	r3, [r3, #16]
     {
 #if (UC_FAMILY == XMC1)
       NVIC_SetPriority((IRQn_Type)handle_ptr->req_src_intr_handle->node_id,
                         handle_ptr->req_src_intr_handle->priority);
 #else
       NVIC_SetPriority((IRQn_Type)handle_ptr->req_src_intr_handle->node_id,
- 8002a62:	689b      	ldr	r3, [r3, #8]
- 8002a64:	4608      	mov	r0, r1
- 8002a66:	4611      	mov	r1, r2
- 8002a68:	461a      	mov	r2, r3
- 8002a6a:	f7ff ff05 	bl	8002878 <NVIC_EncodePriority>
- 8002a6e:	4602      	mov	r2, r0
- 8002a70:	b263      	sxtb	r3, r4
- 8002a72:	4618      	mov	r0, r3
- 8002a74:	4611      	mov	r1, r2
- 8002a76:	f7ff fed5 	bl	8002824 <NVIC_SetPriority>
+ 8002a3e:	689b      	ldr	r3, [r3, #8]
+ 8002a40:	4608      	mov	r0, r1
+ 8002a42:	4611      	mov	r1, r2
+ 8002a44:	461a      	mov	r2, r3
+ 8002a46:	f7ff ff17 	bl	8002878 <NVIC_EncodePriority>
+ 8002a4a:	4602      	mov	r2, r0
+ 8002a4c:	b263      	sxtb	r3, r4
+ 8002a4e:	4618      	mov	r0, r3
+ 8002a50:	4611      	mov	r1, r2
+ 8002a52:	f7ff fee7 	bl	8002824 <NVIC_SetPriority>
                         NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
                         handle_ptr->req_src_intr_handle->priority, handle_ptr->req_src_intr_handle->sub_priority));
 #endif
       /* Connect background Request Source Event to NVIC node */
       XMC_VADC_GLOBAL_BackgroundSetReqSrcEventInterruptNode(handle_ptr->global_handle->module_ptr,
- 8002a7a:	687b      	ldr	r3, [r7, #4]
- 8002a7c:	68db      	ldr	r3, [r3, #12]
- 8002a7e:	695a      	ldr	r2, [r3, #20]
- 8002a80:	687b      	ldr	r3, [r7, #4]
- 8002a82:	7e5b      	ldrb	r3, [r3, #25]
- 8002a84:	4610      	mov	r0, r2
- 8002a86:	4619      	mov	r1, r3
- 8002a88:	f7fe fc7e 	bl	8001388 <XMC_VADC_GLOBAL_BackgroundSetReqSrcEventInterruptNode>
+ 8002a56:	687b      	ldr	r3, [r7, #4]
+ 8002a58:	68db      	ldr	r3, [r3, #12]
+ 8002a5a:	695a      	ldr	r2, [r3, #20]
+ 8002a5c:	687b      	ldr	r3, [r7, #4]
+ 8002a5e:	7e5b      	ldrb	r3, [r3, #25]
+ 8002a60:	4610      	mov	r0, r2
+ 8002a62:	4619      	mov	r1, r3
+ 8002a64:	f7fe fc90 	bl	8001388 <XMC_VADC_GLOBAL_BackgroundSetReqSrcEventInterruptNode>
     		                                         (XMC_VADC_SR_t) handle_ptr->srv_req_node);
     
       /* Enable Background Scan Request source IRQ */
       NVIC_EnableIRQ((IRQn_Type)handle_ptr->req_src_intr_handle->node_id);
- 8002a8c:	687b      	ldr	r3, [r7, #4]
- 8002a8e:	691b      	ldr	r3, [r3, #16]
- 8002a90:	681b      	ldr	r3, [r3, #0]
- 8002a92:	b2db      	uxtb	r3, r3
- 8002a94:	b25b      	sxtb	r3, r3
- 8002a96:	4618      	mov	r0, r3
- 8002a98:	f7ff feac 	bl	80027f4 <NVIC_EnableIRQ>
+ 8002a68:	687b      	ldr	r3, [r7, #4]
+ 8002a6a:	691b      	ldr	r3, [r3, #16]
+ 8002a6c:	681b      	ldr	r3, [r3, #0]
+ 8002a6e:	b2db      	uxtb	r3, r3
+ 8002a70:	b25b      	sxtb	r3, r3
+ 8002a72:	4618      	mov	r0, r3
+ 8002a74:	f7ff febe 	bl	80027f4 <NVIC_EnableIRQ>
     /* Enable Background Scan Request source IRQ */
     NVIC_EnableIRQ((IRQn_Type)handle_ptr->result_intr_handle->node_id);
 #endif
 #endif
     /* Mux Configuration is done*/
     if (handle_ptr->mux_config != NULL)
- 8002a9c:	687b      	ldr	r3, [r7, #4]
- 8002a9e:	695b      	ldr	r3, [r3, #20]
- 8002aa0:	2b00      	cmp	r3, #0
- 8002aa2:	d002      	beq.n	8002aaa <ADC_MEASUREMENT_Init+0x12a>
+ 8002a78:	687b      	ldr	r3, [r7, #4]
+ 8002a7a:	695b      	ldr	r3, [r3, #20]
+ 8002a7c:	2b00      	cmp	r3, #0
+ 8002a7e:	d002      	beq.n	8002a86 <ADC_MEASUREMENT_Init+0x12a>
     {
     	(handle_ptr->mux_config)();
- 8002aa4:	687b      	ldr	r3, [r7, #4]
- 8002aa6:	695b      	ldr	r3, [r3, #20]
- 8002aa8:	4798      	blx	r3
+ 8002a80:	687b      	ldr	r3, [r7, #4]
+ 8002a82:	695b      	ldr	r3, [r3, #20]
+ 8002a84:	4798      	blx	r3
     }
   
     if (handle_ptr->start_conversion != (bool)false)
- 8002aaa:	687b      	ldr	r3, [r7, #4]
- 8002aac:	7e9b      	ldrb	r3, [r3, #26]
- 8002aae:	2b00      	cmp	r3, #0
- 8002ab0:	d005      	beq.n	8002abe <ADC_MEASUREMENT_Init+0x13e>
+ 8002a86:	687b      	ldr	r3, [r7, #4]
+ 8002a88:	7e9b      	ldrb	r3, [r3, #26]
+ 8002a8a:	2b00      	cmp	r3, #0
+ 8002a8c:	d005      	beq.n	8002a9a <ADC_MEASUREMENT_Init+0x13e>
     {
       /* Start conversion manually using load event trigger*/
       XMC_VADC_GLOBAL_BackgroundTriggerConversion(handle_ptr->global_handle->module_ptr);
- 8002ab2:	687b      	ldr	r3, [r7, #4]
- 8002ab4:	68db      	ldr	r3, [r3, #12]
- 8002ab6:	695b      	ldr	r3, [r3, #20]
- 8002ab8:	4618      	mov	r0, r3
- 8002aba:	f7ff ff0f 	bl	80028dc <XMC_VADC_GLOBAL_BackgroundTriggerConversion>
+ 8002a8e:	687b      	ldr	r3, [r7, #4]
+ 8002a90:	68db      	ldr	r3, [r3, #12]
+ 8002a92:	695b      	ldr	r3, [r3, #20]
+ 8002a94:	4618      	mov	r0, r3
+ 8002a96:	f7ff ff21 	bl	80028dc <XMC_VADC_GLOBAL_BackgroundTriggerConversion>
     }
     handle_ptr->init_state = status;
- 8002abe:	687b      	ldr	r3, [r7, #4]
- 8002ac0:	7bba      	ldrb	r2, [r7, #14]
- 8002ac2:	761a      	strb	r2, [r3, #24]
+ 8002a9a:	687b      	ldr	r3, [r7, #4]
+ 8002a9c:	7bba      	ldrb	r2, [r7, #14]
+ 8002a9e:	761a      	strb	r2, [r3, #24]
   }
   return (handle_ptr->init_state);
- 8002ac4:	687b      	ldr	r3, [r7, #4]
- 8002ac6:	7e1b      	ldrb	r3, [r3, #24]
+ 8002aa0:	687b      	ldr	r3, [r7, #4]
+ 8002aa2:	7e1b      	ldrb	r3, [r3, #24]
 }
- 8002ac8:	4618      	mov	r0, r3
- 8002aca:	3714      	adds	r7, #20
- 8002acc:	46bd      	mov	sp, r7
- 8002ace:	bd90      	pop	{r4, r7, pc}
+ 8002aa4:	4618      	mov	r0, r3
+ 8002aa6:	3714      	adds	r7, #20
+ 8002aa8:	46bd      	mov	sp, r7
+ 8002aaa:	bd90      	pop	{r4, r7, pc}
 
-08002ad0 <ADC_MEASUREMENT_StartConversion>:
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-/* This API will Software trigger ADC Background request source and starts conversion*/
-void ADC_MEASUREMENT_StartConversion(ADC_MEASUREMENT_t *const handle_ptr)
-{
- 8002ad0:	b580      	push	{r7, lr}
- 8002ad2:	b082      	sub	sp, #8
- 8002ad4:	af00      	add	r7, sp, #0
- 8002ad6:	6078      	str	r0, [r7, #4]
-  XMC_ASSERT("ADC_MEASUREMENT_Start:Invalid handle_ptr", (handle_ptr != NULL))
-
-  /* Generate a load event to start background request source conversion*/
-  XMC_VADC_GLOBAL_BackgroundTriggerConversion(handle_ptr->global_handle->module_ptr);
- 8002ad8:	687b      	ldr	r3, [r7, #4]
- 8002ada:	68db      	ldr	r3, [r3, #12]
- 8002adc:	695b      	ldr	r3, [r3, #20]
- 8002ade:	4618      	mov	r0, r3
- 8002ae0:	f7ff fefc 	bl	80028dc <XMC_VADC_GLOBAL_BackgroundTriggerConversion>
-}
- 8002ae4:	3708      	adds	r7, #8
- 8002ae6:	46bd      	mov	sp, r7
- 8002ae8:	bd80      	pop	{r7, pc}
- 8002aea:	bf00      	nop
-
-08002aec <ADC_MEASUREMENT_GetResult>:
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#if(XMC_VADC_GROUP_AVAILABLE == 1U)
-/* This API will get the result of a conversion for a specific channel*/
-XMC_VADC_RESULT_SIZE_t ADC_MEASUREMENT_GetResult(ADC_MEASUREMENT_CHANNEL_t *const handle_ptr)
-{
- 8002aec:	b580      	push	{r7, lr}
- 8002aee:	b084      	sub	sp, #16
- 8002af0:	af00      	add	r7, sp, #0
- 8002af2:	6078      	str	r0, [r7, #4]
-  XMC_VADC_RESULT_SIZE_t result;
-
-  XMC_ASSERT("ADC_MEASUREMENT_GetResult:Invalid handle_ptr", (handle_ptr != NULL))
-
-  result = XMC_VADC_GROUP_GetResult(handle_ptr->group_handle, handle_ptr->ch_handle->result_reg_number);
- 8002af4:	687b      	ldr	r3, [r7, #4]
- 8002af6:	689a      	ldr	r2, [r3, #8]
- 8002af8:	687b      	ldr	r3, [r7, #4]
- 8002afa:	681b      	ldr	r3, [r3, #0]
- 8002afc:	789b      	ldrb	r3, [r3, #2]
- 8002afe:	f3c3 0303 	ubfx	r3, r3, #0, #4
- 8002b02:	b2db      	uxtb	r3, r3
- 8002b04:	4610      	mov	r0, r2
- 8002b06:	4619      	mov	r1, r3
- 8002b08:	f7ff ff28 	bl	800295c <XMC_VADC_GROUP_GetResult>
- 8002b0c:	4603      	mov	r3, r0
- 8002b0e:	81fb      	strh	r3, [r7, #14]
-
-  return (result);
- 8002b10:	89fb      	ldrh	r3, [r7, #14]
-}
- 8002b12:	4618      	mov	r0, r3
- 8002b14:	3710      	adds	r7, #16
- 8002b16:	46bd      	mov	sp, r7
- 8002b18:	bd80      	pop	{r7, pc}
- 8002b1a:	bf00      	nop
-
-08002b1c <DAVE_Init>:
+08002aac <DAVE_Init>:
  * @param[in]  None
  *
  * @return  DAVE_STATUS_t <BR>
  ******************************************************************************/
 DAVE_STATUS_t DAVE_Init(void)
 {
- 8002b1c:	b580      	push	{r7, lr}
- 8002b1e:	b082      	sub	sp, #8
- 8002b20:	af00      	add	r7, sp, #0
+ 8002aac:	b580      	push	{r7, lr}
+ 8002aae:	b082      	sub	sp, #8
+ 8002ab0:	af00      	add	r7, sp, #0
   DAVE_STATUS_t init_status;
   
   init_status = DAVE_STATUS_SUCCESS;
- 8002b22:	2300      	movs	r3, #0
- 8002b24:	71fb      	strb	r3, [r7, #7]
+ 8002ab2:	2300      	movs	r3, #0
+ 8002ab4:	71fb      	strb	r3, [r7, #7]
      /** @Initialization of APPs Init Functions */
      init_status = (DAVE_STATUS_t)CLOCK_XMC4_Init(&CLOCK_XMC4_0);
- 8002b26:	4819      	ldr	r0, [pc, #100]	; (8002b8c <DAVE_Init+0x70>)
- 8002b28:	f7ff fe12 	bl	8002750 <CLOCK_XMC4_Init>
- 8002b2c:	4603      	mov	r3, r0
- 8002b2e:	71fb      	strb	r3, [r7, #7]
+ 8002ab6:	4819      	ldr	r0, [pc, #100]	; (8002b1c <DAVE_Init+0x70>)
+ 8002ab8:	f7ff fe4a 	bl	8002750 <CLOCK_XMC4_Init>
+ 8002abc:	4603      	mov	r3, r0
+ 8002abe:	71fb      	strb	r3, [r7, #7]
 
   if (init_status == DAVE_STATUS_SUCCESS)
- 8002b30:	79fb      	ldrb	r3, [r7, #7]
- 8002b32:	2b00      	cmp	r3, #0
- 8002b34:	d104      	bne.n	8002b40 <DAVE_Init+0x24>
+ 8002ac0:	79fb      	ldrb	r3, [r7, #7]
+ 8002ac2:	2b00      	cmp	r3, #0
+ 8002ac4:	d104      	bne.n	8002ad0 <DAVE_Init+0x24>
   {
-	 /**  Initialization of UART APP instance dhUART_0 */
-	 init_status = (DAVE_STATUS_t)UART_Init(&dhUART_0); 
- 8002b36:	4816      	ldr	r0, [pc, #88]	; (8002b90 <DAVE_Init+0x74>)
- 8002b38:	f7fe fea4 	bl	8001884 <UART_Init>
- 8002b3c:	4603      	mov	r3, r0
- 8002b3e:	71fb      	strb	r3, [r7, #7]
+	 /**  Initialization of UART APP instance UART_0 */
+	 init_status = (DAVE_STATUS_t)UART_Init(&UART_0); 
+ 8002ac6:	4816      	ldr	r0, [pc, #88]	; (8002b20 <DAVE_Init+0x74>)
+ 8002ac8:	f7fe fedc 	bl	8001884 <UART_Init>
+ 8002acc:	4603      	mov	r3, r0
+ 8002ace:	71fb      	strb	r3, [r7, #7]
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
- 8002b40:	79fb      	ldrb	r3, [r7, #7]
- 8002b42:	2b00      	cmp	r3, #0
- 8002b44:	d104      	bne.n	8002b50 <DAVE_Init+0x34>
+ 8002ad0:	79fb      	ldrb	r3, [r7, #7]
+ 8002ad2:	2b00      	cmp	r3, #0
+ 8002ad4:	d104      	bne.n	8002ae0 <DAVE_Init+0x34>
   {
 	 /**  Initialization of DIGITAL_IO APP instance dhDIGITAL_OUT_0 */
 	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&dhDIGITAL_OUT_0); 
- 8002b46:	4813      	ldr	r0, [pc, #76]	; (8002b94 <DAVE_Init+0x78>)
- 8002b48:	f7ff fd6e 	bl	8002628 <DIGITAL_IO_Init>
- 8002b4c:	4603      	mov	r3, r0
- 8002b4e:	71fb      	strb	r3, [r7, #7]
+ 8002ad6:	4813      	ldr	r0, [pc, #76]	; (8002b24 <DAVE_Init+0x78>)
+ 8002ad8:	f7ff fda6 	bl	8002628 <DIGITAL_IO_Init>
+ 8002adc:	4603      	mov	r3, r0
+ 8002ade:	71fb      	strb	r3, [r7, #7]
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
- 8002b50:	79fb      	ldrb	r3, [r7, #7]
- 8002b52:	2b00      	cmp	r3, #0
- 8002b54:	d104      	bne.n	8002b60 <DAVE_Init+0x44>
+ 8002ae0:	79fb      	ldrb	r3, [r7, #7]
+ 8002ae2:	2b00      	cmp	r3, #0
+ 8002ae4:	d104      	bne.n	8002af0 <DAVE_Init+0x44>
   {
 	 /**  Initialization of SYSTIMER APP instance dhSYSTIMER_0 */
 	 init_status = (DAVE_STATUS_t)SYSTIMER_Init(&dhSYSTIMER_0); 
- 8002b56:	4810      	ldr	r0, [pc, #64]	; (8002b98 <DAVE_Init+0x7c>)
- 8002b58:	f7ff fbe0 	bl	800231c <SYSTIMER_Init>
- 8002b5c:	4603      	mov	r3, r0
- 8002b5e:	71fb      	strb	r3, [r7, #7]
+ 8002ae6:	4810      	ldr	r0, [pc, #64]	; (8002b28 <DAVE_Init+0x7c>)
+ 8002ae8:	f7ff fc18 	bl	800231c <SYSTIMER_Init>
+ 8002aec:	4603      	mov	r3, r0
+ 8002aee:	71fb      	strb	r3, [r7, #7]
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
- 8002b60:	79fb      	ldrb	r3, [r7, #7]
- 8002b62:	2b00      	cmp	r3, #0
- 8002b64:	d104      	bne.n	8002b70 <DAVE_Init+0x54>
+ 8002af0:	79fb      	ldrb	r3, [r7, #7]
+ 8002af2:	2b00      	cmp	r3, #0
+ 8002af4:	d104      	bne.n	8002b00 <DAVE_Init+0x54>
   {
 	 /**  Initialization of DIGITAL_IO APP instance dhDIGITAL_IN_0 */
 	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&dhDIGITAL_IN_0); 
- 8002b66:	480d      	ldr	r0, [pc, #52]	; (8002b9c <DAVE_Init+0x80>)
- 8002b68:	f7ff fd5e 	bl	8002628 <DIGITAL_IO_Init>
- 8002b6c:	4603      	mov	r3, r0
- 8002b6e:	71fb      	strb	r3, [r7, #7]
+ 8002af6:	480d      	ldr	r0, [pc, #52]	; (8002b2c <DAVE_Init+0x80>)
+ 8002af8:	f7ff fd96 	bl	8002628 <DIGITAL_IO_Init>
+ 8002afc:	4603      	mov	r3, r0
+ 8002afe:	71fb      	strb	r3, [r7, #7]
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
- 8002b70:	79fb      	ldrb	r3, [r7, #7]
- 8002b72:	2b00      	cmp	r3, #0
- 8002b74:	d104      	bne.n	8002b80 <DAVE_Init+0x64>
+ 8002b00:	79fb      	ldrb	r3, [r7, #7]
+ 8002b02:	2b00      	cmp	r3, #0
+ 8002b04:	d104      	bne.n	8002b10 <DAVE_Init+0x64>
   {
 	 /**  Initialization of ADC_MEASUREMENT APP instance dhADC_MEASUREMENT_0 */
 	 init_status = (DAVE_STATUS_t)ADC_MEASUREMENT_Init(&dhADC_MEASUREMENT_0); 
- 8002b76:	480a      	ldr	r0, [pc, #40]	; (8002ba0 <DAVE_Init+0x84>)
- 8002b78:	f7ff ff02 	bl	8002980 <ADC_MEASUREMENT_Init>
- 8002b7c:	4603      	mov	r3, r0
- 8002b7e:	71fb      	strb	r3, [r7, #7]
+ 8002b06:	480a      	ldr	r0, [pc, #40]	; (8002b30 <DAVE_Init+0x84>)
+ 8002b08:	f7ff ff28 	bl	800295c <ADC_MEASUREMENT_Init>
+ 8002b0c:	4603      	mov	r3, r0
+ 8002b0e:	71fb      	strb	r3, [r7, #7]
    }  
   return init_status;
- 8002b80:	79fb      	ldrb	r3, [r7, #7]
+ 8002b10:	79fb      	ldrb	r3, [r7, #7]
 } /**  End of function DAVE_Init */
- 8002b82:	4618      	mov	r0, r3
- 8002b84:	3708      	adds	r7, #8
- 8002b86:	46bd      	mov	sp, r7
- 8002b88:	bd80      	pop	{r7, pc}
- 8002b8a:	bf00      	nop
- 8002b8c:	200000d8 	.word	0x200000d8
- 8002b90:	20000000 	.word	0x20000000
- 8002b94:	08002e24 	.word	0x08002e24
- 8002b98:	200000d4 	.word	0x200000d4
- 8002b9c:	08002e38 	.word	0x08002e38
- 8002ba0:	20000078 	.word	0x20000078
+ 8002b12:	4618      	mov	r0, r3
+ 8002b14:	3708      	adds	r7, #8
+ 8002b16:	46bd      	mov	sp, r7
+ 8002b18:	bd80      	pop	{r7, pc}
+ 8002b1a:	bf00      	nop
+ 8002b1c:	200000d4 	.word	0x200000d4
+ 8002b20:	20000000 	.word	0x20000000
+ 8002b24:	08002cdc 	.word	0x08002cdc
+ 8002b28:	200000d0 	.word	0x200000d0
+ 8002b2c:	08002cf0 	.word	0x08002cf0
+ 8002b30:	20000078 	.word	0x20000078
 
-08002ba4 <XMC_GPIO_SetOutputHigh>:
- * Register Pn_OMR is virtual and does not contain any flip-flop. A read action delivers the value of 0.
- *
- */
-
-__STATIC_INLINE void XMC_GPIO_SetOutputHigh(XMC_GPIO_PORT_t *const port, const uint8_t pin)
-{
- 8002ba4:	b480      	push	{r7}
- 8002ba6:	b083      	sub	sp, #12
- 8002ba8:	af00      	add	r7, sp, #0
- 8002baa:	6078      	str	r0, [r7, #4]
- 8002bac:	460b      	mov	r3, r1
- 8002bae:	70fb      	strb	r3, [r7, #3]
-  XMC_ASSERT("XMC_GPIO_SetOutputHigh: Invalid port", XMC_GPIO_CHECK_OUTPUT_PORT(port));
-
-  port->OMR = (uint32_t)0x1U << pin;
- 8002bb0:	78fb      	ldrb	r3, [r7, #3]
- 8002bb2:	2201      	movs	r2, #1
- 8002bb4:	409a      	lsls	r2, r3
- 8002bb6:	687b      	ldr	r3, [r7, #4]
- 8002bb8:	605a      	str	r2, [r3, #4]
-}
- 8002bba:	370c      	adds	r7, #12
- 8002bbc:	46bd      	mov	sp, r7
- 8002bbe:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8002bc2:	4770      	bx	lr
-
-08002bc4 <UART_IsTxBusy>:
- *  }
- * @endcode
- *
- * */
-__STATIC_INLINE bool UART_IsTxBusy(const UART_t *const handle)
-{
- 8002bc4:	b480      	push	{r7}
- 8002bc6:	b083      	sub	sp, #12
- 8002bc8:	af00      	add	r7, sp, #0
- 8002bca:	6078      	str	r0, [r7, #4]
-  XMC_ASSERT("UART APP handle invalid", (handle != NULL))
-  return (handle->runtime->tx_busy);
- 8002bcc:	687b      	ldr	r3, [r7, #4]
- 8002bce:	689b      	ldr	r3, [r3, #8]
- 8002bd0:	7e1b      	ldrb	r3, [r3, #24]
- 8002bd2:	b2db      	uxtb	r3, r3
-}
- 8002bd4:	4618      	mov	r0, r3
- 8002bd6:	370c      	adds	r7, #12
- 8002bd8:	46bd      	mov	sp, r7
- 8002bda:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8002bde:	4770      	bx	lr
-
-08002be0 <DIGITAL_IO_SetOutputHigh>:
-* }
-*  @endcode
-*/
-
-__STATIC_INLINE void DIGITAL_IO_SetOutputHigh(const DIGITAL_IO_t *const handler)
-{
- 8002be0:	b580      	push	{r7, lr}
- 8002be2:	b082      	sub	sp, #8
- 8002be4:	af00      	add	r7, sp, #0
- 8002be6:	6078      	str	r0, [r7, #4]
-  XMC_ASSERT("DIGITAL_IO_SetOutputHigh: handler null pointer", handler != NULL);
-  XMC_GPIO_SetOutputHigh(handler->gpio_port, handler->gpio_pin);
- 8002be8:	687b      	ldr	r3, [r7, #4]
- 8002bea:	681a      	ldr	r2, [r3, #0]
- 8002bec:	687b      	ldr	r3, [r7, #4]
- 8002bee:	7c1b      	ldrb	r3, [r3, #16]
- 8002bf0:	4610      	mov	r0, r2
- 8002bf2:	4619      	mov	r1, r3
- 8002bf4:	f7ff ffd6 	bl	8002ba4 <XMC_GPIO_SetOutputHigh>
-}
- 8002bf8:	3708      	adds	r7, #8
- 8002bfa:	46bd      	mov	sp, r7
- 8002bfc:	bd80      	pop	{r7, pc}
- 8002bfe:	bf00      	nop
-
-08002c00 <CB_Timer_20ms>:
-uint8_t result = 1;
-//uint8_t Rx_Data[] = { 0};
+08002b34 <CB_Timer_20ms>:
 //uint8_t state = OFF;
+uint8_t read_data[]   = {0x0, 0x1};
+uint8_t send_data[] = "\nHello world!";
 
 void CB_Timer_20ms()
 {
- 8002c00:	b480      	push	{r7}
- 8002c02:	af00      	add	r7, sp, #0
+ 8002b34:	b480      	push	{r7}
+ 8002b36:	af00      	add	r7, sp, #0
 	flag = !flag;
- 8002c04:	4b07      	ldr	r3, [pc, #28]	; (8002c24 <CB_Timer_20ms+0x24>)
- 8002c06:	781b      	ldrb	r3, [r3, #0]
- 8002c08:	b25b      	sxtb	r3, r3
- 8002c0a:	2b00      	cmp	r3, #0
- 8002c0c:	bf0c      	ite	eq
- 8002c0e:	2301      	moveq	r3, #1
- 8002c10:	2300      	movne	r3, #0
- 8002c12:	b2db      	uxtb	r3, r3
- 8002c14:	b2da      	uxtb	r2, r3
- 8002c16:	4b03      	ldr	r3, [pc, #12]	; (8002c24 <CB_Timer_20ms+0x24>)
- 8002c18:	701a      	strb	r2, [r3, #0]
+ 8002b38:	4b07      	ldr	r3, [pc, #28]	; (8002b58 <CB_Timer_20ms+0x24>)
+ 8002b3a:	781b      	ldrb	r3, [r3, #0]
+ 8002b3c:	b25b      	sxtb	r3, r3
+ 8002b3e:	2b00      	cmp	r3, #0
+ 8002b40:	bf0c      	ite	eq
+ 8002b42:	2301      	moveq	r3, #1
+ 8002b44:	2300      	movne	r3, #0
+ 8002b46:	b2db      	uxtb	r3, r3
+ 8002b48:	b2da      	uxtb	r2, r3
+ 8002b4a:	4b03      	ldr	r3, [pc, #12]	; (8002b58 <CB_Timer_20ms+0x24>)
+ 8002b4c:	701a      	strb	r2, [r3, #0]
 }
- 8002c1a:	46bd      	mov	sp, r7
- 8002c1c:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8002c20:	4770      	bx	lr
- 8002c22:	bf00      	nop
- 8002c24:	200000e0 	.word	0x200000e0
+ 8002b4e:	46bd      	mov	sp, r7
+ 8002b50:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8002b54:	4770      	bx	lr
+ 8002b56:	bf00      	nop
+ 8002b58:	200000dc 	.word	0x200000dc
 
-08002c28 <main>:
+08002b5c <main>:
 
 int main(void)
 {
- 8002c28:	b580      	push	{r7, lr}
- 8002c2a:	b082      	sub	sp, #8
- 8002c2c:	af00      	add	r7, sp, #0
+ 8002b5c:	b580      	push	{r7, lr}
+ 8002b5e:	b082      	sub	sp, #8
+ 8002b60:	af00      	add	r7, sp, #0
 	DAVE_STATUS_t status;
 	status = DAVE_Init();           /* Initialization of DAVE APPs  */
- 8002c2e:	f7ff ff75 	bl	8002b1c <DAVE_Init>
- 8002c32:	4603      	mov	r3, r0
- 8002c34:	71fb      	strb	r3, [r7, #7]
+ 8002b62:	f7ff ffa3 	bl	8002aac <DAVE_Init>
+ 8002b66:	4603      	mov	r3, r0
+ 8002b68:	71fb      	strb	r3, [r7, #7]
 
 	if(status != DAVE_STATUS_SUCCESS)
- 8002c36:	79fb      	ldrb	r3, [r7, #7]
- 8002c38:	2b00      	cmp	r3, #0
- 8002c3a:	d000      	beq.n	8002c3e <main+0x16>
+ 8002b6a:	79fb      	ldrb	r3, [r7, #7]
+ 8002b6c:	2b00      	cmp	r3, #0
+ 8002b6e:	d000      	beq.n	8002b72 <main+0x16>
 		XMC_DEBUG("DAVE APPs initialization failed\n");
 
 		while(1U)
 		{
 			//Is Error
 		}
- 8002c3c:	e7fe      	b.n	8002c3c <main+0x14>
+ 8002b70:	e7fe      	b.n	8002b70 <main+0x14>
 	}
 
 	Timer_20ms_Id = SYSTIMER_CreateTimer(20000, SYSTIMER_MODE_PERIODIC, (void*) CB_Timer_20ms, NULL);	//creat 20ms timmer
- 8002c3e:	f644 6020 	movw	r0, #20000	; 0x4e20
- 8002c42:	2101      	movs	r1, #1
- 8002c44:	4a16      	ldr	r2, [pc, #88]	; (8002ca0 <main+0x78>)
- 8002c46:	2300      	movs	r3, #0
- 8002c48:	f7ff fba2 	bl	8002390 <SYSTIMER_CreateTimer>
- 8002c4c:	4602      	mov	r2, r0
- 8002c4e:	4b15      	ldr	r3, [pc, #84]	; (8002ca4 <main+0x7c>)
- 8002c50:	601a      	str	r2, [r3, #0]
+ 8002b72:	f644 6020 	movw	r0, #20000	; 0x4e20
+ 8002b76:	2101      	movs	r1, #1
+ 8002b78:	4a0a      	ldr	r2, [pc, #40]	; (8002ba4 <main+0x48>)
+ 8002b7a:	2300      	movs	r3, #0
+ 8002b7c:	f7ff fc08 	bl	8002390 <SYSTIMER_CreateTimer>
+ 8002b80:	4602      	mov	r2, r0
+ 8002b82:	4b09      	ldr	r3, [pc, #36]	; (8002ba8 <main+0x4c>)
+ 8002b84:	601a      	str	r2, [r3, #0]
 	SYSTIMER_StartTimer(Timer_20ms_Id);	//20ms start Timer!
- 8002c52:	4b14      	ldr	r3, [pc, #80]	; (8002ca4 <main+0x7c>)
- 8002c54:	681b      	ldr	r3, [r3, #0]
- 8002c56:	4618      	mov	r0, r3
- 8002c58:	f7ff fc38 	bl	80024cc <SYSTIMER_StartTimer>
-		/* Placeholder for user application code. The while loop below can be replaced with user application code. */
-	while(1U)
+ 8002b86:	4b08      	ldr	r3, [pc, #32]	; (8002ba8 <main+0x4c>)
+ 8002b88:	681b      	ldr	r3, [r3, #0]
+ 8002b8a:	4618      	mov	r0, r3
+ 8002b8c:	f7ff fc9e 	bl	80024cc <SYSTIMER_StartTimer>
 	{
-		if(flag == ON)
- 8002c5c:	4b12      	ldr	r3, [pc, #72]	; (8002ca8 <main+0x80>)
- 8002c5e:	781b      	ldrb	r3, [r3, #0]
- 8002c60:	b25b      	sxtb	r3, r3
- 8002c62:	2b01      	cmp	r3, #1
- 8002c64:	d11b      	bne.n	8002c9e <main+0x76>
-		{
-			if(UART_IsTxBusy(&dhUART_0) != true)	//Tx
- 8002c66:	4811      	ldr	r0, [pc, #68]	; (8002cac <main+0x84>)
- 8002c68:	f7ff ffac 	bl	8002bc4 <UART_IsTxBusy>
- 8002c6c:	4603      	mov	r3, r0
- 8002c6e:	f083 0301 	eor.w	r3, r3, #1
- 8002c72:	b2db      	uxtb	r3, r3
- 8002c74:	2b00      	cmp	r3, #0
- 8002c76:	d007      	beq.n	8002c88 <main+0x60>
-			{
-				DIGITAL_IO_SetOutputHigh(&dhDIGITAL_OUT_0);	//Check run LED
- 8002c78:	480d      	ldr	r0, [pc, #52]	; (8002cb0 <main+0x88>)
- 8002c7a:	f7ff ffb1 	bl	8002be0 <DIGITAL_IO_SetOutputHigh>
-				UART_Transmit(&dhUART_0, Tx_Data, sizeof(Tx_Data));	//Tx_Data's data send
- 8002c7e:	480b      	ldr	r0, [pc, #44]	; (8002cac <main+0x84>)
- 8002c80:	490c      	ldr	r1, [pc, #48]	; (8002cb4 <main+0x8c>)
- 8002c82:	2213      	movs	r2, #19
- 8002c84:	f7fe fe10 	bl	80018a8 <UART_Transmit>
-			}
-			flag = !flag;
- 8002c88:	4b07      	ldr	r3, [pc, #28]	; (8002ca8 <main+0x80>)
- 8002c8a:	781b      	ldrb	r3, [r3, #0]
- 8002c8c:	b25b      	sxtb	r3, r3
- 8002c8e:	2b00      	cmp	r3, #0
- 8002c90:	bf0c      	ite	eq
- 8002c92:	2301      	moveq	r3, #1
- 8002c94:	2300      	movne	r3, #0
- 8002c96:	b2db      	uxtb	r3, r3
- 8002c98:	b2da      	uxtb	r2, r3
- 8002c9a:	4b03      	ldr	r3, [pc, #12]	; (8002ca8 <main+0x80>)
- 8002c9c:	701a      	strb	r2, [r3, #0]
-		}
+		/* Read the data */
+			//UART_Receive(&UART_0, read_data,1);
+
+		  /* Transmit the message */
+		UART_Transmit(&UART_0, send_data, sizeof(send_data));
+ 8002b90:	4806      	ldr	r0, [pc, #24]	; (8002bac <main+0x50>)
+ 8002b92:	4907      	ldr	r1, [pc, #28]	; (8002bb0 <main+0x54>)
+ 8002b94:	220e      	movs	r2, #14
+ 8002b96:	f7fe fe87 	bl	80018a8 <UART_Transmit>
+		  //UART_Transmit(&UART_0, Tx_Data, sizeof(Tx_Data));
+		  read_data[0] = 0x0;
+ 8002b9a:	4b06      	ldr	r3, [pc, #24]	; (8002bb4 <main+0x58>)
+ 8002b9c:	2200      	movs	r2, #0
+ 8002b9e:	701a      	strb	r2, [r3, #0]
+//				//DIGITAL_IO_SetOutputHigh(&dhDIGITAL_OUT_0);	//Check run LED
+//				UART_Transmit(&dhUART_0, Tx_Data, sizeof(Tx_Data));	//Tx_Data's data send
+//			}
+//			flag = !flag;
+//		}
 	}
- 8002c9e:	e7dd      	b.n	8002c5c <main+0x34>
- 8002ca0:	08002c01 	.word	0x08002c01
- 8002ca4:	20000204 	.word	0x20000204
- 8002ca8:	200000e0 	.word	0x200000e0
- 8002cac:	20000000 	.word	0x20000000
- 8002cb0:	08002e24 	.word	0x08002e24
- 8002cb4:	20000094 	.word	0x20000094
+ 8002ba0:	e7f6      	b.n	8002b90 <main+0x34>
+ 8002ba2:	bf00      	nop
+ 8002ba4:	08002b35 	.word	0x08002b35
+ 8002ba8:	20000200 	.word	0x20000200
+ 8002bac:	20000000 	.word	0x20000000
+ 8002bb0:	20000098 	.word	0x20000098
+ 8002bb4:	20000094 	.word	0x20000094
 
-08002cb8 <VADC0_C0_2_IRQHandler>:
-return 1U;
-}
+08002bb8 <__libc_init_array>:
+ 8002bb8:	b570      	push	{r4, r5, r6, lr}
+ 8002bba:	4b0e      	ldr	r3, [pc, #56]	; (8002bf4 <__libc_init_array+0x3c>)
+ 8002bbc:	4c0e      	ldr	r4, [pc, #56]	; (8002bf8 <__libc_init_array+0x40>)
+ 8002bbe:	1ae4      	subs	r4, r4, r3
+ 8002bc0:	10a4      	asrs	r4, r4, #2
+ 8002bc2:	2500      	movs	r5, #0
+ 8002bc4:	461e      	mov	r6, r3
+ 8002bc6:	42a5      	cmp	r5, r4
+ 8002bc8:	d004      	beq.n	8002bd4 <__libc_init_array+0x1c>
+ 8002bca:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
+ 8002bce:	4798      	blx	r3
+ 8002bd0:	3501      	adds	r5, #1
+ 8002bd2:	e7f8      	b.n	8002bc6 <__libc_init_array+0xe>
+ 8002bd4:	f7fe fd8a 	bl	80016ec <_init>
+ 8002bd8:	4c08      	ldr	r4, [pc, #32]	; (8002bfc <__libc_init_array+0x44>)
+ 8002bda:	4b09      	ldr	r3, [pc, #36]	; (8002c00 <__libc_init_array+0x48>)
+ 8002bdc:	1ae4      	subs	r4, r4, r3
+ 8002bde:	10a4      	asrs	r4, r4, #2
+ 8002be0:	2500      	movs	r5, #0
+ 8002be2:	461e      	mov	r6, r3
+ 8002be4:	42a5      	cmp	r5, r4
+ 8002be6:	d004      	beq.n	8002bf2 <__libc_init_array+0x3a>
+ 8002be8:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
+ 8002bec:	4798      	blx	r3
+ 8002bee:	3501      	adds	r5, #1
+ 8002bf0:	e7f8      	b.n	8002be4 <__libc_init_array+0x2c>
+ 8002bf2:	bd70      	pop	{r4, r5, r6, pc}
+ 8002bf4:	200000a8 	.word	0x200000a8
+ 8002bf8:	200000a8 	.word	0x200000a8
+ 8002bfc:	200000a8 	.word	0x200000a8
+ 8002c00:	200000a8 	.word	0x200000a8
 
-void ISR_Adc_Measurement_0()
-{
- 8002cb8:	b580      	push	{r7, lr}
- 8002cba:	af00      	add	r7, sp, #0
-	result = ADC_MEASUREMENT_GetResult(&ADC_MEASUREMENT_Channel_A);
- 8002cbc:	480c      	ldr	r0, [pc, #48]	; (8002cf0 <VADC0_C0_2_IRQHandler+0x38>)
- 8002cbe:	f7ff ff15 	bl	8002aec <ADC_MEASUREMENT_GetResult>
- 8002cc2:	4603      	mov	r3, r0
- 8002cc4:	b2da      	uxtb	r2, r3
- 8002cc6:	4b0b      	ldr	r3, [pc, #44]	; (8002cf4 <VADC0_C0_2_IRQHandler+0x3c>)
- 8002cc8:	701a      	strb	r2, [r3, #0]
-	if(result == SIGNAL_CHECK)
- 8002cca:	4b0a      	ldr	r3, [pc, #40]	; (8002cf4 <VADC0_C0_2_IRQHandler+0x3c>)
- 8002ccc:	781b      	ldrb	r3, [r3, #0]
- 8002cce:	2b00      	cmp	r3, #0
- 8002cd0:	d105      	bne.n	8002cde <VADC0_C0_2_IRQHandler+0x26>
-	{
-		result++;
- 8002cd2:	4b08      	ldr	r3, [pc, #32]	; (8002cf4 <VADC0_C0_2_IRQHandler+0x3c>)
- 8002cd4:	781b      	ldrb	r3, [r3, #0]
- 8002cd6:	3301      	adds	r3, #1
- 8002cd8:	b2da      	uxtb	r2, r3
- 8002cda:	4b06      	ldr	r3, [pc, #24]	; (8002cf4 <VADC0_C0_2_IRQHandler+0x3c>)
- 8002cdc:	701a      	strb	r2, [r3, #0]
-	}
-	Tx_Data[1] = result;
- 8002cde:	4b05      	ldr	r3, [pc, #20]	; (8002cf4 <VADC0_C0_2_IRQHandler+0x3c>)
- 8002ce0:	781a      	ldrb	r2, [r3, #0]
- 8002ce2:	4b05      	ldr	r3, [pc, #20]	; (8002cf8 <VADC0_C0_2_IRQHandler+0x40>)
- 8002ce4:	705a      	strb	r2, [r3, #1]
-	ADC_MEASUREMENT_StartConversion(&dhADC_MEASUREMENT_0);
- 8002ce6:	4805      	ldr	r0, [pc, #20]	; (8002cfc <VADC0_C0_2_IRQHandler+0x44>)
- 8002ce8:	f7ff fef2 	bl	8002ad0 <ADC_MEASUREMENT_StartConversion>
-}
- 8002cec:	bd80      	pop	{r7, pc}
- 8002cee:	bf00      	nop
- 8002cf0:	20000064 	.word	0x20000064
- 8002cf4:	200000a8 	.word	0x200000a8
- 8002cf8:	20000094 	.word	0x20000094
- 8002cfc:	20000078 	.word	0x20000078
+08002c04 <g_xmc_vadc_group_array>:
+ 8002c04:	40004400 40004800 40004c00 40005000     .D.@.H.@.L.@.P.@
 
-08002d00 <__libc_init_array>:
- 8002d00:	b570      	push	{r4, r5, r6, lr}
- 8002d02:	4b0e      	ldr	r3, [pc, #56]	; (8002d3c <__libc_init_array+0x3c>)
- 8002d04:	4c0e      	ldr	r4, [pc, #56]	; (8002d40 <__libc_init_array+0x40>)
- 8002d06:	1ae4      	subs	r4, r4, r3
- 8002d08:	10a4      	asrs	r4, r4, #2
- 8002d0a:	2500      	movs	r5, #0
- 8002d0c:	461e      	mov	r6, r3
- 8002d0e:	42a5      	cmp	r5, r4
- 8002d10:	d004      	beq.n	8002d1c <__libc_init_array+0x1c>
- 8002d12:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
- 8002d16:	4798      	blx	r3
- 8002d18:	3501      	adds	r5, #1
- 8002d1a:	e7f8      	b.n	8002d0e <__libc_init_array+0xe>
- 8002d1c:	f7fe fce6 	bl	80016ec <_init>
- 8002d20:	4c08      	ldr	r4, [pc, #32]	; (8002d44 <__libc_init_array+0x44>)
- 8002d22:	4b09      	ldr	r3, [pc, #36]	; (8002d48 <__libc_init_array+0x48>)
- 8002d24:	1ae4      	subs	r4, r4, r3
- 8002d26:	10a4      	asrs	r4, r4, #2
- 8002d28:	2500      	movs	r5, #0
- 8002d2a:	461e      	mov	r6, r3
- 8002d2c:	42a5      	cmp	r5, r4
- 8002d2e:	d004      	beq.n	8002d3a <__libc_init_array+0x3a>
- 8002d30:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
- 8002d34:	4798      	blx	r3
- 8002d36:	3501      	adds	r5, #1
- 8002d38:	e7f8      	b.n	8002d2c <__libc_init_array+0x2c>
- 8002d3a:	bd70      	pop	{r4, r5, r6, pc}
- 8002d3c:	200000ac 	.word	0x200000ac
- 8002d40:	200000ac 	.word	0x200000ac
- 8002d44:	200000ac 	.word	0x200000ac
- 8002d48:	200000ac 	.word	0x200000ac
+08002c14 <UART_0_channel_config>:
+ 8002c14:	00002580 10010808 00000000              .%..........
 
-08002d4c <g_xmc_vadc_group_array>:
- 8002d4c:	40004400 40004800 40004c00 40005000     .D.@.H.@.L.@.P.@
+08002c20 <UART_0_tx_pin_config>:
+ 8002c20:	00000090 00000001 00000002              ............
 
-08002d5c <dhUART_0_channel_config>:
- 8002d5c:	00002580 10010808 00000000              .%..........
+08002c2c <UART_0_tx_pin>:
+ 8002c2c:	48028100 00000005 08002c20              ...H.... ,..
 
-08002d68 <dhUART_0_tx_pin_config>:
- 8002d68:	00000090 00000001 00000002              ............
-
-08002d74 <dhUART_0_tx_pin>:
- 8002d74:	48028100 00000005 08002d68              ...H....h-..
-
-08002d80 <dhUART_0_config>:
- 8002d80:	08002d5c 08001d79 00000000 00000000     \-..y...........
+08002c38 <UART_0_config>:
+ 8002c38:	08002c14 08001d79 00000000 00000000     .,..y...........
 	...
- 8002da4:	08002d74 05000000 00000305              t-..........
+ 8002c5c:	08002c2c 05000000 00000305              ,,..........
 
-08002db0 <dhUART_0_rx_pin_config>:
- 8002db0:	00000000 00000001 00000002              ............
+08002c68 <UART_0_rx_pin_config>:
+ 8002c68:	00000000 00000001 00000002              ............
 
-08002dbc <group_init_handle0>:
+08002c74 <group_init_handle0>:
 	...
 
-08002dd0 <group_init_handle1>:
+08002c88 <group_init_handle1>:
 	...
 
-08002de4 <group_init_handle2>:
+08002c9c <group_init_handle2>:
 	...
 
-08002df8 <group_init_handle3>:
+08002cb0 <group_init_handle3>:
 	...
 
-08002e0c <global_config>:
- 8002e0c:	00000000 00000003 00000000 00000000     ................
+08002cc4 <global_config>:
+ 8002cc4:	00000000 00000003 00000000 00000000     ................
 	...
 
-08002e24 <dhDIGITAL_OUT_0>:
- 8002e24:	48028100 00000080 00010000 00000000     ...H............
- 8002e34:	00000001                                ....
+08002cdc <dhDIGITAL_OUT_0>:
+ 8002cdc:	48028100 00000080 00010000 00000000     ...H............
+ 8002cec:	00000001                                ....
 
-08002e38 <dhDIGITAL_IN_0>:
- 8002e38:	48028100 00000000 00000000 00000000     ...H............
- 8002e48:	0000000e 01040250 00010000 00000000     ....P...........
- 8002e58:	00010000 01010101                       ........
+08002cf0 <dhDIGITAL_IN_0>:
+ 8002cf0:	48028100 00000000 00000000 00000000     ...H............
+ 8002d00:	0000000e 01040250 00010000 00000000     ....P...........
+ 8002d10:	00010000 01010101                       ........
 
-08002e60 <global_iclass_config>:
- 8002e60:	00000200                                ....
+08002d18 <global_iclass_config>:
+ 8002d18:	00000200                                ....
 
-08002e64 <backgnd_rs_intr_handle>:
- 8002e64:	00000010 0000003f 00000000              ....?.......
+08002d1c <backgnd_rs_intr_handle>:
+ 8002d1c:	00000010 0000003f 00000000              ....?.......
 
-08002e70 <backgnd_config>:
- 8002e70:	00000005 00000000 00000008              ............
+08002d28 <backgnd_config>:
+ 8002d28:	00000005 00000000 00000008              ............

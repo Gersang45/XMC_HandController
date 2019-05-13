@@ -107,8 +107,8 @@
   <children xsi:type="pi:ContainerShape" visible="true" active="true">
     <properties key="uri" value="http://resources/4.1.8/app/UART/0"/>
     <properties key="APP_NAME_ID" value="UART/0"/>
-    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="122" height="40" x="3">
-      <graphicsAlgorithmChildren xsi:type="al:RoundedRectangle" lineWidth="1" transparency="0.0" width="122" height="40" style="//@styles.0/@styles.2" cornerHeight="5" cornerWidth="5"/>
+    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="108" height="40" x="3">
+      <graphicsAlgorithmChildren xsi:type="al:RoundedRectangle" lineWidth="1" transparency="0.0" width="108" height="40" style="//@styles.0/@styles.2" cornerHeight="5" cornerWidth="5"/>
     </graphicsAlgorithm>
     <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.0 //@connections.3"/>
     <children>
@@ -121,7 +121,7 @@
     </children>
     <children visible="true">
       <properties key="uri" value="http://resources/4.1.8/app/UART/0"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="122" height="20" x="25" y="17" font="//@fonts.1" value="dhUART_0"/>
+      <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="108" height="20" x="25" y="17" font="//@fonts.1" value="UART_0"/>
     </children>
   </children>
   <children xsi:type="pi:ContainerShape" visible="true" active="true">
@@ -1404,7 +1404,7 @@
         <businessObjects href="ModelConfigData.data#//@connections.0"/>
       </link>
     </connectionDecorators>
-    <bendpoints x="84" y="50"/>
+    <bendpoints x="39" y="50"/>
     <bendpoints x="73" y="50"/>
     <bendpoints x="73" y="120"/>
     <bendpoints x="43" y="120"/>
@@ -1464,10 +1464,10 @@
         <businessObjects href="ModelConfigData.data#//@connections.4"/>
       </link>
     </connectionDecorators>
-    <bendpoints x="44" y="50"/>
-    <bendpoints x="50" y="50"/>
-    <bendpoints x="50" y="150"/>
-    <bendpoints x="227" y="150"/>
+    <bendpoints x="75" y="60"/>
+    <bendpoints x="150" y="60"/>
+    <bendpoints x="150" y="120"/>
+    <bendpoints x="273" y="120"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.4/@anchors.0" end="//@children.2/@anchors.0">
     <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0" style="//@styles.5"/>
@@ -1522,8 +1522,8 @@
     </connectionDecorators>
     <bendpoints x="219" y="50"/>
     <bendpoints x="106" y="50"/>
-    <bendpoints x="106" y="120"/>
-    <bendpoints x="273" y="120"/>
+    <bendpoints x="106" y="150"/>
+    <bendpoints x="227" y="150"/>
   </connections>
   <colors red="227" green="238" blue="249"/>
   <colors red="255" green="255" blue="255"/>
