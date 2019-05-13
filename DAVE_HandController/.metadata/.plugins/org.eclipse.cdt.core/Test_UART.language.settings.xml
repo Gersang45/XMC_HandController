@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project>
-	<configuration id="com.ifx.xmc4000.appRelease.576302113" name="Release">
+	<configuration id="com.ifx.xmc4000.appRelease.58283457" name="Release">
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="com.ifx.xmc4000.GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
@@ -2113,7 +2113,7 @@
 			</provider>
 		</extension>
 	</configuration>
-	<configuration id="com.ifx.xmc4000.appDebug.1267024039" name="Debug">
+	<configuration id="com.ifx.xmc4000.appDebug.1772812026" name="Debug">
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="com.ifx.xmc4000.GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">

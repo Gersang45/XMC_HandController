@@ -70,6 +70,21 @@ DAVE_STATUS_t DAVE_Init(void)
   {
 	 /**  Initialization of UART APP instance UART_0 */
 	 init_status = (DAVE_STATUS_t)UART_Init(&UART_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of SYSTIMER APP instance SYSTIMER_0 */
+	 init_status = (DAVE_STATUS_t)SYSTIMER_Init(&SYSTIMER_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of ADC_MEASUREMENT APP instance dhADC_MEASUREMENT_0 */
+	 init_status = (DAVE_STATUS_t)ADC_MEASUREMENT_Init(&dhADC_MEASUREMENT_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance dhDIGITAL_OUT_0 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&dhDIGITAL_OUT_0); 
    }  
   return init_status;
 } /**  End of function DAVE_Init */
