@@ -165,5 +165,15 @@
     <bitFields name="setena31" URI="http://resources/0.1.31/peripheral/cpu/0/iser0/setena31" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="31" stopPos="31" accessPermission="rw" maxValue="1" minValue="0"/>
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="setena16" URI="http://resources/0.1.31/peripheral/cpu/0/iser0/setena16" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="16" stopPos="16" accessPermission="rw" maxValue="1" minValue="0"/>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="CCU81_0_IRQHandler" URI="http://resources/0.1.31/peripheral/cpu/0/nvic/interrupt/64">
+    <resourcesList name="iser_setena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iser2/setena0"/>
+    <resourcesList name="icer_clrena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icer2/clrena0"/>
+    <resourcesList name="ispr_setpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ispr2/setpend0"/>
+    <resourcesList name="icpr_clrpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icpr2/clrpend0"/>
+    <resourcesList name="iabr_active" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iabr2/active0"/>
+    <resourcesList name="ipr_pri" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ipr16/pri_64"/>
+    <resourcesList name="signal_in" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ccu81_0_irqhandler"/>
+  </provided>
+  <provided xsi:type="ResourceModel:BitField" name="setena0" URI="http://resources/0.1.31/peripheral/cpu/0/iser2/setena0" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="0" stopPos="0" accessPermission="rw" maxValue="1" minValue="0"/>
   <addressBlock offset="0x0" size="3488" usage="registers"/>
 </ResourceModel:Peripheral>

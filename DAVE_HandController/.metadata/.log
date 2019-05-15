@@ -10130,3 +10130,480 @@ Binding(ALT+SHIFT+R,
 
 !ENTRY SOLVER 1 0 2019-05-15 14:23:34.040
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2019-05-15 14:33:09.368 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_KR
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.variables 4 120 2019-05-15 14:33:35.541
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2019-05-15 14:33:35.555
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-15 14:33:39.456
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-15 14:33:39.461
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Lenovo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY SOLVER 1 0 2019-05-15 14:33:41.888
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2019-05-15 14:33:42.001
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2019-05-15 14:33:42.006
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2019-05-15 14:33:42.214
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:33:42.927
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.5.00.F100.ALL] is: 706 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:43.069
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:43.556
+!MESSAGE USER_ACTION : Active project:Test_UART[ Software ID:XMC4.5.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2019-05-15 14:33:46.950
+!MESSAGE Time Taken By De-Serialization  : 2875 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:33:46.981
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:48.067
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 4511 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:48.114
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 27 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:48.196
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 76 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:48.210
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:51.783
+!MESSAGE USER_ACTION : Time taken for rendering views is: 3561 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:52.098
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 9033 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:33:52.839
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-15 14:33:52.946
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-15 14:33:56.904
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-15 14:34:03.231
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY org.eclipse.jface 2 0 2019-05-15 14:34:52.769
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.769
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@112157b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@112157b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1760b13,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.769
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15df313,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15df313,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6aecec,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.769
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1989b17,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1989b17,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f52ca4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.769
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b48082,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b48082,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.769
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Searches for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f41334,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Searches for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f41334,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace,References in Workspace,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@216b7e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.769
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10afe12,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10afe12,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.declarations.in.workspace,Declaration in Workspace,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@188c0a1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.769
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Opens the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9e06d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Opens the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9e06d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1a1f0a1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.770
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f97be9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f97be9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f535ff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-15 14:34:52.770
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1138c8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1138c8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c3f653,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-15 14:35:00.257
+!MESSAGE USER_ACTION : Time taken for opening editor is: 955 msec 
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:38.474
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\XMC4.5.00.F100.ALL\device\xmc4500\0\MANIFEST\xmc4500.dd
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:35:44.231
+!MESSAGE USER_ACTION : App Getting Added: INTERRUPT [4.0.8]
+
+!ENTRY SOLVER 1 0 2019-05-15 14:35:44.281
+!MESSAGE USER_ACTION : Creating an APP: INTERRUPT [4.0.8]
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:35:44.661
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.12:p
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:35:45.528
+!MESSAGE USER_ACTION : Created APP: INTERRUPT [4.0.8]-->http://resources/4.0.8/app/INTERRUPT/0
+
+!ENTRY SOLVER 1 0 2019-05-15 14:35:45.611
+!MESSAGE USER_ACTION : Library store ECO file :C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\XMC4.5.00.F100.ALL\device\xmc4500\0\MANIFEST\solver_data\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2019-05-15 14:35:46.077
+!MESSAGE USER_ACTION : Copied ECO file to temp location :D:\XMC_HandController\DAVE_HandController\.metadata\.plugins\solver_data\XMC4.5.00.F100.ALL\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2019-05-15 14:35:49.085
+!MESSAGE USER_ACTION : Loaded ECO file :D:\XMC_HandController\DAVE_HandController\.metadata\.plugins\solver_data\XMC4.5.00.F100.ALL\xmc4500_solver.eco
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:50.913
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\LQFP100.0.0\devicepackage\0\MANIFEST\devicepackage.dd
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:51.118
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.100.3\peripheral\vadc\0\MANIFEST\vadc.dd
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:51.142
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\15\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:51.167
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\1\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:51.203
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.34\peripheral\scu\0\MANIFEST\scu.dd
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:51.217
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\debug_port\0\MANIFEST\debug_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:51.269
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.31\peripheral\cpu\0\MANIFEST\cpu.dd
+
+!ENTRY APPSTORE 1 0 2019-05-15 14:35:51.326
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.30\peripheral\usic\0\MANIFEST\usic.dd
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:35:51.357
+!MESSAGE Time taken for processing complete solver result is: 462 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:35:51.362
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:35:51.367
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:35:51.721
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-15 14:35:51.892
+!MESSAGE Time Taken By Serialization  : 166 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:35:51.946
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:35:52.405
+!MESSAGE Time taken for serialization in msec: 1043
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-15 14:36:02.780
+!MESSAGE USER_ACTION : Time taken for opening editor is: 159 msec 
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:06.279
+!MESSAGE USER_ACTION : Opening HW Signal Connection Dialog.!
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:07.993
+!MESSAGE USER_ACTION : Signal Load : 33
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:09.288
+!MESSAGE USER_ACTION : Signal Load : 19
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:10.133
+!MESSAGE USER_ACTION : Signal Load : 20
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:10.159
+!MESSAGE USER_ACTION : Signal Load : 20
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:11.043
+!MESSAGE USER_ACTION : HW Signal Connection Dialog is closed..!
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:23.241
+!MESSAGE USER_ACTION : Opening HW Signal Connection Dialog.!
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:25.077
+!MESSAGE USER_ACTION : Signal Load : 22
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:30.353
+!MESSAGE USER_ACTION : Signal Load : 19
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:31.160
+!MESSAGE USER_ACTION : Signal Load : 30
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:31.191
+!MESSAGE USER_ACTION : Signal Load : 25
+
+!ENTRY SIGNAL_CONFIG 1 0 2019-05-15 14:36:32.603
+!MESSAGE USER_ACTION : HW Signal Connection Dialog is closed..!
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:36:36.499
+!MESSAGE USER_ACTION : Remove Option: Remove this APP and all APPs that are requiring it (Recursively up the tree)
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:36:36.627
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.0.8/app/INTERRUPT/0
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:37.399
+!MESSAGE Time taken for processing complete solver result is: 19 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:37.403
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:37.407
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:37.806
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-15 14:36:37.938
+!MESSAGE Time Taken By Serialization  : 128 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:37.982
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:38.065
+!MESSAGE Time taken for serialization in msec: 662
+
+!ENTRY SOLVER 1 0 2019-05-15 14:36:38.194
+!MESSAGE Time Taken By Solver for UI Action: 1554 ms
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:54.643
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:54.762
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-15 14:36:54.888
+!MESSAGE Time Taken By Serialization  : 123 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-15 14:36:55.078
+!MESSAGE ****************Cleaning project data:Test_UART*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-15 14:36:55.095
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 130 msec 
+
+!ENTRY SOLVER 1 0 2019-05-15 14:36:55.099
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2019-05-15 14:36:55.361
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
