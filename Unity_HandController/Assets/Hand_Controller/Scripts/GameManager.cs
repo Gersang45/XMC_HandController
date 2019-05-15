@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private GameObject cube;
 
     private const int RECV_SIZE = 19;      // recv 받을 데이터배열의 크기
-    private const int SIGNAL_CHECK = 0;     // CheckGoodSignal 함수에서 신호의 첫번째 들어오는 값이 정상적으로 들어오고 있는지 비교할 기준값
+    private const int START_CHECK = 0;     // 신호의 첫번째 들어오는 값이 정상적으로 들어오고 있는지 비교할 기준값
     private const byte START_TX_SIGNAL = 0x30;
 
 
@@ -41,8 +41,8 @@ public class GameManager : MonoBehaviour
 
     void Start()   // Update 시작 직전 한번만 실행
     {
-        Start_Singal();       // DAVE에게 Unity 로 데이터전송을 시작하라는 신호를 보내는 함수
-        CheckGoodSignal();    // 신호가 제대로 오는지 체크하는 함수
+        
+        //CheckGoodSignal();    // 신호가 제대로 오는지 체크하는 함수
     }
 
     // Update is called once per frame
@@ -50,21 +50,23 @@ public class GameManager : MonoBehaviour
     {
         if (MySerial.IsOpen)   // Serial 통신이 열려 있는지 확인
         {
+            MySerial.DiscardInBuffer();     // 수신 버퍼에 쌓인 값을 지워줌
+            Start_Singal();       // DAVE에게 Unity 로 데이터전송을 시작하라는 신호를 보내는 함수
             try
             {
-                MySerial.Read(Rx_Data, 0, RECV_SIZE);    // 데이터 전송받은 갯수, 데이터는 recvBuf에 배열형식으로 저장됨, Byte라서 최대 0~255까지 
-                if (Rx_Data[0] != SIGNAL_CHECK)     // 들어온 신호가 정상적이지 않을때
+                MySerial.Read(Rx_Buf, 0, 1);    // 데이터 전송받은 갯수, 데이터는 recvBuf에 배열형식으로 저장됨
+                if (Rx_Buf[0] != START_CHECK) // 시작 데이터가 들어왔는지 체크하는 조건문
                 {
-                    CheckGoodSignal();      // 정상적이지 않은 신호를 정상적으로 변환
+                    Rx_Data[0] = Rx_Buf[0]; // 신호의 첫 데이터를 저장함.
+                    for (int i = 0; i < RECV_SIZE - 2; i++) // 총 16개의 신호를 받을것임.
+                    {
+                        MySerial.Read(Rx_Buf, 0, 1);    // 데이터 전송받은 갯수, 데이터는 recvBuf에 배열형식으로 저장됨
+                        Rx_Data[i + 1] = Rx_Buf[0]; // 각 신호들의 값을 데이터에 저장함.
+                        Hand_R.GetComponent<R_GetSensor>().Get_Value(Rx_Data);     //받아온 데이터를 Hand_R로 전송함
+                        //Debug.Log("Signal" + i + " : " + Rx_Data[i]);  // 제대로 값이 오고 있는지 주기적으로 확인함
+                    }
                 }
-                else     //신호가 제대로 들어오고 있음!
-                {
-                    //for (int i = 0; i < RECV_SIZE; i++)
-                    //{
-                    //    Debug.Log("Signal" + i + " : " + recvData[i]);  // 제대로 값이 오고 있는지 주기적으로 확인함
-                    //}
-                    Hand_R.GetComponent<R_GetSensor>().Get_Value(Rx_Data);     //받아온 데이터를 Hand_R로 전송함
-                }
+                
             }
             catch (TimeoutException e)   // Timeout 에러를 죽일때 사용
             {
@@ -91,8 +93,8 @@ public class GameManager : MonoBehaviour
             MySerial.Write(Tx_Check, 0, 1);   // 신호 보내라아~
         }
     }
-
-    private void CheckGoodSignal()  // 신호가 제대로 오는지 체크하는 함수
+/*
+    private void CheckGoodSignal()  // 신호가 제대로 오는지 체크하는 함수      // 이젠 안씀
     {
         bool BelivData = false;     // 받고있는 신호가 정상적인지 아닌지 체크하는 변수
 
@@ -105,7 +107,7 @@ public class GameManager : MonoBehaviour
                 MySerial.Read(Rx_Buf, 0, 1);    // 데이터 전송받은 갯수, 데이터는 recvBuf에 배열형식으로 저장됨
                 if (i == 0) //i == 0일때 
                 {
-                    if (Rx_Buf[0] == SIGNAL_CHECK)    // 첫번쨰로 들어오는 값이 Dave에서 SIGNAL_CHECK 값으로, 0을 보내기로 되어있음
+                    if (Rx_Buf[0] == START_CHECK)    // 첫번쨰로 들어오는 값이 Dave에서 SIGNAL_CHECK 값으로, 0을 보내기로 되어있음
                     {
                         BelivData = true;
                     }
@@ -126,7 +128,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
+*/
     private void Serialinit()   //Serial 관련 초기화 함수
     {
         MySerial.PortName = "" + Com_Port_Name;     // 사용자가 사용할 COM 을 미리 입력해줘서 수정가능 내블루투스 : COM7, 민수형블루투스 : COM8

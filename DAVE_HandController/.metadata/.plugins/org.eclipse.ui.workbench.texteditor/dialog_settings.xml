@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="void ISR_Adc_Measurement_0()" key="selection"/>
+		<item value="/*" key="selection"/>
 		<list key="findhistory">
+			<item value="/*"/>
 			<item value="void ISR_Adc_Measurement_0()"/>
 		</list>
 	</section>

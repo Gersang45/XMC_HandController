@@ -19,14 +19,14 @@ public class R_GetSensor : MonoBehaviour {
 
     }
 
-    public void Get_Value(byte[] sesnsor)
+    public void Get_Value(byte[] sesnsor)   //  GameManager 에서 읽어들인 센서값을 필요한만큼만 가져와서 쓰는 함수
     {
         for(int i = 0; i < 5; i++)
         {
-            sensorValue[i] = sesnsor[i+1];
-            if(i == 0)
+            sensorValue[i] = sesnsor[i];
+            if(i == 0)  // 신호의 첫번째값만, 추후에 5개의 센서를 다 쓰게되면 없어질 조건문
             {
-                Debug.Log("잘 받고있다" + i + " : " + sensorValue[i]);
+                Debug.Log("잘 받고있다" + i + " : " + sensorValue[i]);   // 데이터를 잘 받고있는지 출력한다.
             }
         }
     }
