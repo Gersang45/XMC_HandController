@@ -10607,3 +10607,1738 @@ Binding(F3,
 
 !ENTRY SOLVER 1 0 2019-05-15 14:36:55.361
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2019-05-16 17:44:07.082 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_KR
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.variables 4 120 2019-05-16 17:46:22.976
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2019-05-16 17:46:23.072
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-16 17:46:27.385
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-16 17:46:27.431
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Lenovo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY SOLVER 1 0 2019-05-16 17:46:39.740
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2019-05-16 17:46:39.871
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2019-05-16 17:46:39.875
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2019-05-16 17:46:40.127
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:40.741
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.5.00.F100.ALL] is: 605 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:40.908
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:42.359
+!MESSAGE USER_ACTION : Active project:Test_UART[ Software ID:XMC4.5.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2019-05-16 17:46:46.211
+!MESSAGE Time Taken By De-Serialization  : 2365 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:46:46.276
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:46.670
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 4313 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:46.866
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 189 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:46.899
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 26 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:46.904
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:49.787
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2879 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:50.128
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 9224 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 17:46:50.619
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-16 17:46:50.719
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY PIN_CONFIG 1 0 2019-05-16 17:46:54.316
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.470
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\XMC4.5.00.F100.ALL\device\xmc4500\0\MANIFEST\xmc4500.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.514
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\LQFP100.0.0\devicepackage\0\MANIFEST\devicepackage.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.546
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.41\port\p\0\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.630
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\1\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.655
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\2\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.673
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\3\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.688
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\4\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.704
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\5\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.723
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\14\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.739
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\15\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.749
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\usb_port\0\MANIFEST\usb_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.764
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\hcu_port\0\MANIFEST\hcu_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.786
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\debug_port\0\MANIFEST\debug_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.795
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\reset_port\0\MANIFEST\reset_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.820
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\crystal_port\0\MANIFEST\crystal_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.829
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.39\port\rtc_port\0\MANIFEST\rtc_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.846
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\power_port\0\MANIFEST\power_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:46:54.856
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\analogpower_port\0\MANIFEST\analogpower_port.dd
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-16 17:46:56.535
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-16 17:47:02.836
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY SOLVER 1 0 2019-05-16 17:47:26.419
+!MESSAGE USER_ACTION : Library store ECO file :C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\XMC4.5.00.F100.ALL\device\xmc4500\0\MANIFEST\solver_data\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2019-05-16 17:47:26.850
+!MESSAGE USER_ACTION : Copied ECO file to temp location :D:\XMC_HandController\DAVE_HandController\.metadata\.plugins\solver_data\XMC4.5.00.F100.ALL\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2019-05-16 17:47:29.427
+!MESSAGE USER_ACTION : Loaded ECO file :D:\XMC_HandController\DAVE_HandController\.metadata\.plugins\solver_data\XMC4.5.00.F100.ALL\xmc4500_solver.eco
+
+!ENTRY PIN_CONFIG 1 0 2019-05-16 17:47:29.935
+!MESSAGE USER_ACTION : Pins Load : 3648
+
+!ENTRY PIN_CONFIG 1 0 2019-05-16 17:48:14.666
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : dhADC_MEASUREMENT_0 --> pin_Channel_A --> #31 ( P14.0 ) 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-16 17:48:15.419
+!MESSAGE USER_ACTION : Pin Selection : 801
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:48:17.790
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.100.3\peripheral\vadc\0\MANIFEST\vadc.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:48:17.860
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.34\peripheral\scu\0\MANIFEST\scu.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:48:17.910
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.31\peripheral\cpu\0\MANIFEST\cpu.dd
+
+!ENTRY APPSTORE 1 0 2019-05-16 17:48:17.986
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.30\peripheral\usic\0\MANIFEST\usic.dd
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:48:18.006
+!MESSAGE Time taken for processing complete solver result is: 365 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:48:18.006
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:48:18.006
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:48:18.280
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-16 17:48:18.400
+!MESSAGE Time Taken By Serialization  : 114 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:48:18.449
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:48:18.520
+!MESSAGE Time taken for serialization in msec: 514
+
+!ENTRY PIN_CONFIG 1 0 2019-05-16 17:48:18.646
+!MESSAGE USER_ACTION : Saved User configured Pin Data.!
+
+!ENTRY SOLVER 1 0 2019-05-16 17:48:18.649
+!MESSAGE Time Taken By Solve and Save Manual PIN Configuration  : 1032 ms
+
+!ENTRY PIN_CONFIG 1 0 2019-05-16 17:48:22.166
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY CODEGEN 1 0 2019-05-16 17:48:26.279
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-16 17:48:27.246
+!MESSAGE Code generation completed...
+
+!ENTRY org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@192ebdc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@192ebdc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18cd739,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@493feb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@493feb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a0404b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@328d88,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@328d88,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18ea668,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@af6715,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@af6715,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5fdf53,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Searches for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9b445d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Searches for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9b445d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace,References in Workspace,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d404c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1285940,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1285940,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.declarations.in.workspace,Declaration in Workspace,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@131b371,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Opens the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18ab926,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Opens the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18ab926,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f25013,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13e5b4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13e5b4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c97a3c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-16 17:51:51.006
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@20b04a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@20b04a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-16 17:52:33.350
+!MESSAGE USER_ACTION : Time taken for opening editor is: 3004 msec 
+
+!ENTRY UI_EDITOR 1 0 2019-05-16 17:52:36.596
+!MESSAGE USER_ACTION : Setting value = "8 Bit Conversion" of "gcombo_conv_mode" in APP: ADC_MEASUREMENT/4.1.22/0
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:52:36.716
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:52:36.720
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:52:36.856
+!MESSAGE Time taken for serialization in msec: 136
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 17:52:36.866
+!MESSAGE *****************************
+
+!ENTRY CODEGEN 1 0 2019-05-16 17:52:41.326
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-16 17:52:42.008
+!MESSAGE Code generation completed...
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 18:12:55.701
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 18:12:55.857
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-16 18:12:56.029
+!MESSAGE Time Taken By Serialization  : 172 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-16 18:12:56.279
+!MESSAGE ****************Cleaning project data:Test_UART*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-16 18:12:56.295
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 188 msec 
+
+!ENTRY SOLVER 1 0 2019-05-16 18:12:56.310
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2019-05-16 18:12:56.560
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2019-05-17 14:32:08.092 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_KR
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.variables 4 120 2019-05-17 14:32:43.037
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2019-05-17 14:32:43.151
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-17 14:32:47.877
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-17 14:32:47.882
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Lenovo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY SOLVER 1 0 2019-05-17 14:32:50.676
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2019-05-17 14:32:50.805
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2019-05-17 14:32:50.809
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2019-05-17 14:32:51.102
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2019-05-17 14:32:51.943
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.5.00.F100.ALL] is: 834 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:32:52.170
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 6 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:32:53.814
+!MESSAGE USER_ACTION : Active project:Test_UART[ Software ID:XMC4.5.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2019-05-17 14:33:00.738
+!MESSAGE Time Taken By De-Serialization  : 3919 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 14:33:00.771
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:33:02.729
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 8915 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:33:02.777
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 20 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:33:02.821
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 34 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:33:02.826
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:33:06.035
+!MESSAGE USER_ACTION : Time taken for rendering views is: 3203 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:33:06.463
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 14300 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 14:33:06.955
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-17 14:33:07.083
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-17 14:33:12.498
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2019-05-17 14:33:18.778
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11c9f54,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11c9f54,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d906c3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@874ebf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@874ebf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12fc97b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@420a75,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@420a75,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Searches for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18cf0a0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Searches for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18cf0a0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace,References in Workspace,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15ebb98,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@97c5d9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@97c5d9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.declarations.in.workspace,Declaration in Workspace,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ce689c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Opens the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d98655,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Opens the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d98655,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f76bed,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4dee7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4dee7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@141d473,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c40060,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c40060,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d9b736,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-17 14:56:21.857
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@48a82c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@48a82c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12f005a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:14.506
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:15.206
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:04:15.466
+!MESSAGE Time Taken By Serialization  : 256 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-05-17 15:04:15.796
+!MESSAGE Indexed 'Test_I2C' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-05-17 15:04:18.117
+!MESSAGE Indexed 'Test_I2C' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:18.918
+!MESSAGE assertion failed: 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:18.925
+!MESSAGE File 'D:\XMC_HandController\DAVE_HandController\Test_I2C\linker_script.ld' does not exist
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:19.706
+!MESSAGE assertion failed: 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:19.706
+!MESSAGE File 'D:\XMC_HandController\DAVE_HandController\Test_I2C\linker_script.ld' does not exist
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:21.407
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:21.570
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:04:21.731
+!MESSAGE Time Taken By Serialization  : 158 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:21.905
+!MESSAGE Time taken for project creation before wizard close: 7409
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:21.976
+!MESSAGE Time taken for postProjectCreation: 68
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:24.901
+!MESSAGE Resource '/Test_I2C' is not open.
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:25.422
+!MESSAGE ****************Cleaning project data:Test_UART*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:04:27.600
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 2412 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:04:28.111
+!MESSAGE USER_ACTION : Active project:Test_I2C[ Software ID:XMC4.5.00.F100.ALL]
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:04:28.318
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:04:28.322
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 211 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:04:28.326
+!MESSAGE USER_ACTION : Time taken for updating views is: 0 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:04:28.722
+!MESSAGE USER_ACTION : Time taken for rendering views is: 392 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:04:29.352
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 4164 msec 
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:05:18.092
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\XMC4.5.00.F100.ALL\device\xmc4500\0\MANIFEST\xmc4500.dd
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:11:04.990
+!MESSAGE Resource '/I2CMasterSlave' is not open.
+
+!ENTRY Import 1 0 2019-05-17 15:11:07.577
+!MESSAGE USER_ACTION : Time taken for importing project: I2CMasterSlave into workspace is : 2600 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:11:07.688
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:11:07.695
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:11:07.789
+!MESSAGE Time Taken By Serialization  : 90 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:11:08.064
+!MESSAGE ****************Cleaning project data:Test_I2C*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:11:08.069
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 158 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:11:08.446
+!MESSAGE USER_ACTION : Active project:I2CMasterSlave[ Software ID:XMC4.5.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2019-05-17 15:11:09.084
+!MESSAGE Time Taken By De-Serialization  : 552 ms :: C:\Users\Lenovo\OneDrive\Document\JooSH\자율주행\XMC\Ref\AXDL345\10_I2CMasterSlave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:11:09.089
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:11:09.155
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 709 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:11:09.164
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 3 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:11:09.178
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 9 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:11:09.182
+!MESSAGE USER_ACTION : Time taken for updating views is: 0 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:11:09.711
+!MESSAGE USER_ACTION : Time taken for rendering views is: 525 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:11:09.961
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 2050 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 15:11:14.550
+!MESSAGE USER_ACTION : Time taken for opening editor is: 795 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 15:11:19.538
+!MESSAGE USER_ACTION : Time taken for opening editor is: 81 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 15:11:23.908
+!MESSAGE USER_ACTION : Time taken for opening editor is: 457 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:16:52.031
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:16:52.219
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:16:52.381
+!MESSAGE Time Taken By Serialization  : 158 ms :: C:\Users\Lenovo\OneDrive\Document\JooSH\자율주행\XMC\Ref\AXDL345\10_I2CMasterSlave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:16:52.774
+!MESSAGE ****************Cleaning project data:I2CMasterSlave*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:16:52.793
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 286 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:16:53.141
+!MESSAGE USER_ACTION : Active project:Test_I2C[ Software ID:XMC4.5.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2019-05-17 15:16:53.250
+!MESSAGE Time Taken By De-Serialization  : 87 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:16:53.256
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:16:53.260
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 119 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:16:53.264
+!MESSAGE USER_ACTION : Time taken for updating views is: 0 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:16:53.639
+!MESSAGE USER_ACTION : Time taken for rendering views is: 370 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:16:53.813
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 1306 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:17:09.034
+!MESSAGE USER_ACTION : App Getting Added: UART [4.1.8]
+
+!ENTRY SOLVER 1 0 2019-05-17 15:17:09.142
+!MESSAGE USER_ACTION : Creating an APP: UART [4.1.8]
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:17:09.762
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CLOCK_XMC4 [4.0.2] lStoreAppVersion: 4.0.22:l
+
+!ENTRY SOLVER 1 0 2019-05-17 15:17:10.691
+!MESSAGE USER_ACTION : Creating an APP: CLOCK_XMC4 [4.0.22]
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:17:11.009
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.12:l
+
+!ENTRY SOLVER 1 0 2019-05-17 15:17:11.384
+!MESSAGE USER_ACTION : Creating an APP: CPU_CTRL_XMC4 [4.0.12]
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:17:11.742
+!MESSAGE USER_ACTION : Created APP: CLOCK_XMC4 [4.0.22]-->http://resources/4.0.22/app/CLOCK_XMC4/0
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:17:11.855
+!MESSAGE USER_ACTION : Created APP: CPU_CTRL_XMC4 [4.0.12]-->http://resources/4.0.12/app/CPU_CTRL_XMC4/0
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:17:11.987
+!MESSAGE USER_ACTION : Created APP: UART [4.1.8]-->http://resources/4.1.8/app/UART/0
+
+!ENTRY SOLVER 1 0 2019-05-17 15:17:12.034
+!MESSAGE USER_ACTION : Library store ECO file :C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\XMC4.5.00.F100.ALL\device\xmc4500\0\MANIFEST\solver_data\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2019-05-17 15:17:12.449
+!MESSAGE USER_ACTION : Copied ECO file to temp location :D:\XMC_HandController\DAVE_HandController\.metadata\.plugins\solver_data\XMC4.5.00.F100.ALL\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2019-05-17 15:17:15.982
+!MESSAGE USER_ACTION : Loaded ECO file :D:\XMC_HandController\DAVE_HandController\.metadata\.plugins\solver_data\XMC4.5.00.F100.ALL\xmc4500_solver.eco
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:17:16.871
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.34\peripheral\scu\0\MANIFEST\scu.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:17:16.901
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\debug_port\0\MANIFEST\debug_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:17:16.963
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.31\peripheral\cpu\0\MANIFEST\cpu.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:17:17.026
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.30\peripheral\usic\1\MANIFEST\usic.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:17:17.072
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\2\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:17:17.104
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\LQFP100.0.0\devicepackage\0\MANIFEST\devicepackage.dd
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:17:17.116
+!MESSAGE Time taken for processing complete solver result is: 277 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:17:17.122
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:17:17.125
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:17:17.195
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:17:17.265
+!MESSAGE Time Taken By Serialization  : 64 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:17:17.292
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:17:17.327
+!MESSAGE Time taken for serialization in msec: 206
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 15:18:02.357
+!MESSAGE USER_ACTION : Time taken for opening editor is: 595 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:06.573
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:06.577
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:06.612
+!MESSAGE Time taken for serialization in msec: 35
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:06.619
+!MESSAGE *****************************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:06.626
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:06.692
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:18:06.756
+!MESSAGE Time Taken By Serialization  : 60 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:06.778
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY UI_EDITOR 1 0 2019-05-17 15:18:13.206
+!MESSAGE USER_ACTION : Setting value = "9600" of "gint_desiredbaudrate" in APP: UART/4.1.8/0
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:14.040
+!MESSAGE Time taken for processing complete solver result is: 12 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:14.045
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:14.051
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:14.109
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:18:14.186
+!MESSAGE Time Taken By Serialization  : 73 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:14.210
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:14.246
+!MESSAGE Time taken for serialization in msec: 201
+
+!ENTRY UI_EDITOR 1 0 2019-05-17 15:18:14.305
+!MESSAGE USER_ACTION : Time taken for refreshing UART/4.1.8/0 editor is : 14
+
+!ENTRY SOLVER 1 0 2019-05-17 15:18:14.309
+!MESSAGE Time Taken By Solver for UI Action: 1038 ms
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:28.571
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:28.640
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:18:28.697
+!MESSAGE Time Taken By Serialization  : 54 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:28.924
+!MESSAGE ****************Cleaning project data:Test_I2C*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:28.933
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 112 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:29.371
+!MESSAGE USER_ACTION : Active project:Test_UART[ Software ID:XMC4.5.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2019-05-17 15:18:29.994
+!MESSAGE Time Taken By De-Serialization  : 543 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:30.002
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:30.091
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 719 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:30.104
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 3 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:30.121
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 13 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:30.125
+!MESSAGE USER_ACTION : Time taken for updating views is: 0 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:30.696
+!MESSAGE USER_ACTION : Time taken for rendering views is: 567 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:30.961
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 2141 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:38.029
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:38.167
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:18:38.301
+!MESSAGE Time Taken By Serialization  : 130 ms :: D:\XMC_HandController\DAVE_HandController\Test_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:38.611
+!MESSAGE ****************Cleaning project data:Test_UART*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:38.629
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 200 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:38.926
+!MESSAGE USER_ACTION : Active project:Test_I2C[ Software ID:XMC4.5.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2019-05-17 15:18:39.390
+!MESSAGE Time Taken By De-Serialization  : 426 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:18:39.394
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:39.445
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 519 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:39.453
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 2 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:39.464
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 6 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:39.470
+!MESSAGE USER_ACTION : Time taken for updating views is: 0 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:39.863
+!MESSAGE USER_ACTION : Time taken for rendering views is: 388 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 15:18:40.104
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 1675 msec 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:18:50.505
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.542
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.41\port\p\0\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.566
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\1\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.588
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\3\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.607
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\4\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.625
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\5\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.645
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\14\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.666
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\p\15\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.679
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\usb_port\0\MANIFEST\usb_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.691
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.40\port\hcu_port\0\MANIFEST\hcu_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.704
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\reset_port\0\MANIFEST\reset_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.713
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\crystal_port\0\MANIFEST\crystal_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.725
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.39\port\rtc_port\0\MANIFEST\rtc_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.738
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\power_port\0\MANIFEST\power_port.dd
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:18:50.750
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.0.0\port\analogpower_port\0\MANIFEST\analogpower_port.dd
+
+!ENTRY SOLVER 1 0 2019-05-17 15:18:52.199
+!MESSAGE USER_ACTION : Library store ECO file :C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\XMC4.5.00.F100.ALL\device\xmc4500\0\MANIFEST\solver_data\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2019-05-17 15:18:52.255
+!MESSAGE USER_ACTION : Copied ECO file to temp location :D:\XMC_HandController\DAVE_HandController\.metadata\.plugins\solver_data\XMC4.5.00.F100.ALL\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2019-05-17 15:18:52.263
+!MESSAGE USER_ACTION : Loaded ECO file :D:\XMC_HandController\DAVE_HandController\.metadata\.plugins\solver_data\XMC4.5.00.F100.ALL\xmc4500_solver.eco
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:18:52.571
+!MESSAGE USER_ACTION : Pins Load : 382
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:18:54.851
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : dhUART_0 --> Receive Pin --> #75 ( P1.4 ) 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:18:55.632
+!MESSAGE USER_ACTION : Pin Selection : 836
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:18:56.157
+!MESSAGE USER_ACTION : Pins Load : 288
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:18:57.938
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : dhUART_0 --> Transmit Pin --> #74 ( P1.5 ) 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:18:58.725
+!MESSAGE USER_ACTION : Pin Selection : 846
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:18:59.140
+!MESSAGE USER_ACTION : Pins Load : 288
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:02.212
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : dhUART_0 --> Receive Pin --> Not Selected
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:02.967
+!MESSAGE USER_ACTION : Pin Selection : 807
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:03.728
+!MESSAGE USER_ACTION : Pins Load : 308
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:04.489
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : dhUART_0 --> Transmit Pin --> Not Selected
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:05.256
+!MESSAGE USER_ACTION : Pin Selection : 823
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:05.859
+!MESSAGE USER_ACTION : Pins Load : 307
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:57.621
+!MESSAGE USER_ACTION : Pins Load : 299
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:59.171
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : dhUART_0 --> Transmit Pin --> #74 ( P1.5 ) 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:19:59.942
+!MESSAGE USER_ACTION : Pin Selection : 825
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:20:00.543
+!MESSAGE USER_ACTION : Pins Load : 285
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:20:01.560
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : dhUART_0 --> Receive Pin --> #75 ( P1.4 ) 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:20:02.322
+!MESSAGE USER_ACTION : Pin Selection : 816
+
+!ENTRY APPSTORE 1 0 2019-05-17 15:20:04.738
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.30\peripheral\usic\0\MANIFEST\usic.dd
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:20:04.760
+!MESSAGE Time taken for processing complete solver result is: 99 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:20:04.766
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:20:04.771
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:20:04.858
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 15:20:04.926
+!MESSAGE Time Taken By Serialization  : 65 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:20:04.952
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 15:20:04.990
+!MESSAGE Time taken for serialization in msec: 225
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:20:05.047
+!MESSAGE USER_ACTION : Saved User configured Pin Data.!
+
+!ENTRY SOLVER 1 0 2019-05-17 15:20:05.053
+!MESSAGE Time Taken By Solve and Save Manual PIN Configuration  : 409 ms
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 15:20:10.722
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY CODEGEN 1 0 2019-05-17 15:20:49.780
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 15:20:50.275
+!MESSAGE Code generation completed...
+
+!ENTRY org.eclipse.ui 4 4 2019-05-17 16:38:31.843
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.DebugLast: {ActionDelegateHandlerProxy(null,org.eclipse.debug.internal.ui.actions.DebugLastAction)} vs {ActionDelegateHandlerProxy(null,com.dave.activeproject.ui.actions.ActiveProjDebugLastAction)}
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2019-05-17 16:56:08.048
+!MESSAGE J-Link GDB Server failed: 
+Could not connect to J-Link. Please check if plugged into USB port or Ethernet switch.
+
+For more details, see the JLinkGDBServerCL.exe console.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2019-05-17 16:57:24.571
+!MESSAGE Debug session 'Test_I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 16:59:31.978
+!MESSAGE USER_ACTION : App Getting Added: DIGITAL_IO [4.0.16]
+
+!ENTRY SOLVER 1 0 2019-05-17 16:59:32.047
+!MESSAGE USER_ACTION : Creating an APP: DIGITAL_IO [4.0.16]
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 16:59:32.497
+!MESSAGE USER_ACTION : Created APP: DIGITAL_IO [4.0.16]-->http://resources/4.0.16/app/DIGITAL_IO/0
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:33.277
+!MESSAGE Time taken for processing complete solver result is: 30 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:33.287
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:33.287
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:33.377
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 16:59:33.507
+!MESSAGE Time Taken By Serialization  : 120 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:33.541
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:33.587
+!MESSAGE Time taken for serialization in msec: 300
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 16:59:39.578
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 16:59:41.211
+!MESSAGE USER_ACTION : Pins Load : 265
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 16:59:45.787
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : DIGITAL_IO_0 --> pin --> #78 ( P1.1 ) 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 16:59:46.469
+!MESSAGE USER_ACTION : Pin Selection : 732
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:47.227
+!MESSAGE Time taken for processing complete solver result is: 10 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:47.231
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:47.231
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:47.317
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 16:59:47.390
+!MESSAGE Time Taken By Serialization  : 63 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:47.417
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 16:59:47.467
+!MESSAGE Time taken for serialization in msec: 236
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 16:59:47.517
+!MESSAGE USER_ACTION : Saved User configured Pin Data.!
+
+!ENTRY SOLVER 1 0 2019-05-17 16:59:47.527
+!MESSAGE Time Taken By Solve and Save Manual PIN Configuration  : 330 ms
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 16:59:48.987
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY CODEGEN 1 0 2019-05-17 16:59:50.527
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 16:59:50.877
+!MESSAGE Code generation completed...
+
+!ENTRY CODEGEN 1 0 2019-05-17 17:00:14.651
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 17:00:14.936
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2019-05-17 17:00:36.717
+!MESSAGE J-Link GDB Server failed: 
+Could not connect to J-Link. Please check if plugged into USB port or Ethernet switch.
+
+For more details, see the JLinkGDBServerCL.exe console.
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 17:06:19.260
+!MESSAGE USER_ACTION : Time taken for opening editor is: 269 msec 
+
+!ENTRY UI_EDITOR 1 0 2019-05-17 17:06:21.257
+!MESSAGE USER_ACTION : Setting value = "Input/Output" of "gcombo_io_function" in APP: DIGITAL_IO/4.0.16/0
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 17:06:22.025
+!MESSAGE Time taken for processing complete solver result is: 7 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 17:06:22.037
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 17:06:22.040
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 17:06:22.137
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 17:06:22.250
+!MESSAGE Time Taken By Serialization  : 113 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 17:06:22.286
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 17:06:22.336
+!MESSAGE Time taken for serialization in msec: 294
+
+!ENTRY UI_EDITOR 1 0 2019-05-17 17:06:22.406
+!MESSAGE USER_ACTION : Time taken for refreshing DIGITAL_IO/4.0.16/0 editor is : 30
+
+!ENTRY SOLVER 1 0 2019-05-17 17:06:22.406
+!MESSAGE Time Taken By Solver for UI Action: 1039 ms
+
+!ENTRY CODEGEN 1 0 2019-05-17 17:06:24.710
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 17:06:25.056
+!MESSAGE Code generation completed...
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 17:13:46.326
+!MESSAGE USER_ACTION : Time taken for opening editor is: 580 msec 
+
+!ENTRY CODEGEN 1 0 2019-05-17 17:32:49.282
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 17:32:49.717
+!MESSAGE Code generation completed...
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 17:37:57.034
+!MESSAGE USER_ACTION : Time taken for opening editor is: 116 msec 
+
+!ENTRY CODEGEN 1 0 2019-05-17 17:38:03.963
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 17:38:04.306
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2019-05-17 17:43:18.063
+!MESSAGE Debug session 'Test_I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 18:49:51.926
+!MESSAGE USER_ACTION : App Getting Added: I2C_MASTER [4.1.18]
+
+!ENTRY SOLVER 1 0 2019-05-17 18:49:52.116
+!MESSAGE USER_ACTION : Creating an APP: I2C_MASTER [4.1.18]
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 18:49:52.876
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.12:p
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 18:49:53.385
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CLOCK_XMC4 [4.0.2] lStoreAppVersion: 4.0.22:p
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 18:49:54.244
+!MESSAGE USER_ACTION : Created APP: I2C_MASTER [4.1.18]-->http://resources/4.1.18/app/I2C_MASTER/0
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:55.135
+!MESSAGE Time taken for processing complete solver result is: 27 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:55.139
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:55.143
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:55.242
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 18:49:55.368
+!MESSAGE Time Taken By Serialization  : 123 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:55.410
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:55.471
+!MESSAGE Time taken for serialization in msec: 331
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 18:49:57.024
+!MESSAGE USER_ACTION : App Getting Added: I2C_SLAVE [4.0.14]
+
+!ENTRY SOLVER 1 0 2019-05-17 18:49:57.066
+!MESSAGE USER_ACTION : Creating an APP: I2C_SLAVE [4.0.14]
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 18:49:57.481
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.12:p
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 18:49:57.506
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CLOCK_XMC4 [4.0.2] lStoreAppVersion: 4.0.22:p
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 18:49:57.827
+!MESSAGE USER_ACTION : Created APP: I2C_SLAVE [4.0.14]-->http://resources/4.0.14/app/I2C_SLAVE/0
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:58.724
+!MESSAGE Time taken for processing complete solver result is: 54 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:58.730
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:58.734
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:58.868
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 18:49:58.984
+!MESSAGE Time Taken By Serialization  : 112 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:59.029
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 18:49:59.091
+!MESSAGE Time taken for serialization in msec: 361
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 18:50:14.956
+!MESSAGE USER_ACTION : Time taken for opening editor is: 460 msec 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 18:50:18.712
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 18:50:26.169
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 18:50:35.706
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 18:50:36.920
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 19:02:14.375
+!MESSAGE USER_ACTION : Time taken for opening editor is: 50 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 19:02:15.575
+!MESSAGE USER_ACTION : Time taken for opening editor is: 36 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 19:16:16.198
+!MESSAGE USER_ACTION : Time taken for opening editor is: 545 msec 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:16:35.230
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:18:16.184
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 19:18:20.044
+!MESSAGE USER_ACTION : Remove Option: Remove this APP and all APPs that are requiring it (Recursively up the tree)
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 19:18:20.267
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.0.14/app/I2C_SLAVE/0
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:18:21.197
+!MESSAGE Time taken for processing complete solver result is: 73 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:18:21.204
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:18:21.204
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:18:21.304
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 19:18:21.504
+!MESSAGE Time Taken By Serialization  : 190 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:18:21.547
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:18:21.594
+!MESSAGE Time taken for serialization in msec: 390
+
+!ENTRY SOLVER 1 0 2019-05-17 19:18:21.663
+!MESSAGE Time Taken By Solver for UI Action: 1380 ms
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 19:18:24.364
+!MESSAGE USER_ACTION : Time taken for opening editor is: 69 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 19:24:08.100
+!MESSAGE USER_ACTION : Time taken for opening editor is: 70 msec 
+
+!ENTRY CODEGEN 1 0 2019-05-17 19:38:53.032
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 19:38:53.660
+!MESSAGE Code generation completed...
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:40:21.356
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:40:23.688
+!MESSAGE USER_ACTION : Pins Load : 401
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:40:28.850
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : I2C_MASTER_0 --> SCL --> #56 ( P5.2 ) 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:40:29.643
+!MESSAGE USER_ACTION : Pin Selection : 845
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:40:30.531
+!MESSAGE USER_ACTION : Pins Load : 269
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:40:31.499
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : I2C_MASTER_0 --> SDA --> #58 ( P5.0 ) 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:40:32.269
+!MESSAGE USER_ACTION : Pin Selection : 818
+
+!ENTRY APPSTORE 1 0 2019-05-17 19:43:37.430
+!MESSAGE USER_ACTION : Loaded DD: C:\Users\Lenovo\Infineon\D_LibraryStore_4.1\resources\0.1.30\peripheral\usic\2\MANIFEST\usic.dd
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:43:37.456
+!MESSAGE Time taken for processing complete solver result is: 153 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:43:37.809
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:43:37.824
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:43:37.985
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 19:43:38.150
+!MESSAGE Time Taken By Serialization  : 160 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:43:38.190
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 19:43:38.255
+!MESSAGE Time taken for serialization in msec: 447
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:43:38.326
+!MESSAGE USER_ACTION : Saved User configured Pin Data.!
+
+!ENTRY SOLVER 1 0 2019-05-17 19:43:38.331
+!MESSAGE Time Taken By Solve and Save Manual PIN Configuration  : 1044 ms
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 19:43:40.012
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY CODEGEN 1 0 2019-05-17 19:43:41.469
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 19:43:41.772
+!MESSAGE Code generation completed...
+
+!ENTRY APP_CONFIGURATOR 1 0 2019-05-17 19:56:48.358
+!MESSAGE USER_ACTION : Time taken for opening editor is: 119 msec 
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 20:11:47.049
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY PIN_CONFIG 1 0 2019-05-17 20:12:30.611
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY CODEGEN 1 0 2019-05-17 20:12:35.918
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2019-05-17 20:12:36.372
+!MESSAGE Code generation completed...
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 20:21:04.408
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 20:21:04.549
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2019-05-17 20:21:04.702
+!MESSAGE Time Taken By Serialization  : 149 ms :: D:\XMC_HandController\DAVE_HandController\Test_I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2019-05-17 20:21:04.842
+!MESSAGE ****************Cleaning project data:Test_I2C*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2019-05-17 20:21:04.862
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 116 msec 
+
+!ENTRY SOLVER 1 0 2019-05-17 20:21:04.868
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2019-05-17 20:21:05.149
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED

@@ -1,0 +1,43 @@
+#include <DAVE.h>                 //Declarations from DAVE Code Generation (includes SFR declaration)
+
+int main(void)
+{
+  DAVE_STATUS_t status;
+  uint8_t Send_Data[] = "Send to ReadByte => ";
+  uint8_t ReadData[] = { 0 , '\n', '\r'};
+  uint8_t flag = 1;
+
+  status = DAVE_Init();           /* Initialization of DAVE APPs  */
+
+  if(status != DAVE_STATUS_SUCCESS)
+  {
+    /* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
+    XMC_DEBUG("DAVE APPs initialization failed\n");
+
+    while(1U)
+    {
+
+    }
+  }
+
+  /* Placeholder for user application code. The while loop below can be replaced with user application code. */
+  while(1U)
+  {
+	  if(flag == 1)
+	  {
+		  UART_Transmit(&dhUART_0, Send_Data, sizeof(Send_Data)-1);
+		  UART_Receive(&dhUART_0, ReadData, 1);
+		  flag = 0;
+	  }
+	  if(ReadData[0] != 0)
+	  {
+		  if(ReadData[0] == 1)
+		  {
+			  DIGITAL_IO_SetOutputHigh(&DIGITAL_IO_0);1
+		  }
+			UART_Transmit(&dhUART_0, ReadData, 3);
+			ReadData[0] = 0;
+			flag = 1;
+	  }
+  }
+}

@@ -104,7 +104,7 @@
 
 #define ISR_Adc_Measurement_0 IRQ_Hdlr_16
 #define ADC_MEASUREMENT_Channel_A (ADC_MEASUREMENT_Channel_A_handle)
-#define ADC_MEASUREMENT_Channel_A_RES (VADC_G2->RES[0])
+#define ADC_MEASUREMENT_Channel_A_RES (VADC_G0->RES[15])
 
 
 #define ADC_MEASUREMENT_CPU_4X

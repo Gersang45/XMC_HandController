@@ -1,0 +1,38 @@
+20:20:35 **** Incremental Build of configuration Debug for project Test_I2C ****
+"\"C:\\DAVEv4\\DAVE-4.3.2\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Building file: ../main.c'
+../main.c: In function 'main':
+'Invoking: ARM-GCC C Compiler'
+../main.c:45:62: warning: passing argument 4 of 'I2C_MASTER_Receive' from incompatible pointer type
+"C:/DAVEv4/DAVE-4.3.2/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "main.o" -DXMC4500_F100x1024 -I"D:/XMC_HandController/DAVE_HandController/Test_I2C/Libraries/XMCLib/inc" -I"D:/XMC_HandController/DAVE_HandController/Test_I2C/Libraries/CMSIS/Include" -I"D:/XMC_HandController/DAVE_HandController/Test_I2C/Libraries/CMSIS/Infineon/XMC4500_series/Include" -I"D:/XMC_HandController/DAVE_HandController/Test_I2C" -I"D:/XMC_HandController/DAVE_HandController/Test_I2C/Dave/Generated" -I"D:/XMC_HandController/DAVE_HandController/Test_I2C/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -mfloat-abi=softfp -Wa,-adhlns="main.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d main.o" -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mthumb -g -gdwarf-2 -o "main.o" "../main.c" 
+          I2C_MASTER_Receive(&I2C_MASTER_0,true,SLAVE_ADDRESS,&I2C_Data,1,true,true);
+'Finished building: ../main.c'
+                                                              ^
+
+In file included from D:/XMC_HandController/DAVE_HandController/Test_I2C/Dave/Generated/DAVE.h:64:0,
+                 from ../main.c:1:
+D:/XMC_HandController/DAVE_HandController/Test_I2C/Dave/Generated/I2C_MASTER/i2c_master.h:360:21: note: expected 'uint8_t *' but argument is of type 'uint8_t (*)[8]'
+ I2C_MASTER_STATUS_t I2C_MASTER_Receive(I2C_MASTER_t *handle, bool send_start, const uint32_t address,
+                     ^
+'Building target: Test_I2C.elf'
+'Invoking: ARM-GCC C Linker'
+"C:/DAVEv4/DAVE-4.3.2/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -T"../linker_script.ld" -nostartfiles -Xlinker --gc-sections -specs=nano.specs -specs=nosys.specs -Wl,-Map,"Test_I2C.map" -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mthumb -g -gdwarf-2 -o "Test_I2C.elf" "@objects.rsp"  -lm
+'Finished building target: Test_I2C.elf'
+
+'Invoking: ARM-GCC Create Flash Image'
+"C:/DAVEv4/DAVE-4.3.2/eclipse/ARM-GCC-49/bin/arm-none-eabi-objcopy" -O ihex "Test_I2C.elf" "Test_I2C.hex"
+'Finished building: Test_I2C.hex'
+
+'Invoking: ARM-GCC Create Listing'
+"C:/DAVEv4/DAVE-4.3.2/eclipse/ARM-GCC-49/bin/arm-none-eabi-objdump" -h -S "Test_I2C.elf" > "Test_I2C.lst"
+'Finished building: Test_I2C.lst'
+
+'Invoking: ARM-GCC Print Size'
+"C:/DAVEv4/DAVE-4.3.2/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "Test_I2C.elf"
+   text	   data	    bss	    dec	    hex	filename
+  13784	     68	   2104	  15956	   3e54	Test_I2C.elf
+'Finished building: Test_I2C.siz'
+
+
+20:20:40 Build Finished (took 4s.212ms)
+
