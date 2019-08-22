@@ -167,3 +167,7 @@ D:\XMC\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 D:\XMC\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 D:\XMC\obj\Debug\Assembly-CSharp.dll
 D:\XMC\obj\Debug\Assembly-CSharp.pdb
+D:\XMC_HandController\Unity_HandController\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\XMC_HandController\Unity_HandController\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\XMC_HandController\Unity_HandController\obj\Debug\Assembly-CSharp.dll
+D:\XMC_HandController\Unity_HandController\obj\Debug\Assembly-CSharp.pdb
