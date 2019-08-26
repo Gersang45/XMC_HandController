@@ -1,0 +1,1852 @@
+   1              	 .syntax unified
+   2              	 .cpu cortex-m4
+   3              	 .eabi_attribute 27,3
+   4              	 .fpu fpv4-sp-d16
+   5              	 .eabi_attribute 20,1
+   6              	 .eabi_attribute 21,1
+   7              	 .eabi_attribute 23,3
+   8              	 .eabi_attribute 24,1
+   9              	 .eabi_attribute 25,1
+  10              	 .eabi_attribute 26,1
+  11              	 .eabi_attribute 30,6
+  12              	 .eabi_attribute 34,1
+  13              	 .eabi_attribute 18,4
+  14              	 .thumb
+  15              	 .file "system_XMC4500.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .global SystemCoreClock
+  20              	 .section .no_init,"aw",%progbits
+  21              	 .align 2
+  24              	SystemCoreClock:
+  25 0000 00000000 	 .space 4
+  26              	 .global g_chipid
+  27              	 .align 2
+  30              	g_chipid:
+  31 0004 00000000 	 .space 16
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  32              	 .section .text.delay,"ax",%progbits
+  33              	 .align 2
+  34              	 .thumb
+  35              	 .thumb_func
+  37              	delay:
+  38              	.LFB123:
+  39              	 .file 1 "../Startup/system_XMC4500.c"
+   1:../Startup/system_XMC4500.c **** /**************************************************************************************************
+   2:../Startup/system_XMC4500.c ****  * @file     system_XMC4500.c
+   3:../Startup/system_XMC4500.c ****  * @brief    CMSIS Cortex-M4 Device Peripheral Access Layer Header File for the Infineon XMC4500 De
+   4:../Startup/system_XMC4500.c ****  * @version  V3.1.1
+   5:../Startup/system_XMC4500.c ****  * @date     01. Jun 2016
+   6:../Startup/system_XMC4500.c ****  *
+   7:../Startup/system_XMC4500.c ****  * @cond
+   8:../Startup/system_XMC4500.c ****  **************************************************************************************************
+   9:../Startup/system_XMC4500.c ****  * Copyright (c) 2014-2016, Infineon Technologies AG
+  10:../Startup/system_XMC4500.c ****  * All rights reserved.
+  11:../Startup/system_XMC4500.c ****  *
+  12:../Startup/system_XMC4500.c ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:../Startup/system_XMC4500.c ****  * following conditions are met:
+  14:../Startup/system_XMC4500.c ****  *
+  15:../Startup/system_XMC4500.c ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:../Startup/system_XMC4500.c ****  * disclaimer.
+  17:../Startup/system_XMC4500.c ****  *
+  18:../Startup/system_XMC4500.c ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:../Startup/system_XMC4500.c ****  * disclaimer in the documentation and/or other materials provided with the distribution.
+  20:../Startup/system_XMC4500.c ****  *
+  21:../Startup/system_XMC4500.c ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:../Startup/system_XMC4500.c ****  * products derived from this software without specific prior written permission.
+  23:../Startup/system_XMC4500.c ****  *
+  24:../Startup/system_XMC4500.c ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:../Startup/system_XMC4500.c ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:../Startup/system_XMC4500.c ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:../Startup/system_XMC4500.c ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:../Startup/system_XMC4500.c ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:../Startup/system_XMC4500.c ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:../Startup/system_XMC4500.c ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  31:../Startup/system_XMC4500.c ****  *
+  32:../Startup/system_XMC4500.c ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:../Startup/system_XMC4500.c ****  * Infineon Technologies AG dave@infineon.com).
+  34:../Startup/system_XMC4500.c ****  **************************************************************************************************
+  35:../Startup/system_XMC4500.c ****  *
+  36:../Startup/system_XMC4500.c ****  ********************** Version History ***************************************
+  37:../Startup/system_XMC4500.c ****  * V3.1.0, Dec 2014, Added options to configure clock settings
+  38:../Startup/system_XMC4500.c ****  * V3.1.1, 01. Jun 2016, Fix masking of OSCHPCTRL value 
+  39:../Startup/system_XMC4500.c ****  ******************************************************************************
+  40:../Startup/system_XMC4500.c ****  * @endcond
+  41:../Startup/system_XMC4500.c ****  */
+  42:../Startup/system_XMC4500.c **** 
+  43:../Startup/system_XMC4500.c **** /*******************************************************************************
+  44:../Startup/system_XMC4500.c ****  * HEADER FILES
+  45:../Startup/system_XMC4500.c ****  *******************************************************************************/
+  46:../Startup/system_XMC4500.c **** #include <string.h>
+  47:../Startup/system_XMC4500.c **** 
+  48:../Startup/system_XMC4500.c **** #include <XMC4500.h>
+  49:../Startup/system_XMC4500.c **** #include "system_XMC4500.h"
+  50:../Startup/system_XMC4500.c **** 
+  51:../Startup/system_XMC4500.c **** /*******************************************************************************
+  52:../Startup/system_XMC4500.c ****  * MACROS
+  53:../Startup/system_XMC4500.c ****  *******************************************************************************/
+  54:../Startup/system_XMC4500.c **** 
+  55:../Startup/system_XMC4500.c **** #define CHIPID_LOC ((uint8_t *)0x20000000UL)
+  56:../Startup/system_XMC4500.c **** 
+  57:../Startup/system_XMC4500.c **** /* Define WEAK attribute */
+  58:../Startup/system_XMC4500.c **** #if !defined(__WEAK)
+  59:../Startup/system_XMC4500.c **** #if defined ( __CC_ARM )
+  60:../Startup/system_XMC4500.c **** #define __WEAK __attribute__ ((weak))
+  61:../Startup/system_XMC4500.c **** #elif defined ( __ICCARM__ )
+  62:../Startup/system_XMC4500.c **** #define __WEAK __weak
+  63:../Startup/system_XMC4500.c **** #elif defined ( __GNUC__ )
+  64:../Startup/system_XMC4500.c **** #define __WEAK __attribute__ ((weak))
+  65:../Startup/system_XMC4500.c **** #elif defined ( __TASKING__ )
+  66:../Startup/system_XMC4500.c **** #define __WEAK __attribute__ ((weak))
+  67:../Startup/system_XMC4500.c **** #endif
+  68:../Startup/system_XMC4500.c **** #endif
+  69:../Startup/system_XMC4500.c **** 
+  70:../Startup/system_XMC4500.c **** #define PMU_FLASH_WS          (0x3U)
+  71:../Startup/system_XMC4500.c **** 
+  72:../Startup/system_XMC4500.c **** #define FPLL_FREQUENCY        (120000000U)
+  73:../Startup/system_XMC4500.c **** #define FOSCREF               (2500000U)
+  74:../Startup/system_XMC4500.c **** #define DELAY_CNT_50US_50MHZ  (2500UL)
+  75:../Startup/system_XMC4500.c **** #define DELAY_CNT_150US_50MHZ (7500UL)
+  76:../Startup/system_XMC4500.c **** #define DELAY_CNT_50US_60MHZ  (3000UL)
+  77:../Startup/system_XMC4500.c **** #define DELAY_CNT_50US_90MHZ  (4500UL)
+  78:../Startup/system_XMC4500.c **** #define DELAY_CNT_50US_120MHZ (6000UL)
+  79:../Startup/system_XMC4500.c **** 
+  80:../Startup/system_XMC4500.c **** #define SCU_PLL_PLLSTAT_OSC_USABLE  (SCU_PLL_PLLSTAT_PLLHV_Msk | \
+  81:../Startup/system_XMC4500.c ****                                      SCU_PLL_PLLSTAT_PLLLV_Msk | \
+  82:../Startup/system_XMC4500.c ****                                      SCU_PLL_PLLSTAT_PLLSP_Msk)
+  83:../Startup/system_XMC4500.c **** 
+  84:../Startup/system_XMC4500.c **** /*
+  85:../Startup/system_XMC4500.c **** //-------- <<< Use Configuration Wizard in Context Menu >>> ------------------
+  86:../Startup/system_XMC4500.c **** */
+  87:../Startup/system_XMC4500.c **** 
+  88:../Startup/system_XMC4500.c **** /*
+  89:../Startup/system_XMC4500.c **** // <h> Clock configuration
+  90:../Startup/system_XMC4500.c **** */
+  91:../Startup/system_XMC4500.c **** 
+  92:../Startup/system_XMC4500.c **** /*
+  93:../Startup/system_XMC4500.c **** //    <o> External crystal frequency [Hz]
+  94:../Startup/system_XMC4500.c **** //       <8000000=> 8MHz
+  95:../Startup/system_XMC4500.c **** //       <12000000=> 12MHz
+  96:../Startup/system_XMC4500.c **** //       <16000000=> 16MHz
+  97:../Startup/system_XMC4500.c **** //    <i> Defines external crystal frequency
+  98:../Startup/system_XMC4500.c **** //    <i> Default: 8MHz
+  99:../Startup/system_XMC4500.c **** */
+ 100:../Startup/system_XMC4500.c **** #define OSCHP_FREQUENCY (12000000U)
+ 101:../Startup/system_XMC4500.c **** 
+ 102:../Startup/system_XMC4500.c **** #if OSCHP_FREQUENCY == 8000000U
+ 103:../Startup/system_XMC4500.c **** #define USB_PDIV (1U)
+ 104:../Startup/system_XMC4500.c **** #define USB_NDIV (95U)
+ 105:../Startup/system_XMC4500.c **** #define USB_DIV (3U)
+ 106:../Startup/system_XMC4500.c **** 
+ 107:../Startup/system_XMC4500.c **** #elif OSCHP_FREQUENCY == 12000000U
+ 108:../Startup/system_XMC4500.c **** #define USB_PDIV (1U)
+ 109:../Startup/system_XMC4500.c **** #define USB_NDIV (63U)
+ 110:../Startup/system_XMC4500.c **** #define USB_DIV (3U)
+ 111:../Startup/system_XMC4500.c **** 
+ 112:../Startup/system_XMC4500.c **** #elif OSCHP_FREQUENCY == 16000000U
+ 113:../Startup/system_XMC4500.c **** #define USB_PDIV (1U)
+ 114:../Startup/system_XMC4500.c **** #define USB_NDIV (47U)
+ 115:../Startup/system_XMC4500.c **** #define USB_DIV (3U)
+ 116:../Startup/system_XMC4500.c **** 
+ 117:../Startup/system_XMC4500.c **** #else
+ 118:../Startup/system_XMC4500.c **** #error "External crystal frequency not supported"
+ 119:../Startup/system_XMC4500.c **** 
+ 120:../Startup/system_XMC4500.c **** #endif
+ 121:../Startup/system_XMC4500.c **** 
+ 122:../Startup/system_XMC4500.c **** /*
+ 123:../Startup/system_XMC4500.c **** //    <o> System clock (fSYS) source selection
+ 124:../Startup/system_XMC4500.c **** //       <0=> Backup clock (24MHz)
+ 125:../Startup/system_XMC4500.c **** //       <1=> Maximum clock frequency using PLL (120MHz)
+ 126:../Startup/system_XMC4500.c **** //    <i> Default: Maximum clock frequency using PLL (120MHz)
+ 127:../Startup/system_XMC4500.c **** */
+ 128:../Startup/system_XMC4500.c **** #define SYS_CLOCK_SRC 1
+ 129:../Startup/system_XMC4500.c **** #define SYS_CLOCK_SRC_OFI 0
+ 130:../Startup/system_XMC4500.c **** #define SYS_CLOCK_SRC_PLL 1
+ 131:../Startup/system_XMC4500.c **** 
+ 132:../Startup/system_XMC4500.c **** /*
+ 133:../Startup/system_XMC4500.c **** //    <o> Backup clock calibration mode
+ 134:../Startup/system_XMC4500.c **** //       <0=> Factory calibration
+ 135:../Startup/system_XMC4500.c **** //       <1=> Automatic calibration
+ 136:../Startup/system_XMC4500.c **** //    <i> Default: Automatic calibration
+ 137:../Startup/system_XMC4500.c **** */
+ 138:../Startup/system_XMC4500.c **** #define FOFI_CALIBRATION_MODE 1
+ 139:../Startup/system_XMC4500.c **** #define FOFI_CALIBRATION_MODE_FACTORY 0
+ 140:../Startup/system_XMC4500.c **** #define FOFI_CALIBRATION_MODE_AUTOMATIC 1
+ 141:../Startup/system_XMC4500.c **** 
+ 142:../Startup/system_XMC4500.c **** /*
+ 143:../Startup/system_XMC4500.c **** //    <o> Standby clock (fSTDBY) source selection
+ 144:../Startup/system_XMC4500.c **** //       <0=> Internal slow oscillator (32768Hz)
+ 145:../Startup/system_XMC4500.c **** //       <1=> External crystal (32768Hz)
+ 146:../Startup/system_XMC4500.c **** //    <i> Default: Internal slow oscillator (32768Hz)
+ 147:../Startup/system_XMC4500.c **** */
+ 148:../Startup/system_XMC4500.c **** #define STDBY_CLOCK_SRC 0
+ 149:../Startup/system_XMC4500.c **** #define STDBY_CLOCK_SRC_OSI 0
+ 150:../Startup/system_XMC4500.c **** #define STDBY_CLOCK_SRC_OSCULP 1
+ 151:../Startup/system_XMC4500.c **** 
+ 152:../Startup/system_XMC4500.c **** /*
+ 153:../Startup/system_XMC4500.c **** //    <o> PLL clock source selection
+ 154:../Startup/system_XMC4500.c **** //       <0=> External crystal
+ 155:../Startup/system_XMC4500.c **** //       <1=> External direct input
+ 156:../Startup/system_XMC4500.c **** //       <2=> Internal fast oscillator
+ 157:../Startup/system_XMC4500.c **** //    <i> Default: External crystal
+ 158:../Startup/system_XMC4500.c **** */
+ 159:../Startup/system_XMC4500.c **** #define PLL_CLOCK_SRC 0
+ 160:../Startup/system_XMC4500.c **** #define PLL_CLOCK_SRC_EXT_XTAL 0
+ 161:../Startup/system_XMC4500.c **** #define PLL_CLOCK_SRC_EXT_DIRECT 1
+ 162:../Startup/system_XMC4500.c **** #define PLL_CLOCK_SRC_OFI 2
+ 163:../Startup/system_XMC4500.c **** 
+ 164:../Startup/system_XMC4500.c **** #if PLL_CLOCK_SRC == PLL_CLOCK_SRC_EXT_XTAL
+ 165:../Startup/system_XMC4500.c **** #if OSCHP_FREQUENCY == 8000000U
+ 166:../Startup/system_XMC4500.c **** #define PLL_PDIV (1U)
+ 167:../Startup/system_XMC4500.c **** #define PLL_NDIV (89U)
+ 168:../Startup/system_XMC4500.c **** #define PLL_K2DIV (2U)
+ 169:../Startup/system_XMC4500.c **** 
+ 170:../Startup/system_XMC4500.c **** #elif OSCHP_FREQUENCY == 12000000U
+ 171:../Startup/system_XMC4500.c **** #define PLL_PDIV (1U)
+ 172:../Startup/system_XMC4500.c **** #define PLL_NDIV (79U)
+ 173:../Startup/system_XMC4500.c **** #define PLL_K2DIV (3U)
+ 174:../Startup/system_XMC4500.c **** 
+ 175:../Startup/system_XMC4500.c **** #elif OSCHP_FREQUENCY == 16000000U
+ 176:../Startup/system_XMC4500.c **** #define PLL_PDIV (1U)
+ 177:../Startup/system_XMC4500.c **** #define PLL_NDIV (59U)
+ 178:../Startup/system_XMC4500.c **** #define PLL_K2DIV (3U)
+ 179:../Startup/system_XMC4500.c **** 
+ 180:../Startup/system_XMC4500.c **** #else
+ 181:../Startup/system_XMC4500.c **** #error "External crystal frequency not supported"
+ 182:../Startup/system_XMC4500.c **** 
+ 183:../Startup/system_XMC4500.c **** #endif
+ 184:../Startup/system_XMC4500.c **** 
+ 185:../Startup/system_XMC4500.c **** #define VCO ((OSCHP_FREQUENCY / (PLL_PDIV + 1UL)) * (PLL_NDIV + 1UL))
+ 186:../Startup/system_XMC4500.c **** 
+ 187:../Startup/system_XMC4500.c **** #else /* PLL_CLOCK_SRC == PLL_CLOCK_SRC_EXT_XTAL */
+ 188:../Startup/system_XMC4500.c **** 
+ 189:../Startup/system_XMC4500.c **** #define PLL_PDIV (1U)
+ 190:../Startup/system_XMC4500.c **** #define PLL_NDIV (39U)
+ 191:../Startup/system_XMC4500.c **** #define PLL_K2DIV (3U)
+ 192:../Startup/system_XMC4500.c **** 
+ 193:../Startup/system_XMC4500.c **** #define VCO ((OFI_FREQUENCY / (PLL_PDIV + 1UL)) * (PLL_NDIV + 1UL))
+ 194:../Startup/system_XMC4500.c **** 
+ 195:../Startup/system_XMC4500.c **** #endif /* PLL_CLOCK_SRC == PLL_CLOCK_SRC_OFI */
+ 196:../Startup/system_XMC4500.c **** 
+ 197:../Startup/system_XMC4500.c **** #define PLL_K2DIV_0 ((VCO / OFI_FREQUENCY) - 1UL)
+ 198:../Startup/system_XMC4500.c **** #define PLL_K2DIV_1 ((VCO / 60000000U) - 1UL)
+ 199:../Startup/system_XMC4500.c **** #define PLL_K2DIV_2 ((VCO / 90000000U) - 1UL)
+ 200:../Startup/system_XMC4500.c **** 
+ 201:../Startup/system_XMC4500.c **** #define SCU_CLK_CLKCLR_ENABLE_USBCLK SCU_CLK_CLKCLR_USBCDI_Msk
+ 202:../Startup/system_XMC4500.c **** #define SCU_CLK_CLKCLR_ENABLE_MMCCLK SCU_CLK_CLKCLR_MMCCDI_Msk
+ 203:../Startup/system_XMC4500.c **** #define SCU_CLK_CLKCLR_ENABLE_ETHCLK SCU_CLK_CLKCLR_ETH0CDI_Msk
+ 204:../Startup/system_XMC4500.c **** #define SCU_CLK_CLKCLR_ENABLE_EBUCLK SCU_CLK_CLKCLR_EBUCDI_Msk
+ 205:../Startup/system_XMC4500.c **** #define SCU_CLK_CLKCLR_ENABLE_CCUCLK SCU_CLK_CLKCLR_CCUCDI_Msk
+ 206:../Startup/system_XMC4500.c **** #define SCU_CLK_CLKCLR_ENABLE_WDTCLK SCU_CLK_CLKCLR_WDTCDI_Msk
+ 207:../Startup/system_XMC4500.c **** 
+ 208:../Startup/system_XMC4500.c **** #define SCU_CLK_USBCLKCR_USBSEL_USBPLL (0U << SCU_CLK_USBCLKCR_USBSEL_Pos)
+ 209:../Startup/system_XMC4500.c **** #define SCU_CLK_USBCLKCR_USBSEL_PLL    (1U << SCU_CLK_USBCLKCR_USBSEL_Pos)
+ 210:../Startup/system_XMC4500.c **** 
+ 211:../Startup/system_XMC4500.c **** #define SCU_CLK_WDTCLKCR_WDTSEL_OFI      (0U << SCU_CLK_WDTCLKCR_WDTSEL_Pos)
+ 212:../Startup/system_XMC4500.c **** #define SCU_CLK_WDTCLKCR_WDTSEL_STANDBY  (1U << SCU_CLK_WDTCLKCR_WDTSEL_Pos)
+ 213:../Startup/system_XMC4500.c **** #define SCU_CLK_WDTCLKCR_WDTSEL_PLL      (2U << SCU_CLK_WDTCLKCR_WDTSEL_Pos)
+ 214:../Startup/system_XMC4500.c **** 
+ 215:../Startup/system_XMC4500.c **** #define SCU_CLK_EXTCLKCR_ECKSEL_SYS      (0U << SCU_CLK_EXTCLKCR_ECKSEL_Pos)
+ 216:../Startup/system_XMC4500.c **** #define SCU_CLK_EXTCLKCR_ECKSEL_USBPLL   (2U << SCU_CLK_EXTCLKCR_ECKSEL_Pos)
+ 217:../Startup/system_XMC4500.c **** #define SCU_CLK_EXTCLKCR_ECKSEL_PLL      (3U << SCU_CLK_EXTCLKCR_ECKSEL_Pos)
+ 218:../Startup/system_XMC4500.c **** 
+ 219:../Startup/system_XMC4500.c **** #define EXTCLK_PIN_P0_8  (0)
+ 220:../Startup/system_XMC4500.c **** #define EXTCLK_PIN_P1_15 (1)
+ 221:../Startup/system_XMC4500.c **** 
+ 222:../Startup/system_XMC4500.c **** /*
+ 223:../Startup/system_XMC4500.c **** //    <h> Clock tree
+ 224:../Startup/system_XMC4500.c **** //        <o1.0> CPU clock divider
+ 225:../Startup/system_XMC4500.c **** //                   <0=> fCPU = fSYS
+ 226:../Startup/system_XMC4500.c **** //                   <1=> fCPU = fSYS / 2
+ 227:../Startup/system_XMC4500.c **** //        <o2.0>  Peripheral clock divider
+ 228:../Startup/system_XMC4500.c **** //                     <0=> fPB	= fCPU
+ 229:../Startup/system_XMC4500.c **** //                     <1=> fPB	= fCPU / 2
+ 230:../Startup/system_XMC4500.c **** //        <e.4> Enable CCU clock
+ 231:../Startup/system_XMC4500.c **** //             <o3.0>  CCU clock divider
+ 232:../Startup/system_XMC4500.c **** //                     <0=> fCCU = fCPU
+ 233:../Startup/system_XMC4500.c **** //                     <1=> fCCU = fCPU / 2
+ 234:../Startup/system_XMC4500.c **** //        </e>
+ 235:../Startup/system_XMC4500.c **** //        <e.5> Enable WDT clock
+ 236:../Startup/system_XMC4500.c **** //             <o4.0..7>  WDT clock divider <1-256><#-1>
+ 237:../Startup/system_XMC4500.c **** //             <o4.16..17> WDT clock source <0=> fOFI
+ 238:../Startup/system_XMC4500.c **** //                                          <1=> fSTDBY
+ 239:../Startup/system_XMC4500.c **** //                                          <2=> fPLL
+ 240:../Startup/system_XMC4500.c **** //        </e>
+ 241:../Startup/system_XMC4500.c **** //        <e.3> Enable EBU clock
+ 242:../Startup/system_XMC4500.c **** //             <o5.0..5>  EBU clock divider  <1-64><#-1>
+ 243:../Startup/system_XMC4500.c **** //        </e>
+ 244:../Startup/system_XMC4500.c **** //        <e.2> Enable ETH clock
+ 245:../Startup/system_XMC4500.c **** //        </e>
+ 246:../Startup/system_XMC4500.c **** //        <e.1> Enable MMC clock
+ 247:../Startup/system_XMC4500.c **** //        </e>
+ 248:../Startup/system_XMC4500.c **** //        <e.0> Enable USB clock
+ 249:../Startup/system_XMC4500.c **** //             <o6.16> USB clock source <0=> USBPLL
+ 250:../Startup/system_XMC4500.c **** //                                      <1=> PLL
+ 251:../Startup/system_XMC4500.c **** //        </e>
+ 252:../Startup/system_XMC4500.c **** //        <e7> External Clock configuration
+ 253:../Startup/system_XMC4500.c **** //            <o8.0..1> External Clock Source Selection
+ 254:../Startup/system_XMC4500.c **** //                  <0=> System clock
+ 255:../Startup/system_XMC4500.c **** //                  <2=> USB PLL clock
+ 256:../Startup/system_XMC4500.c **** //                  <3=> PLL clock
+ 257:../Startup/system_XMC4500.c **** //            <o8.16..24> External Clock divider <1-512><#-1>
+ 258:../Startup/system_XMC4500.c **** //            <i> Only valid for USB PLL and PLL clocks
+ 259:../Startup/system_XMC4500.c **** //            <o9.0> External Clock Pin Selection
+ 260:../Startup/system_XMC4500.c **** //                  <0=> P0.8
+ 261:../Startup/system_XMC4500.c **** //                  <1=> P1.15
+ 262:../Startup/system_XMC4500.c **** //        </e>
+ 263:../Startup/system_XMC4500.c **** //    </h>
+ 264:../Startup/system_XMC4500.c **** */
+ 265:../Startup/system_XMC4500.c **** #define ENABLE_SCUCLK (0U)
+ 266:../Startup/system_XMC4500.c **** #define CPUCLKDIV (0U)
+ 267:../Startup/system_XMC4500.c **** #define PBCLKDIV (0U)
+ 268:../Startup/system_XMC4500.c **** #define CCUCLKDIV (0U)
+ 269:../Startup/system_XMC4500.c **** #define WDTCLKDIV (0U | SCU_CLK_WDTCLKCR_WDTSEL_OFI)
+ 270:../Startup/system_XMC4500.c **** #define EBUCLKDIV (0U)
+ 271:../Startup/system_XMC4500.c **** #define USBCLKDIV (0U | SCU_CLK_USBCLKCR_USBSEL_USBPLL | USB_DIV)
+ 272:../Startup/system_XMC4500.c **** 
+ 273:../Startup/system_XMC4500.c **** #define ENABLE_EXTCLK (0U)
+ 274:../Startup/system_XMC4500.c **** #define EXTCLKDIV (0U | SCU_CLK_EXTCLKCR_ECKSEL_SYS)
+ 275:../Startup/system_XMC4500.c **** #define EXTCLK_PIN (0U)
+ 276:../Startup/system_XMC4500.c **** 
+ 277:../Startup/system_XMC4500.c **** #define ENABLE_PLL \
+ 278:../Startup/system_XMC4500.c ****     (SYS_CLOCK_SRC == SYS_CLOCK_SRC_PLL) || \
+ 279:../Startup/system_XMC4500.c ****     ((ENABLE_SCUCLK & SCU_CLK_CLKSET_EBUCEN_Msk) != 0) || \
+ 280:../Startup/system_XMC4500.c ****     (((ENABLE_SCUCLK & SCU_CLK_CLKSET_USBCEN_Msk) != 0) && ((USBCLKDIV & SCU_CLK_USBCLKCR_USBSEL_Ms
+ 281:../Startup/system_XMC4500.c ****     (((ENABLE_SCUCLK & SCU_CLK_CLKSET_WDTCEN_Msk) != 0) && ((WDTCLKDIV & SCU_CLK_WDTCLKCR_WDTSEL_Ms
+ 282:../Startup/system_XMC4500.c **** 
+ 283:../Startup/system_XMC4500.c **** /*
+ 284:../Startup/system_XMC4500.c **** // </h>
+ 285:../Startup/system_XMC4500.c **** */
+ 286:../Startup/system_XMC4500.c **** 
+ 287:../Startup/system_XMC4500.c **** /*
+ 288:../Startup/system_XMC4500.c **** //-------- <<< end of configuration section >>> ------------------
+ 289:../Startup/system_XMC4500.c **** */
+ 290:../Startup/system_XMC4500.c ****                                      
+ 291:../Startup/system_XMC4500.c **** /*******************************************************************************
+ 292:../Startup/system_XMC4500.c ****  * GLOBAL VARIABLES
+ 293:../Startup/system_XMC4500.c ****  *******************************************************************************/
+ 294:../Startup/system_XMC4500.c **** #if defined ( __CC_ARM )
+ 295:../Startup/system_XMC4500.c **** uint32_t SystemCoreClock __attribute__((at(0x2000FFC0)));
+ 296:../Startup/system_XMC4500.c **** uint8_t g_chipid[16] __attribute__((at(0x2000FFC4)));
+ 297:../Startup/system_XMC4500.c **** #elif defined ( __ICCARM__ )
+ 298:../Startup/system_XMC4500.c **** __no_init uint32_t SystemCoreClock;
+ 299:../Startup/system_XMC4500.c **** __no_init uint8_t g_chipid[16];
+ 300:../Startup/system_XMC4500.c **** #elif defined ( __GNUC__ )
+ 301:../Startup/system_XMC4500.c **** uint32_t SystemCoreClock __attribute__((section(".no_init")));
+ 302:../Startup/system_XMC4500.c **** uint8_t g_chipid[16] __attribute__((section(".no_init")));
+ 303:../Startup/system_XMC4500.c **** #elif defined ( __TASKING__ )
+ 304:../Startup/system_XMC4500.c **** uint32_t SystemCoreClock __at( 0x2000FFC0 );
+ 305:../Startup/system_XMC4500.c **** uint8_t g_chipid[16] __at( 0x2000FFC4 );
+ 306:../Startup/system_XMC4500.c **** #endif
+ 307:../Startup/system_XMC4500.c **** 
+ 308:../Startup/system_XMC4500.c **** extern uint32_t __Vectors;
+ 309:../Startup/system_XMC4500.c **** 
+ 310:../Startup/system_XMC4500.c **** /*******************************************************************************
+ 311:../Startup/system_XMC4500.c ****  * LOCAL FUNCTIONS
+ 312:../Startup/system_XMC4500.c ****  *******************************************************************************/
+ 313:../Startup/system_XMC4500.c **** static void delay(uint32_t cycles)
+ 314:../Startup/system_XMC4500.c **** {
+  40              	 .loc 1 314 0
+  41              	 .cfi_startproc
+  42              	 
+  43              	 
+  44              	 
+  45 0000 80B4     	 push {r7}
+  46              	.LCFI0:
+  47              	 .cfi_def_cfa_offset 4
+  48              	 .cfi_offset 7,-4
+  49 0002 85B0     	 sub sp,sp,#20
+  50              	.LCFI1:
+  51              	 .cfi_def_cfa_offset 24
+  52 0004 00AF     	 add r7,sp,#0
+  53              	.LCFI2:
+  54              	 .cfi_def_cfa_register 7
+  55 0006 7860     	 str r0,[r7,#4]
+ 315:../Startup/system_XMC4500.c ****   volatile uint32_t i;
+ 316:../Startup/system_XMC4500.c **** 
+ 317:../Startup/system_XMC4500.c ****   for(i = 0UL; i < cycles ;++i)
+  56              	 .loc 1 317 0
+  57 0008 0023     	 movs r3,#0
+  58 000a FB60     	 str r3,[r7,#12]
+  59 000c 03E0     	 b .L2
+  60              	.L3:
+  61              	.LBB10:
+  62              	.LBB11:
+  63              	 .file 2 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include/cmsis_gcc.h"
+   1:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**************************************************************************//**
+   2:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @brief    CMSIS Cortex-M Core Function/Instruction Header File
+   4:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @version  V4.30
+   5:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * @date     20. October 2015
+   6:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  ******************************************************************************/
+   7:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* Copyright (c) 2009 - 2015 ARM LIMITED
+   8:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+   9:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    All rights reserved.
+  10:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    Redistribution and use in source and binary forms, with or without
+  11:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    modification, are permitted provided that the following conditions are met:
+  12:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    - Redistributions of source code must retain the above copyright
+  13:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****      notice, this list of conditions and the following disclaimer.
+  14:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    - Redistributions in binary form must reproduce the above copyright
+  15:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****      notice, this list of conditions and the following disclaimer in the
+  16:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****      documentation and/or other materials provided with the distribution.
+  17:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    - Neither the name of ARM nor the names of its contributors may be used
+  18:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****      to endorse or promote products derived from this software without
+  19:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****      specific prior written permission.
+  20:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    *
+  21:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
+  25:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    POSSIBILITY OF SUCH DAMAGE.
+  32:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    ---------------------------------------------------------------------------*/
+  33:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  34:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  35:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  36:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __CMSIS_GCC_H
+  37:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  38:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* ignore some GCC warnings */
+  39:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if defined ( __GNUC__ )
+  40:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic push
+  41:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  42:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  43:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  44:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+  45:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  46:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  47:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+  48:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+  49:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+  50:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   @{
+  51:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+  52:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  53:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+  54:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+  55:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+  56:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****            Can only be executed in Privileged modes.
+  57:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+  58:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_irq(void)
+  59:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+  60:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+  61:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+  62:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  63:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  64:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+  65:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+  66:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+  67:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   Can only be executed in Privileged modes.
+  68:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+  69:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_irq(void)
+  70:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+  71:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+  72:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+  73:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  74:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  75:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+  76:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Control Register
+  77:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the Control Register.
+  78:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Control Register value
+  79:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+  80:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_CONTROL(void)
+  81:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+  82:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+  83:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  84:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
+  85:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+  86:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+  87:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  88:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  89:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+  90:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Control Register
+  91:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Writes the given value to the Control Register.
+  92:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+  93:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+  94:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_CONTROL(uint32_t control)
+  95:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+  96:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
+  97:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+  98:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+  99:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 100:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 101:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get IPSR Register
+ 102:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the IPSR Register.
+ 103:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               IPSR Register value
+ 104:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 105:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_IPSR(void)
+ 106:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 107:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 108:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 109:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
+ 110:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 111:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 112:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 113:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 114:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 115:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get APSR Register
+ 116:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the APSR Register.
+ 117:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               APSR Register value
+ 118:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 119:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_APSR(void)
+ 120:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 121:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 122:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 123:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
+ 124:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 125:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 126:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 127:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 128:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 129:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get xPSR Register
+ 130:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
+ 131:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 132:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****     \return               xPSR Register value
+ 133:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 134:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_xPSR(void)
+ 135:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 136:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 137:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 138:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, xpsr" : "=r" (result) );
+ 139:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 140:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 141:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 142:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 143:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 144:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Process Stack Pointer
+ 145:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer (PSP).
+ 146:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               PSP Register value
+ 147:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 148:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_PSP(void)
+ 149:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 150:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   register uint32_t result;
+ 151:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 152:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp\n"  : "=r" (result) );
+ 153:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 154:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 155:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 156:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 157:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 158:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Process Stack Pointer
+ 159:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer (PSP).
+ 160:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 161:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 162:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_PSP(uint32_t topOfProcStack)
+ 163:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 164:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR psp, %0\n" : : "r" (topOfProcStack) : "sp");
+ 165:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 166:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 167:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 168:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 169:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Main Stack Pointer
+ 170:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
+ 171:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               MSP Register value
+ 172:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 173:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_MSP(void)
+ 174:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 175:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   register uint32_t result;
+ 176:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 177:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp\n" : "=r" (result) );
+ 178:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 179:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 180:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 181:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 182:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 183:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Main Stack Pointer
+ 184:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
+ 185:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 186:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****     \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 187:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 188:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_MSP(uint32_t topOfMainStack)
+ 189:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 190:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack) : "sp");
+ 191:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 192:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 193:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 194:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 195:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Priority Mask
+ 196:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current state of the priority mask bit from the Priority Mask Register.
+ 197:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Priority Mask value
+ 198:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 199:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_PRIMASK(void)
+ 200:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 201:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 202:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 203:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) );
+ 204:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 205:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 206:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 207:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 208:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 209:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Priority Mask
+ 210:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Priority Mask Register.
+ 211:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
+ 212:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 213:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_PRIMASK(uint32_t priMask)
+ 214:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 215:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+ 216:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 217:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 218:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 219:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if       (__CORTEX_M >= 0x03U)
+ 220:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 221:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 222:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Enable FIQ
+ 223:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Enables FIQ interrupts by clearing the F-bit in the CPSR.
+ 224:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 225:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 226:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_fault_irq(void)
+ 227:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 228:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("cpsie f" : : : "memory");
+ 229:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 230:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 231:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 232:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 233:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Disable FIQ
+ 234:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Disables FIQ interrupts by setting the F-bit in the CPSR.
+ 235:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 236:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 237:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_fault_irq(void)
+ 238:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 239:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("cpsid f" : : : "memory");
+ 240:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 241:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 242:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 243:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 244:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Base Priority
+ 245:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Base Priority register.
+ 246:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Base Priority register value
+ 247:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 248:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_BASEPRI(void)
+ 249:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 250:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 251:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 252:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, basepri" : "=r" (result) );
+ 253:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 254:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 255:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 256:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 257:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 258:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Base Priority
+ 259:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Base Priority register.
+ 260:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
+ 261:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 262:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_BASEPRI(uint32_t value)
+ 263:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 264:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR basepri, %0" : : "r" (value) : "memory");
+ 265:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 266:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 267:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 268:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 269:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Base Priority with condition
+ 270:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Base Priority register only if BASEPRI masking is disable
+ 271:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****            or the new value increases the BASEPRI priority level.
+ 272:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
+ 273:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 274:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_BASEPRI_MAX(uint32_t value)
+ 275:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 276:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR basepri_max, %0" : : "r" (value) : "memory");
+ 277:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 278:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 279:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 280:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 281:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get Fault Mask
+ 282:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Fault Mask register.
+ 283:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Fault Mask register value
+ 284:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 285:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_FAULTMASK(void)
+ 286:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 287:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 288:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 289:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask" : "=r" (result) );
+ 290:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 291:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 292:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 293:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 294:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 295:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set Fault Mask
+ 296:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Fault Mask register.
+ 297:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    faultMask  Fault Mask value to set
+ 298:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 299:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_FAULTMASK(uint32_t faultMask)
+ 300:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 301:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("MSR faultmask, %0" : : "r" (faultMask) : "memory");
+ 302:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 303:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 304:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif /* (__CORTEX_M >= 0x03U) */
+ 305:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 306:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 307:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if       (__CORTEX_M == 0x04U) || (__CORTEX_M == 0x07U)
+ 308:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 309:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 310:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Get FPSCR
+ 311:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Returns the current value of the Floating Point Status/Control register.
+ 312:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \return               Floating Point Status/Control register value
+ 313:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 314:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_FPSCR(void)
+ 315:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 316:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (__FPU_PRESENT == 1U) && (__FPU_USED == 1U)
+ 317:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   uint32_t result;
+ 318:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 319:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   /* Empty asm statement works as a scheduling barrier */
+ 320:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("");
+ 321:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("VMRS %0, fpscr" : "=r" (result) );
+ 322:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("");
+ 323:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   return(result);
+ 324:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #else
+ 325:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****    return(0);
+ 326:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 327:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 328:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 329:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 330:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 331:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Set FPSCR
+ 332:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Assigns the given value to the Floating Point Status/Control register.
+ 333:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \param [in]    fpscr  Floating Point Status/Control value to set
+ 334:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 335:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_FPSCR(uint32_t fpscr)
+ 336:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 337:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if (__FPU_PRESENT == 1U) && (__FPU_USED == 1U)
+ 338:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   /* Empty asm statement works as a scheduling barrier */
+ 339:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("");
+ 340:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("VMSR fpscr, %0" : : "r" (fpscr) : "vfpcc");
+ 341:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("");
+ 342:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 343:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 344:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 345:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif /* (__CORTEX_M == 0x04U) || (__CORTEX_M == 0x07U) */
+ 346:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 347:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 348:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 349:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /*@} end of CMSIS_Core_RegAccFunctions */
+ 350:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 351:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 352:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* ##########################  Core Instruction Access  ######################### */
+ 353:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /** \defgroup CMSIS_Core_InstructionInterface CMSIS Core Instruction Interface
+ 354:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   Access to dedicated instructions
+ 355:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   @{
+ 356:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** */
+ 357:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 358:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /* Define macros for porting to both thumb1 and thumb2.
+ 359:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * For thumb1, use low register (r0-r7), specified by constraint "l"
+ 360:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  * Otherwise, use general registers, specified by constraint "r" */
+ 361:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #if defined (__thumb__) && !defined (__thumb2__)
+ 362:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
+ 363:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
+ 364:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #else
+ 365:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=r" (r)
+ 366:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "r" (r)
+ 367:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** #endif
+ 368:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 369:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 370:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   No Operation
+ 371:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details No Operation does nothing. This instruction can be used for code alignment purposes.
+ 372:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 373:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __NOP(void)
+ 374:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 375:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("nop");
+  64              	 .loc 2 375 0 discriminator 3
+  65              	
+  66 000e 00BF     	 nop
+  67              	
+  68              	 .thumb
+  69              	.LBE11:
+  70              	.LBE10:
+  71              	 .loc 1 317 0 discriminator 3
+  72 0010 FB68     	 ldr r3,[r7,#12]
+  73 0012 0133     	 adds r3,r3,#1
+  74 0014 FB60     	 str r3,[r7,#12]
+  75              	.L2:
+  76              	 .loc 1 317 0 is_stmt 0 discriminator 1
+  77 0016 FA68     	 ldr r2,[r7,#12]
+  78 0018 7B68     	 ldr r3,[r7,#4]
+  79 001a 9A42     	 cmp r2,r3
+  80 001c F7D3     	 bcc .L3
+ 318:../Startup/system_XMC4500.c ****   {
+ 319:../Startup/system_XMC4500.c ****     __NOP();
+ 320:../Startup/system_XMC4500.c ****   }
+ 321:../Startup/system_XMC4500.c **** }
+  81              	 .loc 1 321 0 is_stmt 1
+  82 001e 1437     	 adds r7,r7,#20
+  83              	.LCFI3:
+  84              	 .cfi_def_cfa_offset 4
+  85 0020 BD46     	 mov sp,r7
+  86              	.LCFI4:
+  87              	 .cfi_def_cfa_register 13
+  88              	 
+  89 0022 5DF8047B 	 ldr r7,[sp],#4
+  90              	.LCFI5:
+  91              	 .cfi_restore 7
+  92              	 .cfi_def_cfa_offset 0
+  93 0026 7047     	 bx lr
+  94              	 .cfi_endproc
+  95              	.LFE123:
+  97              	 .section .text.SystemInit,"ax",%progbits
+  98              	 .align 2
+  99              	 .weak SystemInit
+ 100              	 .thumb
+ 101              	 .thumb_func
+ 103              	SystemInit:
+ 104              	.LFB124:
+ 322:../Startup/system_XMC4500.c **** 
+ 323:../Startup/system_XMC4500.c **** /*******************************************************************************
+ 324:../Startup/system_XMC4500.c ****  * API IMPLEMENTATION
+ 325:../Startup/system_XMC4500.c ****  *******************************************************************************/
+ 326:../Startup/system_XMC4500.c **** 
+ 327:../Startup/system_XMC4500.c **** __WEAK void SystemInit(void)
+ 328:../Startup/system_XMC4500.c **** {
+ 105              	 .loc 1 328 0
+ 106              	 .cfi_startproc
+ 107              	 
+ 108              	 
+ 109 0000 98B5     	 push {r3,r4,r7,lr}
+ 110              	.LCFI6:
+ 111              	 .cfi_def_cfa_offset 16
+ 112              	 .cfi_offset 3,-16
+ 113              	 .cfi_offset 4,-12
+ 114              	 .cfi_offset 7,-8
+ 115              	 .cfi_offset 14,-4
+ 116 0002 00AF     	 add r7,sp,#0
+ 117              	.LCFI7:
+ 118              	 .cfi_def_cfa_register 7
+ 329:../Startup/system_XMC4500.c ****   memcpy(g_chipid, CHIPID_LOC, 16);
+ 119              	 .loc 1 329 0
+ 120 0004 054A     	 ldr r2,.L5
+ 121 0006 4FF00053 	 mov r3,#536870912
+ 122 000a 1446     	 mov r4,r2
+ 123 000c 0FCB     	 ldmia r3,{r0,r1,r2,r3}
+ 124 000e 84E80F00 	 stmia r4,{r0,r1,r2,r3}
+ 330:../Startup/system_XMC4500.c **** 
+ 331:../Startup/system_XMC4500.c ****   SystemCoreSetup();
+ 125              	 .loc 1 331 0
+ 126 0012 FFF7FEFF 	 bl SystemCoreSetup
+ 332:../Startup/system_XMC4500.c ****   SystemCoreClockSetup(); 
+ 127              	 .loc 1 332 0
+ 128 0016 FFF7FEFF 	 bl SystemCoreClockSetup
+ 333:../Startup/system_XMC4500.c **** }
+ 129              	 .loc 1 333 0
+ 130 001a 98BD     	 pop {r3,r4,r7,pc}
+ 131              	.L6:
+ 132              	 .align 2
+ 133              	.L5:
+ 134 001c 00000000 	 .word g_chipid
+ 135              	 .cfi_endproc
+ 136              	.LFE124:
+ 138              	 .section .text.SystemCoreSetup,"ax",%progbits
+ 139              	 .align 2
+ 140              	 .weak SystemCoreSetup
+ 141              	 .thumb
+ 142              	 .thumb_func
+ 144              	SystemCoreSetup:
+ 145              	.LFB125:
+ 334:../Startup/system_XMC4500.c **** 
+ 335:../Startup/system_XMC4500.c **** __WEAK void SystemCoreSetup(void)
+ 336:../Startup/system_XMC4500.c **** {
+ 146              	 .loc 1 336 0
+ 147              	 .cfi_startproc
+ 148              	 
+ 149              	 
+ 150              	 
+ 151 0000 80B4     	 push {r7}
+ 152              	.LCFI8:
+ 153              	 .cfi_def_cfa_offset 4
+ 154              	 .cfi_offset 7,-4
+ 155 0002 83B0     	 sub sp,sp,#12
+ 156              	.LCFI9:
+ 157              	 .cfi_def_cfa_offset 16
+ 158 0004 00AF     	 add r7,sp,#0
+ 159              	.LCFI10:
+ 160              	 .cfi_def_cfa_register 7
+ 161              	.LBB12:
+ 162              	.LBB13:
+  71:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 163              	 .loc 2 71 0
+ 164              	
+ 165 0006 72B6     	 cpsid i
+ 166              	
+ 167              	 .thumb
+ 168              	.LBE13:
+ 169              	.LBE12:
+ 337:../Startup/system_XMC4500.c ****   uint32_t temp;
+ 338:../Startup/system_XMC4500.c **** 	
+ 339:../Startup/system_XMC4500.c ****   /* relocate vector table */
+ 340:../Startup/system_XMC4500.c ****   __disable_irq();
+ 341:../Startup/system_XMC4500.c ****   SCB->VTOR = (uint32_t)(&__Vectors);
+ 170              	 .loc 1 341 0
+ 171 0008 164B     	 ldr r3,.L8
+ 172 000a 174A     	 ldr r2,.L8+4
+ 173 000c 9A60     	 str r2,[r3,#8]
+ 174              	.LBB14:
+ 175              	.LBB15:
+ 376:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 377:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 378:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 379:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 380:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Wait For Interrupt
+ 381:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Wait For Interrupt is a hint instruction that suspends execution until one of a number o
+ 382:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 383:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __WFI(void)
+ 384:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 385:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("wfi");
+ 386:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 387:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 388:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 389:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 390:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Wait For Event
+ 391:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Wait For Event is a hint instruction that permits the processor to enter
+ 392:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****     a low-power state until one of a number of events occurs.
+ 393:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 394:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __WFE(void)
+ 395:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 396:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("wfe");
+ 397:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 398:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 399:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 400:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 401:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Send Event
+ 402:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Send Event is a hint instruction. It causes an event to be signaled to the CPU.
+ 403:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 404:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __SEV(void)
+ 405:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 406:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("sev");
+ 407:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 408:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 409:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 410:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 411:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Instruction Synchronization Barrier
+ 412:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Instruction Synchronization Barrier flushes the pipeline in the processor,
+ 413:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****            so that all instructions following the ISB are fetched from cache or memory,
+ 414:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****            after the instruction has been completed.
+ 415:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 416:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __ISB(void)
+ 417:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 418:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("isb 0xF":::"memory");
+ 419:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 420:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 421:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** 
+ 422:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** /**
+ 423:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \brief   Data Synchronization Barrier
+ 424:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   \details Acts as a special kind of Data Memory Barrier.
+ 425:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****            It completes when all explicit memory accesses before this instruction complete.
+ 426:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****  */
+ 427:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __DSB(void)
+ 428:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** {
+ 429:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h ****   __ASM volatile ("dsb 0xF":::"memory");
+ 176              	 .loc 2 429 0
+ 177              	
+ 178 000e BFF34F8F 	 dsb 0xF
+ 179              	
+ 180              	 .thumb
+ 181              	.LBE15:
+ 182              	.LBE14:
+ 183              	.LBB16:
+ 184              	.LBB17:
+  60:D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include\cmsis_gcc.h **** }
+ 185              	 .loc 2 60 0
+ 186              	
+ 187 0012 62B6     	 cpsie i
+ 188              	
+ 189              	 .thumb
+ 190              	.LBE17:
+ 191              	.LBE16:
+ 342:../Startup/system_XMC4500.c ****   __DSB();
+ 343:../Startup/system_XMC4500.c ****   __enable_irq();
+ 344:../Startup/system_XMC4500.c ****     
+ 345:../Startup/system_XMC4500.c **** #if ((__FPU_PRESENT == 1) && (__FPU_USED == 1))
+ 346:../Startup/system_XMC4500.c ****   SCB->CPACR |= ((3UL << 10*2) |                 /* set CP10 Full Access */
+ 192              	 .loc 1 346 0
+ 193 0014 134A     	 ldr r2,.L8
+ 194 0016 134B     	 ldr r3,.L8
+ 195 0018 D3F88830 	 ldr r3,[r3,#136]
+ 196 001c 43F47003 	 orr r3,r3,#15728640
+ 197 0020 C2F88830 	 str r3,[r2,#136]
+ 347:../Startup/system_XMC4500.c ****                  (3UL << 11*2)  );               /* set CP11 Full Access */
+ 348:../Startup/system_XMC4500.c **** #endif
+ 349:../Startup/system_XMC4500.c **** 
+ 350:../Startup/system_XMC4500.c ****   /* Enable unaligned memory access - SCB_CCR.UNALIGN_TRP = 0 */
+ 351:../Startup/system_XMC4500.c ****   SCB->CCR &= ~(SCB_CCR_UNALIGN_TRP_Msk);
+ 198              	 .loc 1 351 0
+ 199 0024 0F4A     	 ldr r2,.L8
+ 200 0026 0F4B     	 ldr r3,.L8
+ 201 0028 5B69     	 ldr r3,[r3,#20]
+ 202 002a 23F00803 	 bic r3,r3,#8
+ 203 002e 5361     	 str r3,[r2,#20]
+ 352:../Startup/system_XMC4500.c **** 
+ 353:../Startup/system_XMC4500.c ****   temp = FLASH0->FCON;
+ 204              	 .loc 1 353 0
+ 205 0030 0E4B     	 ldr r3,.L8+8
+ 206 0032 03F58053 	 add r3,r3,#4096
+ 207 0036 1433     	 adds r3,r3,#20
+ 208 0038 1B68     	 ldr r3,[r3]
+ 209 003a 7B60     	 str r3,[r7,#4]
+ 354:../Startup/system_XMC4500.c ****   temp &= ~FLASH_FCON_WSPFLASH_Msk;
+ 210              	 .loc 1 354 0
+ 211 003c 7B68     	 ldr r3,[r7,#4]
+ 212 003e 23F00F03 	 bic r3,r3,#15
+ 213 0042 7B60     	 str r3,[r7,#4]
+ 355:../Startup/system_XMC4500.c ****   temp |= PMU_FLASH_WS;
+ 214              	 .loc 1 355 0
+ 215 0044 7B68     	 ldr r3,[r7,#4]
+ 216 0046 43F00303 	 orr r3,r3,#3
+ 217 004a 7B60     	 str r3,[r7,#4]
+ 356:../Startup/system_XMC4500.c ****   FLASH0->FCON = temp;
+ 218              	 .loc 1 356 0
+ 219 004c 074B     	 ldr r3,.L8+8
+ 220 004e 03F58053 	 add r3,r3,#4096
+ 221 0052 1433     	 adds r3,r3,#20
+ 222 0054 7A68     	 ldr r2,[r7,#4]
+ 223 0056 1A60     	 str r2,[r3]
+ 357:../Startup/system_XMC4500.c **** }
+ 224              	 .loc 1 357 0
+ 225 0058 0C37     	 adds r7,r7,#12
+ 226              	.LCFI11:
+ 227              	 .cfi_def_cfa_offset 4
+ 228 005a BD46     	 mov sp,r7
+ 229              	.LCFI12:
+ 230              	 .cfi_def_cfa_register 13
+ 231              	 
+ 232 005c 5DF8047B 	 ldr r7,[sp],#4
+ 233              	.LCFI13:
+ 234              	 .cfi_restore 7
+ 235              	 .cfi_def_cfa_offset 0
+ 236 0060 7047     	 bx lr
+ 237              	.L9:
+ 238 0062 00BF     	 .align 2
+ 239              	.L8:
+ 240 0064 00ED00E0 	 .word -536810240
+ 241 0068 00000000 	 .word __Vectors
+ 242 006c 00100058 	 .word 1476399104
+ 243              	 .cfi_endproc
+ 244              	.LFE125:
+ 246              	 .section .text.SystemCoreClockSetup,"ax",%progbits
+ 247              	 .align 2
+ 248              	 .weak SystemCoreClockSetup
+ 249              	 .thumb
+ 250              	 .thumb_func
+ 252              	SystemCoreClockSetup:
+ 253              	.LFB126:
+ 358:../Startup/system_XMC4500.c **** 
+ 359:../Startup/system_XMC4500.c **** __WEAK void SystemCoreClockSetup(void)
+ 360:../Startup/system_XMC4500.c **** {
+ 254              	 .loc 1 360 0
+ 255              	 .cfi_startproc
+ 256              	 
+ 257              	 
+ 258 0000 80B5     	 push {r7,lr}
+ 259              	.LCFI14:
+ 260              	 .cfi_def_cfa_offset 8
+ 261              	 .cfi_offset 7,-8
+ 262              	 .cfi_offset 14,-4
+ 263 0002 00AF     	 add r7,sp,#0
+ 264              	.LCFI15:
+ 265              	 .cfi_def_cfa_register 7
+ 361:../Startup/system_XMC4500.c **** #if FOFI_CALIBRATION_MODE == FOFI_CALIBRATION_MODE_FACTORY
+ 362:../Startup/system_XMC4500.c ****   /* Enable factory calibration */
+ 363:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 |= SCU_PLL_PLLCON0_FOTR_Msk;
+ 364:../Startup/system_XMC4500.c **** #else
+ 365:../Startup/system_XMC4500.c ****   /* Automatic calibration uses the fSTDBY */
+ 366:../Startup/system_XMC4500.c **** 
+ 367:../Startup/system_XMC4500.c ****   /* Enable HIB domain */
+ 368:../Startup/system_XMC4500.c ****   /* Power up HIB domain if and only if it is currently powered down */
+ 369:../Startup/system_XMC4500.c ****   if((SCU_POWER->PWRSTAT & SCU_POWER_PWRSTAT_HIBEN_Msk) == 0)
+ 266              	 .loc 1 369 0
+ 267 0004 754B     	 ldr r3,.L21
+ 268 0006 1B68     	 ldr r3,[r3]
+ 269 0008 03F00103 	 and r3,r3,#1
+ 270 000c 002B     	 cmp r3,#0
+ 271 000e 0CD1     	 bne .L11
+ 370:../Startup/system_XMC4500.c ****   {
+ 371:../Startup/system_XMC4500.c ****     SCU_POWER->PWRSET |= SCU_POWER_PWRSET_HIB_Msk;
+ 272              	 .loc 1 371 0
+ 273 0010 724A     	 ldr r2,.L21
+ 274 0012 724B     	 ldr r3,.L21
+ 275 0014 5B68     	 ldr r3,[r3,#4]
+ 276 0016 43F00103 	 orr r3,r3,#1
+ 277 001a 5360     	 str r3,[r2,#4]
+ 372:../Startup/system_XMC4500.c **** 
+ 373:../Startup/system_XMC4500.c ****     while((SCU_POWER->PWRSTAT & SCU_POWER_PWRSTAT_HIBEN_Msk) == 0)
+ 278              	 .loc 1 373 0
+ 279 001c 00BF     	 nop
+ 280              	.L12:
+ 281              	 .loc 1 373 0 is_stmt 0 discriminator 1
+ 282 001e 6F4B     	 ldr r3,.L21
+ 283 0020 1B68     	 ldr r3,[r3]
+ 284 0022 03F00103 	 and r3,r3,#1
+ 285 0026 002B     	 cmp r3,#0
+ 286 0028 F9D0     	 beq .L12
+ 287              	.L11:
+ 374:../Startup/system_XMC4500.c ****     {
+ 375:../Startup/system_XMC4500.c ****       /* wait until HIB domain is enabled */
+ 376:../Startup/system_XMC4500.c ****     }
+ 377:../Startup/system_XMC4500.c ****   }
+ 378:../Startup/system_XMC4500.c **** 
+ 379:../Startup/system_XMC4500.c ****   /* Remove the reset only if HIB domain were in a state of reset */
+ 380:../Startup/system_XMC4500.c ****   if((SCU_RESET->RSTSTAT) & SCU_RESET_RSTSTAT_HIBRS_Msk)
+ 288              	 .loc 1 380 0 is_stmt 1
+ 289 002a 6D4B     	 ldr r3,.L21+4
+ 290 002c 1B68     	 ldr r3,[r3]
+ 291 002e 03F40073 	 and r3,r3,#512
+ 292 0032 002B     	 cmp r3,#0
+ 293 0034 09D0     	 beq .L13
+ 381:../Startup/system_XMC4500.c ****   {
+ 382:../Startup/system_XMC4500.c ****     SCU_RESET->RSTCLR |= SCU_RESET_RSTCLR_HIBRS_Msk;
+ 294              	 .loc 1 382 0
+ 295 0036 6A4A     	 ldr r2,.L21+4
+ 296 0038 694B     	 ldr r3,.L21+4
+ 297 003a 9B68     	 ldr r3,[r3,#8]
+ 298 003c 43F40073 	 orr r3,r3,#512
+ 299 0040 9360     	 str r3,[r2,#8]
+ 383:../Startup/system_XMC4500.c ****     delay(DELAY_CNT_150US_50MHZ);
+ 300              	 .loc 1 383 0
+ 301 0042 41F64C50 	 movw r0,#7500
+ 302 0046 FFF7FEFF 	 bl delay
+ 303              	.L13:
+ 384:../Startup/system_XMC4500.c ****   }
+ 385:../Startup/system_XMC4500.c ****   
+ 386:../Startup/system_XMC4500.c **** #if STDBY_CLOCK_SRC == STDBY_CLOCK_SRC_OSCULP
+ 387:../Startup/system_XMC4500.c ****   /* Enable OSC_ULP */
+ 388:../Startup/system_XMC4500.c ****   if ((SCU_HIBERNATE->OSCULCTRL & SCU_HIBERNATE_OSCULCTRL_MODE_Msk) != 0UL)
+ 389:../Startup/system_XMC4500.c ****   {
+ 390:../Startup/system_XMC4500.c ****     /*enable OSC_ULP*/
+ 391:../Startup/system_XMC4500.c ****     while (SCU_GENERAL->MIRRSTS & SCU_GENERAL_MIRRSTS_OSCULCTRL_Msk)
+ 392:../Startup/system_XMC4500.c ****     {
+ 393:../Startup/system_XMC4500.c ****       /* check SCU_MIRRSTS to ensure that no transfer over serial interface is pending */
+ 394:../Startup/system_XMC4500.c ****     }
+ 395:../Startup/system_XMC4500.c ****     SCU_HIBERNATE->OSCULCTRL &= ~SCU_HIBERNATE_OSCULCTRL_MODE_Msk;
+ 396:../Startup/system_XMC4500.c **** 
+ 397:../Startup/system_XMC4500.c ****     /* Check if the clock is OK using OSCULP Oscillator Watchdog*/
+ 398:../Startup/system_XMC4500.c ****     while (SCU_GENERAL->MIRRSTS & SCU_GENERAL_MIRRSTS_HDCR_Msk)
+ 399:../Startup/system_XMC4500.c ****     {
+ 400:../Startup/system_XMC4500.c ****       /* check SCU_MIRRSTS to ensure that no transfer over serial interface is pending */
+ 401:../Startup/system_XMC4500.c ****     }
+ 402:../Startup/system_XMC4500.c ****     SCU_HIBERNATE->HDCR |= SCU_HIBERNATE_HDCR_ULPWDGEN_Msk;
+ 403:../Startup/system_XMC4500.c **** 
+ 404:../Startup/system_XMC4500.c ****     /* wait till clock is stable */
+ 405:../Startup/system_XMC4500.c ****     do
+ 406:../Startup/system_XMC4500.c ****     {
+ 407:../Startup/system_XMC4500.c ****       while (SCU_GENERAL->MIRRSTS & SCU_GENERAL_MIRRSTS_HDCLR_Msk)
+ 408:../Startup/system_XMC4500.c ****       {
+ 409:../Startup/system_XMC4500.c ****         /* check SCU_MIRRSTS to ensure that no transfer over serial interface is pending */
+ 410:../Startup/system_XMC4500.c ****       }
+ 411:../Startup/system_XMC4500.c ****       SCU_HIBERNATE->HDCLR |= SCU_HIBERNATE_HDCLR_ULPWDG_Msk;
+ 412:../Startup/system_XMC4500.c **** 
+ 413:../Startup/system_XMC4500.c ****       delay(DELAY_CNT_50US_50MHZ);
+ 414:../Startup/system_XMC4500.c **** 
+ 415:../Startup/system_XMC4500.c ****     } while ((SCU_HIBERNATE->HDSTAT & SCU_HIBERNATE_HDSTAT_ULPWDG_Msk) != 0UL);
+ 416:../Startup/system_XMC4500.c **** 
+ 417:../Startup/system_XMC4500.c ****   }
+ 418:../Startup/system_XMC4500.c **** 
+ 419:../Startup/system_XMC4500.c ****   /* now OSC_ULP is running and can be used*/
+ 420:../Startup/system_XMC4500.c ****   /* Select OSC_ULP as the clock source for RTC and STDBY*/
+ 421:../Startup/system_XMC4500.c ****   while (SCU_GENERAL->MIRRSTS & SCU_GENERAL_MIRRSTS_HDCR_Msk)
+ 422:../Startup/system_XMC4500.c ****   {
+ 423:../Startup/system_XMC4500.c ****     /* check SCU_MIRRSTS to ensure that no transfer over serial interface is pending */
+ 424:../Startup/system_XMC4500.c ****   }
+ 425:../Startup/system_XMC4500.c ****   SCU_HIBERNATE->HDCR |= SCU_HIBERNATE_HDCR_RCS_Msk | SCU_HIBERNATE_HDCR_STDBYSEL_Msk;
+ 426:../Startup/system_XMC4500.c **** 
+ 427:../Startup/system_XMC4500.c **** #endif /* STDBY_CLOCK_SRC == STDBY_CLOCK_SRC_OSCULP */
+ 428:../Startup/system_XMC4500.c **** 
+ 429:../Startup/system_XMC4500.c ****   /* Enable automatic calibration of internal fast oscillator */
+ 430:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 |= SCU_PLL_PLLCON0_AOTREN_Msk;
+ 304              	 .loc 1 430 0
+ 305 004a 664A     	 ldr r2,.L21+8
+ 306 004c 654B     	 ldr r3,.L21+8
+ 307 004e 5B68     	 ldr r3,[r3,#4]
+ 308 0050 43F40023 	 orr r3,r3,#524288
+ 309 0054 5360     	 str r3,[r2,#4]
+ 431:../Startup/system_XMC4500.c **** #endif /* FOFI_CALIBRATION_MODE == FOFI_CALIBRATION_MODE_AUTOMATIC */
+ 432:../Startup/system_XMC4500.c **** 
+ 433:../Startup/system_XMC4500.c ****   delay(DELAY_CNT_50US_50MHZ);
+ 310              	 .loc 1 433 0
+ 311 0056 40F6C410 	 movw r0,#2500
+ 312 005a FFF7FEFF 	 bl delay
+ 434:../Startup/system_XMC4500.c **** 
+ 435:../Startup/system_XMC4500.c **** #if ENABLE_PLL
+ 436:../Startup/system_XMC4500.c **** 
+ 437:../Startup/system_XMC4500.c ****   /* enable PLL */
+ 438:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 &= ~(SCU_PLL_PLLCON0_VCOPWD_Msk | SCU_PLL_PLLCON0_PLLPWD_Msk);
+ 313              	 .loc 1 438 0
+ 314 005e 614A     	 ldr r2,.L21+8
+ 315 0060 604B     	 ldr r3,.L21+8
+ 316 0062 5B68     	 ldr r3,[r3,#4]
+ 317 0064 23F48033 	 bic r3,r3,#65536
+ 318 0068 23F00203 	 bic r3,r3,#2
+ 319 006c 5360     	 str r3,[r2,#4]
+ 439:../Startup/system_XMC4500.c **** 
+ 440:../Startup/system_XMC4500.c **** #if PLL_CLOCK_SRC != PLL_CLOCK_SRC_OFI
+ 441:../Startup/system_XMC4500.c ****   /* enable OSC_HP */
+ 442:../Startup/system_XMC4500.c ****   if ((SCU_OSC->OSCHPCTRL & SCU_OSC_OSCHPCTRL_MODE_Msk) != 0U)
+ 320              	 .loc 1 442 0
+ 321 006e 5E4B     	 ldr r3,.L21+12
+ 322 0070 5B68     	 ldr r3,[r3,#4]
+ 323 0072 03F03003 	 and r3,r3,#48
+ 324 0076 002B     	 cmp r3,#0
+ 325 0078 29D0     	 beq .L14
+ 443:../Startup/system_XMC4500.c ****   {
+ 444:../Startup/system_XMC4500.c ****     SCU_OSC->OSCHPCTRL &= ~(SCU_OSC_OSCHPCTRL_MODE_Msk | SCU_OSC_OSCHPCTRL_OSCVAL_Msk);
+ 326              	 .loc 1 444 0
+ 327 007a 5B4A     	 ldr r2,.L21+12
+ 328 007c 5A4B     	 ldr r3,.L21+12
+ 329 007e 5B68     	 ldr r3,[r3,#4]
+ 330 0080 23F47023 	 bic r3,r3,#983040
+ 331 0084 23F03003 	 bic r3,r3,#48
+ 332 0088 5360     	 str r3,[r2,#4]
+ 445:../Startup/system_XMC4500.c ****     SCU_OSC->OSCHPCTRL |= ((OSCHP_GetFrequency() / FOSCREF) - 1UL) << SCU_OSC_OSCHPCTRL_OSCVAL_Pos;
+ 333              	 .loc 1 445 0
+ 334 008a FFF7FEFF 	 bl OSCHP_GetFrequency
+ 335 008e 0246     	 mov r2,r0
+ 336 0090 564B     	 ldr r3,.L21+16
+ 337 0092 A3FB0223 	 umull r2,r3,r3,r2
+ 338 0096 1B0D     	 lsrs r3,r3,#20
+ 339 0098 013B     	 subs r3,r3,#1
+ 340 009a 1B04     	 lsls r3,r3,#16
+ 341 009c 5249     	 ldr r1,.L21+12
+ 342 009e 524A     	 ldr r2,.L21+12
+ 343 00a0 5268     	 ldr r2,[r2,#4]
+ 344 00a2 1343     	 orrs r3,r3,r2
+ 345 00a4 4B60     	 str r3,[r1,#4]
+ 446:../Startup/system_XMC4500.c **** 
+ 447:../Startup/system_XMC4500.c ****     /* select OSC_HP clock as PLL input */
+ 448:../Startup/system_XMC4500.c ****     SCU_PLL->PLLCON2 &= ~SCU_PLL_PLLCON2_PINSEL_Msk;
+ 346              	 .loc 1 448 0
+ 347 00a6 4F4A     	 ldr r2,.L21+8
+ 348 00a8 4E4B     	 ldr r3,.L21+8
+ 349 00aa DB68     	 ldr r3,[r3,#12]
+ 350 00ac 23F00103 	 bic r3,r3,#1
+ 351 00b0 D360     	 str r3,[r2,#12]
+ 449:../Startup/system_XMC4500.c **** 
+ 450:../Startup/system_XMC4500.c ****     /* restart OSC Watchdog */
+ 451:../Startup/system_XMC4500.c ****     SCU_PLL->PLLCON0 &= ~SCU_PLL_PLLCON0_OSCRES_Msk;
+ 352              	 .loc 1 451 0
+ 353 00b2 4C4A     	 ldr r2,.L21+8
+ 354 00b4 4B4B     	 ldr r3,.L21+8
+ 355 00b6 5B68     	 ldr r3,[r3,#4]
+ 356 00b8 23F40033 	 bic r3,r3,#131072
+ 357 00bc 5360     	 str r3,[r2,#4]
+ 452:../Startup/system_XMC4500.c **** 
+ 453:../Startup/system_XMC4500.c ****     while ((SCU_PLL->PLLSTAT & SCU_PLL_PLLSTAT_OSC_USABLE) != SCU_PLL_PLLSTAT_OSC_USABLE)
+ 358              	 .loc 1 453 0
+ 359 00be 00BF     	 nop
+ 360              	.L15:
+ 361              	 .loc 1 453 0 is_stmt 0 discriminator 1
+ 362 00c0 484B     	 ldr r3,.L21+8
+ 363 00c2 1B68     	 ldr r3,[r3]
+ 364 00c4 03F46073 	 and r3,r3,#896
+ 365 00c8 B3F5607F 	 cmp r3,#896
+ 366 00cc F8D1     	 bne .L15
+ 367              	.L14:
+ 454:../Startup/system_XMC4500.c ****     {
+ 455:../Startup/system_XMC4500.c ****       /* wait till OSC_HP output frequency is usable */
+ 456:../Startup/system_XMC4500.c ****     }
+ 457:../Startup/system_XMC4500.c ****   }
+ 458:../Startup/system_XMC4500.c **** #else /* PLL_CLOCK_SRC != PLL_CLOCK_SRC_OFI */
+ 459:../Startup/system_XMC4500.c **** 
+ 460:../Startup/system_XMC4500.c ****   /* select backup clock as PLL input */
+ 461:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON2 |= SCU_PLL_PLLCON2_PINSEL_Msk;
+ 462:../Startup/system_XMC4500.c **** #endif
+ 463:../Startup/system_XMC4500.c **** 
+ 464:../Startup/system_XMC4500.c ****   /* Go to bypass the Main PLL */
+ 465:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 |= SCU_PLL_PLLCON0_VCOBYP_Msk;
+ 368              	 .loc 1 465 0 is_stmt 1
+ 369 00ce 454A     	 ldr r2,.L21+8
+ 370 00d0 444B     	 ldr r3,.L21+8
+ 371 00d2 5B68     	 ldr r3,[r3,#4]
+ 372 00d4 43F00103 	 orr r3,r3,#1
+ 373 00d8 5360     	 str r3,[r2,#4]
+ 466:../Startup/system_XMC4500.c **** 
+ 467:../Startup/system_XMC4500.c ****   /* disconnect Oscillator from PLL */
+ 468:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 |= SCU_PLL_PLLCON0_FINDIS_Msk;
+ 374              	 .loc 1 468 0
+ 375 00da 424A     	 ldr r2,.L21+8
+ 376 00dc 414B     	 ldr r3,.L21+8
+ 377 00de 5B68     	 ldr r3,[r3,#4]
+ 378 00e0 43F01003 	 orr r3,r3,#16
+ 379 00e4 5360     	 str r3,[r2,#4]
+ 469:../Startup/system_XMC4500.c **** 
+ 470:../Startup/system_XMC4500.c ****   /* Setup divider settings for main PLL */
+ 471:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON1 = ((PLL_NDIV << SCU_PLL_PLLCON1_NDIV_Pos) |
+ 380              	 .loc 1 471 0
+ 381 00e6 3F4B     	 ldr r3,.L21+8
+ 382 00e8 414A     	 ldr r2,.L21+20
+ 383 00ea 9A60     	 str r2,[r3,#8]
+ 472:../Startup/system_XMC4500.c ****                       (PLL_K2DIV_0 << SCU_PLL_PLLCON1_K2DIV_Pos) |
+ 473:../Startup/system_XMC4500.c ****                       (PLL_PDIV << SCU_PLL_PLLCON1_PDIV_Pos));
+ 474:../Startup/system_XMC4500.c **** 
+ 475:../Startup/system_XMC4500.c ****   /* Set OSCDISCDIS */
+ 476:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 |= SCU_PLL_PLLCON0_OSCDISCDIS_Msk;
+ 384              	 .loc 1 476 0
+ 385 00ec 3D4A     	 ldr r2,.L21+8
+ 386 00ee 3D4B     	 ldr r3,.L21+8
+ 387 00f0 5B68     	 ldr r3,[r3,#4]
+ 388 00f2 43F04003 	 orr r3,r3,#64
+ 389 00f6 5360     	 str r3,[r2,#4]
+ 477:../Startup/system_XMC4500.c **** 
+ 478:../Startup/system_XMC4500.c ****   /* connect Oscillator to PLL */
+ 479:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 &= ~SCU_PLL_PLLCON0_FINDIS_Msk;
+ 390              	 .loc 1 479 0
+ 391 00f8 3A4A     	 ldr r2,.L21+8
+ 392 00fa 3A4B     	 ldr r3,.L21+8
+ 393 00fc 5B68     	 ldr r3,[r3,#4]
+ 394 00fe 23F01003 	 bic r3,r3,#16
+ 395 0102 5360     	 str r3,[r2,#4]
+ 480:../Startup/system_XMC4500.c **** 
+ 481:../Startup/system_XMC4500.c ****   /* restart PLL Lock detection */
+ 482:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 |= SCU_PLL_PLLCON0_RESLD_Msk;
+ 396              	 .loc 1 482 0
+ 397 0104 374A     	 ldr r2,.L21+8
+ 398 0106 374B     	 ldr r3,.L21+8
+ 399 0108 5B68     	 ldr r3,[r3,#4]
+ 400 010a 43F48023 	 orr r3,r3,#262144
+ 401 010e 5360     	 str r3,[r2,#4]
+ 483:../Startup/system_XMC4500.c **** 
+ 484:../Startup/system_XMC4500.c ****   while ((SCU_PLL->PLLSTAT & SCU_PLL_PLLSTAT_VCOLOCK_Msk) == 0U)
+ 402              	 .loc 1 484 0
+ 403 0110 00BF     	 nop
+ 404              	.L16:
+ 405              	 .loc 1 484 0 is_stmt 0 discriminator 1
+ 406 0112 344B     	 ldr r3,.L21+8
+ 407 0114 1B68     	 ldr r3,[r3]
+ 408 0116 03F00403 	 and r3,r3,#4
+ 409 011a 002B     	 cmp r3,#0
+ 410 011c F9D0     	 beq .L16
+ 485:../Startup/system_XMC4500.c ****   {
+ 486:../Startup/system_XMC4500.c ****     /* wait for PLL Lock */
+ 487:../Startup/system_XMC4500.c ****   }
+ 488:../Startup/system_XMC4500.c **** 
+ 489:../Startup/system_XMC4500.c ****   /* Disable bypass- put PLL clock back */
+ 490:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 &= ~SCU_PLL_PLLCON0_VCOBYP_Msk;
+ 411              	 .loc 1 490 0 is_stmt 1
+ 412 011e 314A     	 ldr r2,.L21+8
+ 413 0120 304B     	 ldr r3,.L21+8
+ 414 0122 5B68     	 ldr r3,[r3,#4]
+ 415 0124 23F00103 	 bic r3,r3,#1
+ 416 0128 5360     	 str r3,[r2,#4]
+ 491:../Startup/system_XMC4500.c ****   while ((SCU_PLL->PLLSTAT & SCU_PLL_PLLSTAT_VCOBYST_Msk) != 0U)
+ 417              	 .loc 1 491 0
+ 418 012a 00BF     	 nop
+ 419              	.L17:
+ 420              	 .loc 1 491 0 is_stmt 0 discriminator 1
+ 421 012c 2D4B     	 ldr r3,.L21+8
+ 422 012e 1B68     	 ldr r3,[r3]
+ 423 0130 03F00103 	 and r3,r3,#1
+ 424 0134 002B     	 cmp r3,#0
+ 425 0136 F9D1     	 bne .L17
+ 492:../Startup/system_XMC4500.c ****   {
+ 493:../Startup/system_XMC4500.c ****     /* wait for normal mode */
+ 494:../Startup/system_XMC4500.c ****   }
+ 495:../Startup/system_XMC4500.c **** #endif /* ENABLE_PLL */
+ 496:../Startup/system_XMC4500.c **** 
+ 497:../Startup/system_XMC4500.c **** #if (SYS_CLOCK_SRC == SYS_CLOCK_SRC_PLL)
+ 498:../Startup/system_XMC4500.c ****   /* Switch system clock to PLL */
+ 499:../Startup/system_XMC4500.c ****   SCU_CLK->SYSCLKCR |= SCU_CLK_SYSCLKCR_SYSSEL_Msk;
+ 426              	 .loc 1 499 0 is_stmt 1
+ 427 0138 2E4A     	 ldr r2,.L21+24
+ 428 013a 2E4B     	 ldr r3,.L21+24
+ 429 013c DB68     	 ldr r3,[r3,#12]
+ 430 013e 43F48033 	 orr r3,r3,#65536
+ 431 0142 D360     	 str r3,[r2,#12]
+ 500:../Startup/system_XMC4500.c **** #else
+ 501:../Startup/system_XMC4500.c ****   /* Switch system clock to backup clock */
+ 502:../Startup/system_XMC4500.c ****   SCU_CLK->SYSCLKCR &= ~SCU_CLK_SYSCLKCR_SYSSEL_Msk;
+ 503:../Startup/system_XMC4500.c **** #endif
+ 504:../Startup/system_XMC4500.c **** 
+ 505:../Startup/system_XMC4500.c ****   /* Before scaling to final frequency we need to setup the clock dividers */
+ 506:../Startup/system_XMC4500.c ****   SCU_CLK->PBCLKCR = PBCLKDIV;
+ 432              	 .loc 1 506 0
+ 433 0144 2B4B     	 ldr r3,.L21+24
+ 434 0146 0022     	 movs r2,#0
+ 435 0148 5A61     	 str r2,[r3,#20]
+ 507:../Startup/system_XMC4500.c ****   SCU_CLK->CPUCLKCR = CPUCLKDIV;
+ 436              	 .loc 1 507 0
+ 437 014a 2A4B     	 ldr r3,.L21+24
+ 438 014c 0022     	 movs r2,#0
+ 439 014e 1A61     	 str r2,[r3,#16]
+ 508:../Startup/system_XMC4500.c ****   SCU_CLK->CCUCLKCR = CCUCLKDIV;
+ 440              	 .loc 1 508 0
+ 441 0150 284B     	 ldr r3,.L21+24
+ 442 0152 0022     	 movs r2,#0
+ 443 0154 1A62     	 str r2,[r3,#32]
+ 509:../Startup/system_XMC4500.c ****   SCU_CLK->WDTCLKCR = WDTCLKDIV;
+ 444              	 .loc 1 509 0
+ 445 0156 274B     	 ldr r3,.L21+24
+ 446 0158 0022     	 movs r2,#0
+ 447 015a 5A62     	 str r2,[r3,#36]
+ 510:../Startup/system_XMC4500.c ****   SCU_CLK->EBUCLKCR = EBUCLKDIV;
+ 448              	 .loc 1 510 0
+ 449 015c 254B     	 ldr r3,.L21+24
+ 450 015e 0022     	 movs r2,#0
+ 451 0160 DA61     	 str r2,[r3,#28]
+ 511:../Startup/system_XMC4500.c ****   SCU_CLK->USBCLKCR = USBCLKDIV;
+ 452              	 .loc 1 511 0
+ 453 0162 244B     	 ldr r3,.L21+24
+ 454 0164 0322     	 movs r2,#3
+ 455 0166 9A61     	 str r2,[r3,#24]
+ 512:../Startup/system_XMC4500.c **** 
+ 513:../Startup/system_XMC4500.c **** #if ENABLE_PLL
+ 514:../Startup/system_XMC4500.c ****   /* PLL frequency stepping...*/
+ 515:../Startup/system_XMC4500.c ****   /* Reset OSCDISCDIS */
+ 516:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON0 &= ~SCU_PLL_PLLCON0_OSCDISCDIS_Msk;
+ 456              	 .loc 1 516 0
+ 457 0168 1E4A     	 ldr r2,.L21+8
+ 458 016a 1E4B     	 ldr r3,.L21+8
+ 459 016c 5B68     	 ldr r3,[r3,#4]
+ 460 016e 23F04003 	 bic r3,r3,#64
+ 461 0172 5360     	 str r3,[r2,#4]
+ 517:../Startup/system_XMC4500.c **** 
+ 518:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON1 = ((PLL_NDIV << SCU_PLL_PLLCON1_NDIV_Pos) |
+ 462              	 .loc 1 518 0
+ 463 0174 1B4B     	 ldr r3,.L21+8
+ 464 0176 204A     	 ldr r2,.L21+28
+ 465 0178 9A60     	 str r2,[r3,#8]
+ 519:../Startup/system_XMC4500.c **** 	                    (PLL_K2DIV_1 << SCU_PLL_PLLCON1_K2DIV_Pos) |
+ 520:../Startup/system_XMC4500.c **** 	                    (PLL_PDIV << SCU_PLL_PLLCON1_PDIV_Pos));
+ 521:../Startup/system_XMC4500.c **** 
+ 522:../Startup/system_XMC4500.c **** 
+ 523:../Startup/system_XMC4500.c ****   delay(DELAY_CNT_50US_60MHZ);
+ 466              	 .loc 1 523 0
+ 467 017a 40F6B830 	 movw r0,#3000
+ 468 017e FFF7FEFF 	 bl delay
+ 524:../Startup/system_XMC4500.c ****   while ((SCU_PLL->PLLSTAT & SCU_PLL_PLLSTAT_VCOLOCK_Msk) == 0U)
+ 469              	 .loc 1 524 0
+ 470 0182 00BF     	 nop
+ 471              	.L18:
+ 472              	 .loc 1 524 0 is_stmt 0 discriminator 1
+ 473 0184 174B     	 ldr r3,.L21+8
+ 474 0186 1B68     	 ldr r3,[r3]
+ 475 0188 03F00403 	 and r3,r3,#4
+ 476 018c 002B     	 cmp r3,#0
+ 477 018e F9D0     	 beq .L18
+ 525:../Startup/system_XMC4500.c ****   {
+ 526:../Startup/system_XMC4500.c ****     /* wait for PLL Lock */
+ 527:../Startup/system_XMC4500.c ****   }
+ 528:../Startup/system_XMC4500.c **** 
+ 529:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON1 = ((PLL_NDIV << SCU_PLL_PLLCON1_NDIV_Pos) |
+ 478              	 .loc 1 529 0 is_stmt 1
+ 479 0190 144B     	 ldr r3,.L21+8
+ 480 0192 1A4A     	 ldr r2,.L21+32
+ 481 0194 9A60     	 str r2,[r3,#8]
+ 530:../Startup/system_XMC4500.c **** 	                    (PLL_K2DIV_2 << SCU_PLL_PLLCON1_K2DIV_Pos) |
+ 531:../Startup/system_XMC4500.c **** 	                    (PLL_PDIV << SCU_PLL_PLLCON1_PDIV_Pos));
+ 532:../Startup/system_XMC4500.c **** 
+ 533:../Startup/system_XMC4500.c **** 
+ 534:../Startup/system_XMC4500.c ****   delay(DELAY_CNT_50US_90MHZ);
+ 482              	 .loc 1 534 0
+ 483 0196 41F29410 	 movw r0,#4500
+ 484 019a FFF7FEFF 	 bl delay
+ 535:../Startup/system_XMC4500.c ****   while ((SCU_PLL->PLLSTAT & SCU_PLL_PLLSTAT_VCOLOCK_Msk) == 0U)
+ 485              	 .loc 1 535 0
+ 486 019e 00BF     	 nop
+ 487              	.L19:
+ 488              	 .loc 1 535 0 is_stmt 0 discriminator 1
+ 489 01a0 104B     	 ldr r3,.L21+8
+ 490 01a2 1B68     	 ldr r3,[r3]
+ 491 01a4 03F00403 	 and r3,r3,#4
+ 492 01a8 002B     	 cmp r3,#0
+ 493 01aa F9D0     	 beq .L19
+ 536:../Startup/system_XMC4500.c ****   {
+ 537:../Startup/system_XMC4500.c ****     /* wait for PLL Lock */
+ 538:../Startup/system_XMC4500.c ****   }
+ 539:../Startup/system_XMC4500.c **** 
+ 540:../Startup/system_XMC4500.c ****   SCU_PLL->PLLCON1 = ((PLL_NDIV << SCU_PLL_PLLCON1_NDIV_Pos) |
+ 494              	 .loc 1 540 0 is_stmt 1
+ 495 01ac 0D4B     	 ldr r3,.L21+8
+ 496 01ae 144A     	 ldr r2,.L21+36
+ 497 01b0 9A60     	 str r2,[r3,#8]
+ 541:../Startup/system_XMC4500.c **** 	                    (PLL_K2DIV << SCU_PLL_PLLCON1_K2DIV_Pos) |
+ 542:../Startup/system_XMC4500.c **** 	                    (PLL_PDIV << SCU_PLL_PLLCON1_PDIV_Pos));
+ 543:../Startup/system_XMC4500.c **** 
+ 544:../Startup/system_XMC4500.c **** 
+ 545:../Startup/system_XMC4500.c ****   delay(DELAY_CNT_50US_120MHZ);
+ 498              	 .loc 1 545 0
+ 499 01b2 41F27070 	 movw r0,#6000
+ 500 01b6 FFF7FEFF 	 bl delay
+ 546:../Startup/system_XMC4500.c ****   while ((SCU_PLL->PLLSTAT & SCU_PLL_PLLSTAT_VCOLOCK_Msk) == 0U)
+ 501              	 .loc 1 546 0
+ 502 01ba 00BF     	 nop
+ 503              	.L20:
+ 504              	 .loc 1 546 0 is_stmt 0 discriminator 1
+ 505 01bc 094B     	 ldr r3,.L21+8
+ 506 01be 1B68     	 ldr r3,[r3]
+ 507 01c0 03F00403 	 and r3,r3,#4
+ 508 01c4 002B     	 cmp r3,#0
+ 509 01c6 F9D0     	 beq .L20
+ 547:../Startup/system_XMC4500.c ****   {
+ 548:../Startup/system_XMC4500.c ****     /* wait for PLL Lock */
+ 549:../Startup/system_XMC4500.c ****   }
+ 550:../Startup/system_XMC4500.c **** 
+ 551:../Startup/system_XMC4500.c ****   SCU_TRAP->TRAPCLR = SCU_TRAP_TRAPCLR_SOSCWDGT_Msk | SCU_TRAP_TRAPCLR_SVCOLCKT_Msk;
+ 510              	 .loc 1 551 0 is_stmt 1
+ 511 01c8 0E4B     	 ldr r3,.L21+40
+ 512 01ca 0522     	 movs r2,#5
+ 513 01cc DA60     	 str r2,[r3,#12]
+ 552:../Startup/system_XMC4500.c **** #endif /* ENABLE_PLL */
+ 553:../Startup/system_XMC4500.c **** 
+ 554:../Startup/system_XMC4500.c **** #if (((ENABLE_SCUCLK & SCU_CLK_CLKSET_USBCEN_Msk) != 0) && ((USBCLKDIV & SCU_CLK_USBCLKCR_USBSEL_Ms
+ 555:../Startup/system_XMC4500.c ****   /* enable USB PLL first */
+ 556:../Startup/system_XMC4500.c ****   SCU_PLL->USBPLLCON &= ~(SCU_PLL_USBPLLCON_VCOPWD_Msk | SCU_PLL_USBPLLCON_PLLPWD_Msk);
+ 557:../Startup/system_XMC4500.c **** 
+ 558:../Startup/system_XMC4500.c ****   /* USB PLL uses as clock input the OSC_HP */
+ 559:../Startup/system_XMC4500.c ****   /* check and if not already running enable OSC_HP */
+ 560:../Startup/system_XMC4500.c ****   if ((SCU_OSC->OSCHPCTRL & SCU_OSC_OSCHPCTRL_MODE_Msk) != 0U)
+ 561:../Startup/system_XMC4500.c ****   {
+ 562:../Startup/system_XMC4500.c ****     /* check if Main PLL is switched on for OSC WDG*/
+ 563:../Startup/system_XMC4500.c ****     if ((SCU_PLL->PLLCON0 &(SCU_PLL_PLLCON0_VCOPWD_Msk | SCU_PLL_PLLCON0_PLLPWD_Msk)) != 0UL)
+ 564:../Startup/system_XMC4500.c ****     {
+ 565:../Startup/system_XMC4500.c ****       /* enable PLL first */
+ 566:../Startup/system_XMC4500.c ****       SCU_PLL->PLLCON0 &= ~(SCU_PLL_PLLCON0_VCOPWD_Msk | SCU_PLL_PLLCON0_PLLPWD_Msk);
+ 567:../Startup/system_XMC4500.c ****     }
+ 568:../Startup/system_XMC4500.c **** 
+ 569:../Startup/system_XMC4500.c ****     SCU_OSC->OSCHPCTRL &= ~(SCU_OSC_OSCHPCTRL_MODE_Msk | SCU_OSC_OSCHPCTRL_OSCVAL_Msk);
+ 570:../Startup/system_XMC4500.c ****     SCU_OSC->OSCHPCTRL |= ((OSCHP_GetFrequency() / FOSCREF) - 1UL) << SCU_OSC_OSCHPCTRL_OSCVAL_Pos;
+ 571:../Startup/system_XMC4500.c **** 
+ 572:../Startup/system_XMC4500.c ****     /* restart OSC Watchdog */
+ 573:../Startup/system_XMC4500.c ****     SCU_PLL->PLLCON0 &= ~SCU_PLL_PLLCON0_OSCRES_Msk;
+ 574:../Startup/system_XMC4500.c **** 
+ 575:../Startup/system_XMC4500.c ****     while ((SCU_PLL->PLLSTAT & SCU_PLL_PLLSTAT_OSC_USABLE) != SCU_PLL_PLLSTAT_OSC_USABLE)
+ 576:../Startup/system_XMC4500.c ****     {
+ 577:../Startup/system_XMC4500.c ****       /* wait till OSC_HP output frequency is usable */
+ 578:../Startup/system_XMC4500.c ****     }
+ 579:../Startup/system_XMC4500.c ****   }
+ 580:../Startup/system_XMC4500.c **** 
+ 581:../Startup/system_XMC4500.c ****   /* Setup USB PLL */
+ 582:../Startup/system_XMC4500.c ****   /* Go to bypass the USB PLL */
+ 583:../Startup/system_XMC4500.c ****   SCU_PLL->USBPLLCON |= SCU_PLL_USBPLLCON_VCOBYP_Msk;
+ 584:../Startup/system_XMC4500.c **** 
+ 585:../Startup/system_XMC4500.c ****   /* disconnect Oscillator from USB PLL */
+ 586:../Startup/system_XMC4500.c ****   SCU_PLL->USBPLLCON |= SCU_PLL_USBPLLCON_FINDIS_Msk;
+ 587:../Startup/system_XMC4500.c **** 
+ 588:../Startup/system_XMC4500.c ****   /* Setup Divider settings for USB PLL */
+ 589:../Startup/system_XMC4500.c ****   SCU_PLL->USBPLLCON = ((USB_NDIV << SCU_PLL_USBPLLCON_NDIV_Pos) |
+ 590:../Startup/system_XMC4500.c ****                         (USB_PDIV << SCU_PLL_USBPLLCON_PDIV_Pos));
+ 591:../Startup/system_XMC4500.c **** 
+ 592:../Startup/system_XMC4500.c ****   /* Set OSCDISCDIS */
+ 593:../Startup/system_XMC4500.c ****   SCU_PLL->USBPLLCON |= SCU_PLL_USBPLLCON_OSCDISCDIS_Msk;
+ 594:../Startup/system_XMC4500.c **** 
+ 595:../Startup/system_XMC4500.c ****   /* connect Oscillator to USB PLL */
+ 596:../Startup/system_XMC4500.c ****   SCU_PLL->USBPLLCON &= ~SCU_PLL_USBPLLCON_FINDIS_Msk;
+ 597:../Startup/system_XMC4500.c **** 
+ 598:../Startup/system_XMC4500.c ****   /* restart PLL Lock detection */
+ 599:../Startup/system_XMC4500.c ****   SCU_PLL->USBPLLCON |= SCU_PLL_USBPLLCON_RESLD_Msk;
+ 600:../Startup/system_XMC4500.c **** 
+ 601:../Startup/system_XMC4500.c ****   while ((SCU_PLL->USBPLLSTAT & SCU_PLL_USBPLLSTAT_VCOLOCK_Msk) == 0U)
+ 602:../Startup/system_XMC4500.c ****   {
+ 603:../Startup/system_XMC4500.c ****     /* wait for PLL Lock */
+ 604:../Startup/system_XMC4500.c ****   }
+ 605:../Startup/system_XMC4500.c **** #endif /* (USBCLKDIV & SCU_CLK_USBCLKCR_USBSEL_Msk) */
+ 606:../Startup/system_XMC4500.c **** 
+ 607:../Startup/system_XMC4500.c ****   /* Enable selected clocks */
+ 608:../Startup/system_XMC4500.c ****   SCU_CLK->CLKSET = ENABLE_SCUCLK;
+ 514              	 .loc 1 608 0
+ 515 01ce 094B     	 ldr r3,.L21+24
+ 516 01d0 0022     	 movs r2,#0
+ 517 01d2 5A60     	 str r2,[r3,#4]
+ 609:../Startup/system_XMC4500.c **** 
+ 610:../Startup/system_XMC4500.c **** #if ENABLE_EXTCLK == 1
+ 611:../Startup/system_XMC4500.c ****   /* Configure external clock */
+ 612:../Startup/system_XMC4500.c ****   SCU_CLK->EXTCLKCR = EXTCLKDIV;
+ 613:../Startup/system_XMC4500.c **** 
+ 614:../Startup/system_XMC4500.c **** #if EXTCLK_PIN == EXTCLK_PIN_P1_15
+ 615:../Startup/system_XMC4500.c ****   /* P1.15 */
+ 616:../Startup/system_XMC4500.c ****   PORT1->PDR1 &= ~PORT1_PDR1_PD15_Msk;
+ 617:../Startup/system_XMC4500.c ****   PORT1->IOCR12 = (PORT1->IOCR12 & ~PORT0_IOCR12_PC15_Msk) | (0x11U << PORT0_IOCR12_PC15_Pos);
+ 618:../Startup/system_XMC4500.c **** #else
+ 619:../Startup/system_XMC4500.c ****   /* P0.8 */
+ 620:../Startup/system_XMC4500.c ****   PORT0->HWSEL &= ~PORT0_HWSEL_HW8_Msk;
+ 621:../Startup/system_XMC4500.c ****   PORT0->PDR1 &= ~PORT0_PDR1_PD8_Msk;
+ 622:../Startup/system_XMC4500.c ****   PORT0->IOCR8 = (PORT0->IOCR8 & ~PORT0_IOCR8_PC8_Msk) | (0x11U << PORT0_IOCR8_PC8_Pos);
+ 623:../Startup/system_XMC4500.c **** #endif
+ 624:../Startup/system_XMC4500.c **** 
+ 625:../Startup/system_XMC4500.c **** #endif  /* ENABLE_EXTCLK == 1  */
+ 626:../Startup/system_XMC4500.c **** 
+ 627:../Startup/system_XMC4500.c ****   SystemCoreClockUpdate();
+ 518              	 .loc 1 627 0
+ 519 01d4 FFF7FEFF 	 bl SystemCoreClockUpdate
+ 628:../Startup/system_XMC4500.c **** }
+ 520              	 .loc 1 628 0
+ 521 01d8 80BD     	 pop {r7,pc}
+ 522              	.L22:
+ 523 01da 00BF     	 .align 2
+ 524              	.L21:
+ 525 01dc 00420050 	 .word 1342194176
+ 526 01e0 00440050 	 .word 1342194688
+ 527 01e4 10470050 	 .word 1342195472
+ 528 01e8 00470050 	 .word 1342195456
+ 529 01ec 6BCA5F6B 	 .word 1801439851
+ 530 01f0 004F1301 	 .word 18042624
+ 531 01f4 00460050 	 .word 1342195200
+ 532 01f8 004F0701 	 .word 17256192
+ 533 01fc 004F0401 	 .word 17059584
+ 534 0200 004F0301 	 .word 16994048
+ 535 0204 60410050 	 .word 1342194016
+ 536              	 .cfi_endproc
+ 537              	.LFE126:
+ 539              	 .section .text.SystemCoreClockUpdate,"ax",%progbits
+ 540              	 .align 2
+ 541              	 .weak SystemCoreClockUpdate
+ 542              	 .thumb
+ 543              	 .thumb_func
+ 545              	SystemCoreClockUpdate:
+ 546              	.LFB127:
+ 629:../Startup/system_XMC4500.c **** 
+ 630:../Startup/system_XMC4500.c **** __WEAK void SystemCoreClockUpdate(void)
+ 631:../Startup/system_XMC4500.c **** {
+ 547              	 .loc 1 631 0
+ 548              	 .cfi_startproc
+ 549              	 
+ 550              	 
+ 551 0000 80B5     	 push {r7,lr}
+ 552              	.LCFI16:
+ 553              	 .cfi_def_cfa_offset 8
+ 554              	 .cfi_offset 7,-8
+ 555              	 .cfi_offset 14,-4
+ 556 0002 84B0     	 sub sp,sp,#16
+ 557              	.LCFI17:
+ 558              	 .cfi_def_cfa_offset 24
+ 559 0004 00AF     	 add r7,sp,#0
+ 560              	.LCFI18:
+ 561              	 .cfi_def_cfa_register 7
+ 632:../Startup/system_XMC4500.c ****   uint32_t pdiv;
+ 633:../Startup/system_XMC4500.c ****   uint32_t ndiv;
+ 634:../Startup/system_XMC4500.c ****   uint32_t kdiv;
+ 635:../Startup/system_XMC4500.c ****   uint32_t temp;
+ 636:../Startup/system_XMC4500.c **** 
+ 637:../Startup/system_XMC4500.c ****   if (SCU_CLK->SYSCLKCR & SCU_CLK_SYSCLKCR_SYSSEL_Msk)
+ 562              	 .loc 1 637 0
+ 563 0006 2F4B     	 ldr r3,.L30
+ 564 0008 DB68     	 ldr r3,[r3,#12]
+ 565 000a 03F48033 	 and r3,r3,#65536
+ 566 000e 002B     	 cmp r3,#0
+ 567 0010 3ED0     	 beq .L24
+ 638:../Startup/system_XMC4500.c ****   {
+ 639:../Startup/system_XMC4500.c ****     /* fPLL is clock source for fSYS */
+ 640:../Startup/system_XMC4500.c ****     if(SCU_PLL->PLLCON2 & SCU_PLL_PLLCON2_PINSEL_Msk)
+ 568              	 .loc 1 640 0
+ 569 0012 2D4B     	 ldr r3,.L30+4
+ 570 0014 DB68     	 ldr r3,[r3,#12]
+ 571 0016 03F00103 	 and r3,r3,#1
+ 572 001a 002B     	 cmp r3,#0
+ 573 001c 02D0     	 beq .L25
+ 641:../Startup/system_XMC4500.c ****     {
+ 642:../Startup/system_XMC4500.c ****       /* PLL input clock is the backup clock (fOFI) */
+ 643:../Startup/system_XMC4500.c ****       temp = OFI_FREQUENCY;
+ 574              	 .loc 1 643 0
+ 575 001e 2B4B     	 ldr r3,.L30+8
+ 576 0020 FB60     	 str r3,[r7,#12]
+ 577 0022 02E0     	 b .L26
+ 578              	.L25:
+ 644:../Startup/system_XMC4500.c ****     }
+ 645:../Startup/system_XMC4500.c ****     else
+ 646:../Startup/system_XMC4500.c ****     {
+ 647:../Startup/system_XMC4500.c ****       /* PLL input clock is the high performance osicllator (fOSCHP) */
+ 648:../Startup/system_XMC4500.c ****       temp = OSCHP_GetFrequency();
+ 579              	 .loc 1 648 0
+ 580 0024 FFF7FEFF 	 bl OSCHP_GetFrequency
+ 581 0028 F860     	 str r0,[r7,#12]
+ 582              	.L26:
+ 649:../Startup/system_XMC4500.c ****     }
+ 650:../Startup/system_XMC4500.c **** 
+ 651:../Startup/system_XMC4500.c ****     /* check if PLL is locked */
+ 652:../Startup/system_XMC4500.c ****     if (SCU_PLL->PLLSTAT & SCU_PLL_PLLSTAT_VCOLOCK_Msk)
+ 583              	 .loc 1 652 0
+ 584 002a 274B     	 ldr r3,.L30+4
+ 585 002c 1B68     	 ldr r3,[r3]
+ 586 002e 03F00403 	 and r3,r3,#4
+ 587 0032 002B     	 cmp r3,#0
+ 588 0034 20D0     	 beq .L27
+ 653:../Startup/system_XMC4500.c ****     {
+ 654:../Startup/system_XMC4500.c ****       /* PLL normal mode */
+ 655:../Startup/system_XMC4500.c ****       /* read back divider settings */
+ 656:../Startup/system_XMC4500.c ****       pdiv = ((SCU_PLL->PLLCON1 & SCU_PLL_PLLCON1_PDIV_Msk) >> SCU_PLL_PLLCON1_PDIV_Pos) + 1;
+ 589              	 .loc 1 656 0
+ 590 0036 244B     	 ldr r3,.L30+4
+ 591 0038 9B68     	 ldr r3,[r3,#8]
+ 592 003a 03F07063 	 and r3,r3,#251658240
+ 593 003e 1B0E     	 lsrs r3,r3,#24
+ 594 0040 0133     	 adds r3,r3,#1
+ 595 0042 BB60     	 str r3,[r7,#8]
+ 657:../Startup/system_XMC4500.c ****       ndiv = ((SCU_PLL->PLLCON1 & SCU_PLL_PLLCON1_NDIV_Msk) >> SCU_PLL_PLLCON1_NDIV_Pos) + 1;
+ 596              	 .loc 1 657 0
+ 597 0044 204B     	 ldr r3,.L30+4
+ 598 0046 9B68     	 ldr r3,[r3,#8]
+ 599 0048 03F4FE43 	 and r3,r3,#32512
+ 600 004c 1B0A     	 lsrs r3,r3,#8
+ 601 004e 0133     	 adds r3,r3,#1
+ 602 0050 7B60     	 str r3,[r7,#4]
+ 658:../Startup/system_XMC4500.c ****       kdiv = ((SCU_PLL->PLLCON1 & SCU_PLL_PLLCON1_K2DIV_Msk) >> SCU_PLL_PLLCON1_K2DIV_Pos) + 1;
+ 603              	 .loc 1 658 0
+ 604 0052 1D4B     	 ldr r3,.L30+4
+ 605 0054 9B68     	 ldr r3,[r3,#8]
+ 606 0056 03F4FE03 	 and r3,r3,#8323072
+ 607 005a 1B0C     	 lsrs r3,r3,#16
+ 608 005c 0133     	 adds r3,r3,#1
+ 609 005e 3B60     	 str r3,[r7]
+ 659:../Startup/system_XMC4500.c **** 
+ 660:../Startup/system_XMC4500.c ****       temp = (temp / (pdiv * kdiv)) * ndiv;
+ 610              	 .loc 1 660 0
+ 611 0060 BB68     	 ldr r3,[r7,#8]
+ 612 0062 3A68     	 ldr r2,[r7]
+ 613 0064 02FB03F3 	 mul r3,r2,r3
+ 614 0068 FA68     	 ldr r2,[r7,#12]
+ 615 006a B2FBF3F3 	 udiv r3,r2,r3
+ 616 006e 7A68     	 ldr r2,[r7,#4]
+ 617 0070 02FB03F3 	 mul r3,r2,r3
+ 618 0074 FB60     	 str r3,[r7,#12]
+ 619 0076 0DE0     	 b .L29
+ 620              	.L27:
+ 661:../Startup/system_XMC4500.c ****     }
+ 662:../Startup/system_XMC4500.c ****     else
+ 663:../Startup/system_XMC4500.c ****     {
+ 664:../Startup/system_XMC4500.c ****       /* PLL prescalar mode */
+ 665:../Startup/system_XMC4500.c ****       /* read back divider settings */
+ 666:../Startup/system_XMC4500.c ****       kdiv  = ((SCU_PLL->PLLCON1 & SCU_PLL_PLLCON1_K1DIV_Msk) >> SCU_PLL_PLLCON1_K1DIV_Pos) + 1;
+ 621              	 .loc 1 666 0
+ 622 0078 134B     	 ldr r3,.L30+4
+ 623 007a 9B68     	 ldr r3,[r3,#8]
+ 624 007c 03F07F03 	 and r3,r3,#127
+ 625 0080 0133     	 adds r3,r3,#1
+ 626 0082 3B60     	 str r3,[r7]
+ 667:../Startup/system_XMC4500.c ****       
+ 668:../Startup/system_XMC4500.c ****       temp = (temp / kdiv);
+ 627              	 .loc 1 668 0
+ 628 0084 FA68     	 ldr r2,[r7,#12]
+ 629 0086 3B68     	 ldr r3,[r7]
+ 630 0088 B2FBF3F3 	 udiv r3,r2,r3
+ 631 008c FB60     	 str r3,[r7,#12]
+ 632 008e 01E0     	 b .L29
+ 633              	.L24:
+ 669:../Startup/system_XMC4500.c ****     }
+ 670:../Startup/system_XMC4500.c ****   }
+ 671:../Startup/system_XMC4500.c ****   else
+ 672:../Startup/system_XMC4500.c ****   {
+ 673:../Startup/system_XMC4500.c ****     /* fOFI is clock source for fSYS */    
+ 674:../Startup/system_XMC4500.c ****     temp = OFI_FREQUENCY;
+ 634              	 .loc 1 674 0
+ 635 0090 0E4B     	 ldr r3,.L30+8
+ 636 0092 FB60     	 str r3,[r7,#12]
+ 637              	.L29:
+ 675:../Startup/system_XMC4500.c ****   }
+ 676:../Startup/system_XMC4500.c **** 
+ 677:../Startup/system_XMC4500.c ****   temp = temp / ((SCU_CLK->SYSCLKCR & SCU_CLK_SYSCLKCR_SYSDIV_Msk) + 1);
+ 638              	 .loc 1 677 0
+ 639 0094 0B4B     	 ldr r3,.L30
+ 640 0096 DB68     	 ldr r3,[r3,#12]
+ 641 0098 DBB2     	 uxtb r3,r3
+ 642 009a 0133     	 adds r3,r3,#1
+ 643 009c FA68     	 ldr r2,[r7,#12]
+ 644 009e B2FBF3F3 	 udiv r3,r2,r3
+ 645 00a2 FB60     	 str r3,[r7,#12]
+ 678:../Startup/system_XMC4500.c ****   temp = temp / ((SCU_CLK->CPUCLKCR & SCU_CLK_CPUCLKCR_CPUDIV_Msk) + 1);
+ 646              	 .loc 1 678 0
+ 647 00a4 074B     	 ldr r3,.L30
+ 648 00a6 1B69     	 ldr r3,[r3,#16]
+ 649 00a8 03F00103 	 and r3,r3,#1
+ 650 00ac 0133     	 adds r3,r3,#1
+ 651 00ae FA68     	 ldr r2,[r7,#12]
+ 652 00b0 B2FBF3F3 	 udiv r3,r2,r3
+ 653 00b4 FB60     	 str r3,[r7,#12]
+ 679:../Startup/system_XMC4500.c **** 
+ 680:../Startup/system_XMC4500.c ****   SystemCoreClock = temp;
+ 654              	 .loc 1 680 0
+ 655 00b6 064A     	 ldr r2,.L30+12
+ 656 00b8 FB68     	 ldr r3,[r7,#12]
+ 657 00ba 1360     	 str r3,[r2]
+ 681:../Startup/system_XMC4500.c **** }
+ 658              	 .loc 1 681 0
+ 659 00bc 1037     	 adds r7,r7,#16
+ 660              	.LCFI19:
+ 661              	 .cfi_def_cfa_offset 8
+ 662 00be BD46     	 mov sp,r7
+ 663              	.LCFI20:
+ 664              	 .cfi_def_cfa_register 13
+ 665              	 
+ 666 00c0 80BD     	 pop {r7,pc}
+ 667              	.L31:
+ 668 00c2 00BF     	 .align 2
+ 669              	.L30:
+ 670 00c4 00460050 	 .word 1342195200
+ 671 00c8 10470050 	 .word 1342195472
+ 672 00cc 00366E01 	 .word 24000000
+ 673 00d0 00000000 	 .word SystemCoreClock
+ 674              	 .cfi_endproc
+ 675              	.LFE127:
+ 677              	 .section .text.OSCHP_GetFrequency,"ax",%progbits
+ 678              	 .align 2
+ 679              	 .weak OSCHP_GetFrequency
+ 680              	 .thumb
+ 681              	 .thumb_func
+ 683              	OSCHP_GetFrequency:
+ 684              	.LFB128:
+ 682:../Startup/system_XMC4500.c **** 
+ 683:../Startup/system_XMC4500.c **** __WEAK uint32_t OSCHP_GetFrequency(void)
+ 684:../Startup/system_XMC4500.c **** {
+ 685              	 .loc 1 684 0
+ 686              	 .cfi_startproc
+ 687              	 
+ 688              	 
+ 689              	 
+ 690 0000 80B4     	 push {r7}
+ 691              	.LCFI21:
+ 692              	 .cfi_def_cfa_offset 4
+ 693              	 .cfi_offset 7,-4
+ 694 0002 00AF     	 add r7,sp,#0
+ 695              	.LCFI22:
+ 696              	 .cfi_def_cfa_register 7
+ 685:../Startup/system_XMC4500.c ****   return OSCHP_FREQUENCY;
+ 697              	 .loc 1 685 0
+ 698 0004 024B     	 ldr r3,.L34
+ 686:../Startup/system_XMC4500.c **** }
+ 699              	 .loc 1 686 0
+ 700 0006 1846     	 mov r0,r3
+ 701 0008 BD46     	 mov sp,r7
+ 702              	.LCFI23:
+ 703              	 .cfi_def_cfa_register 13
+ 704              	 
+ 705 000a 5DF8047B 	 ldr r7,[sp],#4
+ 706              	.LCFI24:
+ 707              	 .cfi_restore 7
+ 708              	 .cfi_def_cfa_offset 0
+ 709 000e 7047     	 bx lr
+ 710              	.L35:
+ 711              	 .align 2
+ 712              	.L34:
+ 713 0010 001BB700 	 .word 12000000
+ 714              	 .cfi_endproc
+ 715              	.LFE128:
+ 717              	 .text
+ 718              	.Letext0:
+ 719              	 .file 3 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 720              	 .file 4 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 721              	 .file 5 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include/core_cm4.h"
+ 722              	 .file 6 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 system_XMC4500.c
+    {standard input}:24     .no_init:00000000 SystemCoreClock
+    {standard input}:21     .no_init:00000000 $d
+    {standard input}:30     .no_init:00000004 g_chipid
+    {standard input}:33     .text.delay:00000000 $t
+    {standard input}:37     .text.delay:00000000 delay
+    {standard input}:98     .text.SystemInit:00000000 $t
+    {standard input}:103    .text.SystemInit:00000000 SystemInit
+    {standard input}:144    .text.SystemCoreSetup:00000000 SystemCoreSetup
+    {standard input}:252    .text.SystemCoreClockSetup:00000000 SystemCoreClockSetup
+    {standard input}:134    .text.SystemInit:0000001c $d
+    {standard input}:139    .text.SystemCoreSetup:00000000 $t
+    {standard input}:240    .text.SystemCoreSetup:00000064 $d
+    {standard input}:247    .text.SystemCoreClockSetup:00000000 $t
+    {standard input}:683    .text.OSCHP_GetFrequency:00000000 OSCHP_GetFrequency
+    {standard input}:545    .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+    {standard input}:525    .text.SystemCoreClockSetup:000001dc $d
+    {standard input}:540    .text.SystemCoreClockUpdate:00000000 $t
+    {standard input}:670    .text.SystemCoreClockUpdate:000000c4 $d
+    {standard input}:678    .text.OSCHP_GetFrequency:00000000 $t
+    {standard input}:713    .text.OSCHP_GetFrequency:00000010 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+__Vectors

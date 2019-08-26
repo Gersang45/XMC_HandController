@@ -1,0 +1,223 @@
+   1              	 .syntax unified
+   2              	 .cpu cortex-m4
+   3              	 .eabi_attribute 27,3
+   4              	 .fpu fpv4-sp-d16
+   5              	 .eabi_attribute 20,1
+   6              	 .eabi_attribute 21,1
+   7              	 .eabi_attribute 23,3
+   8              	 .eabi_attribute 24,1
+   9              	 .eabi_attribute 25,1
+  10              	 .eabi_attribute 26,1
+  11              	 .eabi_attribute 30,6
+  12              	 .eabi_attribute 34,1
+  13              	 .eabi_attribute 18,4
+  14              	 .thumb
+  15              	 .file "main.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .comm g_var,4,4
+  20              	 .comm Timer_1ms_Id,4,4
+  21              	 .section .text.CB_Timer_1ms,"ax",%progbits
+  22              	 .align 2
+  23              	 .global CB_Timer_1ms
+  24              	 .thumb
+  25              	 .thumb_func
+  27              	CB_Timer_1ms:
+  28              	.LFB249:
+  29              	 .file 1 "../main.c"
+   1:../main.c     **** #include <DAVE.h>                 //Declarations from DAVE Code Generation (includes SFR declaratio
+   2:../main.c     **** 
+   3:../main.c     **** 
+   4:../main.c     **** #define TICKS_PER_SECOND (1000U)
+   5:../main.c     **** 
+   6:../main.c     **** uint32_t g_var;
+   7:../main.c     **** 
+   8:../main.c     **** uint32_t Timer_1ms_Id;
+   9:../main.c     **** 
+  10:../main.c     **** void CB_Timer_1ms(void)
+  11:../main.c     **** {
+  30              	 .loc 1 11 0
+  31              	 .cfi_startproc
+  32              	 
+  33              	 
+  34 0000 80B5     	 push {r7,lr}
+  35              	.LCFI0:
+  36              	 .cfi_def_cfa_offset 8
+  37              	 .cfi_offset 7,-8
+  38              	 .cfi_offset 14,-4
+  39 0002 00AF     	 add r7,sp,#0
+  40              	.LCFI1:
+  41              	 .cfi_def_cfa_register 7
+  12:../main.c     ****     static uint32_t ticks = 0;
+  13:../main.c     **** 
+  14:../main.c     ****     ticks++;
+  42              	 .loc 1 14 0
+  43 0004 0A4B     	 ldr r3,.L3
+  44 0006 1B68     	 ldr r3,[r3]
+  45 0008 0133     	 adds r3,r3,#1
+  46 000a 094A     	 ldr r2,.L3
+  47 000c 1360     	 str r3,[r2]
+  15:../main.c     **** 
+  16:../main.c     ****     if (ticks == TICKS_PER_SECOND)
+  48              	 .loc 1 16 0
+  49 000e 084B     	 ldr r3,.L3
+  50 0010 1B68     	 ldr r3,[r3]
+  51 0012 B3F57A7F 	 cmp r3,#1000
+  52 0016 09D1     	 bne .L1
+  17:../main.c     ****     {
+  18:../main.c     ****          ticks = 0;
+  53              	 .loc 1 18 0
+  54 0018 054B     	 ldr r3,.L3
+  55 001a 0022     	 movs r2,#0
+  56 001c 1A60     	 str r2,[r3]
+  19:../main.c     **** 
+  20:../main.c     ****          g_var = ADC_MEASUREMENT_GetResult(&ADC_MEASUREMENT_Channel_A);
+  57              	 .loc 1 20 0
+  58 001e 0548     	 ldr r0,.L3+4
+  59 0020 FFF7FEFF 	 bl ADC_MEASUREMENT_GetResult
+  60 0024 0346     	 mov r3,r0
+  61 0026 1A46     	 mov r2,r3
+  62 0028 034B     	 ldr r3,.L3+8
+  63 002a 1A60     	 str r2,[r3]
+  64              	.L1:
+  21:../main.c     **** 
+  22:../main.c     ****      }
+  23:../main.c     **** }
+  65              	 .loc 1 23 0
+  66 002c 80BD     	 pop {r7,pc}
+  67              	.L4:
+  68 002e 00BF     	 .align 2
+  69              	.L3:
+  70 0030 00000000 	 .word ticks.8562
+  71 0034 00000000 	 .word ADC_MEASUREMENT_Channel_A_handle
+  72 0038 00000000 	 .word g_var
+  73              	 .cfi_endproc
+  74              	.LFE249:
+  76              	 .section .text.main,"ax",%progbits
+  77              	 .align 2
+  78              	 .global main
+  79              	 .thumb
+  80              	 .thumb_func
+  82              	main:
+  83              	.LFB250:
+  24:../main.c     **** 
+  25:../main.c     **** int main(void)
+  26:../main.c     **** {
+  84              	 .loc 1 26 0
+  85              	 .cfi_startproc
+  86              	 
+  87              	 
+  88 0000 80B5     	 push {r7,lr}
+  89              	.LCFI2:
+  90              	 .cfi_def_cfa_offset 8
+  91              	 .cfi_offset 7,-8
+  92              	 .cfi_offset 14,-4
+  93 0002 82B0     	 sub sp,sp,#8
+  94              	.LCFI3:
+  95              	 .cfi_def_cfa_offset 16
+  96 0004 00AF     	 add r7,sp,#0
+  97              	.LCFI4:
+  98              	 .cfi_def_cfa_register 7
+  27:../main.c     ****     DAVE_STATUS_t status;
+  28:../main.c     **** 
+  29:../main.c     ****     status = DAVE_Init();           /* Initialization of DAVE APPs  */
+  99              	 .loc 1 29 0
+ 100 0006 FFF7FEFF 	 bl DAVE_Init
+ 101 000a 0346     	 mov r3,r0
+ 102 000c FB71     	 strb r3,[r7,#7]
+  30:../main.c     **** 
+  31:../main.c     ****     if(status != DAVE_STATUS_SUCCESS)
+ 103              	 .loc 1 31 0
+ 104 000e FB79     	 ldrb r3,[r7,#7]
+ 105 0010 002B     	 cmp r3,#0
+ 106 0012 00D0     	 beq .L6
+ 107              	.L7:
+  32:../main.c     ****     {
+  33:../main.c     ****         /* Placeholder for error handler code. The while loop below can be replaced with an user er
+  34:../main.c     ****         XMC_DEBUG("DAVE APPs initialization failed\n");
+  35:../main.c     ****         while(1U)
+  36:../main.c     ****         {
+  37:../main.c     **** 
+  38:../main.c     ****         }
+ 108              	 .loc 1 38 0 discriminator 1
+ 109 0014 FEE7     	 b .L7
+ 110              	.L6:
+  39:../main.c     ****     }
+  40:../main.c     **** 
+  41:../main.c     ****     g_var = 0;
+ 111              	 .loc 1 41 0
+ 112 0016 094B     	 ldr r3,.L9
+ 113 0018 0022     	 movs r2,#0
+ 114 001a 1A60     	 str r2,[r3]
+  42:../main.c     **** 
+  43:../main.c     ****     Timer_1ms_Id = SYSTIMER_CreateTimer(1000, SYSTIMER_MODE_PERIODIC, (void*) CB_Timer_1ms, NULL);
+ 115              	 .loc 1 43 0
+ 116 001c 4FF47A70 	 mov r0,#1000
+ 117 0020 0121     	 movs r1,#1
+ 118 0022 074A     	 ldr r2,.L9+4
+ 119 0024 0023     	 movs r3,#0
+ 120 0026 FFF7FEFF 	 bl SYSTIMER_CreateTimer
+ 121 002a 0246     	 mov r2,r0
+ 122 002c 054B     	 ldr r3,.L9+8
+ 123 002e 1A60     	 str r2,[r3]
+  44:../main.c     **** 
+  45:../main.c     ****     SYSTIMER_StartTimer(Timer_1ms_Id);
+ 124              	 .loc 1 45 0
+ 125 0030 044B     	 ldr r3,.L9+8
+ 126 0032 1B68     	 ldr r3,[r3]
+ 127 0034 1846     	 mov r0,r3
+ 128 0036 FFF7FEFF 	 bl SYSTIMER_StartTimer
+ 129              	.L8:
+  46:../main.c     **** 
+  47:../main.c     ****     /* Placeholder for user application code. The while loop below can be replaced with user applic
+  48:../main.c     ****     while(1U)
+  49:../main.c     ****     {
+  50:../main.c     **** 
+  51:../main.c     ****     }
+ 130              	 .loc 1 51 0 discriminator 2
+ 131 003a FEE7     	 b .L8
+ 132              	.L10:
+ 133              	 .align 2
+ 134              	.L9:
+ 135 003c 00000000 	 .word g_var
+ 136 0040 00000000 	 .word CB_Timer_1ms
+ 137 0044 00000000 	 .word Timer_1ms_Id
+ 138              	 .cfi_endproc
+ 139              	.LFE250:
+ 141              	 .section .bss.ticks.8562,"aw",%nobits
+ 142              	 .align 2
+ 145              	ticks.8562:
+ 146 0000 00000000 	 .space 4
+ 147              	 .text
+ 148              	.Letext0:
+ 149              	 .file 2 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 150              	 .file 3 "c:\\davev4\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 151              	 .file 4 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
+ 152              	 .file 5 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/XMCLib/inc/xmc_vadc.h"
+ 153              	 .file 6 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Dave/Generated/ADC_MEASUREMENT/adc_measurement.h"
+ 154              	 .file 7 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Dave/Generated/SYSTIMER/systimer.h"
+ 155              	 .file 8 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Dave/Generated/DAVE.h"
+ 156              	 .file 9 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Include/core_cm4.h"
+ 157              	 .file 10 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
+ 158              	 .file 11 "D:/XMC_HandController/DAVE_HandController/Test_FlexSensor/Dave/Generated/ADC_MEASUREMENT/ADC_MEASUREMENT_Extern.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+                            *COM*:00000004 g_var
+                            *COM*:00000004 Timer_1ms_Id
+    {standard input}:22     .text.CB_Timer_1ms:00000000 $t
+    {standard input}:27     .text.CB_Timer_1ms:00000000 CB_Timer_1ms
+    {standard input}:70     .text.CB_Timer_1ms:00000030 $d
+    {standard input}:145    .bss.ticks.8562:00000000 ticks.8562
+    {standard input}:77     .text.main:00000000 $t
+    {standard input}:82     .text.main:00000000 main
+    {standard input}:135    .text.main:0000003c $d
+    {standard input}:142    .bss.ticks.8562:00000000 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+ADC_MEASUREMENT_GetResult
+ADC_MEASUREMENT_Channel_A_handle
+DAVE_Init
+SYSTIMER_CreateTimer
+SYSTIMER_StartTimer
